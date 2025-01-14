@@ -1,0 +1,36 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+
+{% block title %}I-CITADEL | Contact Us{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any queries or support.</p>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div>
+                    <h2>Reach Out to Us</h2>
+                    <p>We’re here to help! Use the form below or contact us via phone or email.</p>
+                    <ul class="contact-list">
+                        <li><strong>Phone:</strong> +1234567890</li>
+                        <li><strong>Email:</strong> info@example.com</li>
+                        <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

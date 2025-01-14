@@ -1,0 +1,27 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+
+{% block title %}I-CITADEL | About Us{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>I-Citadel Exzellenz is an international training and consultancy group, delivering high quality courses to every sector, covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>
+        </div>
+    </section>
+    <section class="mission-section">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="mission-content">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to provide comprehensive training and consultancy solutions all over the world, in an effective, tailored to consumers' needs and accessible way. 
+                        We aim at full optimization of training organization process in order to make it quick and easy for each of the involved parties.</p>
+                </div>
+                <div class="side-image">
+                    <img src="{% static 'layout/images/mission.jpeg' %}" alt="Our Mission">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+
+{% block title %}I-CITADEL | Home{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Career with Industry-Leading Training</h1>
+                <p>Expert-led courses across diverse sectors and industries</p>
+                <a href="{% url 'courses' %}" class="btn btn-primary">Explore Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="content-wrapper">
+                <div class="side-image">
+                    <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="What We Do">
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Professional Training</h3>
+                        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Upskilling/Reskilling</h3>
+                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Certification</h3>
+                        <p>Internationally recognized certifications</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Consultancy</h3>
+                        <p>Resolve bottlenecks within minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Popular Courses Section -->
+    <section class="popular-courses">
+        <div class="container">
+            <h2 class="section-title">Popular Courses</h2>
+            <div class="courses-grid">
+                {% for course in popular_courses %}
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="{{ course.image.url }}" alt="{{ course.title }}">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-category">{{ course.category }}</span>
+                        <h3>{{ course.title }}</h3>
+                        <p>{{ course.description|truncatewords:20 }}</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-clock"></i> {{ course.duration }}</span>
+                            <span><i class="fas fa-user-graduate"></i> {{ course.enrolled_students }} students</span>
+                        </div>
+                        <div class="course-footer">
+                            <span class="price">${{ course.price }}</span>
+                            <a href="{% url 'course_detail' course.slug %}" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                <a href="{% url 'courses' %}" class="btn btn-outline">View All Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15K+</h3>
+                    <p>Students Trained</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Expert Instructors</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Courses Available</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Countries Reached</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonials-grid">
+                {% for testimonial in testimonials %}
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>{{ testimonial.content }}</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{{ testimonial.author_image.url }}" alt="{{ testimonial.author_name }}">
+                        <div>
+                            <h4>{{ testimonial.author_name }}</h4>
+                            <p>{{ testimonial.author_title }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
