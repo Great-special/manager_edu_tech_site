@@ -1,0 +1,46 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+
+{% block title %}I-CITADEL | Course{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="course-details-hero">
+        <h1>Course Details</h1>
+        <p>Discover more about this course and what it offers.</p>
+    </section>
+
+    <!-- Course Details Section -->
+    <section class="course-details">
+        <div class="container">
+            <div class="course-header">
+                <h2>Course Title</h2>
+                <p>Category: <span class="course-category">Programming</span></p>
+            </div>
+            <div class="course-body">
+                {% if course.image %}
+                <div class="course-image">
+                    <img src="{{course.image.url}}" alt="Course Image">
+                </div>
+                {% endif %}
+                <div class="course-description">
+                    <h3>About This Course</h3>
+                    <p>
+                        This course is designed to give you an in-depth understanding of modern web development. Learn the latest tools and technologies to create professional-grade websites and applications.
+                    </p>
+                    <ul>
+                        <li>Understand the fundamentals of web development</li>
+                        <li>Learn HTML, CSS, JavaScript, and more</li>
+                        <li>Hands-on projects and assignments</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 8 weeks</p>
+                    <p><strong>Level:</strong> Beginner to Advanced</p>
+                </div>
+            </div>
+            <div class="course-footer">
+                <a href="enroll.html" class="btn btn-primary">Enroll Now</a>
+                <p><strong>Price:</strong> $199</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

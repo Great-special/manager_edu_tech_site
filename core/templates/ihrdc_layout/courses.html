@@ -1,7 +1,7 @@
 {% extends 'ihrdc_layout/base.html' %}
 {% load static %}
 
-{% block title %}Training Platform - Home{% endblock %}
+{% block title %}I-CITADEL | Courses{% endblock %}
 
 {% block content %}
     <!-- Course Catalog Section -->
@@ -17,30 +17,14 @@
                     <nav class="category-nav">
                         <h3>Categories</h3>
                         <ul>
+                            {% for category in categories %}
                             <li>
-                                <a href="#" class="category-item">
-                                    <span>Programming & Development</span>
-                                    <span class="count">(150)</span>
+                                <a href="{% url 'category_details' category.slug %}" class="category-item">
+                                    <span>{{category}}</span>
+                                    <span class="count">({{category.courses.count}})</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" class="category-item">
-                                    <span>DevOps & Cloud</span>
-                                    <span class="count">(85)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="category-item">
-                                    <span>Data Science & AI</span>
-                                    <span class="count">(92)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="category-item">
-                                    <span>Cybersecurity</span>
-                                    <span class="count">(64)</span>
-                                </a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </nav>
                 </aside>
@@ -62,23 +46,23 @@
                     </div>
                     <div class="catalog-grid">
                         <!-- Repeat course cards with more detailed information -->
+                        {% for course in courses %}
                         <div class="catalog-card">
                             <div class="card-header">
-                                <h3>Advanced Python Development</h3>
-                                <span class="price">$1,999</span>
+                                <h3>{{course.title}}</h3>
+                                <span class="price">${{course.price}}</span>
                             </div>
                             <div class="card-details">
-                                <span><i class="fas fa-clock"></i> 5 Days</span>
-                                <span><i class="fas fa-signal"></i> Advanced</span>
+                                <span><i class="fas fa-clock"></i> {{course.duration}}</span>
                                 <span><i class="fas fa-users"></i> Live Training</span>
                             </div>
-                            <p>Advanced Python concepts including multithreading, async programming, and design patterns.</p>
+                            <p>{{course.description}}</p>
                             <div class="card-footer">
-                                <button class="btn-outline">Learn More</button>
-                                <button class="btn-primary">Schedule Course</button>
+                                <button class="btn btn-outline">Learn More</button>
+                                <button class="btn btn-primary">Schedule Course</button>
                             </div>
                         </div>
-                        <!-- Add more catalog cards as needed -->
+                        {% endfor %}       
                     </div>
                 </main>
             </div>

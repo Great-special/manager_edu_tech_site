@@ -1,0 +1,47 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+
+{% block title %}I-CITADEL | Courses{% endblock %}
+
+{% block content %}
+    <!-- Course Catalog Section -->
+    <section class="course-catalog">
+        <div class="container">
+            <h2 class="section-title">{{category.title}}</h2>
+            <div class="catalog-header">
+                <div class="filters">
+                    <select>
+                        <option>Sort by: Popular</option>
+                        <option>Sort by: Newest</option>
+                        <option>Sort by: Price</option>
+                    </select>
+                    <select>
+                        <option>Duration: Any</option>
+                        <option>1-3 Days</option>
+                        <option>4-5 Days</option>
+                        <option>1+ Week</option>
+                    </select>
+                </div>
+            </div>
+            <div class="catalog-grid">
+                {% for course in courses %}
+                <div class="catalog-card">
+                    <div class="card-header">
+                        <h3>{{course.title}}</h3>
+                        <span class="price">${{course.price}}</span>
+                    </div>
+                    <div class="card-details">
+                        <span><i class="fas fa-clock"></i> {{course.duration}}</span>
+                        <span><i class="fas fa-users"></i> Live Training</span>
+                    </div>
+                    <p>{{course.description}}</p>
+                    <div class="card-footer">
+                        <button class="btn btn-outline">Learn More</button>
+                        <button class="btn btn-primary">Schedule Course</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

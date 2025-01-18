@@ -57,9 +57,11 @@
             <div class="courses-grid">
                 {% for course in popular_courses %}
                 <div class="course-card">
+                    {% if course.image %}
                     <div class="course-image">
                         <img src="{{ course.image.url }}" alt="{{ course.title }}">
                     </div>
+                    {% endif %}
                     <div class="course-content">
                         <span class="course-category">{{ course.category }}</span>
                         <h3>{{ course.title }}</h3>
@@ -70,7 +72,7 @@
                         </div>
                         <div class="course-footer">
                             <span class="price">${{ course.price }}</span>
-                            <a href="{% url 'course_detail' course.slug %}" class="btn btn-primary">Learn More</a>
+                            <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">Start</a>
                         </div>
                     </div>
                 </div>
