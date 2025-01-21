@@ -1,20 +1,25 @@
 {% extends 'ihrdc_layout/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}I-CITADEL | Home{% endblock %}
 
 {% block content %}
     <!-- Hero Section -->
+     
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                {% blocktrans %}
                 <h1>Transform Your Career with Industry-Leading Training</h1>
                 <p>Expert-led courses across diverse sectors and industries</p>
-                <a href="{% url 'courses' %}" class="btn btn-primary">Explore Courses</a>
+                {% endblocktrans %}
+                <a href="{% url 'courses' %}" class="btn btn-primary">{% trans "Explore Courses" %}</a>
             </div>
         </div>
     </section>
 
+    
     <!-- What We Do Section -->
     <section class="what-we-do">
         <div class="container">
@@ -23,6 +28,7 @@
                 <div class="side-image">
                     <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="What We Do">
                 </div>
+                {% blocktrans %}
                 <div class="services-grid">
                     <div class="service-card">
                         <i class="fas fa-graduation-cap"></i>
@@ -45,10 +51,11 @@
                         <p>Resolve bottlenecks within minutes</p>
                     </div>
                 </div>
+                {% endblocktrans %}
             </div>
         </div>
     </section>
-
+    
 
     <!-- Popular Courses Section -->
     <section class="popular-courses">
@@ -85,7 +92,7 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats">
+    {% comment %} <section class="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
@@ -106,7 +113,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
 
     <!-- Testimonials Section -->
     <section class="testimonials">

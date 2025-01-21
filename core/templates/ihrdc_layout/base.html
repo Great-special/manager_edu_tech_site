@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,10 @@
     <script src="https://js.paypal.com/js/paypal.min.js"></script>
     <script src="{% static 'layout/js/scripts.js' %}"></script>
 </head>
+
 <body>
     <header class="main-header">
+        {% blocktrans %}
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
@@ -25,10 +28,12 @@
                 </div>
             </div>
         </div>
+        {% endblocktrans %}
         <nav class="main-nav">
             <div class="container">
                 <div class="logo">
                     <a href="{% url 'home' %}">
+                        <img src="{% static 'layout/images/logo.png' %}" alt="Company Logo">
                         <img src="{% static 'layout/images/logo-name.png' %}" alt="Company Logo">
                     </a>
                 </div>
@@ -39,6 +44,8 @@
                         <a href="{% url 'courses' %}">Courses</a>
                     </li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                    
                 </ul>
                 <button class="mobile-menu-toggle">
                     <span></span>
@@ -53,6 +60,7 @@
         {% block content %}
         {% endblock %}
     </main>
+
 
     <footer class="main-footer">
         <div class="container">
@@ -70,6 +78,7 @@
                         <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
+                {% blocktrans %}
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <ul class="contact-list">
@@ -86,9 +95,11 @@
                     </form>
                 </div>
             </div>
+            {% endblocktrans %}
             <div class="footer-bottom">
-                <p>&copy; {% now "Y" %} Training Platform. All rights reserved.</p>
+                <p>&copy; {% now "Y" %} {% trans "Training Platform. All rights reserved." %}</p>
             </div>
+            
         </div>
     </footer>
 </body>
