@@ -23,17 +23,19 @@
     <!-- What We Do Section -->
     <section class="what-we-do">
         <div class="container">
-            <h2 class="section-title">What We Do</h2>
+            <h2 class="section-title">{% translate "What We Do" %}</h2>
             <div class="content-wrapper">
                 <div class="side-image">
                     <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="What We Do">
                 </div>
-                {% blocktrans %}
+                
                 <div class="services-grid">
                     <div class="service-card">
                         <i class="fas fa-graduation-cap"></i>
+                        {% blocktrans %}
                         <h3>Professional Training</h3>
                         <p>Industry-specific courses designed by experts, customized training programs for organizations</p>
+                        {% endblocktrans %}
                     </div>
                     <div class="service-card">
                         <i class="fas fa-users"></i>
@@ -51,7 +53,7 @@
                         <p>Resolve bottlenecks within minutes</p>
                     </div>
                 </div>
-                {% endblocktrans %}
+                
             </div>
         </div>
     </section>

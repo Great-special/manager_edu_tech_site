@@ -20,3 +20,14 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
+
+class Testimonials(models.Model):
+    author_name = models.CharField(max_length=100)
+    author_title = models.CharField(max_length=100, null=True, blank=True)
+    author_image = models.ImageField(upload_to='testimonials/', null=True, blank=True)
+    content = models.TextField()
+    
+    def __str__(self):
+        return self.author_name
+    
+    

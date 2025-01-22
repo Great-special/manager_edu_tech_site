@@ -14,7 +14,7 @@
 
 <body>
     <header class="main-header">
-        {% blocktrans %}
+
         <div class="header-top">
             <div class="container">
                 <div class="contact-info">
@@ -26,9 +26,17 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
+                
+                <div class="social-links">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for lang in languages %}
+                    <a href="/{{lang.code}}/">{{lang.name_local}}</i></a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-        {% endblocktrans %}
         <nav class="main-nav">
             <div class="container">
                 <div class="logo">
@@ -66,8 +74,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Leading provider of training solutions for the energy industry worldwide.</p>
+                    <h3>{% translate "About Us" %}</h3>
+                    <p>{% trans "Leading provider of training solutions for the energy industry worldwide." %}</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
