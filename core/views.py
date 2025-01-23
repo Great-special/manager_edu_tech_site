@@ -1,5 +1,14 @@
-from django.shortcuts import render
-from .models import Course, Category
+import json
+import stripe
+from django.conf import settings
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import TemplateView
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Course, Category, Testimonial, Payment, FeedBack
+
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Create your views here.
 
@@ -12,7 +21,18 @@ def index_page(request):
         print(e)
         categories = None
         popular_courses = None
-    return render(request, 'ihrdc_layout/index.html', {'categories': categories, 'popular_courses': popular_courses})
+    
+    try:
+        testimonials = Testimonial.objects.all()
+    except:
+        testimonials = []
+    
+    context = {
+        'categories': categories, 
+        'popular_courses': popular_courses,
+        'testimonials':testimonials
+    }
+    return render(request, 'ihrdc_layout/index.html', context)
 
 def course_list(request):
     try:
@@ -41,4 +61,21 @@ def about_page(request):
     return render(request, 'ihrdc_layout/about.html')
 
 def contact_page(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        message = request.POST.get('message', '')
+        
+        FeedBack.objects.create(
+            name=name,
+            email=email,
+            message=message
+        )
+        return render(request, 'ihrdc_layout/thank_you.html')
     return render(request, 'ihrdc_layout/contact.html')
+
+
+def payment_page(request, id):
+    course = get_object_or_404(Course, id=id)
+    return render(request, 'ihrdc_layout/course_payment.html', {'stripe_key': settings.STRIPE_PUBLIC_KEY, 'course':course})
+

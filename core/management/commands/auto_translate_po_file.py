@@ -103,7 +103,7 @@ class Command(BaseCommand):
             # Compile the messages
             try:
                 self.stdout.write('Compiling messages...')
-                os.system(f'django-admin compilemessages -l {language}')
+                os.system(f'python manage.py compilemessages')
                 self.stdout.write(self.style.SUCCESS('Messages compiled successfully!'))
             except Exception as e:
                 self.stdout.write(

@@ -1,18 +1,22 @@
 {% extends 'ihrdc_layout/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}I-CITADEL | Contact Us{% endblock %}
 
 {% block content %}
     <section class="hero">
         <div class="hero-content">
+            {% blocktrans %}
             <h1>Contact Us</h1>
             <p>Get in touch with us for any queries or support.</p>
+            {% endblocktrans %}
         </div>
     </section>
     <section class="contact-section">
         <div class="container">
             <div class="content-wrapper">
+                {% blocktrans %}
                 <div>
                     <h2>Reach Out to Us</h2>
                     <p>We’re here to help! Use the form below or contact us via phone or email.</p>
@@ -22,12 +26,15 @@
                         <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>
                     </ul>
                 </div>
+                {% endblocktrans %}
                 <div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <form method='post' class="contact-form">
+                        {% blocktrans %}
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         <button type="submit" class="btn">Send Message</button>
+                        {% endblocktrans %}
                     </form>
                 </div>
             </div>

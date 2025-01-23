@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Course, Testimonials
+from .models import Category, Course, Testimonial
 # Register your models here.
 
 
@@ -23,4 +23,4 @@ class TestimonialsAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Course, CourseAdmin)
-admin.site.register(Testimonials, TestimonialsAdmin)
+admin.site.register(Testimonial, TestimonialsAdmin)

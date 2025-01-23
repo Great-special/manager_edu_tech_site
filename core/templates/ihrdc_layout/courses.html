@@ -1,5 +1,6 @@
 {% extends 'ihrdc_layout/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}I-CITADEL | Courses{% endblock %}
 
@@ -7,7 +8,7 @@
     <!-- Course Catalog Section -->
     <section class="course-catalog">
         <div class="container">
-            <h2 class="section-title">Course Catalog</h2>
+            <h2 class="section-title">{% trans "Course Catalog" %}</h2>
             <div class="catalog-layout">
                 <aside class="category-sidebar">
                     <div class="search-box">
@@ -15,7 +16,7 @@
                         <i class="fas fa-search"></i>
                     </div>
                     <nav class="category-nav">
-                        <h3>Categories</h3>
+                        <h3>{% trans "Categories" %}</h3>
                         <ul>
                             {% for category in categories %}
                             <li>
@@ -30,6 +31,7 @@
                 </aside>
                 <main class="catalog-content">
                     <div class="catalog-header">
+                        {% blocktrans %}
                         <div class="filters">
                             <select>
                                 <option>Sort by: Popular</option>
@@ -43,6 +45,7 @@
                                 <option>1+ Week</option>
                             </select>
                         </div>
+                        {% endblocktrans %}
                     </div>
                     <div class="catalog-grid">
                         <!-- Repeat course cards with more detailed information -->
@@ -54,12 +57,12 @@
                             </div>
                             <div class="card-details">
                                 <span><i class="fas fa-clock"></i> {{course.duration}}</span>
-                                <span><i class="fas fa-users"></i> Live Training</span>
+                                <span><i class="fas fa-users"></i>{% trans "Live Training" %}</span>
                             </div>
                             <p>{{course.description}}</p>
                             <div class="card-footer">
-                                <button class="btn btn-outline">Learn More</button>
-                                <button class="btn btn-primary">Schedule Course</button>
+                                <a href="{% url "course_detail" course.id %}" class="btn btn-outline">{% trans "Learn More" %}</a>
+                                <a href="#" class="btn btn-primary">{% translate "Book Course" %}</a>
                             </div>
                         </div>
                         {% endfor %}       
@@ -70,3 +73,24 @@
     </section>
 
 {% endblock %}
+
+{% block script %}
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe("{{ STRIPE_PUBLISHABLE_KEY }}");
+
+    document.getElementById('payButton').addEventListener('click', async () => {
+        const response = await fetch('/stripe-payment/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({amount: 1000, payment_method_id: 'pm_card_visa'})
+        });
+        const data = await response.json();
+        if (data.error) {
+            alert(data.error);
+        } else {
+            alert('Payment successful!');
+        }
+    });
+</script>
+{% endblock script %}

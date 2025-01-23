@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-22 04:18+0100\n"
+"POT-Creation-Date: 2025-01-23 12:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,175 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\core\models.py:5 .\core\models.py:85
+msgid "name"
+msgstr "Name"
+
+#: .\core\models.py:6
+msgid "slug"
+msgstr "Schnecke"
+
+#: .\core\models.py:7 .\core\models.py:32 .\core\models.py:48
+#: .\core\models.py:78
+msgid "created at"
+msgstr "erstellt am"
+
+#: .\core\models.py:8 .\core\models.py:33 .\core\models.py:49
+#: .\core\models.py:79
+msgid "updated at"
+msgstr "aktualisiert am"
+
+#: .\core\models.py:11 .\core\models.py:26
+msgid "category"
+msgstr "Kategorie"
+
+#: .\core\models.py:12
+msgid "categories"
+msgstr "Kategorien"
+
+#: .\core\models.py:19
+msgid "title"
+msgstr "Titel"
+
+#: .\core\models.py:20
+msgid "description"
+msgstr "Beschreibung"
+
+#: .\core\models.py:21
+msgid "image"
+msgstr "Bild"
+
+#: .\core\models.py:22
+msgid "price"
+msgstr "Preis"
+
+#: .\core\models.py:23
+msgid "duration"
+msgstr "Dauer"
+
+#: .\core\models.py:30
+msgid "is popular"
+msgstr "ist beliebt"
+
+#: .\core\models.py:31
+msgid "is upcoming"
+msgstr "steht bevor"
+
+#: .\core\models.py:36
+msgid "course"
+msgstr "Kurs"
+
+#: .\core\models.py:37
+msgid "courses"
+msgstr "Kurse"
+
+#: .\core\models.py:44
+msgid "author name"
+msgstr "Name des Autors"
+
+#: .\core\models.py:45
+msgid "author title"
+msgstr "Autortitel"
+
+#: .\core\models.py:46
+msgid "author image"
+msgstr "Autorenbild"
+
+#: .\core\models.py:47
+msgid "content"
+msgstr "Inhalt"
+
+#: .\core\models.py:52
+msgid "testimonial"
+msgstr "Zeugnis"
+
+#: .\core\models.py:53
+msgid "testimonials"
+msgstr "Erfahrungsberichte"
+
+#: .\core\models.py:72
+msgid "customer"
+msgstr "Kunde"
+
+#: .\core\models.py:73
+msgid "amount"
+msgstr "Menge"
+
+#: .\core\models.py:74
+#, fuzzy
+#| msgid "Currently"
+msgid "currency"
+msgstr "Momentan"
+
+#: .\core\models.py:75
+msgid "status"
+msgstr "Status"
+
+#: .\core\models.py:76
+msgid "payment method"
+msgstr "Zahlungsarten"
+
+#: .\core\models.py:77
+msgid "stripe payment intent id"
+msgstr "Stripe-Zahlungsabsichts-ID"
+
+#: .\core\models.py:86
+msgid "email"
+msgstr "E-Mail"
+
+#: .\core\models.py:87
+#, fuzzy
+#| msgid "Messages"
+msgid "message"
+msgstr "Nachrichten"
+
+#: .\core\templates\ihrdc_layout\about.html:10
+msgid ""
+"\n"
+"            <h1>About Us</h1>\n"
+"            <p>I-Citadel Exzellenz is an international training and consultancy group, delivering high quality courses to every sector, covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>\n"
+"            "
+msgstr ""
+"<h1>Über uns</h1>\n"
+"<p>I-Citadel Exzellenz ist eine internationale Schulungs- und Beratungsgruppe, die hochwertige Kurse für alle Branchen anbietet, darunter: Künstliche Intelligenz, IT, Management, Angewandte Statistik.</p>"
+
+#: .\core\templates\ihrdc_layout\about.html:20
+msgid ""
+"\n"
+"                    <h2>Our Mission</h2>\n"
+"                    <p>Our mission is to provide comprehensive training and consultancy solutions all over the world, in an effective, tailored to consumers' needs and accessible way. \n"
+"                        We aim at full optimization of training organization process in order to make it quick and easy for each of the involved parties.</p>\n"
+"                    "
+msgstr ""
+"<h2>Unsere Mission</h2>\n"
+"<p>Unsere Mission ist es, umfassende Schulungs- und Beratungslösungen auf der ganzen Welt anzubieten, und zwar auf effektive, auf die Bedürfnisse der Verbraucher zugeschnittene und zugängliche Weise.\n"
+"\n"
+"Wir streben eine vollständige Optimierung des Schulungsorganisationsprozesses an, um ihn für alle Beteiligten schnell und einfach zu gestalten.</p>"
+
+#: .\core\templates\ihrdc_layout\base.html:51
+#: .\core\templates\ihrdc_layout\base.html:83
+msgid "Home"
+msgstr "Heim"
+
+#: .\core\templates\ihrdc_layout\base.html:52
+#: .\core\templates\ihrdc_layout\base.html:84
+#, fuzzy
+#| msgid "About Us"
+msgid "About"
+msgstr "Über uns"
+
+#: .\core\templates\ihrdc_layout\base.html:54
+#: .\core\templates\ihrdc_layout\base.html:85
+#, fuzzy
+#| msgid "courses"
+msgid "Courses"
+msgstr "Kurse"
+
+#: .\core\templates\ihrdc_layout\base.html:56
+#: .\core\templates\ihrdc_layout\base.html:86
+msgid "Contact"
+msgstr "Kontakt"
 
 #: .\core\templates\ihrdc_layout\base.html:77
 msgid "About Us"
@@ -28,13 +197,37 @@ msgid ""
 msgstr ""
 "Weltweit führender Anbieter von Schulungslösungen für die Energiebranche."
 
+#: .\core\templates\ihrdc_layout\base.html:81
+msgid "Quick Links"
+msgstr "Direktlinks"
+
 #: .\core\templates\ihrdc_layout\base.html:89
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                <div class=\"footer-section\">\n"
+#| "                    <h3>Contact Info</h3>\n"
+#| "                    <ul class=\"contact-list\">\n"
+#| "                        <li><i class=\"fas fa-map-marker-alt\"></i> 123 Training St, City, Country</li>\n"
+#| "                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
+#| "                        <li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
+#| "                    </ul>\n"
+#| "                </div>\n"
+#| "                <div class=\"footer-section\">\n"
+#| "                    <h3>Newsletter</h3>\n"
+#| "                    <form class=\"newsletter-form\">\n"
+#| "                        <input type=\"email\" placeholder=\"Enter your email\">\n"
+#| "                        <button type=\"submit\" class=\"btn btn-primary\">Subscribe</button>\n"
+#| "                    </form>\n"
+#| "                </div>\n"
+#| "            </div>\n"
+#| "            "
 msgid ""
 "\n"
 "                <div class=\"footer-section\">\n"
 "                    <h3>Contact Info</h3>\n"
 "                    <ul class=\"contact-list\">\n"
-"                        <li><i class=\"fas fa-map-marker-alt\"></i> 123 Training St, City, Country</li>\n"
+"                        <li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, City, Country</li>\n"
 "                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
 "                        <li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
 "                    </ul>\n"
@@ -70,6 +263,181 @@ msgstr ""
 msgid "Training Platform. All rights reserved."
 msgstr "Trainingsplattform. Alle Rechte vorbehalten."
 
+#: .\core\templates\ihrdc_layout\contact.html:10
+msgid ""
+"\n"
+"            <h1>Contact Us</h1>\n"
+"            <p>Get in touch with us for any queries or support.</p>\n"
+"            "
+msgstr ""
+"<h1>Kontakt</h1>\n"
+"<p>Kontaktieren Sie uns bei Fragen oder für Supportanfragen.</p>"
+
+#: .\core\templates\ihrdc_layout\contact.html:19
+msgid ""
+"\n"
+"                <div>\n"
+"                    <h2>Reach Out to Us</h2>\n"
+"                    <p>We’re here to help! Use the form below or contact us via phone or email.</p>\n"
+"                    <ul class=\"contact-list\">\n"
+"                        <li><strong>Phone:</strong> +1234567890</li>\n"
+"                        <li><strong>Email:</strong> info@example.com</li>\n"
+"                        <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>\n"
+"                    </ul>\n"
+"                </div>\n"
+"                "
+msgstr ""
+"<div>\n"
+"<h2>Kontaktieren Sie uns</h2>\n"
+"<p>Wir helfen Ihnen gerne! Verwenden Sie das untenstehende Formular oder kontaktieren Sie uns per Telefon oder E-Mail.</p>\n"
+"<ul class=\"contact-list\">\n"
+"<li><strong>Telefon:</strong> +1234567890</li>\n"
+"<li><strong>E-Mail:</strong> info@example.com</li>\n"
+"<li><strong>Adresse:</strong> 123 Main Street, Anytown, USA</li>\n"
+"</ul>\n"
+"</div>"
+
+#: .\core\templates\ihrdc_layout\contact.html:32
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <input type=\"text\" placeholder=\"Your Name\" required>\n"
+#| "                        <input type=\"email\" placeholder=\"Your Email\" required>\n"
+#| "                        <textarea placeholder=\"Your Message\" rows=\"5\" required></textarea>\n"
+#| "                        <button type=\"submit\" class=\"btn\">Send Message</button>\n"
+#| "                        "
+msgid ""
+"\n"
+"                        <input type=\"text\" name=\"name\" placeholder=\"Your Name\" required>\n"
+"                        <input type=\"email\" name=\"email\" placeholder=\"Your Email\" required>\n"
+"                        <textarea name=\"message\" placeholder=\"Your Message\" rows=\"5\" required></textarea>\n"
+"                        <button type=\"submit\" class=\"btn\">Send Message</button>\n"
+"                        "
+msgstr ""
+"<input type=\"text\" placeholder=\"Ihr Name\" erforderlich>\n"
+"<input type=\"email\" placeholder=\"Ihre E-Mail\" erforderlich>\n"
+"<textarea placeholder=\"Ihre Nachricht\" rows=\"5\" erforderlich></textarea>\n"
+"<button type=\"submit\" class=\"btn\">Nachricht senden</button>"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:9
+msgid ""
+"\n"
+"    <section class=\"course-details-hero\">\n"
+"        <h1>Course Details</h1>\n"
+"        <p>Discover more about this course and what it offers.</p>\n"
+"    </section>\n"
+"    "
+msgstr ""
+"<section class=\"course-details-hero\">\n"
+"<h1>Kursdetails</h1>\n"
+"<p>Erfahren Sie mehr über diesen Kurs und was er bietet.</p>\n"
+"</section>"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:21
+#, fuzzy
+#| msgid "category"
+msgid "Category"
+msgstr "Kategorie"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:30
+msgid "About This Course"
+msgstr "Über diesen Kurs"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:34
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1795
+msgid "Duration"
+msgstr "Dauer"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:39
+msgid "Enroll Now"
+msgstr "Jetzt anmelden"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:40
+#: .\core\templates\ihrdc_layout\course_payment.html:26
+#, fuzzy
+#| msgid "price"
+msgid "Price"
+msgstr "Preis"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:17
+#, fuzzy
+#| msgid "Course Catalog"
+msgid "Course Details"
+msgstr "Vorlesungsverzeichnis"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:20
+#, fuzzy
+#| msgid "Course Catalog"
+msgid "Course Name"
+msgstr "Vorlesungsverzeichnis"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:23
+#, fuzzy
+#| msgid "description"
+msgid "Description"
+msgstr "Beschreibung"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:30
+msgid ""
+"\n"
+"            <button id=\"payButton\">Pay</button>\n"
+"            "
+msgstr "<button id=\"payButton\">Bezahlen</button>"
+
+#: .\core\templates\ihrdc_layout\courses.html:11
+msgid "Course Catalog"
+msgstr "Vorlesungsverzeichnis"
+
+#: .\core\templates\ihrdc_layout\courses.html:19
+msgid "Categories"
+msgstr "Kategorien"
+
+#: .\core\templates\ihrdc_layout\courses.html:34
+msgid ""
+"\n"
+"                        <div class=\"filters\">\n"
+"                            <select>\n"
+"                                <option>Sort by: Popular</option>\n"
+"                                <option>Sort by: Newest</option>\n"
+"                                <option>Sort by: Price</option>\n"
+"                            </select>\n"
+"                            <select>\n"
+"                                <option>Duration: Any</option>\n"
+"                                <option>1-3 Days</option>\n"
+"                                <option>4-5 Days</option>\n"
+"                                <option>1+ Week</option>\n"
+"                            </select>\n"
+"                        </div>\n"
+"                        "
+msgstr ""
+"<div class=\"filters\">\n"
+"<select>\n"
+"<option>Sortieren nach: Beliebt</option>\n"
+"<option>Sortieren nach: Neueste</option>\n"
+"<option>Sortieren nach: Preis</option>\n"
+"</select>\n"
+"<select>\n"
+"<option>Dauer: Beliebig</option>\n"
+"<option>1-3 Tage</option>\n"
+"<option>4-5 Tage</option>\n"
+"<option>1+ Woche</option>\n"
+"</select>\n"
+"</div>"
+
+#: .\core\templates\ihrdc_layout\courses.html:60
+msgid "Live Training"
+msgstr "Live-Schulung"
+
+#: .\core\templates\ihrdc_layout\courses.html:64
+msgid "Learn More"
+msgstr "Mehr erfahren"
+
+#: .\core\templates\ihrdc_layout\courses.html:65
+#, fuzzy
+#| msgid "Explore Courses"
+msgid "Book Course"
+msgstr "Kurse erkunden"
+
 #: .\core\templates\ihrdc_layout\index.html:13
 msgid ""
 "\n"
@@ -98,15 +466,57 @@ msgstr ""
 "<h3>Professionelle Schulung</h3>\n"
 "<p>Branchenspezifische Kurse von Experten, maßgeschneiderte Schulungsprogramme für Organisationen</p>"
 
-#: .\edusite\settings.py:111
+#: .\core\templates\ihrdc_layout\index.html:42
+msgid ""
+"\n"
+"                        <h3>Upskilling/Reskilling</h3>\n"
+"                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
+"                        "
+msgstr ""
+"<h3>Weiterbildung/Umschulung</h3>\n"
+"<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das veränderte Geschäftsklima anzupassen...</p>"
+
+#: .\core\templates\ihrdc_layout\index.html:49
+msgid ""
+"\n"
+"                        <h3>Certification</h3>\n"
+"                        <p>Internationally recognized certifications</p>\n"
+"                        "
+msgstr ""
+"<h3>Zertifizierung</h3>\n"
+"<p>International anerkannte Zertifizierungen</p>"
+
+#: .\core\templates\ihrdc_layout\index.html:56
+msgid ""
+"\n"
+"                        <h3>Consultancy</h3>\n"
+"                        <p>Resolve bottlenecks within minutes</p>\n"
+"                        "
+msgstr ""
+"<h3>Beratung</h3>\n"
+"<p>Engpässe innerhalb von Minuten beheben</p>"
+
+#: .\core\templates\ihrdc_layout\index.html:71
+#, fuzzy
+#| msgid "Explore Courses"
+msgid "Popular Courses"
+msgstr "Kurse erkunden"
+
+#: .\core\templates\ihrdc_layout\index.html:97
+#, fuzzy
+#| msgid "courses"
+msgid "View All Courses"
+msgstr "Kurse"
+
+#: .\edusite\settings.py:120
 msgid "English"
 msgstr "Englisch"
 
-#: .\edusite\settings.py:112
+#: .\edusite\settings.py:121
 msgid "French"
 msgstr "Französisch"
 
-#: .\edusite\settings.py:113
+#: .\edusite\settings.py:122
 msgid "German"
 msgstr "Deutsch"
 
@@ -426,10 +836,6 @@ msgid ""
 msgstr ""
 "Der Wert „%(value)s“ hat ein ungültiges Format. Er muss im Format [TT] "
 "[[HH:]MM:]ss[.uuuuuu] vorliegen."
-
-#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1795
-msgid "Duration"
-msgstr "Dauer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1847
 msgid "Email address"
@@ -1403,3 +1809,11 @@ msgstr "Django-Community"
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr "Vernetzen, Hilfe erhalten oder beitragen"
+
+#: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
+msgid "None"
+msgstr "Keiner"
+
+#, fuzzy
+#~ msgid "Course Title"
+#~ msgstr "Vorlesungsverzeichnis"

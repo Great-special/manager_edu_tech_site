@@ -2,3 +2,5 @@
 
 <!-- gettext -->
 <!-- https://github.com/mlocati/gettext-iconv-windows/releases/tag/v0.22.5a-v1.17 -->
+<!-- django-modeltranslation -->
+<!-- deep-translator -->

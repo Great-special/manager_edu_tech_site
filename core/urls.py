@@ -9,4 +9,5 @@ urlpatterns = [
     path('categories/', views.get_categories, name='categories'),
     path('course/<int:id>/', views.course_detail, name='course_detail'),
     path('category/<str:slug>/', views.category_detail, name='category_details'),
+    
 ]

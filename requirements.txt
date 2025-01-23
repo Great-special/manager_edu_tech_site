@@ -4,11 +4,15 @@ certifi==2024.12.14
 charset-normalizer==3.4.1
 deep-translator==1.11.4
 Django==4.2
+django-modeltranslation==0.19.12
 idna==3.10
 pillow==11.1.0
 polib==1.2.0
+python-dotenv==1.0.1
 requests==2.32.3
 soupsieve==2.6
 sqlparse==0.5.3
+stripe==11.4.1
+typing_extensions==4.12.2
 tzdata==2024.2
 urllib3==2.3.0

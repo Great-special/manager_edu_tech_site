@@ -1,0 +1,58 @@
+<!-- templates/payment.html -->
+{% extends 'ihrdc_layout/base.html' %}
+{% load i18n %}
+
+{% block style %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="card shadow-lg">
+        <div class="card-header ">
+            <h3 class="mb-0">Course Payment</h3>
+        </div>
+        <div class="card-body">
+            <!-- Course Details -->
+            <div class="mb-4">
+                <h5>{% translate "Course Details" %}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>{% trans "Course Name" %}:</strong> {{ course.title }}
+                    </li>
+                    <li class="list-group-item">
+                        <strong>{% translate "Description" %}:</strong> {{ course.description }}
+                    </li>
+                    <li class="list-group-item">
+                        <strong>{% translate "Price" %}:</strong> ${{ course.price }}
+                    </li>
+                </ul>
+            </div>
+            {% blocktrans %}
+            <button id="payButton">Pay</button>
+            {% endblocktrans %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripe = Stripe("{{ STRIPE_PUBLISHABLE_KEY }}");
+
+    document.getElementById('payButton').addEventListener('click', async () => {
+        const response = await fetch('/stripe-payment/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({amount: 1000, payment_method_id: 'pm_card_visa'})
+        });
+        const data = await response.json();
+        if (data.error) {
+            alert(data.error);
+        } else {
+            alert('Payment successful!');
+        }
+    });
+</script>
+{% endblock script %}

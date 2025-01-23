@@ -39,18 +39,24 @@
                     </div>
                     <div class="service-card">
                         <i class="fas fa-users"></i>
+                        {% blocktrans %}
                         <h3>Upskilling/Reskilling</h3>
                         <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>
+                        {% endblocktrans %}
                     </div>
                     <div class="service-card">
                         <i class="fas fa-certificate"></i>
+                        {% blocktrans %}
                         <h3>Certification</h3>
                         <p>Internationally recognized certifications</p>
+                        {% endblocktrans %}
                     </div>
                     <div class="service-card">
                         <i class="fas fa-comments"></i>
+                        {% blocktrans %}
                         <h3>Consultancy</h3>
                         <p>Resolve bottlenecks within minutes</p>
+                        {% endblocktrans %}
                     </div>
                 </div>
                 
@@ -62,7 +68,7 @@
     <!-- Popular Courses Section -->
     <section class="popular-courses">
         <div class="container">
-            <h2 class="section-title">Popular Courses</h2>
+            <h2 class="section-title">{% trans "Popular Courses" %}</h2>
             <div class="courses-grid">
                 {% for course in popular_courses %}
                 <div class="course-card">
@@ -81,14 +87,14 @@
                         </div>
                         <div class="course-footer">
                             <span class="price">${{ course.price }}</span>
-                            <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">Start</a>
+                            <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">learn more</a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
             <div class="text-center">
-                <a href="{% url 'courses' %}" class="btn btn-outline">View All Courses</a>
+                <a href="{% url 'courses' %}" class="btn btn-outline">{% trans "View All Courses" %}</a>
             </div>
         </div>
     </section>
@@ -128,7 +134,9 @@
                         <p>{{ testimonial.content }}</p>
                     </div>
                     <div class="testimonial-author">
+                        {% if testimonial.author_image %}
                         <img src="{{ testimonial.author_image.url }}" alt="{{ testimonial.author_name }}">
+                        {% endif %}
                         <div>
                             <h4>{{ testimonial.author_name }}</h4>
                             <p>{{ testimonial.author_title }}</p>

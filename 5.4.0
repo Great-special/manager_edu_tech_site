@@ -1,0 +1,14 @@
+Collecting stripe
+  Downloading stripe-11.4.1-py2.py3-none-any.whl.metadata (2.7 kB)
+Requirement already satisfied: requests>=2.20 in d:\my projects\managers projects\edusite_project\venv\lib\site-packages (from stripe) (2.32.3)
+Collecting typing-extensions>=4.5.0 (from stripe)
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in d:\my projects\managers projects\edusite_project\venv\lib\site-packages (from requests>=2.20->stripe) (3.4.1)
+Requirement already satisfied: idna<4,>=2.5 in d:\my projects\managers projects\edusite_project\venv\lib\site-packages (from requests>=2.20->stripe) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in d:\my projects\managers projects\edusite_project\venv\lib\site-packages (from requests>=2.20->stripe) (2.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in d:\my projects\managers projects\edusite_project\venv\lib\site-packages (from requests>=2.20->stripe) (2024.12.14)
+Downloading stripe-11.4.1-py2.py3-none-any.whl (1.6 MB)
+   ---------------------------------------- 1.6/1.6 MB 87.4 kB/s eta 0:00:00
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Installing collected packages: typing-extensions, stripe
+Successfully installed stripe-11.4.1 typing-extensions-4.12.2
