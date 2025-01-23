@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-23 12:58+0100\n"
+"POT-Creation-Date: 2025-01-23 13:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -463,6 +463,12 @@ msgstr ""
 #| msgid "Explore Courses"
 msgid "Popular Courses"
 msgstr "Découvrir les cours"
+
+#: .\core\templates\ihrdc_layout\index.html:90
+#, fuzzy
+#| msgid "Learn More"
+msgid "learn more"
+msgstr "Apprendre encore plus"
 
 #: .\core\templates\ihrdc_layout\index.html:97
 #, fuzzy
