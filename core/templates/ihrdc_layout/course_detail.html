@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}I-CITADEL | Course{% endblock %}
+{% block title %}Course{% endblock %}
 
 {% block content %}
     <!-- Hero Section -->
@@ -32,11 +32,11 @@
                         {{course.description}}
                     </p>
                     <p><strong>{% trans "Duration" %}:</strong> {{course.duration}}</p>
-                    <p><strong>Level:</strong> Beginner to Advanced</p>
+                    {% comment %} <p><strong>Level:</strong> Beginner to Advanced</p> {% endcomment %}
                 </div>
             </div>
             <div class="course-footer">
-                <a href="enroll.html" class="btn btn-primary">{% trans "Enroll Now" %}</a>
+                <a href="{% url "payment_page" course.id %}" class="btn btn-primary">{% trans "Enroll Now" %}</a>
                 <p><strong>{% trans "Price" %}:</strong> ${{course.price}}</p>
             </div>
         </div>

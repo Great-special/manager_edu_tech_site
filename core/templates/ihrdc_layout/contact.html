@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}I-CITADEL | Contact Us{% endblock %}
+{% block title %}Contact Us{% endblock %}
 
 {% block content %}
     <section class="hero">
@@ -16,19 +16,18 @@
     <section class="contact-section">
         <div class="container">
             <div class="content-wrapper">
-                {% blocktrans %}
                 <div>
-                    <h2>Reach Out to Us</h2>
-                    <p>We’re here to help! Use the form below or contact us via phone or email.</p>
+                    <h2>{% translate "Reach Out to Us" %}</h2>
+                    <p>{% translate "We’re here to help! Use the form below or contact us via phone or email." %}</p>
                     <ul class="contact-list">
-                        <li><strong>Phone:</strong> +1234567890</li>
-                        <li><strong>Email:</strong> info@example.com</li>
-                        <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>
+                        <li><strong>{% trans "Phone" %}:</strong> +1234567890</li>
+                        <li><strong>{% trans "Email" %}:</strong> info@example.com</li>
+                        <li><strong>{% trans "Address" %}:</strong> {% trans "123 Main Street, Anytown, USA" %}</li>
                     </ul>
                 </div>
-                {% endblocktrans %}
                 <div>
                     <form method='post' class="contact-form">
+                        {% csrf_token %}
                         {% blocktrans %}
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>

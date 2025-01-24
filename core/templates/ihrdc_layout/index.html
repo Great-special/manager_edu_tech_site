@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}I-CITADEL | Home{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
     <!-- Hero Section -->
@@ -76,6 +76,10 @@
                     <div class="course-image">
                         <img src="{{ course.image.url }}" alt="{{ course.title }}">
                     </div>
+                    {% else %}
+                    <div class="course-image">
+                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="{{ course.title }}">
+                    </div>
                     {% endif %}
                     <div class="course-content">
                         <span class="course-category">{{ course.category }}</span>
@@ -126,7 +130,7 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Students Say</h2>
+            <h2 class="section-title">{% trans "What Our Students Say" %}</h2>
             <div class="testimonials-grid">
                 {% for testimonial in testimonials %}
                 <div class="testimonial-card">
@@ -136,6 +140,8 @@
                     <div class="testimonial-author">
                         {% if testimonial.author_image %}
                         <img src="{{ testimonial.author_image.url }}" alt="{{ testimonial.author_name }}">
+                        {% else %}
+                        <img src="{% static 'layout/images/user.png' %}" alt="{{ testimonial.author_name }}">
                         {% endif %}
                         <div>
                             <h4>{{ testimonial.author_name }}</h4>

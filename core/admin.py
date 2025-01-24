@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Course, Testimonial
+from .models import Category, Course, Testimonial, Payment, FeedBack
 # Register your models here.
 
 
@@ -21,6 +21,24 @@ class TestimonialsAdmin(admin.ModelAdmin):
     ordering = ('author_name',)
 
 
+class PaymentAdmin(admin.ModelAdmin):
+    list_display = ('get_customer', 'get_customer_email', 'get_customer_phone_number', 'amount', 'status')
+    search_fields = ('get_customer', 'get_customer_email', 'get_customer_phone_number', 'amount',)
+    ordering = ('-created_at',)
+    
+    def get_customer_email(self, obj):
+        return obj.customer.email if obj.customer else 'N/A'
+    
+    def get_customer_phone_number(self, obj):
+        return obj.customer.phone_number if obj.customer else 'N/A'
+
+    def get_customer(self, obj):
+        return obj.customer if obj.customer else 'N/A'
+
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Testimonial, TestimonialsAdmin)
+admin.site.register(Payment, PaymentAdmin)
+admin.site.register(FeedBack)

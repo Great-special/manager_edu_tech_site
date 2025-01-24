@@ -1,7 +1,7 @@
 {% extends 'ihrdc_layout/base.html' %}
 {% load static %}
 
-{% block title %}I-CITADEL | Courses{% endblock %}
+{% block title %}Courses{% endblock %}
 
 {% block content %}
     <!-- Course Catalog Section -->
@@ -32,12 +32,12 @@
                     </div>
                     <div class="card-details">
                         <span><i class="fas fa-clock"></i> {{course.duration}}</span>
-                        <span><i class="fas fa-users"></i> Live Training</span>
+                        <span><i class="fas fa-users"></i>{{course.mode}}</span>
                     </div>
                     <p>{{course.description}}</p>
                     <div class="card-footer">
-                        <button class="btn btn-outline">Learn More</button>
-                        <button class="btn btn-primary">Schedule Course</button>
+                        <a href="{% url 'course_detail' course.id %}" class="btn btn-outline">{% translate "Learn More" %}</a>
+                        <a href="{% url 'payment_page' course.id %}" class="btn btn-primary">{% translate "Enroll Now" %}</a>
                     </div>
                 </div>
                 {% endfor %}

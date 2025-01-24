@@ -9,5 +9,10 @@ urlpatterns = [
     path('categories/', views.get_categories, name='categories'),
     path('course/<int:id>/', views.course_detail, name='course_detail'),
     path('category/<str:slug>/', views.category_detail, name='category_details'),
+    path('payment-checkout/<int:id>/', views.payment_page, name='payment_page'),
+    path("create-checkout-session/<int:id>/", views.createstripe_checkout_session, name="create_checkout_session"),
     
+    path('cancel/', views.cancel, name='cancel'),
+    path('success/', views.success, name='success'),
+    path("webhooks/stripe/", views.stripe_webhook, name="stripe_webhook"),
 ]

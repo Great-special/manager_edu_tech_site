@@ -27,6 +27,8 @@ class Course(models.Model):
         on_delete=models.CASCADE, 
         related_name='courses'
     )
+    mode = models.CharField(_('Course Mode'), max_length=150, choices=(('Online', _('Online')),('Classroom',_('Classroom'))), default='Online')
+    url = models.URLField(_('url'), null=True, blank=True)
     is_popular = models.BooleanField(_('is popular'), default=False)
     is_upcoming = models.BooleanField(_('is upcoming'), default=False)
     created_at = models.DateTimeField(_('created at'), auto_now_add=True)
@@ -56,6 +58,22 @@ class Testimonial(models.Model):  # Changed from plural to singular
         return self.author_name
 
 
+class EnrolledCustomer(models.Model):
+    customer = models.CharField(max_length=255, verbose_name=_('customer'))
+    email = models.EmailField(_('Email'))
+    phone_number = models.CharField(_('Phone Number'), max_length=25, blank=True, null=True)
+    city = models.CharField(_('City'), max_length=100)
+    country = models.CharField(_('Country'), max_length=100)
+    postcode = models.CharField(_('Postcode'), max_length=50)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name=_('Course'), related_name='courses')
+
+    class Meta:
+        verbose_name = _('enrolled_customer')
+        verbose_name_plural = _('enrolled_customers')
+    
+    def __str__(self):
+        return f"{self.customer} ({self.course.title})"
+
 class Payment(models.Model):
     PAYMENT_STATUS_CHOICES = [
         ('pending', 'Pending'),
@@ -69,17 +87,22 @@ class Payment(models.Model):
         ('paypal', 'PayPal'),
     ]
     
-    customer = models.CharField(max_length=255, verbose_name=_('customer'))
+    customer = models.ForeignKey(EnrolledCustomer, on_delete=models.CASCADE, verbose_name=_('Customer'), related_name='customers')
     amount = models.DecimalField(max_digits=10, decimal_places=2, verbose_name=_('amount'))
     currency = models.CharField(max_length=3, default='USD', verbose_name=_('currency'))
+    quantity = models.IntegerField(_('Quantity'))
     status = models.CharField(max_length=10, choices=PAYMENT_STATUS_CHOICES, default='pending', verbose_name=_('status'))
-    payment_method = models.CharField(max_length=20, choices=PAYMENT_METHOD_CHOICES, verbose_name=_('payment method'))
+    payment_method = models.CharField(max_length=20, choices=PAYMENT_METHOD_CHOICES, default='', verbose_name=_('payment method'))
     stripe_payment_intent_id = models.CharField(max_length=255, blank=True, verbose_name=_('stripe payment intent id'))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created at')) 
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_('updated at'))
 
+    class Meta:
+        verbose_name = _('payment')
+        verbose_name_plural = _('payments')
+    
     def __str__(self):
-        return f"{self.customer} - {self.amount} {self.currency}"
+        return f"{self.amount} {self.currency}"
     
 class FeedBack(models.Model):
     name = models.CharField(max_length=125, verbose_name=_('name'))

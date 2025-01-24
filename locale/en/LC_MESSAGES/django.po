@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-23 13:09+0100\n"
+"POT-Creation-Date: 2025-01-24 14:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,179 +18,244 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\core\models.py:5 .\core\models.py:85
+#: .\core\models.py:5 .\core\models.py:108
 msgid "name"
-msgstr ""
+msgstr "name"
 
 #: .\core\models.py:6
 msgid "slug"
-msgstr ""
+msgstr "slug"
 
-#: .\core\models.py:7 .\core\models.py:32 .\core\models.py:48
-#: .\core\models.py:78
+#: .\core\models.py:7 .\core\models.py:34 .\core\models.py:50
+#: .\core\models.py:97
 msgid "created at"
-msgstr ""
+msgstr "created at"
 
-#: .\core\models.py:8 .\core\models.py:33 .\core\models.py:49
-#: .\core\models.py:79
+#: .\core\models.py:8 .\core\models.py:35 .\core\models.py:51
+#: .\core\models.py:98
 msgid "updated at"
-msgstr ""
+msgstr "updated at"
 
 #: .\core\models.py:11 .\core\models.py:26
 msgid "category"
-msgstr ""
+msgstr "category"
 
 #: .\core\models.py:12
 msgid "categories"
-msgstr ""
+msgstr "categories"
 
 #: .\core\models.py:19
 msgid "title"
-msgstr ""
+msgstr "title"
 
 #: .\core\models.py:20
 msgid "description"
-msgstr ""
+msgstr "description"
 
 #: .\core\models.py:21
 msgid "image"
-msgstr ""
+msgstr "image"
 
 #: .\core\models.py:22
 msgid "price"
-msgstr ""
+msgstr "price"
 
 #: .\core\models.py:23
 msgid "duration"
-msgstr ""
+msgstr "duration"
 
 #: .\core\models.py:30
-msgid "is popular"
-msgstr ""
+msgid "Course Mode"
+msgstr "Course Mode"
+
+#: .\core\models.py:30
+msgid "Online"
+msgstr "Online"
+
+#: .\core\models.py:30
+msgid "Classroom"
+msgstr "Classroom"
 
 #: .\core\models.py:31
+msgid "url"
+msgstr "url"
+
+#: .\core\models.py:32
+msgid "is popular"
+msgstr "is popular"
+
+#: .\core\models.py:33
 msgid "is upcoming"
-msgstr ""
+msgstr "is upcoming"
 
-#: .\core\models.py:36
+#: .\core\models.py:38
 msgid "course"
-msgstr ""
+msgstr "course"
 
-#: .\core\models.py:37
+#: .\core\models.py:39
 msgid "courses"
-msgstr ""
-
-#: .\core\models.py:44
-msgid "author name"
-msgstr ""
-
-#: .\core\models.py:45
-msgid "author title"
-msgstr ""
+msgstr "courses"
 
 #: .\core\models.py:46
-msgid "author image"
-msgstr ""
+msgid "author name"
+msgstr "author name"
 
 #: .\core\models.py:47
+msgid "author title"
+msgstr "author title"
+
+#: .\core\models.py:48
+msgid "author image"
+msgstr "author image"
+
+#: .\core\models.py:49
 msgid "content"
-msgstr ""
+msgstr "content"
 
-#: .\core\models.py:52
+#: .\core\models.py:54
 msgid "testimonial"
-msgstr ""
+msgstr "testimonial"
 
-#: .\core\models.py:53
+#: .\core\models.py:55
 msgid "testimonials"
-msgstr ""
+msgstr "testimonials"
+
+#: .\core\models.py:62
+msgid "customer"
+msgstr "customer"
+
+#: .\core\models.py:63 .\core\templates\ihrdc_layout\contact.html:24
+#: .\core\templates\ihrdc_layout\course_payment.html:51
+msgid "Email"
+msgstr "Email"
+
+#: .\core\models.py:64 .\core\templates\ihrdc_layout\course_payment.html:62
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: .\core\models.py:65 .\core\templates\ihrdc_layout\course_payment.html:85
+msgid "City"
+msgstr "City"
+
+#: .\core\models.py:66 .\core\templates\ihrdc_layout\course_payment.html:96
+msgid "Country"
+msgstr "Country"
+
+#: .\core\models.py:67 .\core\templates\ihrdc_layout\course_payment.html:107
+msgid "Postcode"
+msgstr "Postcode"
+
+#: .\core\models.py:68
+msgid "Course"
+msgstr "Course"
+
+#: .\core\models.py:71
+msgid "enrolled_customer"
+msgstr "enrolled_customer"
 
 #: .\core\models.py:72
-msgid "customer"
-msgstr ""
+msgid "enrolled_customers"
+msgstr "enrolled_customers"
 
-#: .\core\models.py:73
+#: .\core\models.py:90 .\core\templates\ihrdc_layout\course_payment.html:40
+msgid "Customer"
+msgstr "Customer"
+
+#: .\core\models.py:91
 msgid "amount"
-msgstr ""
+msgstr "amount"
 
-#: .\core\models.py:74
+#: .\core\models.py:92
 msgid "currency"
-msgstr ""
+msgstr "currency"
 
-#: .\core\models.py:75
+#: .\core\models.py:93 .\core\templates\ihrdc_layout\course_payment.html:73
+msgid "Quantity"
+msgstr "Quantity"
+
+#: .\core\models.py:94
 msgid "status"
-msgstr ""
+msgstr "status"
 
-#: .\core\models.py:76
+#: .\core\models.py:95
 msgid "payment method"
-msgstr ""
+msgstr "payment method"
 
-#: .\core\models.py:77
+#: .\core\models.py:96
 msgid "stripe payment intent id"
-msgstr ""
+msgstr "stripe payment intent id"
 
-#: .\core\models.py:86
+#: .\core\models.py:101
+msgid "payment"
+msgstr "payment"
+
+#: .\core\models.py:102
+msgid "payments"
+msgstr "payments"
+
+#: .\core\models.py:109
 msgid "email"
-msgstr ""
+msgstr "email"
 
-#: .\core\models.py:87
+#: .\core\models.py:110
 msgid "message"
-msgstr ""
+msgstr "message"
 
 #: .\core\templates\ihrdc_layout\about.html:10
 msgid ""
 "\n"
 "            <h1>About Us</h1>\n"
-"            <p>I-Citadel Exzellenz is an international training and "
-"consultancy group, delivering high quality courses to every sector, "
-"covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>\n"
+"            <p>I-Citadel Exzellenz is an international training and consultancy group, delivering high quality courses to every sector, covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>\n"
 "            "
 msgstr ""
+"<h1>About Us</h1>\n"
+"            <p>I-Citadel Exzellenz is an international training and consultancy group, delivering high quality courses to every sector, covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>"
 
 #: .\core\templates\ihrdc_layout\about.html:20
 msgid ""
 "\n"
 "                    <h2>Our Mission</h2>\n"
-"                    <p>Our mission is to provide comprehensive training and "
-"consultancy solutions all over the world, in an effective, tailored to "
-"consumers' needs and accessible way. \n"
-"                        We aim at full optimization of training organization "
-"process in order to make it quick and easy for each of the involved parties."
-"</p>\n"
+"                    <p>Our mission is to provide comprehensive training and consultancy solutions all over the world, in an effective, tailored to consumers' needs and accessible way. \n"
+"                        We aim at full optimization of training organization process in order to make it quick and easy for each of the involved parties.</p>\n"
 "                    "
 msgstr ""
+"<h2>Our Mission</h2>\n"
+"                    <p>Our mission is to provide comprehensive training and consultancy solutions all over the world, in an effective, tailored to consumers' needs and accessible way. \n"
+"                        We aim at full optimization of training organization process in order to make it quick and easy for each of the involved parties.</p>"
 
 #: .\core\templates\ihrdc_layout\base.html:51
 #: .\core\templates\ihrdc_layout\base.html:83
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: .\core\templates\ihrdc_layout\base.html:52
 #: .\core\templates\ihrdc_layout\base.html:84
 msgid "About"
-msgstr ""
+msgstr "About"
 
 #: .\core\templates\ihrdc_layout\base.html:54
 #: .\core\templates\ihrdc_layout\base.html:85
 msgid "Courses"
-msgstr ""
+msgstr "Courses"
 
 #: .\core\templates\ihrdc_layout\base.html:56
 #: .\core\templates\ihrdc_layout\base.html:86
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: .\core\templates\ihrdc_layout\base.html:77
 msgid "About Us"
-msgstr ""
+msgstr "About Us"
 
 #: .\core\templates\ihrdc_layout\base.html:78
 msgid ""
 "Leading provider of training solutions for the energy industry worldwide."
 msgstr ""
+"Leading provider of training solutions for the energy industry worldwide."
 
 #: .\core\templates\ihrdc_layout\base.html:81
 msgid "Quick Links"
-msgstr ""
+msgstr "Quick Links"
 
 #: .\core\templates\ihrdc_layout\base.html:89
 msgid ""
@@ -198,30 +263,66 @@ msgid ""
 "                <div class=\"footer-section\">\n"
 "                    <h3>Contact Info</h3>\n"
 "                    <ul class=\"contact-list\">\n"
-"                        <li><i class=\"fas fa-map-marker-alt\"></i>123 "
-"Training St, City, Country</li>\n"
-"                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</"
-"li>\n"
-"                        <li><i class=\"fas fa-envelope\"></i> "
-"info@example.com</li>\n"
+"                        <li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, City, Country</li>\n"
+"                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
+"                        <li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
 "                    </ul>\n"
 "                </div>\n"
 "                <div class=\"footer-section\">\n"
 "                    <h3>Newsletter</h3>\n"
 "                    <form class=\"newsletter-form\">\n"
-"                        <input type=\"email\" placeholder=\"Enter your "
-"email\">\n"
-"                        <button type=\"submit\" class=\"btn btn-"
-"primary\">Subscribe</button>\n"
+"                        <input type=\"email\" placeholder=\"Enter your email\">\n"
+"                        <button type=\"submit\" class=\"btn btn-primary\">Subscribe</button>\n"
 "                    </form>\n"
 "                </div>\n"
 "            </div>\n"
 "            "
 msgstr ""
+"<div class=\"footer-section\">\n"
+"                    <h3>Contact Info</h3>\n"
+"                    <ul class=\"contact-list\">\n"
+"                        <li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, City, Country</li>\n"
+"                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
+"                        <li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
+"                    </ul>\n"
+"                </div>\n"
+"                <div class=\"footer-section\">\n"
+"                    <h3>Newsletter</h3>\n"
+"                    <form class=\"newsletter-form\">\n"
+"                        <input type=\"email\" placeholder=\"Enter your email\">\n"
+"                        <button type=\"submit\" class=\"btn btn-primary\">Subscribe</button>\n"
+"                    </form>\n"
+"                </div>\n"
+"            </div>"
 
 #: .\core\templates\ihrdc_layout\base.html:108
 msgid "Training Platform. All rights reserved."
+msgstr "Training Platform. All rights reserved."
+
+#: .\core\templates\ihrdc_layout\cancel.html:10
+msgid "Forgot to add something to your cart?"
+msgstr "Forgot to add something to your cart?"
+
+#: .\core\templates\ihrdc_layout\cancel.html:12
+msgid ""
+"No problem! Explore our available courses and find what you're looking for."
 msgstr ""
+"No problem! Explore our available courses and find what you're looking for."
+
+#: .\core\templates\ihrdc_layout\cancel.html:15
+#: .\core\templates\ihrdc_layout\success.html:15
+msgid "Go to Courses"
+msgstr "Go to Courses"
+
+#: .\core\templates\ihrdc_layout\category.html:39
+#: .\core\templates\ihrdc_layout\courses.html:64
+msgid "Learn More"
+msgstr "Learn More"
+
+#: .\core\templates\ihrdc_layout\category.html:40
+#: .\core\templates\ihrdc_layout\course_detail.html:40
+msgid "Enroll Now"
+msgstr "Enroll Now"
 
 #: .\core\templates\ihrdc_layout\contact.html:10
 msgid ""
@@ -230,37 +331,44 @@ msgid ""
 "            <p>Get in touch with us for any queries or support.</p>\n"
 "            "
 msgstr ""
+"<h1>Contact Us</h1>\n"
+"            <p>Get in touch with us for any queries or support.</p>"
 
-#: .\core\templates\ihrdc_layout\contact.html:19
+#: .\core\templates\ihrdc_layout\contact.html:20
+msgid "Reach Out to Us"
+msgstr "Reach Out to Us"
+
+#: .\core\templates\ihrdc_layout\contact.html:21
 msgid ""
-"\n"
-"                <div>\n"
-"                    <h2>Reach Out to Us</h2>\n"
-"                    <p>We’re here to help! Use the form below or contact us "
-"via phone or email.</p>\n"
-"                    <ul class=\"contact-list\">\n"
-"                        <li><strong>Phone:</strong> +1234567890</li>\n"
-"                        <li><strong>Email:</strong> info@example.com</li>\n"
-"                        <li><strong>Address:</strong> 123 Main Street, "
-"Anytown, USA</li>\n"
-"                    </ul>\n"
-"                </div>\n"
-"                "
+"We’re here to help! Use the form below or contact us via phone or email."
 msgstr ""
+"We’re here to help! Use the form below or contact us via phone or email."
 
-#: .\core\templates\ihrdc_layout\contact.html:32
+#: .\core\templates\ihrdc_layout\contact.html:23
+msgid "Phone"
+msgstr "Phone"
+
+#: .\core\templates\ihrdc_layout\contact.html:25
+msgid "Address"
+msgstr "Address"
+
+#: .\core\templates\ihrdc_layout\contact.html:25
+msgid "123 Main Street, Anytown, USA"
+msgstr "123 Main Street, Anytown, USA"
+
+#: .\core\templates\ihrdc_layout\contact.html:31
 msgid ""
 "\n"
-"                        <input type=\"text\" name=\"name\" "
-"placeholder=\"Your Name\" required>\n"
-"                        <input type=\"email\" name=\"email\" "
-"placeholder=\"Your Email\" required>\n"
-"                        <textarea name=\"message\" placeholder=\"Your "
-"Message\" rows=\"5\" required></textarea>\n"
-"                        <button type=\"submit\" class=\"btn\">Send Message</"
-"button>\n"
+"                        <input type=\"text\" name=\"name\" placeholder=\"Your Name\" required>\n"
+"                        <input type=\"email\" name=\"email\" placeholder=\"Your Email\" required>\n"
+"                        <textarea name=\"message\" placeholder=\"Your Message\" rows=\"5\" required></textarea>\n"
+"                        <button type=\"submit\" class=\"btn\">Send Message</button>\n"
 "                        "
 msgstr ""
+"<input type=\"text\" name=\"name\" placeholder=\"Your Name\" required>\n"
+"                        <input type=\"email\" name=\"email\" placeholder=\"Your Email\" required>\n"
+"                        <textarea name=\"message\" placeholder=\"Your Message\" rows=\"5\" required></textarea>\n"
+"                        <button type=\"submit\" class=\"btn\">Send Message</button>"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:9
 msgid ""
@@ -271,55 +379,72 @@ msgid ""
 "    </section>\n"
 "    "
 msgstr ""
+"<section class=\"course-details-hero\">\n"
+"        <h1>Course Details</h1>\n"
+"        <p>Discover more about this course and what it offers.</p>\n"
+"    </section>"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:21
 msgid "Category"
-msgstr ""
+msgstr "Category"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:30
 msgid "About This Course"
-msgstr ""
+msgstr "About This Course"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:34
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1795
 msgid "Duration"
-msgstr ""
+msgstr "Duration"
 
-#: .\core\templates\ihrdc_layout\course_detail.html:39
-msgid "Enroll Now"
-msgstr ""
-
-#: .\core\templates\ihrdc_layout\course_detail.html:40
+#: .\core\templates\ihrdc_layout\course_detail.html:41
 #: .\core\templates\ihrdc_layout\course_payment.html:26
 msgid "Price"
-msgstr ""
+msgstr "Price"
 
 #: .\core\templates\ihrdc_layout\course_payment.html:17
 msgid "Course Details"
-msgstr ""
+msgstr "Course Details"
 
 #: .\core\templates\ihrdc_layout\course_payment.html:20
 msgid "Course Name"
-msgstr ""
+msgstr "Course Name"
 
 #: .\core\templates\ihrdc_layout\course_payment.html:23
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
-#: .\core\templates\ihrdc_layout\course_payment.html:30
-msgid ""
-"\n"
-"            <button id=\"payButton\">Pay</button>\n"
-"            "
-msgstr ""
+#: .\core\templates\ihrdc_layout\course_payment.html:38
+msgid "Enter Payment Details"
+msgstr "Enter Payment Details"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:118
+msgid "Currency"
+msgstr "Currency"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:120
+msgid "USD"
+msgstr "USD"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:121
+msgid "EUR"
+msgstr "EUR"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:122
+msgid "GBP"
+msgstr "GBP"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:126
+msgid "Pay"
+msgstr "Pay"
 
 #: .\core\templates\ihrdc_layout\courses.html:11
 msgid "Course Catalog"
-msgstr ""
+msgstr "Course Catalog"
 
 #: .\core\templates\ihrdc_layout\courses.html:19
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: .\core\templates\ihrdc_layout\courses.html:34
 msgid ""
@@ -339,54 +464,65 @@ msgid ""
 "                        </div>\n"
 "                        "
 msgstr ""
+"<div class=\"filters\">\n"
+"                            <select>\n"
+"                                <option>Sort by: Popular</option>\n"
+"                                <option>Sort by: Newest</option>\n"
+"                                <option>Sort by: Price</option>\n"
+"                            </select>\n"
+"                            <select>\n"
+"                                <option>Duration: Any</option>\n"
+"                                <option>1-3 Days</option>\n"
+"                                <option>4-5 Days</option>\n"
+"                                <option>1+ Week</option>\n"
+"                            </select>\n"
+"                        </div>"
 
 #: .\core\templates\ihrdc_layout\courses.html:60
 msgid "Live Training"
-msgstr ""
-
-#: .\core\templates\ihrdc_layout\courses.html:64
-msgid "Learn More"
-msgstr ""
+msgstr "Live Training"
 
 #: .\core\templates\ihrdc_layout\courses.html:65
 msgid "Book Course"
-msgstr ""
+msgstr "Book Course"
 
 #: .\core\templates\ihrdc_layout\index.html:13
 msgid ""
 "\n"
-"                <h1>Transform Your Career with Industry-Leading Training</"
-"h1>\n"
-"                <p>Expert-led courses across diverse sectors and industries</"
-"p>\n"
+"                <h1>Transform Your Career with Industry-Leading Training</h1>\n"
+"                <p>Expert-led courses across diverse sectors and industries</p>\n"
 "                "
 msgstr ""
+"<h1>Transform Your Career with Industry-Leading Training</h1>\n"
+"                <p>Expert-led courses across diverse sectors and industries</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:17
 msgid "Explore Courses"
-msgstr ""
+msgstr "Explore Courses"
 
 #: .\core\templates\ihrdc_layout\index.html:26
 msgid "What We Do"
-msgstr ""
+msgstr "What We Do"
 
 #: .\core\templates\ihrdc_layout\index.html:35
 msgid ""
 "\n"
 "                        <h3>Professional Training</h3>\n"
-"                        <p>Industry-specific courses designed by experts, "
-"customized training programs for organizations</p>\n"
+"                        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>\n"
 "                        "
 msgstr ""
+"<h3>Professional Training</h3>\n"
+"                        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:42
 msgid ""
 "\n"
 "                        <h3>Upskilling/Reskilling</h3>\n"
-"                        <p>Re-tooling your skillsets and acquired knowledge "
-"to adapt to the changing business climate....</p>\n"
+"                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
 "                        "
 msgstr ""
+"<h3>Upskilling/Reskilling</h3>\n"
+"                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:49
 msgid ""
@@ -395,6 +531,8 @@ msgid ""
 "                        <p>Internationally recognized certifications</p>\n"
 "                        "
 msgstr ""
+"<h3>Certification</h3>\n"
+"                        <p>Internationally recognized certifications</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:56
 msgid ""
@@ -403,133 +541,150 @@ msgid ""
 "                        <p>Resolve bottlenecks within minutes</p>\n"
 "                        "
 msgstr ""
+"<h3>Consultancy</h3>\n"
+"                        <p>Resolve bottlenecks within minutes</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:71
 msgid "Popular Courses"
-msgstr ""
+msgstr "Popular Courses"
 
-#: .\core\templates\ihrdc_layout\index.html:90
+#: .\core\templates\ihrdc_layout\index.html:94
 msgid "learn more"
-msgstr ""
+msgstr "learn more"
 
-#: .\core\templates\ihrdc_layout\index.html:97
+#: .\core\templates\ihrdc_layout\index.html:101
 msgid "View All Courses"
-msgstr ""
+msgstr "View All Courses"
+
+#: .\core\templates\ihrdc_layout\index.html:134
+msgid "What Our Students Say"
+msgstr "What Our Students Say"
+
+#: .\core\templates\ihrdc_layout\success.html:10
+msgid "Thank You!"
+msgstr "Thank You!"
+
+#: .\core\templates\ihrdc_layout\success.html:12
+msgid "Thanks for purchasing our product. We hope you enjoy it!"
+msgstr "Thanks for purchasing our product. We hope you enjoy it!"
 
 #: .\edusite\settings.py:120
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: .\edusite\settings.py:121
 msgid "French"
-msgstr ""
+msgstr "French"
 
 #: .\edusite\settings.py:122
 msgid "German"
-msgstr ""
+msgstr "German"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
 msgid "Messages"
-msgstr ""
+msgstr "Messages"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Site Maps"
 
 #: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Static Files"
 
 #: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "Syndication"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
 #: .\venv\Lib\site-packages\django\core\paginator.py:30
 msgid "…"
-msgstr ""
+msgstr "…"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:50
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "That page number is not an integer"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:52
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "That page number is less than 1"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:54
 msgid "That page contains no results"
-msgstr ""
+msgstr "That page contains no results"
 
 #: .\venv\Lib\site-packages\django\core\validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Enter a valid value."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:104
 #: .\venv\Lib\site-packages\django\forms\fields.py:749
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Enter a valid URL."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:164
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "Enter a valid integer."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:175
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Enter a valid email address."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: .\venv\Lib\site-packages\django\core\validators.py:256
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 msgstr ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:264
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:276
 #: .\venv\Lib\site-packages\django\core\validators.py:284
 #: .\venv\Lib\site-packages\django\core\validators.py:313
 msgid "Enter a valid IPv4 address."
-msgstr ""
+msgstr "Enter a valid IPv4 address."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:293
 #: .\venv\Lib\site-packages\django\core\validators.py:314
 msgid "Enter a valid IPv6 address."
-msgstr ""
+msgstr "Enter a valid IPv6 address."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:305
 #: .\venv\Lib\site-packages\django\core\validators.py:312
 msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
+msgstr "Enter a valid IPv4 or IPv6 address."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:348
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "Enter only digits separated by commas."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:354
 #, python-format
 msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
+msgstr "Ensure this value is %(limit_value)s (it is %(show_value)s)."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:389
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
+msgstr "Ensure this value is less than or equal to %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:398
 #, python-format
 msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
+msgstr "Ensure this value is greater than or equal to %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:407
 #, python-format
 msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
+msgstr "Ensure this value is a multiple of step size %(limit_value)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:417
 #, python-format
@@ -557,7 +712,7 @@ msgstr[1] ""
 #: .\venv\Lib\site-packages\django\forms\fields.py:347
 #: .\venv\Lib\site-packages\django\forms\fields.py:386
 msgid "Enter a number."
-msgstr ""
+msgstr "Enter a number."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:460
 #, python-format
@@ -588,43 +743,45 @@ msgid ""
 "File extension “%(extension)s” is not allowed. Allowed extensions are: "
 "%(allowed_extensions)s."
 msgstr ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:602
 msgid "Null characters are not allowed."
-msgstr ""
+msgstr "Null characters are not allowed."
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1423
 #: .\venv\Lib\site-packages\django\forms\models.py:893
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: .\venv\Lib\site-packages\django\db\models\base.py:1425
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
+msgstr "%(model_name)s with this %(field_labels)s already exists."
 
 #: .\venv\Lib\site-packages\django\db\models\constraints.py:17
 #, python-format
 msgid "Constraint “%(name)s” is violated."
-msgstr ""
+msgstr "Constraint “%(name)s” is violated."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:128
 #, python-format
 msgid "Value %(value)r is not a valid choice."
-msgstr ""
+msgstr "Value %(value)r is not a valid choice."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:129
 msgid "This field cannot be null."
-msgstr ""
+msgstr "This field cannot be null."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:130
 msgid "This field cannot be blank."
-msgstr ""
+msgstr "This field cannot be blank."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:131
 #, python-format
 msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
+msgstr "%(model_name)s with this %(field_label)s already exists."
 
 #. Translators: The 'lookup_type' is one of 'date', 'year' or
 #. 'month'. Eg: "Title must be unique for pub_date year"
@@ -633,38 +790,39 @@ msgstr ""
 msgid ""
 "%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
 msgstr ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:173
 #, python-format
 msgid "Field of type: %(field_type)s"
-msgstr ""
+msgstr "Field of type: %(field_type)s"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1094
 #, python-format
 msgid "“%(value)s” value must be either True or False."
-msgstr ""
+msgstr "“%(value)s” value must be either True or False."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1095
 #, python-format
 msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
+msgstr "“%(value)s” value must be either True, False, or None."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1097
 msgid "Boolean (Either True or False)"
-msgstr ""
+msgstr "Boolean (Either True or False)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1147
 #, python-format
 msgid "String (up to %(max_length)s)"
-msgstr ""
+msgstr "String (up to %(max_length)s)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1149
 msgid "String (unlimited)"
-msgstr ""
+msgstr "String (unlimited)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1253
 msgid "Comma-separated integers"
-msgstr ""
+msgstr "Comma-separated integers"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1354
 #, python-format
@@ -672,6 +830,8 @@ msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1358
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1493
@@ -680,10 +840,12 @@ msgid ""
 "“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
 "date."
 msgstr ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1362
 msgid "Date (without time)"
-msgstr ""
+msgstr "Date (without time)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1489
 #, python-format
@@ -691,26 +853,30 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
 "HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1497
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1502
 msgid "Date (with time)"
-msgstr ""
+msgstr "Date (with time)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1626
 #, python-format
 msgid "“%(value)s” value must be a decimal number."
-msgstr ""
+msgstr "“%(value)s” value must be a decimal number."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1628
 msgid "Decimal number"
-msgstr ""
+msgstr "Decimal number"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1791
 #, python-format
@@ -718,79 +884,81 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in [DD] "
 "[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1847
 msgid "Email address"
-msgstr ""
+msgstr "Email address"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1872
 msgid "File path"
-msgstr ""
+msgstr "File path"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1950
 #, python-format
 msgid "“%(value)s” value must be a float."
-msgstr ""
+msgstr "“%(value)s” value must be a float."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1952
 msgid "Floating point number"
-msgstr ""
+msgstr "Floating point number"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1992
 #, python-format
 msgid "“%(value)s” value must be an integer."
-msgstr ""
+msgstr "“%(value)s” value must be an integer."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1994
 msgid "Integer"
-msgstr ""
+msgstr "Integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2090
 msgid "Big (8 byte) integer"
-msgstr ""
+msgstr "Big (8 byte) integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2107
 msgid "Small integer"
-msgstr ""
+msgstr "Small integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2115
 msgid "IPv4 address"
-msgstr ""
+msgstr "IPv4 address"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2146
 msgid "IP address"
-msgstr ""
+msgstr "IP address"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2239
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2240
 #, python-format
 msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
+msgstr "“%(value)s” value must be either None, True or False."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2242
 msgid "Boolean (Either True, False or None)"
-msgstr ""
+msgstr "Boolean (Either True, False or None)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2293
 msgid "Positive big integer"
-msgstr ""
+msgstr "Positive big integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2308
 msgid "Positive integer"
-msgstr ""
+msgstr "Positive integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2323
 msgid "Positive small integer"
-msgstr ""
+msgstr "Positive small integer"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2339
 #, python-format
 msgid "Slug (up to %(max_length)s)"
-msgstr ""
+msgstr "Slug (up to %(max_length)s)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2375
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2450
 #, python-format
@@ -798,6 +966,8 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
 "format."
 msgstr ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2454
 #, python-format
@@ -805,123 +975,127 @@ msgid ""
 "“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
 "invalid time."
 msgstr ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2458
 msgid "Time"
-msgstr ""
+msgstr "Time"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2566
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2590
 msgid "Raw binary data"
-msgstr ""
+msgstr "Raw binary data"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2655
 #, python-format
 msgid "“%(value)s” is not a valid UUID."
-msgstr ""
+msgstr "“%(value)s” is not a valid UUID."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2657
 msgid "Universally unique identifier"
-msgstr ""
+msgstr "Universally unique identifier"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:232
 msgid "File"
-msgstr ""
+msgstr "File"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\files.py:393
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:26
 msgid "A JSON object"
-msgstr ""
+msgstr "A JSON object"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:28
 msgid "Value must be valid JSON."
-msgstr ""
+msgstr "Value must be valid JSON."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:919
 #, python-format
 msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
+msgstr "%(model)s instance with %(field)s %(value)r does not exist."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:921
 msgid "Foreign Key (type determined by related field)"
-msgstr ""
+msgstr "Foreign Key (type determined by related field)"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1212
 msgid "One-to-one relationship"
-msgstr ""
+msgstr "One-to-one relationship"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1269
 #, python-format
 msgid "%(from)s-%(to)s relationship"
-msgstr ""
+msgstr "%(from)s-%(to)s relationship"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1271
 #, python-format
 msgid "%(from)s-%(to)s relationships"
-msgstr ""
+msgstr "%(from)s-%(to)s relationships"
 
 #: .\venv\Lib\site-packages\django\db\models\fields\related.py:1319
 msgid "Many-to-many relationship"
-msgstr ""
+msgstr "Many-to-many relationship"
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:184
 msgid ":?.!"
-msgstr ""
+msgstr ":?.!"
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:91
 msgid "This field is required."
-msgstr ""
+msgstr "This field is required."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:298
 msgid "Enter a whole number."
-msgstr ""
+msgstr "Enter a whole number."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:467
 #: .\venv\Lib\site-packages\django\forms\fields.py:1238
 msgid "Enter a valid date."
-msgstr ""
+msgstr "Enter a valid date."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:490
 #: .\venv\Lib\site-packages\django\forms\fields.py:1239
 msgid "Enter a valid time."
-msgstr ""
+msgstr "Enter a valid time."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:517
 msgid "Enter a valid date/time."
-msgstr ""
+msgstr "Enter a valid date/time."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:551
 msgid "Enter a valid duration."
-msgstr ""
+msgstr "Enter a valid duration."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:552
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
+msgstr "The number of days must be between {min_days} and {max_days}."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:618
 msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
+msgstr "No file was submitted. Check the encoding type on the form."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:619
 msgid "No file was submitted."
-msgstr ""
+msgstr "No file was submitted."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:620
 msgid "The submitted file is empty."
-msgstr ""
+msgstr "The submitted file is empty."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:622
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -929,49 +1103,51 @@ msgstr[1] ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:627
 msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
+msgstr "Please either submit a file or check the clear checkbox, not both."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:691
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:854
 #: .\venv\Lib\site-packages\django\forms\fields.py:946
 #: .\venv\Lib\site-packages\django\forms\models.py:1566
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
+msgstr "Select a valid choice. %(value)s is not one of the available choices."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:948
 #: .\venv\Lib\site-packages\django\forms\fields.py:1067
 #: .\venv\Lib\site-packages\django\forms\models.py:1564
 msgid "Enter a list of values."
-msgstr ""
+msgstr "Enter a list of values."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1068
 msgid "Enter a complete value."
-msgstr ""
+msgstr "Enter a complete value."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1307
 msgid "Enter a valid UUID."
-msgstr ""
+msgstr "Enter a valid UUID."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:1337
 msgid "Enter a valid JSON."
-msgstr ""
+msgstr "Enter a valid JSON."
 
 #. Translators: This is the default suffix added to form field labels
 #: .\venv\Lib\site-packages\django\forms\forms.py:98
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: .\venv\Lib\site-packages\django\forms\forms.py:244
 #: .\venv\Lib\site-packages\django\forms\forms.py:328
 #, python-format
 msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
+msgstr "(Hidden field %(name)s) %(error)s"
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:63
 #, python-format
@@ -979,6 +1155,8 @@ msgid ""
 "ManagementForm data is missing or has been tampered with. Missing fields: "
 "%(field_names)s. You may need to file a bug report if the issue persists."
 msgstr ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:67
 #, python-format
@@ -997,21 +1175,22 @@ msgstr[1] ""
 #: .\venv\Lib\site-packages\django\forms\formsets.py:484
 #: .\venv\Lib\site-packages\django\forms\formsets.py:491
 msgid "Order"
-msgstr ""
+msgstr "Order"
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:499
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: .\venv\Lib\site-packages\django\forms\models.py:886
 #, python-format
 msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
+msgstr "Please correct the duplicate data for %(field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:891
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
 msgstr ""
+"Please correct the duplicate data for %(field)s, which must be unique."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:898
 #, python-format
@@ -1019,23 +1198,27 @@ msgid ""
 "Please correct the duplicate data for %(field_name)s which must be unique "
 "for the %(lookup)s in %(date_field)s."
 msgstr ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:907
 msgid "Please correct the duplicate values below."
-msgstr ""
+msgstr "Please correct the duplicate values below."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1338
 msgid "The inline value did not match the parent instance."
-msgstr ""
+msgstr "The inline value did not match the parent instance."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1429
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
+"Select a valid choice. That choice is not one of the available choices."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1568
 #, python-format
 msgid "“%(pk)s” is not a valid value."
-msgstr ""
+msgstr "“%(pk)s” is not a valid value."
 
 #: .\venv\Lib\site-packages\django\forms\utils.py:226
 #, python-format
@@ -1043,35 +1226,37 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:439
 msgid "Clear"
-msgstr ""
+msgstr "Clear"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:440
 msgid "Currently"
-msgstr ""
+msgstr "Currently"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:441
 msgid "Change"
-msgstr ""
+msgstr "Change"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:770
 msgid "Unknown"
-msgstr ""
+msgstr "Unknown"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:771
 msgid "Yes"
-msgstr ""
+msgstr "Yes"
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:772
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #. Translators: Please do not add spaces around commas.
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:861
 msgid "yes,no,maybe"
-msgstr ""
+msgstr "yes,no,maybe"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:891
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:908
@@ -1084,343 +1269,343 @@ msgstr[1] ""
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:910
 #, python-format
 msgid "%s KB"
-msgstr ""
+msgstr "%s KB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:912
 #, python-format
 msgid "%s MB"
-msgstr ""
+msgstr "%s MB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:914
 #, python-format
 msgid "%s GB"
-msgstr ""
+msgstr "%s GB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:916
 #, python-format
 msgid "%s TB"
-msgstr ""
+msgstr "%s TB"
 
 #: .\venv\Lib\site-packages\django\template\defaultfilters.py:918
 #, python-format
 msgid "%s PB"
-msgstr ""
+msgstr "%s PB"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:73
 msgid "p.m."
-msgstr ""
+msgstr "p.m."
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:74
 msgid "a.m."
-msgstr ""
+msgstr "a.m."
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:79
 msgid "PM"
-msgstr ""
+msgstr "PM"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:80
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:152
 msgid "midnight"
-msgstr ""
+msgstr "midnight"
 
 #: .\venv\Lib\site-packages\django\utils\dateformat.py:154
 msgid "noon"
-msgstr ""
+msgstr "noon"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:7
 msgid "Monday"
-msgstr ""
+msgstr "Monday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:8
 msgid "Tuesday"
-msgstr ""
+msgstr "Tuesday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:9
 msgid "Wednesday"
-msgstr ""
+msgstr "Wednesday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:10
 msgid "Thursday"
-msgstr ""
+msgstr "Thursday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:11
 msgid "Friday"
-msgstr ""
+msgstr "Friday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:12
 msgid "Saturday"
-msgstr ""
+msgstr "Saturday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:13
 msgid "Sunday"
-msgstr ""
+msgstr "Sunday"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:16
 msgid "Mon"
-msgstr ""
+msgstr "Mon"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:17
 msgid "Tue"
-msgstr ""
+msgstr "Tue"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:18
 msgid "Wed"
-msgstr ""
+msgstr "Wed"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "Thu"
-msgstr ""
+msgstr "Thu"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "Fri"
-msgstr ""
+msgstr "Fri"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:21
 msgid "Sat"
-msgstr ""
+msgstr "Sat"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:22
 msgid "Sun"
-msgstr ""
+msgstr "Sun"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:25
 msgid "January"
-msgstr ""
+msgstr "January"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:26
 msgid "February"
-msgstr ""
+msgstr "February"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:27
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:28
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:29
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:30
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:31
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:32
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:33
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:34
 msgid "October"
-msgstr ""
+msgstr "October"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:35
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:36
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:39
 msgid "jan"
-msgstr ""
+msgstr "jan"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:40
 msgid "feb"
-msgstr ""
+msgstr "feb"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:41
 msgid "mar"
-msgstr ""
+msgstr "mar"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:42
 msgid "apr"
-msgstr ""
+msgstr "apr"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:43
 msgid "may"
-msgstr ""
+msgstr "may"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:44
 msgid "jun"
-msgstr ""
+msgstr "jun"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:45
 msgid "jul"
-msgstr ""
+msgstr "jul"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:46
 msgid "aug"
-msgstr ""
+msgstr "aug"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:47
 msgid "sep"
-msgstr ""
+msgstr "sep"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:48
 msgid "oct"
-msgstr ""
+msgstr "oct"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:49
 msgid "nov"
-msgstr ""
+msgstr "nov"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:50
 msgid "dec"
-msgstr ""
+msgstr "dec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:53
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr ""
+msgstr "Jan."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:54
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr ""
+msgstr "Feb."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:55
 msgctxt "abbrev. month"
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:56
 msgctxt "abbrev. month"
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:57
 msgctxt "abbrev. month"
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:58
 msgctxt "abbrev. month"
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:59
 msgctxt "abbrev. month"
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:60
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr ""
+msgstr "Aug."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:61
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr ""
+msgstr "Sept."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:62
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr ""
+msgstr "Oct."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:63
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr ""
+msgstr "Nov."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:64
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr ""
+msgstr "Dec."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:67
 msgctxt "alt. month"
 msgid "January"
-msgstr ""
+msgstr "January"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:68
 msgctxt "alt. month"
 msgid "February"
-msgstr ""
+msgstr "February"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:69
 msgctxt "alt. month"
 msgid "March"
-msgstr ""
+msgstr "March"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:70
 msgctxt "alt. month"
 msgid "April"
-msgstr ""
+msgstr "April"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:71
 msgctxt "alt. month"
 msgid "May"
-msgstr ""
+msgstr "May"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:72
 msgctxt "alt. month"
 msgid "June"
-msgstr ""
+msgstr "June"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:73
 msgctxt "alt. month"
 msgid "July"
-msgstr ""
+msgstr "July"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:74
 msgctxt "alt. month"
 msgid "August"
-msgstr ""
+msgstr "August"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:75
 msgctxt "alt. month"
 msgid "September"
-msgstr ""
+msgstr "September"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:76
 msgctxt "alt. month"
 msgid "October"
-msgstr ""
+msgstr "October"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:77
 msgctxt "alt. month"
 msgid "November"
-msgstr ""
+msgstr "November"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:78
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "December"
 
 #: .\venv\Lib\site-packages\django\utils\ipv6.py:8
 msgid "This is not a valid IPv6 address."
-msgstr ""
+msgstr "This is not a valid IPv6 address."
 
 #: .\venv\Lib\site-packages\django\utils\text.py:78
 #, python-format
 msgctxt "String to return when truncating text"
 msgid "%(truncated_text)s…"
-msgstr ""
+msgstr "%(truncated_text)s…"
 
 #: .\venv\Lib\site-packages\django\utils\text.py:254
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #. Translators: This string is used as a separator between list elements
 #: .\venv\Lib\site-packages\django\utils\text.py:273
 #: .\venv\Lib\site-packages\django\utils\timesince.py:131
 msgid ", "
-msgstr ""
+msgstr ","
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:8
 #, python-format
@@ -1466,11 +1651,11 @@ msgstr[1] ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:111
 msgid "Forbidden"
-msgstr ""
+msgstr "Forbidden"
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:112
 msgid "CSRF verification failed. Request aborted."
-msgstr ""
+msgstr "CSRF verification failed. Request aborted."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:116
 msgid ""
@@ -1479,6 +1664,10 @@ msgid ""
 "required for security reasons, to ensure that your browser is not being "
 "hijacked by third parties."
 msgstr ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:122
 msgid ""
@@ -1486,15 +1675,23 @@ msgid ""
 "enable them, at least for this site, or for HTTPS connections, or for “same-"
 "origin” requests."
 msgstr ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:136
 msgid ""
@@ -1502,44 +1699,49 @@ msgid ""
 "submitting forms. This cookie is required for security reasons, to ensure "
 "that your browser is not being hijacked by third parties."
 msgstr ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:142
 msgid ""
 "If you have configured your browser to disable cookies, please re-enable "
 "them, at least for this site, or for “same-origin” requests."
 msgstr ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:148
 msgid "More information is available with DEBUG=True."
-msgstr ""
+msgstr "More information is available with DEBUG=True."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:44
 msgid "No year specified"
-msgstr ""
+msgstr "No year specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:64
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:115
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:214
 msgid "Date out of range"
-msgstr ""
+msgstr "Date out of range"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:94
 msgid "No month specified"
-msgstr ""
+msgstr "No month specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:147
 msgid "No day specified"
-msgstr ""
+msgstr "No day specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:194
 msgid "No week specified"
-msgstr ""
+msgstr "No week specified"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:349
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:380
 #, python-format
 msgid "No %(verbose_name_plural)s available"
-msgstr ""
+msgstr "No %(verbose_name_plural)s available"
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
@@ -1547,49 +1749,51 @@ msgid ""
 "Future %(verbose_name_plural)s not available because "
 "%(class_name)s.allow_future is False."
 msgstr ""
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
+msgstr "Invalid date string “%(datestr)s” given format “%(format)s”"
 
 #: .\venv\Lib\site-packages\django\views\generic\detail.py:56
 #, python-format
 msgid "No %(verbose_name)s found matching the query"
-msgstr ""
+msgstr "No %(verbose_name)s found matching the query"
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:70
 msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
+msgstr "Page is not “last”, nor can it be converted to an int."
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:77
 #, python-format
 msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
+msgstr "Invalid page (%(page_number)s): %(message)s"
 
 #: .\venv\Lib\site-packages\django\views\generic\list.py:169
 #, python-format
 msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
+msgstr "Empty list and “%(class_name)s.allow_empty” is False."
 
 #: .\venv\Lib\site-packages\django\views\static.py:38
 msgid "Directory indexes are not allowed here."
-msgstr ""
+msgstr "Directory indexes are not allowed here."
 
 #: .\venv\Lib\site-packages\django\views\static.py:40
 #, python-format
 msgid "“%(path)s” does not exist"
-msgstr ""
+msgstr "“%(path)s” does not exist"
 
 #: .\venv\Lib\site-packages\django\views\static.py:79
 #, python-format
 msgid "Index of %(directory)s"
-msgstr ""
+msgstr "Index of %(directory)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 msgid "The install worked successfully! Congratulations!"
-msgstr ""
+msgstr "The install worked successfully! Congratulations!"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:207
 #, python-format
@@ -1597,40 +1801,46 @@ msgid ""
 "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 msgstr ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
 msgid "Django Documentation"
-msgstr ""
+msgstr "Django Documentation"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:231
 msgid "Topics, references, &amp; how-to’s"
-msgstr ""
+msgstr "Topics, references, &amp; how-to’s"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
 msgid "Tutorial: A Polling App"
-msgstr ""
+msgstr "Tutorial: A Polling App"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:240
 msgid "Get started with Django"
-msgstr ""
+msgstr "Get started with Django"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
 msgid "Django Community"
-msgstr ""
+msgstr "Django Community"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
 msgid "Connect, get help, or contribute"
-msgstr ""
+msgstr "Connect, get help, or contribute"
 
 #: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
 msgid "None"
-msgstr ""
+msgstr "None"

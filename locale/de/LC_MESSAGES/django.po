@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-23 13:09+0100\n"
+"POT-Creation-Date: 2025-01-24 14:56+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\core\models.py:5 .\core\models.py:85
+#: .\core\models.py:5 .\core\models.py:108
 msgid "name"
 msgstr "Name"
 
@@ -26,13 +26,13 @@ msgstr "Name"
 msgid "slug"
 msgstr "Schnecke"
 
-#: .\core\models.py:7 .\core\models.py:32 .\core\models.py:48
-#: .\core\models.py:78
+#: .\core\models.py:7 .\core\models.py:34 .\core\models.py:50
+#: .\core\models.py:97
 msgid "created at"
 msgstr "erstellt am"
 
-#: .\core\models.py:8 .\core\models.py:33 .\core\models.py:49
-#: .\core\models.py:79
+#: .\core\models.py:8 .\core\models.py:35 .\core\models.py:51
+#: .\core\models.py:98
 msgid "updated at"
 msgstr "aktualisiert am"
 
@@ -65,80 +65,141 @@ msgid "duration"
 msgstr "Dauer"
 
 #: .\core\models.py:30
+msgid "Course Mode"
+msgstr "Kursmodus"
+
+#: .\core\models.py:30
+msgid "Online"
+msgstr "Online"
+
+#: .\core\models.py:30
+msgid "Classroom"
+msgstr "Klassenzimmer"
+
+#: .\core\models.py:31
+msgid "url"
+msgstr "URL (URL)"
+
+#: .\core\models.py:32
 msgid "is popular"
 msgstr "ist beliebt"
 
-#: .\core\models.py:31
+#: .\core\models.py:33
 msgid "is upcoming"
 msgstr "steht bevor"
 
-#: .\core\models.py:36
+#: .\core\models.py:38
 msgid "course"
 msgstr "Kurs"
 
-#: .\core\models.py:37
+#: .\core\models.py:39
 msgid "courses"
 msgstr "Kurse"
 
-#: .\core\models.py:44
+#: .\core\models.py:46
 msgid "author name"
 msgstr "Name des Autors"
 
-#: .\core\models.py:45
+#: .\core\models.py:47
 msgid "author title"
 msgstr "Autortitel"
 
-#: .\core\models.py:46
+#: .\core\models.py:48
 msgid "author image"
 msgstr "Autorenbild"
 
-#: .\core\models.py:47
+#: .\core\models.py:49
 msgid "content"
 msgstr "Inhalt"
 
-#: .\core\models.py:52
+#: .\core\models.py:54
 msgid "testimonial"
 msgstr "Zeugnis"
 
-#: .\core\models.py:53
+#: .\core\models.py:55
 msgid "testimonials"
 msgstr "Erfahrungsberichte"
 
-#: .\core\models.py:72
+#: .\core\models.py:62
 msgid "customer"
 msgstr "Kunde"
 
-#: .\core\models.py:73
+#: .\core\models.py:63 .\core\templates\ihrdc_layout\contact.html:24
+#: .\core\templates\ihrdc_layout\course_payment.html:51
+msgid "Email"
+msgstr "E-Mail"
+
+#: .\core\models.py:64 .\core\templates\ihrdc_layout\course_payment.html:62
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: .\core\models.py:65 .\core\templates\ihrdc_layout\course_payment.html:85
+msgid "City"
+msgstr "Stadt"
+
+#: .\core\models.py:66 .\core\templates\ihrdc_layout\course_payment.html:96
+msgid "Country"
+msgstr "Land"
+
+#: .\core\models.py:67 .\core\templates\ihrdc_layout\course_payment.html:107
+msgid "Postcode"
+msgstr "Postleitzahl"
+
+#: .\core\models.py:68
+msgid "Course"
+msgstr "Kurs"
+
+#: .\core\models.py:71
+msgid "enrolled_customer"
+msgstr "eingeschriebener_Kunde"
+
+#: .\core\models.py:72
+msgid "enrolled_customers"
+msgstr "Eingeschriebene Kunden"
+
+#: .\core\models.py:90 .\core\templates\ihrdc_layout\course_payment.html:40
+msgid "Customer"
+msgstr "Kunde"
+
+#: .\core\models.py:91
 msgid "amount"
 msgstr "Menge"
 
-#: .\core\models.py:74
-#, fuzzy
-#| msgid "Currently"
+#: .\core\models.py:92
 msgid "currency"
-msgstr "Momentan"
+msgstr "Währung"
 
-#: .\core\models.py:75
+#: .\core\models.py:93 .\core\templates\ihrdc_layout\course_payment.html:73
+msgid "Quantity"
+msgstr "Menge"
+
+#: .\core\models.py:94
 msgid "status"
 msgstr "Status"
 
-#: .\core\models.py:76
+#: .\core\models.py:95
 msgid "payment method"
 msgstr "Zahlungsarten"
 
-#: .\core\models.py:77
+#: .\core\models.py:96
 msgid "stripe payment intent id"
 msgstr "Stripe-Zahlungsabsichts-ID"
 
-#: .\core\models.py:86
+#: .\core\models.py:101
+msgid "payment"
+msgstr "Zahlung"
+
+#: .\core\models.py:102
+msgid "payments"
+msgstr "Zahlungen"
+
+#: .\core\models.py:109
 msgid "email"
 msgstr "E-Mail"
 
-#: .\core\models.py:87
-#, fuzzy
-#| msgid "Messages"
+#: .\core\models.py:110
 msgid "message"
-msgstr "Nachrichten"
+msgstr "Nachricht"
 
 #: .\core\templates\ihrdc_layout\about.html:10
 msgid ""
@@ -170,15 +231,11 @@ msgstr "Heim"
 
 #: .\core\templates\ihrdc_layout\base.html:52
 #: .\core\templates\ihrdc_layout\base.html:84
-#, fuzzy
-#| msgid "About Us"
 msgid "About"
-msgstr "Über uns"
+msgstr "Um"
 
 #: .\core\templates\ihrdc_layout\base.html:54
 #: .\core\templates\ihrdc_layout\base.html:85
-#, fuzzy
-#| msgid "courses"
 msgid "Courses"
 msgstr "Kurse"
 
@@ -202,26 +259,6 @@ msgid "Quick Links"
 msgstr "Direktlinks"
 
 #: .\core\templates\ihrdc_layout\base.html:89
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                <div class=\"footer-section\">\n"
-#| "                    <h3>Contact Info</h3>\n"
-#| "                    <ul class=\"contact-list\">\n"
-#| "                        <li><i class=\"fas fa-map-marker-alt\"></i> 123 Training St, City, Country</li>\n"
-#| "                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
-#| "                        <li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
-#| "                    </ul>\n"
-#| "                </div>\n"
-#| "                <div class=\"footer-section\">\n"
-#| "                    <h3>Newsletter</h3>\n"
-#| "                    <form class=\"newsletter-form\">\n"
-#| "                        <input type=\"email\" placeholder=\"Enter your email\">\n"
-#| "                        <button type=\"submit\" class=\"btn btn-primary\">Subscribe</button>\n"
-#| "                    </form>\n"
-#| "                </div>\n"
-#| "            </div>\n"
-#| "            "
 msgid ""
 "\n"
 "                <div class=\"footer-section\">\n"
@@ -245,7 +282,7 @@ msgstr ""
 "<div class=\"footer-section\">\n"
 "<h3>Kontaktinformationen</h3>\n"
 "<ul class=\"contact-list\">\n"
-"<li><i class=\"fas fa-map-marker-alt\"></i> 123 Training St, Stadt, Land</li>\n"
+"<li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, Stadt, Land</li>\n"
 "<li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
 "<li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
 "</ul>\n"
@@ -263,6 +300,32 @@ msgstr ""
 msgid "Training Platform. All rights reserved."
 msgstr "Trainingsplattform. Alle Rechte vorbehalten."
 
+#: .\core\templates\ihrdc_layout\cancel.html:10
+msgid "Forgot to add something to your cart?"
+msgstr "Haben Sie vergessen, etwas in Ihren Warenkorb zu legen?"
+
+#: .\core\templates\ihrdc_layout\cancel.html:12
+msgid ""
+"No problem! Explore our available courses and find what you're looking for."
+msgstr ""
+"Kein Problem! Sehen Sie sich unsere verfügbaren Kurse an und finden Sie, "
+"wonach Sie suchen."
+
+#: .\core\templates\ihrdc_layout\cancel.html:15
+#: .\core\templates\ihrdc_layout\success.html:15
+msgid "Go to Courses"
+msgstr "Gehe zu den Kursen"
+
+#: .\core\templates\ihrdc_layout\category.html:39
+#: .\core\templates\ihrdc_layout\courses.html:64
+msgid "Learn More"
+msgstr "Mehr erfahren"
+
+#: .\core\templates\ihrdc_layout\category.html:40
+#: .\core\templates\ihrdc_layout\course_detail.html:40
+msgid "Enroll Now"
+msgstr "Jetzt anmelden"
+
 #: .\core\templates\ihrdc_layout\contact.html:10
 msgid ""
 "\n"
@@ -273,39 +336,30 @@ msgstr ""
 "<h1>Kontakt</h1>\n"
 "<p>Kontaktieren Sie uns bei Fragen oder für Supportanfragen.</p>"
 
-#: .\core\templates\ihrdc_layout\contact.html:19
-msgid ""
-"\n"
-"                <div>\n"
-"                    <h2>Reach Out to Us</h2>\n"
-"                    <p>We’re here to help! Use the form below or contact us via phone or email.</p>\n"
-"                    <ul class=\"contact-list\">\n"
-"                        <li><strong>Phone:</strong> +1234567890</li>\n"
-"                        <li><strong>Email:</strong> info@example.com</li>\n"
-"                        <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>\n"
-"                    </ul>\n"
-"                </div>\n"
-"                "
-msgstr ""
-"<div>\n"
-"<h2>Kontaktieren Sie uns</h2>\n"
-"<p>Wir helfen Ihnen gerne! Verwenden Sie das untenstehende Formular oder kontaktieren Sie uns per Telefon oder E-Mail.</p>\n"
-"<ul class=\"contact-list\">\n"
-"<li><strong>Telefon:</strong> +1234567890</li>\n"
-"<li><strong>E-Mail:</strong> info@example.com</li>\n"
-"<li><strong>Adresse:</strong> 123 Main Street, Anytown, USA</li>\n"
-"</ul>\n"
-"</div>"
+#: .\core\templates\ihrdc_layout\contact.html:20
+msgid "Reach Out to Us"
+msgstr "Kontaktieren Sie uns"
 
-#: .\core\templates\ihrdc_layout\contact.html:32
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "                        <input type=\"text\" placeholder=\"Your Name\" required>\n"
-#| "                        <input type=\"email\" placeholder=\"Your Email\" required>\n"
-#| "                        <textarea placeholder=\"Your Message\" rows=\"5\" required></textarea>\n"
-#| "                        <button type=\"submit\" class=\"btn\">Send Message</button>\n"
-#| "                        "
+#: .\core\templates\ihrdc_layout\contact.html:21
+msgid ""
+"We’re here to help! Use the form below or contact us via phone or email."
+msgstr ""
+"Wir helfen Ihnen gerne weiter! Nutzen Sie das untenstehende Formular oder "
+"kontaktieren Sie uns per Telefon oder E-Mail."
+
+#: .\core\templates\ihrdc_layout\contact.html:23
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\core\templates\ihrdc_layout\contact.html:25
+msgid "Address"
+msgstr "Adresse"
+
+#: .\core\templates\ihrdc_layout\contact.html:25
+msgid "123 Main Street, Anytown, USA"
+msgstr "123 Main Street, Anytown, USA"
+
+#: .\core\templates\ihrdc_layout\contact.html:31
 msgid ""
 "\n"
 "                        <input type=\"text\" name=\"name\" placeholder=\"Your Name\" required>\n"
@@ -314,9 +368,9 @@ msgid ""
 "                        <button type=\"submit\" class=\"btn\">Send Message</button>\n"
 "                        "
 msgstr ""
-"<input type=\"text\" placeholder=\"Ihr Name\" erforderlich>\n"
-"<input type=\"email\" placeholder=\"Ihre E-Mail\" erforderlich>\n"
-"<textarea placeholder=\"Ihre Nachricht\" rows=\"5\" erforderlich></textarea>\n"
+"<input type=\"text\" name=\"name\" placeholder=\"Ihr Name\" erforderlich>\n"
+"<input type=\"email\" name=\"email\" placeholder=\"Ihre E-Mail\" erforderlich>\n"
+"<textarea name=\"message\" placeholder=\"Ihre Nachricht\" rows=\"5\" erforderlich></textarea>\n"
 "<button type=\"submit\" class=\"btn\">Nachricht senden</button>"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:9
@@ -334,8 +388,6 @@ msgstr ""
 "</section>"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:21
-#, fuzzy
-#| msgid "category"
 msgid "Category"
 msgstr "Kategorie"
 
@@ -348,41 +400,46 @@ msgstr "Über diesen Kurs"
 msgid "Duration"
 msgstr "Dauer"
 
-#: .\core\templates\ihrdc_layout\course_detail.html:39
-msgid "Enroll Now"
-msgstr "Jetzt anmelden"
-
-#: .\core\templates\ihrdc_layout\course_detail.html:40
+#: .\core\templates\ihrdc_layout\course_detail.html:41
 #: .\core\templates\ihrdc_layout\course_payment.html:26
-#, fuzzy
-#| msgid "price"
 msgid "Price"
 msgstr "Preis"
 
 #: .\core\templates\ihrdc_layout\course_payment.html:17
-#, fuzzy
-#| msgid "Course Catalog"
 msgid "Course Details"
-msgstr "Vorlesungsverzeichnis"
+msgstr "Kursdetails"
 
 #: .\core\templates\ihrdc_layout\course_payment.html:20
-#, fuzzy
-#| msgid "Course Catalog"
 msgid "Course Name"
-msgstr "Vorlesungsverzeichnis"
+msgstr "Kursname"
 
 #: .\core\templates\ihrdc_layout\course_payment.html:23
-#, fuzzy
-#| msgid "description"
 msgid "Description"
 msgstr "Beschreibung"
 
-#: .\core\templates\ihrdc_layout\course_payment.html:30
-msgid ""
-"\n"
-"            <button id=\"payButton\">Pay</button>\n"
-"            "
-msgstr "<button id=\"payButton\">Bezahlen</button>"
+#: .\core\templates\ihrdc_layout\course_payment.html:38
+msgid "Enter Payment Details"
+msgstr "Zahlungsdetails eingeben"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:118
+msgid "Currency"
+msgstr "Währung"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:120
+msgid "USD"
+msgstr "USD"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:121
+msgid "EUR"
+msgstr "EUR"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:122
+msgid "GBP"
+msgstr "GBP"
+
+#: .\core\templates\ihrdc_layout\course_payment.html:126
+msgid "Pay"
+msgstr "Zahlen"
 
 #: .\core\templates\ihrdc_layout\courses.html:11
 msgid "Course Catalog"
@@ -428,15 +485,9 @@ msgstr ""
 msgid "Live Training"
 msgstr "Live-Schulung"
 
-#: .\core\templates\ihrdc_layout\courses.html:64
-msgid "Learn More"
-msgstr "Mehr erfahren"
-
 #: .\core\templates\ihrdc_layout\courses.html:65
-#, fuzzy
-#| msgid "Explore Courses"
 msgid "Book Course"
-msgstr "Kurse erkunden"
+msgstr "Kurs buchen"
 
 #: .\core\templates\ihrdc_layout\index.html:13
 msgid ""
@@ -497,22 +548,29 @@ msgstr ""
 "<p>Engpässe innerhalb von Minuten beheben</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:71
-#, fuzzy
-#| msgid "Explore Courses"
 msgid "Popular Courses"
-msgstr "Kurse erkunden"
+msgstr "Beliebte Kurse"
 
-#: .\core\templates\ihrdc_layout\index.html:90
-#, fuzzy
-#| msgid "Learn More"
+#: .\core\templates\ihrdc_layout\index.html:94
 msgid "learn more"
 msgstr "Mehr erfahren"
 
-#: .\core\templates\ihrdc_layout\index.html:97
-#, fuzzy
-#| msgid "courses"
+#: .\core\templates\ihrdc_layout\index.html:101
 msgid "View All Courses"
-msgstr "Kurse"
+msgstr "Alle Kurse anzeigen"
+
+#: .\core\templates\ihrdc_layout\index.html:134
+msgid "What Our Students Say"
+msgstr "Was unsere Studenten sagen"
+
+#: .\core\templates\ihrdc_layout\success.html:10
+msgid "Thank You!"
+msgstr "Danke schön!"
+
+#: .\core\templates\ihrdc_layout\success.html:12
+msgid "Thanks for purchasing our product. We hope you enjoy it!"
+msgstr ""
+"Vielen Dank für den Kauf unseres Produkts. Wir hoffen, es gefällt Ihnen!"
 
 #: .\edusite\settings.py:120
 msgid "English"
@@ -1153,7 +1211,7 @@ msgstr "Bitte korrigieren Sie die doppelten Daten für %(Feld)s."
 #, python-format
 msgid "Please correct the duplicate data for %(field)s, which must be unique."
 msgstr ""
-"Bitte korrigieren Sie die doppelten Daten für %(Feld)s, die eindeutig sein "
+"Bitte korrigieren Sie die doppelten Daten für %(Feld)e, die eindeutig sein "
 "müssen."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:898
@@ -1819,7 +1877,3 @@ msgstr "Vernetzen, Hilfe erhalten oder beitragen"
 #: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
 msgid "None"
 msgstr "Keiner"
-
-#, fuzzy
-#~ msgid "Course Title"
-#~ msgstr "Vorlesungsverzeichnis"

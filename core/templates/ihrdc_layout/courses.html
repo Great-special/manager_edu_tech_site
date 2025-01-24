@@ -62,7 +62,7 @@
                             <p>{{course.description}}</p>
                             <div class="card-footer">
                                 <a href="{% url "course_detail" course.id %}" class="btn btn-outline">{% trans "Learn More" %}</a>
-                                <a href="#" class="btn btn-primary">{% translate "Book Course" %}</a>
+                                <a href="{% url "payment_page" course.id %}" class="btn btn-primary">{% translate "Book Course" %}</a>
                             </div>
                         </div>
                         {% endfor %}       
@@ -74,23 +74,3 @@
 
 {% endblock %}
 
-{% block script %}
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-    const stripe = Stripe("{{ STRIPE_PUBLISHABLE_KEY }}");
-
-    document.getElementById('payButton').addEventListener('click', async () => {
-        const response = await fetch('/stripe-payment/', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({amount: 1000, payment_method_id: 'pm_card_visa'})
-        });
-        const data = await response.json();
-        if (data.error) {
-            alert(data.error);
-        } else {
-            alert('Payment successful!');
-        }
-    });
-</script>
-{% endblock script %}
