@@ -628,7 +628,6 @@ body {
 }
 
 
-
 /* Footer Styles */
 .main-footer {
     background: var(--primary-dark);
@@ -891,6 +890,8 @@ body {
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .nav-links {

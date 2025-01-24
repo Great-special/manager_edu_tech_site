@@ -34,7 +34,7 @@
                         <span><i class="fas fa-clock"></i> {{course.duration}}</span>
                         <span><i class="fas fa-users"></i>{{course.mode}}</span>
                     </div>
-                    <p>{{course.description}}</p>
+                    <p>{{course.description | truncatewords:25}}</p>
                     <div class="card-footer">
                         <a href="{% url 'course_detail' course.id %}" class="btn btn-outline">{% translate "Learn More" %}</a>
                         <a href="{% url 'payment_page' course.id %}" class="btn btn-primary">{% translate "Enroll Now" %}</a>
