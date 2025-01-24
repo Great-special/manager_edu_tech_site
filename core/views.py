@@ -197,9 +197,4 @@ def stripe_webhook(request, format=None):
         #     from_email="your@email.com",
         # )
 
-        Payment.objects.create(
-                email=customer_email, product=product, payment_status="completed"
-            ) # Add this
-    
-
     return HttpResponse(status=200)
