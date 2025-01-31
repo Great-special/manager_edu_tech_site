@@ -25,34 +25,42 @@
         <div class="container">
             <h2 class="section-title">{% translate "What We Do" %}</h2>
             <div class="content-wrapper">
-                <div class="side-image">
+                {% comment %} <div class="side-image">
                     <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="What We Do">
-                </div>
+                </div>  {% endcomment %}
                 
                 <div class="services-grid">
                     <div class="service-card">
-                        <i class="fas fa-graduation-cap"></i>
+                        <div class="card-image">
+                            <img src="{% static 'layout/images/Training.jpeg' %}" alt="Professional Training">
+                        </div>
                         {% blocktrans %}
                         <h3>Professional Training</h3>
                         <p>Industry-specific courses designed by experts, customized training programs for organizations</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-users"></i>
+                        <div class="card-image">
+                            <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="Upskilling and Reskilling">
+                        </div>
                         {% blocktrans %}
                         <h3>Upskilling/Reskilling</h3>
                         <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-certificate"></i>
+                        <div class="card-image">
+                            <img src="{% static 'layout/images/certification.jpg' %}" alt="Certification">
+                        </div>
                         {% blocktrans %}
                         <h3>Certification</h3>
                         <p>Internationally recognized certifications</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-comments"></i>
+                        <div class="card-image">
+                            <img src="{% static 'layout/images/consultancy.jpeg' %}" alt="Consultancy">
+                        </div>
                         {% blocktrans %}
                         <h3>Consultancy</h3>
                         <p>Resolve bottlenecks within minutes</p>

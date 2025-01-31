@@ -20,7 +20,7 @@
                         <strong>{% trans "Course Name" %}:</strong> {{ course.title }}
                     </li>
                     <li class="list-group-item">
-                        <strong>{% translate "Description" %}:</strong> {{ course.description | truncatewords:50 }}
+                        <strong>{% translate "Description" %}:</strong> {{ course.description | truncatewords:25 }}
                     </li>
                     <li class="list-group-item">
                         <strong>{% translate "Price" %}:</strong> ${{ course.price }}
