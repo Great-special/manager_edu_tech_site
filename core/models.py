@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 class Category(models.Model):
     name = models.CharField(_('name'), max_length=100)
     slug = models.SlugField(_('slug'), max_length=100, unique=True)
+    image = models.ImageField(_('image'), upload_to='category_images/', null=True, blank=True)
     created_at = models.DateTimeField(_('created at'), auto_now_add=True)
     updated_at = models.DateTimeField(_('updated at'), auto_now=True)
     
@@ -27,7 +28,7 @@ class Course(models.Model):
         on_delete=models.CASCADE, 
         related_name='courses'
     )
-    mode = models.CharField(_('Course Mode'), max_length=150, choices=(('Online', _('Online')),('Classroom',_('Classroom'))), default='Online')
+    mode = models.CharField(_('Course Mode'), max_length=150, blank=True, null=True)
     url = models.URLField(_('url'), null=True, blank=True)
     is_popular = models.BooleanField(_('is popular'), default=False)
     is_upcoming = models.BooleanField(_('is upcoming'), default=False)

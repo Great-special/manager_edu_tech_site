@@ -6,61 +6,77 @@
 
 {% block content %}
     <!-- Hero Section -->
-     
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                {% blocktrans %}
-                <h1>Transform Your Career with Industry-Leading Training</h1>
-                <p>Expert-led courses across diverse sectors and industries</p>
-                {% endblocktrans %}
-                <a href="{% url 'courses' %}" class="btn btn-primary">{% trans "Explore Courses" %}</a>
+    <section class="hero-carousel">
+        <div class="hero-slide active" style="background-image: url('{% static "/layout/images/hero-image.jpeg" %}');">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transform Your Career with Industry-Leading Training</h1>
+                    <p>Expert-led courses across diverse sectors and industries</p>
+                    <a href="#" class="btn btn-primary">Explore Courses</a>
+                </div>
             </div>
         </div>
-    </section>
 
+        <div class="hero-slide" style="background-image: url('{% static "/layout/images/mission.jpeg" %}');">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Unlock Your Potential with Cutting-Edge Learning</h1>
+                    <p>Flexible online and in-person programs for every career stage</p>
+                    <a href="#" class="btn btn-primary">View Programs</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" style="background-image: url('{% static "/layout/images/hero-image.jpeg" %}');">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Learn from Industry Experts</h1>
+                    <p>Connect with top professionals and gain real-world insights</p>
+                    <a href="#" class="btn btn-primary">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-carousel-indicators">
+            <span class="hero-indicator active" data-slide="0"></span>
+            <span class="hero-indicator" data-slide="1"></span>
+            <span class="hero-indicator" data-slide="2"></span>
+        </div>
+    </section>
     
     <!-- What We Do Section -->
     <section class="what-we-do">
         <div class="container">
             <h2 class="section-title">{% translate "What We Do" %}</h2>
             <div class="content-wrapper">
-                {% comment %} <div class="side-image">
+                <div class="side-image">
                     <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="What We Do">
-                </div>  {% endcomment %}
+                </div>
                 
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="card-image">
-                            <img src="{% static 'layout/images/Training.jpeg' %}" alt="Professional Training">
-                        </div>
+                        <i class="fas fa-graduation-cap"></i>
                         {% blocktrans %}
                         <h3>Professional Training</h3>
                         <p>Industry-specific courses designed by experts, customized training programs for organizations</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <div class="card-image">
-                            <img src="{% static 'layout/images/what-we-do-image.jpeg' %}" alt="Upskilling and Reskilling">
-                        </div>
+                        <i class="fas fa-users"></i>
                         {% blocktrans %}
                         <h3>Upskilling/Reskilling</h3>
                         <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <div class="card-image">
-                            <img src="{% static 'layout/images/certification.jpg' %}" alt="Certification">
-                        </div>
+                        <i class="fas fa-certificate"></i>
                         {% blocktrans %}
                         <h3>Certification</h3>
                         <p>Internationally recognized certifications</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <div class="card-image">
-                            <img src="{% static 'layout/images/consultancy.jpeg' %}" alt="Consultancy">
-                        </div>
+                        <i class="fas fa-comments"></i>
                         {% blocktrans %}
                         <h3>Consultancy</h3>
                         <p>Resolve bottlenecks within minutes</p>
@@ -134,6 +150,48 @@
             </div>
         </div>
     </section> {% endcomment %}
+
+    <section class="client-section">
+        <div class="container">
+            <div class="client-section-title">
+                <h2>Trusted by Leading Companies</h2>
+                <p>Our training programs have empowered professionals from a diverse range of industries, helping them achieve their career goals and drive organizational success.</p>
+            </div>
+
+            <div class="client-logo-marquee">
+                <div class="client-logo-track">
+                    <!-- Duplicate logos to create continuous scroll -->
+                    <div class="client-logo-item">
+                        <img src="../images/clients/microsoft-logo.png" alt="Microsoft">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/google-logo.png" alt="Google">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/amazon-logo.png" alt="Amazon">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/apple-logo.png" alt="Apple">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/ibm-logo.png" alt="IBM">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/intel-logo.png" alt="Intel">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/cisco-logo.png" alt="Cisco">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/oracle-logo.png" alt="Oracle">
+                    </div>
+                    <div class="client-logo-item">
+                        <img src="../images/clients/sap-logo.png" alt="SAP">
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
