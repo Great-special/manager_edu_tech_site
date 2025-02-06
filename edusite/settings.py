@@ -34,8 +34,8 @@ SECRET_KEY = 'django-insecure-gnht-ic%$(yl#z%cx$l_r)v!hny#_h^7z@wwvm*mqrbfjztuqz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['k8a-adaptable-darwin.circumeo-apps.net', '.i-citadelexz.com', 'localhost']
-CSRF_TRUSTED_ORIGINS = ["https://k8a-adaptable-darwin.circumeo-apps.net", "https://i-citadelexz.com", "http://localhost"]
+ALLOWED_HOSTS = ['k8a-adaptable-darwin.circumeo-apps.net', 'localhost']
+CSRF_TRUSTED_ORIGINS = ["https://k8a-adaptable-darwin.circumeo-apps.net", "http://localhost"]
 
 # Application definition
 
