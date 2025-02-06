@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}Course{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 
 {% block content %}
     <!-- Hero Section -->
@@ -14,31 +14,30 @@
     {% endblocktrans %}
 
     <!-- Course Details Section -->
-    <section class="course-details">
-        <div class="container">
-            <div class="course-header">
-                <h2>{{course.title}}</h2>
-                <p>{% trans "Category" %}: <span class="course-category">{{course.category}}</span></p>
-            </div>
-            <div class="course-body">
-                {% if course.image %}
-                <div class="course-image">
-                    <img src="{{course.image.url}}" alt="Course Image">
-                </div>
-                {% endif %}
-                <div class="course-description">
-                    <h3>{% trans "About This Course" %}</h3>
-                    <p>
-                        {{course.description}}
-                    </p>
-                    <p><strong>{% trans "Duration" %}:</strong> {{course.duration}}</p>
-                    <p><strong>{% trans "Venue" %}:</strong> {{course.mode}}</p> 
-                </div>
-            </div>
-            <div class="course-footer">
-                <a href="{% url "payment_page" course.id %}" class="btn btn-primary">{% trans "Enroll Now" %}</a>
-                <p><strong>{% trans "Price" %}:</strong> ${{course.price}}</p>
-            </div>
+    <div class="service-detail">
+        <div class="service-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>{{ page_title }}</h1>
         </div>
-    </section>
+        
+        <div class="service-description">
+            {% blocktrans %}
+            <p>{{ description }}</p>
+            {% endblocktrans %}
+        </div>
+        
+        <div class="service-benefits">
+            <h2>{% translate "Key Benefits" %}</h2>
+            <ul>
+                {% for item in lists %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="call-to-action">
+            <a href="{% url 'courses' %}" class="btn btn-primary">{% trans "Enroll Now" %}</a>
+            <a href="{% url 'contact' %}" class="btn btn-outline">{% trans "Contact Us" %}</a>
+        </div>
+    </div>
 {% endblock %}

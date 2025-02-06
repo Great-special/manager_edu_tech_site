@@ -1,10 +1,12 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.utils.text import slugify
 
 class Category(models.Model):
     name = models.CharField(_('name'), max_length=100)
-    slug = models.SlugField(_('slug'), max_length=100, unique=True)
+    slug = models.SlugField(_('slug'), max_length=100, blank=True, null=True, unique=True)
     image = models.ImageField(_('image'), upload_to='category_images/', null=True, blank=True)
+    description = models.TextField(blank=True)
     created_at = models.DateTimeField(_('created at'), auto_now_add=True)
     updated_at = models.DateTimeField(_('updated at'), auto_now=True)
     
@@ -14,6 +16,11 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        if self.name and not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
 
 class Course(models.Model):

@@ -10,9 +10,11 @@
         <div class="hero-slide active" style="background-image: url('{% static "/layout/images/hero-image.jpeg" %}');">
             <div class="container">
                 <div class="hero-content">
+                    {% blocktrans %}
                     <h1>Transform Your Career with Industry-Leading Training</h1>
                     <p>Expert-led courses across diverse sectors and industries</p>
-                    <a href="#" class="btn btn-primary">Explore Courses</a>
+                    {% endblocktrans %}
+                    <a href="{% url 'courses' %}" class="btn btn-primary">{% trans "Explore Courses" %}</a>
                 </div>
             </div>
         </div>
@@ -20,9 +22,11 @@
         <div class="hero-slide" style="background-image: url('{% static "/layout/images/mission.jpeg" %}');">
             <div class="container">
                 <div class="hero-content">
+                    {% blocktrans %}
                     <h1>Unlock Your Potential with Cutting-Edge Learning</h1>
                     <p>Flexible online and in-person programs for every career stage</p>
-                    <a href="#" class="btn btn-primary">View Programs</a>
+                    {% endblocktrans %}
+                    <a href="{% url 'courses' %}" class="btn btn-primary">{% translate "View Programs" %}</a>
                 </div>
             </div>
         </div>
@@ -30,9 +34,11 @@
         <div class="hero-slide" style="background-image: url('{% static "/layout/images/hero-image.jpeg" %}');">
             <div class="container">
                 <div class="hero-content">
+                    {% blocktrans %}
                     <h1>Learn from Industry Experts</h1>
                     <p>Connect with top professionals and gain real-world insights</p>
-                    <a href="#" class="btn btn-primary">Start Learning</a>
+                    {% endblocktrans %}
+                    <a href="{% url 'courses' %}" class="btn btn-primary">{% trans "Start Learning" %}</a>
                 </div>
             </div>
         </div>
@@ -55,28 +61,28 @@
                 
                 <div class="services-grid">
                     <div class="service-card">
-                        <i class="fas fa-graduation-cap"></i>
+                        <a href="{% url "professional_training" %}"><i class="fas fa-graduation-cap"></i></a>
                         {% blocktrans %}
                         <h3>Professional Training</h3>
                         <p>Industry-specific courses designed by experts, customized training programs for organizations</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-users"></i>
+                        <a href="{% url "upskilling_reskilling" %}" ><i class="fas fa-users"></i></a>
                         {% blocktrans %}
                         <h3>Upskilling/Reskilling</h3>
                         <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-certificate"></i>
+                        <a href="{% url 'certification' %}"><i class="fas fa-certificate"></i></a>
                         {% blocktrans %}
                         <h3>Certification</h3>
                         <p>Internationally recognized certifications</p>
                         {% endblocktrans %}
                     </div>
                     <div class="service-card">
-                        <i class="fas fa-comments"></i>
+                        <a href="{% url 'consultancy' %}"><i class="fas fa-comments"></i></a>
                         {% blocktrans %}
                         <h3>Consultancy</h3>
                         <p>Resolve bottlenecks within minutes</p>
