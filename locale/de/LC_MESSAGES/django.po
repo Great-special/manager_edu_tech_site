@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 10:21+0100\n"
+"POT-Creation-Date: 2025-02-10 17:00+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -216,41 +216,45 @@ msgstr ""
 "\n"
 "Wir streben eine vollständige Optimierung des Schulungsorganisationsprozesses an, um ihn für alle Beteiligten schnell und einfach zu gestalten.</p>"
 
-#: .\core\templates\ihrdc_layout\base.html:49
-#: .\core\templates\ihrdc_layout\base.html:81
+#: .\core\templates\ihrdc_layout\base.html:51
+msgid "Search..."
+msgstr "Suchen..."
+
+#: .\core\templates\ihrdc_layout\base.html:57
+#: .\core\templates\ihrdc_layout\base.html:90
 msgid "Home"
 msgstr "Heim"
 
-#: .\core\templates\ihrdc_layout\base.html:50
-#: .\core\templates\ihrdc_layout\base.html:82
+#: .\core\templates\ihrdc_layout\base.html:58
+#: .\core\templates\ihrdc_layout\base.html:91
 msgid "About"
 msgstr "Um"
 
-#: .\core\templates\ihrdc_layout\base.html:52
-#: .\core\templates\ihrdc_layout\base.html:83
+#: .\core\templates\ihrdc_layout\base.html:60
+#: .\core\templates\ihrdc_layout\base.html:92
 msgid "Courses"
 msgstr "Kurse"
 
-#: .\core\templates\ihrdc_layout\base.html:54
-#: .\core\templates\ihrdc_layout\base.html:84
+#: .\core\templates\ihrdc_layout\base.html:62
+#: .\core\templates\ihrdc_layout\base.html:93
 msgid "Contact"
 msgstr "Kontakt"
 
-#: .\core\templates\ihrdc_layout\base.html:75
+#: .\core\templates\ihrdc_layout\base.html:84
 msgid "About Us"
 msgstr "Über uns"
 
-#: .\core\templates\ihrdc_layout\base.html:76
+#: .\core\templates\ihrdc_layout\base.html:85
 msgid ""
 "Leading provider of training solutions for the energy industry worldwide."
 msgstr ""
 "Weltweit führender Anbieter von Schulungslösungen für die Energiebranche."
 
-#: .\core\templates\ihrdc_layout\base.html:79
+#: .\core\templates\ihrdc_layout\base.html:88
 msgid "Quick Links"
 msgstr "Direktlinks"
 
-#: .\core\templates\ihrdc_layout\base.html:87
+#: .\core\templates\ihrdc_layout\base.html:96
 msgid ""
 "\n"
 "                <div class=\"footer-section\">\n"
@@ -288,7 +292,7 @@ msgstr ""
 "</div>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\base.html:106
+#: .\core\templates\ihrdc_layout\base.html:115
 msgid "Training Platform. All rights reserved."
 msgstr "Trainingsplattform. Alle Rechte vorbehalten."
 
@@ -309,7 +313,7 @@ msgid "Go to Courses"
 msgstr "Gehe zu den Kursen"
 
 #: .\core\templates\ihrdc_layout\category.html:40
-#: .\core\templates\ihrdc_layout\courses.html:64
+#: .\core\templates\ihrdc_layout\courses.html:67
 msgid "Learn More"
 msgstr "Mehr erfahren"
 
@@ -541,11 +545,11 @@ msgstr "Zahlen"
 msgid "Course Catalog"
 msgstr "Vorlesungsverzeichnis"
 
-#: .\core\templates\ihrdc_layout\courses.html:19
+#: .\core\templates\ihrdc_layout\courses.html:22
 msgid "Categories"
 msgstr "Kategorien"
 
-#: .\core\templates\ihrdc_layout\courses.html:34
+#: .\core\templates\ihrdc_layout\courses.html:37
 msgid ""
 "\n"
 "                        <div class=\"filters\">\n"
@@ -577,7 +581,7 @@ msgstr ""
 "</select>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\courses.html:65
+#: .\core\templates\ihrdc_layout\courses.html:68
 msgid "Book Course"
 msgstr "Kurs buchen"
 
@@ -697,7 +701,17 @@ msgstr "Mehr erfahren"
 msgid "View All Courses"
 msgstr "Alle Kurse anzeigen"
 
-#: .\core\templates\ihrdc_layout\index.html:206
+#: .\core\templates\ihrdc_layout\index.html:164
+msgid ""
+"\n"
+"                <h2>Trusted by Leading Companies</h2>\n"
+"                <p>Our training programs have empowered professionals from a diverse range of industries, helping them achieve their career goals and drive organizational success.</p>\n"
+"            "
+msgstr ""
+"<h2> vertrauen von führenden Unternehmen </h2>\n"
+"                <p> Unsere Schulungsprogramme haben Fachleute aus verschiedenen Branchen befähigt, die ihnen helfen, ihre Karriereziele zu erreichen und den organisatorischen Erfolg zu fördern. </p>"
+
+#: .\core\templates\ihrdc_layout\index.html:208
 msgid "What Our Students Say"
 msgstr "Was unsere Studenten sagen"
 
@@ -837,15 +851,15 @@ msgstr "Branchen-Strom-Lehrplan"
 msgid "Flexible Learning Options"
 msgstr "Flexible Lernoptionen"
 
-#: .\edusite\settings.py:120
+#: .\edusite\settings.py:129
 msgid "English"
 msgstr "Englisch"
 
-#: .\edusite\settings.py:121
+#: .\edusite\settings.py:130
 msgid "French"
 msgstr "Französisch"
 
-#: .\edusite\settings.py:122
+#: .\edusite\settings.py:131
 msgid "German"
 msgstr "Deutsch"
 

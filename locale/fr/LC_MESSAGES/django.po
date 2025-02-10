@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 10:23+0100\n"
+"POT-Creation-Date: 2025-02-10 17:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,42 +215,46 @@ msgstr ""
 "<p>Notre mission est de fournir des solutions complètes de formation et de conseil dans le monde entier, de manière efficace, adaptée aux besoins des consommateurs et accessible. \n"
 "Notre objectif est d'optimiser pleinement le processus d'organisation de la formation afin de le rendre rapide et facile pour chacune des parties concernées.</p>"
 
-#: .\core\templates\ihrdc_layout\base.html:49
-#: .\core\templates\ihrdc_layout\base.html:81
+#: .\core\templates\ihrdc_layout\base.html:51
+msgid "Search..."
+msgstr "Recherche..."
+
+#: .\core\templates\ihrdc_layout\base.html:57
+#: .\core\templates\ihrdc_layout\base.html:90
 msgid "Home"
 msgstr "Maison"
 
-#: .\core\templates\ihrdc_layout\base.html:50
-#: .\core\templates\ihrdc_layout\base.html:82
+#: .\core\templates\ihrdc_layout\base.html:58
+#: .\core\templates\ihrdc_layout\base.html:91
 msgid "About"
 msgstr "À propos"
 
-#: .\core\templates\ihrdc_layout\base.html:52
-#: .\core\templates\ihrdc_layout\base.html:83
+#: .\core\templates\ihrdc_layout\base.html:60
+#: .\core\templates\ihrdc_layout\base.html:92
 msgid "Courses"
 msgstr "Cours"
 
-#: .\core\templates\ihrdc_layout\base.html:54
-#: .\core\templates\ihrdc_layout\base.html:84
+#: .\core\templates\ihrdc_layout\base.html:62
+#: .\core\templates\ihrdc_layout\base.html:93
 msgid "Contact"
 msgstr "Contact"
 
-#: .\core\templates\ihrdc_layout\base.html:75
+#: .\core\templates\ihrdc_layout\base.html:84
 msgid "About Us"
 msgstr "À propos de nous"
 
-#: .\core\templates\ihrdc_layout\base.html:76
+#: .\core\templates\ihrdc_layout\base.html:85
 msgid ""
 "Leading provider of training solutions for the energy industry worldwide."
 msgstr ""
 "Premier fournisseur mondial de solutions de formation pour le secteur de "
 "l'énergie."
 
-#: .\core\templates\ihrdc_layout\base.html:79
+#: .\core\templates\ihrdc_layout\base.html:88
 msgid "Quick Links"
 msgstr "Liens rapides"
 
-#: .\core\templates\ihrdc_layout\base.html:87
+#: .\core\templates\ihrdc_layout\base.html:96
 msgid ""
 "\n"
 "                <div class=\"footer-section\">\n"
@@ -288,7 +292,7 @@ msgstr ""
 "</div>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\base.html:106
+#: .\core\templates\ihrdc_layout\base.html:115
 msgid "Training Platform. All rights reserved."
 msgstr "Plateforme de formation. Tous droits réservés."
 
@@ -309,7 +313,7 @@ msgid "Go to Courses"
 msgstr "Accéder aux cours"
 
 #: .\core\templates\ihrdc_layout\category.html:40
-#: .\core\templates\ihrdc_layout\courses.html:64
+#: .\core\templates\ihrdc_layout\courses.html:67
 msgid "Learn More"
 msgstr "Apprendre encore plus"
 
@@ -541,11 +545,11 @@ msgstr "Payer"
 msgid "Course Catalog"
 msgstr "Catalogue des cours"
 
-#: .\core\templates\ihrdc_layout\courses.html:19
+#: .\core\templates\ihrdc_layout\courses.html:22
 msgid "Categories"
 msgstr "Catégories"
 
-#: .\core\templates\ihrdc_layout\courses.html:34
+#: .\core\templates\ihrdc_layout\courses.html:37
 msgid ""
 "\n"
 "                        <div class=\"filters\">\n"
@@ -577,7 +581,7 @@ msgstr ""
 "</select>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\courses.html:65
+#: .\core\templates\ihrdc_layout\courses.html:68
 msgid "Book Course"
 msgstr "Cours de livre"
 
@@ -697,7 +701,17 @@ msgstr "apprendre encore plus"
 msgid "View All Courses"
 msgstr "Voir tous les cours"
 
-#: .\core\templates\ihrdc_layout\index.html:206
+#: .\core\templates\ihrdc_layout\index.html:164
+msgid ""
+"\n"
+"                <h2>Trusted by Leading Companies</h2>\n"
+"                <p>Our training programs have empowered professionals from a diverse range of industries, helping them achieve their career goals and drive organizational success.</p>\n"
+"            "
+msgstr ""
+"<h2> Fait confiance par les principales entreprises </h2>\n"
+"                <p> Nos programmes de formation ont permis aux professionnels d'un éventail diversifié d'industries, les aidant à atteindre leurs objectifs de carrière et à stimuler la réussite organisationnelle. </p>"
+
+#: .\core\templates\ihrdc_layout\index.html:208
 msgid "What Our Students Say"
 msgstr "Ce que disent nos étudiants"
 
@@ -837,15 +851,15 @@ msgstr "Curriculum de courant de l'industrie"
 msgid "Flexible Learning Options"
 msgstr "Options d'apprentissage flexibles"
 
-#: .\edusite\settings.py:120
+#: .\edusite\settings.py:129
 msgid "English"
 msgstr "Anglais"
 
-#: .\edusite\settings.py:121
+#: .\edusite\settings.py:130
 msgid "French"
 msgstr "Français"
 
-#: .\edusite\settings.py:122
+#: .\edusite\settings.py:131
 msgid "German"
 msgstr "Allemand"
 

@@ -34,8 +34,8 @@ SECRET_KEY = 'django-insecure-gnht-ic%$(yl#z%cx$l_r)v!hny#_h^7z@wwvm*mqrbfjztuqz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ["https://k8a-adaptable-darwin.circumeo-apps.net", "http://localhost"]
+ALLOWED_HOSTS = ['i-citadelexz.com', '.i-citadelexz.com', 'localhost', '127.0.0.1', 'k8a-adaptable-darwin.circumeo-apps.net']
+CSRF_TRUSTED_ORIGINS = ["https://k8a-adaptable-darwin.circumeo-apps.net", "http://localhost", "https://i-citadelexz.com/"]
 
 # Application definition
 
@@ -89,9 +89,18 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    # 'default':{
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'icitjssa_citadel',
+    #     'USER': 'icitjssa_dikachi',
+    #     'PASSWORD': 'eRgsxCK5w&eE',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # }
 }
 
+# eRgsxCK5w&eE
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -144,7 +153,8 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
+# STATIC_ROOT =  '/home/icitjssa/public_html/static'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'

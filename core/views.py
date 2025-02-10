@@ -43,6 +43,14 @@ def index_page(request):
     }
     return render(request, 'ihrdc_layout/index.html', context)
 
+
+def search_courses(request):
+    query = request.GET.get('q', '')
+    courses = Course.objects.filter(title__icontains=query)
+    categories = Category.objects.all()
+    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+
+
 def course_list(request):
     try:
         categories = Category.objects.all()

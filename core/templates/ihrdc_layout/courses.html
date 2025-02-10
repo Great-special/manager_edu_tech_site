@@ -11,10 +11,13 @@
             <h2 class="section-title">{% trans "Course Catalog" %}</h2>
             <div class="catalog-layout">
                 <aside class="category-sidebar">
-                    <div class="search-box">
-                        <input type="text" placeholder="Search courses...">
-                        <i class="fas fa-search"></i>
-                    </div>
+                    <form action="{% url 'search' %}" method="GET">
+                        <div class="search-box">
+                            <input type="text" name='q' placeholder="Search courses...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </form>
+                    
                     <nav class="category-nav">
                         <h3>{% trans "Categories" %}</h3>
                         <ul>
