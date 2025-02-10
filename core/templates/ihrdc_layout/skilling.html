@@ -1,0 +1,42 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    {% blocktrans %}
+    <section class="course-details-hero">
+        <h1>What We Do</h1>
+        <p>Discover more about what we have to offers.</p>
+    </section>
+    {% endblocktrans %}
+
+    <!-- Course Details Section -->
+    <div class="service-detail">
+        <div class="service-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>{% trans "Upskilling & Reskilling" %}</h1>
+        </div>
+        
+        <div class="service-description">
+            <p>{% trans "Adapt to the changing business landscape by re-tooling your skillsets and expanding your professional capabilities." %}</p>
+        </div>
+        
+        <div class="service-benefits">
+            <h2>{% translate "Key Benefits" %}</h2>
+            <ul>
+                <li>{% trans "Adaptive Learning Strategies" %}</li>
+                <li>{% trans "Career Transformation Support" %}</li>
+                <li>{% trans "Emerging Technology Focus" %}</li>
+                <li>{% trans "Personalized Skill Development" %}</li>
+            </ul>
+        </div>
+        
+        <div class="call-to-action">
+            <a href="{% url 'courses' %}" class="btn btn-primary">{% trans "Enroll Now" %}</a>
+            <a href="{% url 'contact' %}" class="btn btn-outline">{% trans "Contact Us" %}</a>
+        </div>
+    </div>
+{% endblock %}

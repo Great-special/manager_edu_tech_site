@@ -87,53 +87,53 @@ def professional_training(request):
     context = {
         'page_title': 'Professional Training',
         'description': 'Our industry-specific courses are meticulously designed by experts to provide cutting-edge knowledge and skills.',
-        'lists': [
+        'key_benefits': [
             'Tailored Learning Paths',
             'Expert-Led Courses',
             'Industry-Current Curriculum',
             'Flexible Learning Options'
         ]
     }
-    return render(request, 'ihrdc_layout/what_we_do_details.html', context)
+    return render(request, 'ihrdc_layout/training.html', context)
 
 def upskilling_reskilling(request):
     context = {
         'page_title': 'Upskilling & Reskilling',
         'description': 'Adapt to the changing business landscape by re-tooling your skillsets and expanding your professional capabilities.',
-        'lists': [
+        'key_benefits': [
             'Adaptive Learning Strategies',
             'Career Transformation Support',
             'Emerging Technology Focus',
             'Personalized Skill Development'
         ]
     }
-    return render(request, 'ihrdc_layout/what_we_do_details.html', context)
+    return render(request, 'ihrdc_layout/skilling.html', context)
 
 def certification(request):
     context = {
         'page_title': 'Professional Certification',
         'description': 'Earn internationally recognized certifications that validate your expertise and enhance your professional credibility.',
-        'lists': [
+        'certification_types': [
             'Technical Certifications',
             'Professional Development Credentials',
             'Industry-Specific Qualifications',
             'Global Recognition Programs'
         ]
     }
-    return render(request, 'ihrdc_layout/what_we_do_details.html', context)
+    return render(request, 'ihrdc_layout/certification.html', context)
 
 def consultancy(request):
     context = {
         'page_title': 'Expert Consultancy',
         'description': 'Rapid, targeted consulting to resolve organizational bottlenecks and drive strategic improvements.',
-        'lists': [
+        'service_areas': [
             'Strategic Planning',
             'Process Optimization',
             'Technology Integration',
             'Performance Enhancement'
         ]
     }
-    return render(request, 'ihrdc_layout/what_we_do_details.html', context)
+    return render(request, 'ihrdc_layout/consultancy.html', context)
 
 def import_csv_to_model(csv_file_path: str, model_class: Type[Model], field_mapping: dict = {}, skip_header: bool = True) -> tuple[int, list]:
     """

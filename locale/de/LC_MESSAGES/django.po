@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-24 14:56+0100\n"
+"POT-Creation-Date: 2025-02-10 10:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,186 +18,178 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\core\models.py:5 .\core\models.py:108
+#: .\core\models.py:6 .\core\models.py:116
 msgid "name"
 msgstr "Name"
 
-#: .\core\models.py:6
+#: .\core\models.py:7
 msgid "slug"
 msgstr "Schnecke"
 
-#: .\core\models.py:7 .\core\models.py:34 .\core\models.py:50
-#: .\core\models.py:97
-msgid "created at"
-msgstr "erstellt am"
-
-#: .\core\models.py:8 .\core\models.py:35 .\core\models.py:51
-#: .\core\models.py:98
-msgid "updated at"
-msgstr "aktualisiert am"
-
-#: .\core\models.py:11 .\core\models.py:26
-msgid "category"
-msgstr "Kategorie"
-
-#: .\core\models.py:12
-msgid "categories"
-msgstr "Kategorien"
-
-#: .\core\models.py:19
-msgid "title"
-msgstr "Titel"
-
-#: .\core\models.py:20
-msgid "description"
-msgstr "Beschreibung"
-
-#: .\core\models.py:21
+#: .\core\models.py:8 .\core\models.py:29
 msgid "image"
 msgstr "Bild"
 
-#: .\core\models.py:22
+#: .\core\models.py:10 .\core\models.py:42 .\core\models.py:58
+#: .\core\models.py:105
+msgid "created at"
+msgstr "erstellt am"
+
+#: .\core\models.py:11 .\core\models.py:43 .\core\models.py:59
+#: .\core\models.py:106
+msgid "updated at"
+msgstr "aktualisiert am"
+
+#: .\core\models.py:14 .\core\models.py:34
+msgid "category"
+msgstr "Kategorie"
+
+#: .\core\models.py:15
+msgid "categories"
+msgstr "Kategorien"
+
+#: .\core\models.py:27
+msgid "title"
+msgstr "Titel"
+
+#: .\core\models.py:28
+msgid "description"
+msgstr "Beschreibung"
+
+#: .\core\models.py:30
 msgid "price"
 msgstr "Preis"
 
-#: .\core\models.py:23
+#: .\core\models.py:31
 msgid "duration"
 msgstr "Dauer"
 
-#: .\core\models.py:30
+#: .\core\models.py:38
 msgid "Course Mode"
 msgstr "Kursmodus"
 
-#: .\core\models.py:30
-msgid "Online"
-msgstr "Online"
-
-#: .\core\models.py:30
-msgid "Classroom"
-msgstr "Klassenzimmer"
-
-#: .\core\models.py:31
+#: .\core\models.py:39
 msgid "url"
 msgstr "URL (URL)"
 
-#: .\core\models.py:32
+#: .\core\models.py:40
 msgid "is popular"
 msgstr "ist beliebt"
 
-#: .\core\models.py:33
+#: .\core\models.py:41
 msgid "is upcoming"
 msgstr "steht bevor"
 
-#: .\core\models.py:38
+#: .\core\models.py:46
 msgid "course"
 msgstr "Kurs"
 
-#: .\core\models.py:39
+#: .\core\models.py:47
 msgid "courses"
 msgstr "Kurse"
 
-#: .\core\models.py:46
+#: .\core\models.py:54
 msgid "author name"
 msgstr "Name des Autors"
 
-#: .\core\models.py:47
+#: .\core\models.py:55
 msgid "author title"
 msgstr "Autortitel"
 
-#: .\core\models.py:48
+#: .\core\models.py:56
 msgid "author image"
 msgstr "Autorenbild"
 
-#: .\core\models.py:49
+#: .\core\models.py:57
 msgid "content"
 msgstr "Inhalt"
 
-#: .\core\models.py:54
+#: .\core\models.py:62
 msgid "testimonial"
 msgstr "Zeugnis"
 
-#: .\core\models.py:55
+#: .\core\models.py:63
 msgid "testimonials"
 msgstr "Erfahrungsberichte"
 
-#: .\core\models.py:62
+#: .\core\models.py:70
 msgid "customer"
 msgstr "Kunde"
 
-#: .\core\models.py:63 .\core\templates\ihrdc_layout\contact.html:24
+#: .\core\models.py:71 .\core\templates\ihrdc_layout\contact.html:24
 #: .\core\templates\ihrdc_layout\course_payment.html:51
 msgid "Email"
 msgstr "E-Mail"
 
-#: .\core\models.py:64 .\core\templates\ihrdc_layout\course_payment.html:62
+#: .\core\models.py:72 .\core\templates\ihrdc_layout\course_payment.html:62
 msgid "Phone Number"
 msgstr "Telefonnummer"
 
-#: .\core\models.py:65 .\core\templates\ihrdc_layout\course_payment.html:85
+#: .\core\models.py:73 .\core\templates\ihrdc_layout\course_payment.html:85
 msgid "City"
 msgstr "Stadt"
 
-#: .\core\models.py:66 .\core\templates\ihrdc_layout\course_payment.html:96
+#: .\core\models.py:74 .\core\templates\ihrdc_layout\course_payment.html:96
 msgid "Country"
 msgstr "Land"
 
-#: .\core\models.py:67 .\core\templates\ihrdc_layout\course_payment.html:107
+#: .\core\models.py:75 .\core\templates\ihrdc_layout\course_payment.html:107
 msgid "Postcode"
 msgstr "Postleitzahl"
 
-#: .\core\models.py:68
+#: .\core\models.py:76
 msgid "Course"
 msgstr "Kurs"
 
-#: .\core\models.py:71
+#: .\core\models.py:79
 msgid "enrolled_customer"
 msgstr "eingeschriebener_Kunde"
 
-#: .\core\models.py:72
+#: .\core\models.py:80
 msgid "enrolled_customers"
 msgstr "Eingeschriebene Kunden"
 
-#: .\core\models.py:90 .\core\templates\ihrdc_layout\course_payment.html:40
+#: .\core\models.py:98 .\core\templates\ihrdc_layout\course_payment.html:40
 msgid "Customer"
 msgstr "Kunde"
 
-#: .\core\models.py:91
+#: .\core\models.py:99
 msgid "amount"
 msgstr "Menge"
 
-#: .\core\models.py:92
+#: .\core\models.py:100
 msgid "currency"
 msgstr "Währung"
 
-#: .\core\models.py:93 .\core\templates\ihrdc_layout\course_payment.html:73
+#: .\core\models.py:101 .\core\templates\ihrdc_layout\course_payment.html:73
 msgid "Quantity"
 msgstr "Menge"
 
-#: .\core\models.py:94
+#: .\core\models.py:102
 msgid "status"
 msgstr "Status"
 
-#: .\core\models.py:95
+#: .\core\models.py:103
 msgid "payment method"
 msgstr "Zahlungsarten"
 
-#: .\core\models.py:96
+#: .\core\models.py:104
 msgid "stripe payment intent id"
 msgstr "Stripe-Zahlungsabsichts-ID"
 
-#: .\core\models.py:101
+#: .\core\models.py:109
 msgid "payment"
 msgstr "Zahlung"
 
-#: .\core\models.py:102
+#: .\core\models.py:110
 msgid "payments"
 msgstr "Zahlungen"
 
-#: .\core\models.py:109
+#: .\core\models.py:117
 msgid "email"
 msgstr "E-Mail"
 
-#: .\core\models.py:110
+#: .\core\models.py:118
 msgid "message"
 msgstr "Nachricht"
 
@@ -224,41 +216,41 @@ msgstr ""
 "\n"
 "Wir streben eine vollständige Optimierung des Schulungsorganisationsprozesses an, um ihn für alle Beteiligten schnell und einfach zu gestalten.</p>"
 
-#: .\core\templates\ihrdc_layout\base.html:51
-#: .\core\templates\ihrdc_layout\base.html:83
+#: .\core\templates\ihrdc_layout\base.html:49
+#: .\core\templates\ihrdc_layout\base.html:81
 msgid "Home"
 msgstr "Heim"
 
-#: .\core\templates\ihrdc_layout\base.html:52
-#: .\core\templates\ihrdc_layout\base.html:84
+#: .\core\templates\ihrdc_layout\base.html:50
+#: .\core\templates\ihrdc_layout\base.html:82
 msgid "About"
 msgstr "Um"
 
-#: .\core\templates\ihrdc_layout\base.html:54
-#: .\core\templates\ihrdc_layout\base.html:85
+#: .\core\templates\ihrdc_layout\base.html:52
+#: .\core\templates\ihrdc_layout\base.html:83
 msgid "Courses"
 msgstr "Kurse"
 
-#: .\core\templates\ihrdc_layout\base.html:56
-#: .\core\templates\ihrdc_layout\base.html:86
+#: .\core\templates\ihrdc_layout\base.html:54
+#: .\core\templates\ihrdc_layout\base.html:84
 msgid "Contact"
 msgstr "Kontakt"
 
-#: .\core\templates\ihrdc_layout\base.html:77
+#: .\core\templates\ihrdc_layout\base.html:75
 msgid "About Us"
 msgstr "Über uns"
 
-#: .\core\templates\ihrdc_layout\base.html:78
+#: .\core\templates\ihrdc_layout\base.html:76
 msgid ""
 "Leading provider of training solutions for the energy industry worldwide."
 msgstr ""
 "Weltweit führender Anbieter von Schulungslösungen für die Energiebranche."
 
-#: .\core\templates\ihrdc_layout\base.html:81
+#: .\core\templates\ihrdc_layout\base.html:79
 msgid "Quick Links"
 msgstr "Direktlinks"
 
-#: .\core\templates\ihrdc_layout\base.html:89
+#: .\core\templates\ihrdc_layout\base.html:87
 msgid ""
 "\n"
 "                <div class=\"footer-section\">\n"
@@ -296,7 +288,7 @@ msgstr ""
 "</div>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\base.html:108
+#: .\core\templates\ihrdc_layout\base.html:106
 msgid "Training Platform. All rights reserved."
 msgstr "Trainingsplattform. Alle Rechte vorbehalten."
 
@@ -316,15 +308,115 @@ msgstr ""
 msgid "Go to Courses"
 msgstr "Gehe zu den Kursen"
 
-#: .\core\templates\ihrdc_layout\category.html:39
+#: .\core\templates\ihrdc_layout\category.html:40
 #: .\core\templates\ihrdc_layout\courses.html:64
 msgid "Learn More"
 msgstr "Mehr erfahren"
 
-#: .\core\templates\ihrdc_layout\category.html:40
-#: .\core\templates\ihrdc_layout\course_detail.html:40
+#: .\core\templates\ihrdc_layout\category.html:41
+#: .\core\templates\ihrdc_layout\certification.html:38
+#: .\core\templates\ihrdc_layout\consultancy.html:41
+#: .\core\templates\ihrdc_layout\course_detail.html:39
+#: .\core\templates\ihrdc_layout\skilling.html:38
+#: .\core\templates\ihrdc_layout\training.html:38
 msgid "Enroll Now"
 msgstr "Jetzt anmelden"
+
+#: .\core\templates\ihrdc_layout\certification.html:9
+#: .\core\templates\ihrdc_layout\consultancy.html:9
+#: .\core\templates\ihrdc_layout\skilling.html:9
+#: .\core\templates\ihrdc_layout\training.html:9
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "    <section class=\"course-details-hero\">\n"
+#| "        <h1>Course Details</h1>\n"
+#| "        <p>Discover more about this course and what it offers.</p>\n"
+#| "    </section>\n"
+#| "    "
+msgid ""
+"\n"
+"    <section class=\"course-details-hero\">\n"
+"        <h1>What We Do</h1>\n"
+"        <p>Discover more about what we have to offers.</p>\n"
+"    </section>\n"
+"    "
+msgstr ""
+"<section class=\"course-details-hero\">\n"
+"<h1>Kursdetails</h1>\n"
+"<p>Erfahren Sie mehr über diesen Kurs und was er bietet.</p>\n"
+"</section>"
+
+#: .\core\templates\ihrdc_layout\certification.html:20
+msgid "Professional Certification"
+msgstr "Professionelle Zertifizierung"
+
+#: .\core\templates\ihrdc_layout\certification.html:24
+msgid ""
+"Earn internationally recognized certifications that validate your expertise "
+"and enhance your professional credibility."
+msgstr ""
+"Verdienen Sie international anerkannte Zertifizierungen, die Ihr Fachwissen "
+"validieren und Ihre berufliche Glaubwürdigkeit verbessern."
+
+#: .\core\templates\ihrdc_layout\certification.html:28
+msgid "Certification Types"
+msgstr "Zertifizierungstypen"
+
+#: .\core\templates\ihrdc_layout\certification.html:30
+msgid "Technical Certifications"
+msgstr "Technische Zertifizierungen"
+
+#: .\core\templates\ihrdc_layout\certification.html:31
+msgid "Professional Development Credentials"
+msgstr "Berechtigte berufliche Entwicklung"
+
+#: .\core\templates\ihrdc_layout\certification.html:32
+msgid "Industry-Specific Qualifications"
+msgstr "Branchenspezifische Qualifikationen"
+
+#: .\core\templates\ihrdc_layout\certification.html:33
+msgid "Global Recognition Programs"
+msgstr "Globale Anerkennungsprogramme"
+
+#: .\core\templates\ihrdc_layout\certification.html:39
+#: .\core\templates\ihrdc_layout\consultancy.html:42
+#: .\core\templates\ihrdc_layout\skilling.html:39
+#: .\core\templates\ihrdc_layout\training.html:39
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "Kontakt"
+
+#: .\core\templates\ihrdc_layout\consultancy.html:21
+msgid "Expert Consultancy"
+msgstr "Expertenberatung"
+
+#: .\core\templates\ihrdc_layout\consultancy.html:25
+msgid ""
+"Rapid, targeted consulting to resolve organizational bottlenecks and drive "
+"strategic improvements."
+msgstr ""
+"Schnelle, gezielte Beratung zur Lösung organisatorischer Engpässe und zur "
+"strategischen Verbesserung."
+
+#: .\core\templates\ihrdc_layout\consultancy.html:29
+msgid "Service Areas"
+msgstr "Servicebereiche"
+
+#: .\core\templates\ihrdc_layout\consultancy.html:31
+msgid ""
+"\n"
+"                <li>Strategic Planning</li>\n"
+"                <li>Process Optimization</li>\n"
+"                <li>Technology Integration</li>\n"
+"                <li>Performance Enhancement</li>\n"
+"                "
+msgstr ""
+"<li> Strategische Planung </li>\n"
+"                <li> Prozessoptimierung </li>\n"
+"                <li> Technologieintegration </li>\n"
+"                <li> Leistungsverbesserung </li>"
 
 #: .\core\templates\ihrdc_layout\contact.html:10
 msgid ""
@@ -400,7 +492,11 @@ msgstr "Über diesen Kurs"
 msgid "Duration"
 msgstr "Dauer"
 
-#: .\core\templates\ihrdc_layout\course_detail.html:41
+#: .\core\templates\ihrdc_layout\course_detail.html:35
+msgid "Venue"
+msgstr "Veranstaltungsort"
+
+#: .\core\templates\ihrdc_layout\course_detail.html:40
 #: .\core\templates\ihrdc_layout\course_payment.html:26
 msgid "Price"
 msgstr "Preis"
@@ -481,20 +577,22 @@ msgstr ""
 "</select>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\courses.html:60
-msgid "Live Training"
-msgstr "Live-Schulung"
-
 #: .\core\templates\ihrdc_layout\courses.html:65
 msgid "Book Course"
 msgstr "Kurs buchen"
 
 #: .\core\templates\ihrdc_layout\index.html:13
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                <h1>Transform Your Career with Industry-Leading Training</h1>\n"
+#| "                <p>Expert-led courses across diverse sectors and industries</p>\n"
+#| "                "
 msgid ""
 "\n"
-"                <h1>Transform Your Career with Industry-Leading Training</h1>\n"
-"                <p>Expert-led courses across diverse sectors and industries</p>\n"
-"                "
+"                    <h1>Transform Your Career with Industry-Leading Training</h1>\n"
+"                    <p>Expert-led courses across diverse sectors and industries</p>\n"
+"                    "
 msgstr ""
 "<h1>Verwandeln Sie Ihre Karriere mit branchenführenden Schulungen</h1>\n"
 "<p>Von Experten geleitete Kurse in verschiedenen Sektoren und Branchen</p>"
@@ -503,11 +601,51 @@ msgstr ""
 msgid "Explore Courses"
 msgstr "Kurse erkunden"
 
-#: .\core\templates\ihrdc_layout\index.html:26
+#: .\core\templates\ihrdc_layout\index.html:25
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                <h1>Transform Your Career with Industry-Leading Training</h1>\n"
+#| "                <p>Expert-led courses across diverse sectors and industries</p>\n"
+#| "                "
+msgid ""
+"\n"
+"                    <h1>Unlock Your Potential with Cutting-Edge Learning</h1>\n"
+"                    <p>Flexible online and in-person programs for every career stage</p>\n"
+"                    "
+msgstr ""
+"<h1>Verwandeln Sie Ihre Karriere mit branchenführenden Schulungen</h1>\n"
+"<p>Von Experten geleitete Kurse in verschiedenen Sektoren und Branchen</p>"
+
+#: .\core\templates\ihrdc_layout\index.html:29
+msgid "View Programs"
+msgstr "Programme anzeigen"
+
+#: .\core\templates\ihrdc_layout\index.html:37
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Consultancy</h3>\n"
+#| "                        <p>Resolve bottlenecks within minutes</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"                    <h1>Learn from Industry Experts</h1>\n"
+"                    <p>Connect with top professionals and gain real-world insights</p>\n"
+"                    "
+msgstr ""
+"<h3>Beratung</h3>\n"
+"<p>Engpässe innerhalb von Minuten beheben</p>"
+
+#: .\core\templates\ihrdc_layout\index.html:41
+msgid "Start Learning"
+msgstr "Fangen Sie an zu lernen"
+
+#: .\core\templates\ihrdc_layout\index.html:56
 msgid "What We Do"
 msgstr "Was wir tun"
 
-#: .\core\templates\ihrdc_layout\index.html:35
+#: .\core\templates\ihrdc_layout\index.html:65
 msgid ""
 "\n"
 "                        <h3>Professional Training</h3>\n"
@@ -517,7 +655,7 @@ msgstr ""
 "<h3>Professionelle Schulung</h3>\n"
 "<p>Branchenspezifische Kurse von Experten, maßgeschneiderte Schulungsprogramme für Organisationen</p>"
 
-#: .\core\templates\ihrdc_layout\index.html:42
+#: .\core\templates\ihrdc_layout\index.html:72
 msgid ""
 "\n"
 "                        <h3>Upskilling/Reskilling</h3>\n"
@@ -527,7 +665,7 @@ msgstr ""
 "<h3>Weiterbildung/Umschulung</h3>\n"
 "<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das veränderte Geschäftsklima anzupassen...</p>"
 
-#: .\core\templates\ihrdc_layout\index.html:49
+#: .\core\templates\ihrdc_layout\index.html:79
 msgid ""
 "\n"
 "                        <h3>Certification</h3>\n"
@@ -537,7 +675,7 @@ msgstr ""
 "<h3>Zertifizierung</h3>\n"
 "<p>International anerkannte Zertifizierungen</p>"
 
-#: .\core\templates\ihrdc_layout\index.html:56
+#: .\core\templates\ihrdc_layout\index.html:86
 msgid ""
 "\n"
 "                        <h3>Consultancy</h3>\n"
@@ -547,21 +685,118 @@ msgstr ""
 "<h3>Beratung</h3>\n"
 "<p>Engpässe innerhalb von Minuten beheben</p>"
 
-#: .\core\templates\ihrdc_layout\index.html:71
+#: .\core\templates\ihrdc_layout\index.html:101
 msgid "Popular Courses"
 msgstr "Beliebte Kurse"
 
-#: .\core\templates\ihrdc_layout\index.html:94
+#: .\core\templates\ihrdc_layout\index.html:124
 msgid "learn more"
 msgstr "Mehr erfahren"
 
-#: .\core\templates\ihrdc_layout\index.html:101
+#: .\core\templates\ihrdc_layout\index.html:131
 msgid "View All Courses"
 msgstr "Alle Kurse anzeigen"
 
-#: .\core\templates\ihrdc_layout\index.html:134
+#: .\core\templates\ihrdc_layout\index.html:206
 msgid "What Our Students Say"
 msgstr "Was unsere Studenten sagen"
+
+#: .\core\templates\ihrdc_layout\old_work.html:4
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Professional Training</h3>\n"
+#| "                        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"        <h3>Professional Training</h3>\n"
+"        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>\n"
+"        "
+msgstr ""
+"<h3>Professionelle Schulung</h3>\n"
+"<p>Branchenspezifische Kurse von Experten, maßgeschneiderte Schulungsprogramme für Organisationen</p>"
+
+#: .\core\templates\ihrdc_layout\old_work.html:11
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Upskilling/Reskilling</h3>\n"
+#| "                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"        <h3>Upskilling/Reskilling</h3>\n"
+"        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
+"        "
+msgstr ""
+"<h3>Weiterbildung/Umschulung</h3>\n"
+"<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das veränderte Geschäftsklima anzupassen...</p>"
+
+#: .\core\templates\ihrdc_layout\old_work.html:18
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Certification</h3>\n"
+#| "                        <p>Internationally recognized certifications</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"        <h3>Certification</h3>\n"
+"        <p>Internationally recognized certifications</p>\n"
+"        "
+msgstr ""
+"<h3>Zertifizierung</h3>\n"
+"<p>International anerkannte Zertifizierungen</p>"
+
+#: .\core\templates\ihrdc_layout\old_work.html:25
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Consultancy</h3>\n"
+#| "                        <p>Resolve bottlenecks within minutes</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"        <h3>Consultancy</h3>\n"
+"        <p>Resolve bottlenecks within minutes</p>\n"
+"        "
+msgstr ""
+"<h3>Beratung</h3>\n"
+"<p>Engpässe innerhalb von Minuten beheben</p>"
+
+#: .\core\templates\ihrdc_layout\skilling.html:20
+msgid "Upskilling & Reskilling"
+msgstr "Upskilling & Reskilling"
+
+#: .\core\templates\ihrdc_layout\skilling.html:24
+msgid ""
+"Adapt to the changing business landscape by re-tooling your skillsets and "
+"expanding your professional capabilities."
+msgstr ""
+"Passen Sie sich an die sich ändernde Geschäftslandschaft an, indem Sie Ihre "
+"Fähigkeiten neu toultieren und Ihre beruflichen Fähigkeiten erweitern."
+
+#: .\core\templates\ihrdc_layout\skilling.html:28
+#: .\core\templates\ihrdc_layout\training.html:28
+msgid "Key Benefits"
+msgstr "Schlüsselvorteile"
+
+#: .\core\templates\ihrdc_layout\skilling.html:30
+msgid "Adaptive Learning Strategies"
+msgstr "Adaptive Lernstrategien"
+
+#: .\core\templates\ihrdc_layout\skilling.html:31
+msgid "Career Transformation Support"
+msgstr "Unterstützung bei der Karriere -Transformation"
+
+#: .\core\templates\ihrdc_layout\skilling.html:32
+msgid "Emerging Technology Focus"
+msgstr "Emerging Technology Focus"
+
+#: .\core\templates\ihrdc_layout\skilling.html:33
+msgid "Personalized Skill Development"
+msgstr "Personalisierte Fähigkeitenentwicklung"
 
 #: .\core\templates\ihrdc_layout\success.html:10
 msgid "Thank You!"
@@ -571,6 +806,36 @@ msgstr "Danke schön!"
 msgid "Thanks for purchasing our product. We hope you enjoy it!"
 msgstr ""
 "Vielen Dank für den Kauf unseres Produkts. Wir hoffen, es gefällt Ihnen!"
+
+#: .\core\templates\ihrdc_layout\training.html:20
+msgid "Professional Training"
+msgstr "Berufstraining"
+
+#: .\core\templates\ihrdc_layout\training.html:24
+msgid ""
+"Our industry-specific courses are meticulously designed by experts to "
+"provide cutting-edge knowledge and skills."
+msgstr ""
+"Unsere branchenspezifischen Kurse wurden von Experten sorgfältig entwickelt,"
+" um hochmoderne Kenntnisse und Fähigkeiten zu vermitteln."
+
+#: .\core\templates\ihrdc_layout\training.html:30
+msgid "Tailored Learning Paths"
+msgstr "MEMAKTE LERNUNGSPURE"
+
+#: .\core\templates\ihrdc_layout\training.html:31
+#, fuzzy
+#| msgid "Explore Courses"
+msgid "Expert-Led Courses"
+msgstr "Kurse erkunden"
+
+#: .\core\templates\ihrdc_layout\training.html:32
+msgid "Industry-Current Curriculum"
+msgstr "Branchen-Strom-Lehrplan"
+
+#: .\core\templates\ihrdc_layout\training.html:33
+msgid "Flexible Learning Options"
+msgstr "Flexible Lernoptionen"
 
 #: .\edusite\settings.py:120
 msgid "English"
@@ -1628,7 +1893,7 @@ msgstr "oder"
 #: .\venv\Lib\site-packages\django\utils\text.py:273
 #: .\venv\Lib\site-packages\django\utils\timesince.py:131
 msgid ", "
-msgstr ""
+msgstr "Anwesend"
 
 #: .\venv\Lib\site-packages\django\utils\timesince.py:8
 #, python-format
@@ -1877,3 +2142,12 @@ msgstr "Vernetzen, Hilfe erhalten oder beitragen"
 #: .\venv\Lib\site-packages\modeltranslation\widgets.py:32
 msgid "None"
 msgstr "Keiner"
+
+#~ msgid "Online"
+#~ msgstr "Online"
+
+#~ msgid "Classroom"
+#~ msgstr "Klassenzimmer"
+
+#~ msgid "Live Training"
+#~ msgstr "Live-Schulung"

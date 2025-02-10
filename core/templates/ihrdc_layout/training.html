@@ -17,21 +17,20 @@
     <div class="service-detail">
         <div class="service-header">
             <i class="fas fa-graduation-cap"></i>
-            <h1>{{ page_title }}</h1>
+            <h1>{% trans "Professional Training" %}</h1>
         </div>
         
         <div class="service-description">
-            {% blocktrans %}
-            <p>{{ description }}</p>
-            {% endblocktrans %}
+            <p>{% trans "Our industry-specific courses are meticulously designed by experts to provide cutting-edge knowledge and skills." %}</p>
         </div>
         
         <div class="service-benefits">
             <h2>{% translate "Key Benefits" %}</h2>
             <ul>
-                {% for item in lists %}
-                    <li>{{ item }}</li>
-                {% endfor %}
+                <li>{% trans "Tailored Learning Paths" %}</li>
+                <li>{% trans "Expert-Led Courses" %}</li>
+                <li>{% trans "Industry-Current Curriculum" %}</li>
+                <li>{% trans "Flexible Learning Options" %}</li>
             </ul>
         </div>
         
