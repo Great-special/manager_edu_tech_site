@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I-CITADEL | {% block title %}{% endblock %}</title>
     {% block style %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'layout/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'layout/css/old.css' %}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://js.paypal.com/js/paypal.min.js"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'layout/images/logo.png' %}">
@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="contact-info">
                     <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a>
-                    <a href="mailto:info@example.com"><i class="fas fa-envelope"></i> info@example.com</a>
+                    <a href="mailto:info@i-citadelexz.com"><i class="fas fa-envelope"></i> info@i-citadelexz.com</a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -61,12 +61,13 @@
                         </li>
                         <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
                     </ul>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
-                <button class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                
             </div>
         </nav>
     </header>
@@ -93,13 +94,14 @@
                         <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
                     </ul>
                 </div>
+    
                 {% blocktrans %}
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <ul class="contact-list">
                         <li><i class="fas fa-map-marker-alt"></i>123 Training St, City, Country</li>
                         <li><i class="fas fa-phone"></i> +1 (234) 567-890</li>
-                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-envelope"></i> info@i-citadelexz.com</li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -111,8 +113,17 @@
                 </div>
             </div>
             {% endblocktrans %}
+            <div class="footer-section">
+                <h3>{% trans "Staff Links" %}</h3>
+                <ul>
+                    <li><a href="https://i-citadelexz.com:2096/">{% trans "Mailing" %}</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://i-citadelexz.com/admin/">{% trans "Staff" %}</a></li>
+                </ul>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; {% now "Y" %} {% trans "Training Platform. All rights reserved." %}</p>
+                <p>&copy; {% now "Y" %} {% trans "I-Citadelexz Training Platform. All rights reserved." %}</p>
             </div>
             
         </div>
