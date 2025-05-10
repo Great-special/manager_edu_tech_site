@@ -1,0 +1,274 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}Courses - I-Citadel{% endblock %}
+{% block style %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'academy_layout/css/courses.css' %}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+{% endblock style %}
+
+{% block content %}
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Courses</h1>
+            <p class="page-subtitle">Explore our wide range of courses designed to help you succeed in your career.</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="filter-item">
+                    <span class="filter-label">Category:</span>
+                    <select class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="health-social-care">Health & Social Care</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="mental-health">Mental Health</option>
+                        <option value="first-aid">First Aid</option>
+                        <option value="elderly-care">Elderly Care</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <span class="filter-label">Level:</span>
+                    <select class="filter-select">
+                        <option value="">All Levels</option>
+                        <option value="level-2">Level 2</option>
+                        <option value="level-3">Level 3</option>
+                        <option value="level-4">Level 4</option>
+                        <option value="level-5">Level 5</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <span class="filter-label">Duration:</span>
+                    <select class="filter-select">
+                        <option value="">Any Duration</option>
+                        <option value="short">Short (1-4 weeks)</option>
+                        <option value="medium">Medium (1-3 months)</option>
+                        <option value="long">Long (3+ months)</option>
+                    </select>
+                </div>
+                <div class="search-form">
+                    <input type="text" class="search-input" placeholder="Search courses...">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="category-sidebar">
+        <form action="{% url 'search' %}" method="GET">
+            <div class="search-box">
+                <input type="text" name='q' placeholder="Search courses...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        
+        <nav class="category-nav">
+            <ul>
+                {% for category in categories %}
+                <li>
+                    <a href="{% url 'category_details' category.slug %}" class="category-item">
+                        <span>{{category}}</span>
+                        <span class="count">({{category.courses.count}})</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </aside>
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('/api/placeholder/400/250');"></div>
+                        <div class="course-content">
+                            <span class="course-category">Health & Social Care</span>
+                            <h3 class="course-title">Health and Social Care Level 3 Diploma</h3>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i>12 months</span>
+                                <span><i class="fas fa-graduation-cap"></i>Level 3</span>
+                            </div>
+                            <p class="course-text">Comprehensive training for careers in healthcare and social care settings, covering essential principles and practices.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check-circle"></i>Accredited Qualification</li>
+                                <li><i class="fas fa-check-circle"></i>Work Placement Included</li>
+                                <li><i class="fas fa-check-circle"></i>Career Support</li>
+                            </ul>
+                            <div class="course-price">£1,200</div>
+                            <a href="#" class="btn btn-primary-custom">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('/api/placeholder/400/250');"></div>
+                        <div class="course-content">
+                            <span class="course-category">Nursing</span>
+                            <h3 class="course-title">Healthcare Assistant Training</h3>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i>6 weeks</span>
+                                <span><i class="fas fa-graduation-cap"></i>Level 2</span>
+                            </div>
+                            <p class="course-text">Develop practical skills needed to provide high-quality care and support in various healthcare environments.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check-circle"></i>Hands-on Training</li>
+                                <li><i class="fas fa-check-circle"></i>Industry Recognized</li>
+                                <li><i class="fas fa-check-circle"></i>Job Placement Assistance</li>
+                            </ul>
+                            <div class="course-price">£650</div>
+                            <a href="#" class="btn btn-primary-custom">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('/api/placeholder/400/250');"></div>
+                        <div class="course-content">
+                            <span class="course-category">Elderly Care</span>
+                            <h3 class="course-title">Adult Care Worker Diploma</h3>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i>9 months</span>
+                                <span><i class="fas fa-graduation-cap"></i>Level 3</span>
+                            </div>
+                            <p class="course-text">Professional qualification for those working or looking to work in adult care settings across the healthcare sector.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check-circle"></i>Nationally Recognized</li>
+                                <li><i class="fas fa-check-circle"></i>Flexible Learning</li>
+                                <li><i class="fas fa-check-circle"></i>Expert Tutors</li>
+                            </ul>
+                            <div class="course-price">£950</div>
+                            <a href="#" class="btn btn-primary-custom">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('/api/placeholder/400/250');"></div>
+                        <div class="course-content">
+                            <span class="course-category">Mental Health</span>
+                            <h3 class="course-title">Mental Health First Aid</h3>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i>2 days</span>
+                                <span><i class="fas fa-graduation-cap"></i>Certificate</span>
+                            </div>
+                            <p class="course-text">Learn to identify, understand and help someone who may be experiencing a mental health issue.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check-circle"></i>Certified Training</li>
+                                <li><i class="fas fa-check-circle"></i>Interactive Sessions</li>
+                                <li><i class="fas fa-check-circle"></i>Resource Materials</li>
+                            </ul>
+                            <div class="course-price">£195</div>
+                            <a href="#" class="btn btn-primary-custom">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('/api/placeholder/400/250');"></div>
+                        <div class="course-content">
+                            <span class="course-category">First Aid</span>
+                            <h3 class="course-title">Emergency First Aid at Work</h3>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i>1 day</span>
+                                <span><i class="fas fa-graduation-cap"></i>Certificate</span>
+                            </div>
+                            <p class="course-text">Essential first aid skills for workplace emergencies, meeting HSE requirements for low-risk workplaces.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check-circle"></i>HSE Compliant</li>
+                                <li><i class="fas fa-check-circle"></i>Practical Training</li>
+                                <li><i class="fas fa-check-circle"></i>3-Year Certification</li>
+                            </ul>
+                            <div class="course-price">£85</div>
+                            <a href="#" class="btn btn-primary-custom">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-img" style="background-image: url('/api/placeholder/400/250');"></div>
+                        <div class="course-content">
+                            <span class="course-category">Health & Social Care</span>
+                            <h3 class="course-title">Leadership in Health & Social Care Level 5</h3>
+                            <div class="course-meta">
+                                <span><i class="far fa-clock"></i>18 months</span>
+                                <span><i class="fas fa-graduation-cap"></i>Level 5</span>
+                            </div>
+                            <p class="course-text">Advanced qualification for healthcare professionals looking to move into management and leadership roles.</p>
+                            <ul class="course-features">
+                                <li><i class="fas fa-check-circle"></i>Advanced Qualification</li>
+                                <li><i class="fas fa-check-circle"></i>Management Skills</li>
+                                <li><i class="fas fa-check-circle"></i>Career Progression</li>
+                            </ul>
+                            <div class="course-price">£2,500</div>
+                            <a href="#" class="btn btn-primary-custom">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination-custom">
+                <a href="#" class="page-link-custom page-link-prev"><i class="fas fa-chevron-left me-2"></i>Prev</a>
+                <a href="#" class="page-link-custom active">1</a>
+                <a href="#" class="page-link-custom">2</a>
+                <a href="#" class="page-link-custom">3</a>
+                <a href="#" class="page-link-custom">...</a>
+                <a href="#" class="page-link-custom">6</a>
+                <a href="#" class="page-link-custom page-link-next">Next<i class="fas fa-chevron-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="courseFAQ">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How do I enroll in a course?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#courseFAQ">
+                        <div class="accordion-body">
+                            To enroll in a course, simply select the course you're interested in and click on the "View Details" button. On the course details page, you'll find an "Enroll Now" button. Click on it and follow the registration process. Alternatively, you can contact our admissions team directly via phone or email for assistance with enrollment.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What qualifications do I need to start a course?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#courseFAQ">
+                        <div class="accordion-body">
+                            Entry requirements vary depending on the course and level. Generally, Level 2 courses may require basic literacy and numeracy skills. Level 3 courses typically require either a Level 2 qualification in a related subject or relevant work experience. Higher-level courses (Level 4 and above) usually require previous qualifications or significant work experience in the field. Specific requirements are listed on each course page.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Are your courses accredited?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#courseFAQ">
+                        <div class="accordion-body">
+                            Yes, all of our diploma and certificate courses are fully accredited by recognized awarding bodies in the UK, such as City & Guilds, NCFE, and Pearson. Our short courses and specialized training programs are also recognized by relevant industry organizations. These accreditations ensure that the qualifications you receive are valued by employers and educational institutions across the country.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

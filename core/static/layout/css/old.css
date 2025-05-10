@@ -129,6 +129,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
 }
 
 .logo img {
@@ -230,7 +231,7 @@ body {
     position: relative;
     min-height: 500px;
     height: 80vh;
-    max-height: 800px;
+    max-height: 1500px;
     overflow: hidden;
 }
 
@@ -353,7 +354,7 @@ body {
 }
 
 .what-we-do .container {
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -547,7 +548,7 @@ body {
 
 .client-logo-track {
     display: flex;
-    width: calc(250px * 18); /* Adjust based on number of logos */
+    width: calc(250px * 12); /* Adjust based on number of logos */
     animation: scroll 20s linear infinite;
 }
 
@@ -1128,23 +1129,56 @@ body {
     :root {
         --container-width: 3400px;
     }
-    .section-title {
-        font-size: 5rem;
+    h1,h2,h3 {
+        font-size: var(--font-xl);
+        margin-bottom: var(--space-md);
     }
-    .what-we-do .container {
-        max-width: 2880px;
+    p {
+        font-size: var(--font-lg);
+        margin-bottom: var(--space-md);
+    }
+    a {
+        font-size: 32px;
+    }
+    span {
+        font-size: 32px;
     }
     .header-top .container {
-        height: 100px;
+        height: 150px;
+    }
+    .contact-info a {
+        color: white;
+        text-decoration: none;
+        margin-right: var(--space-lg);
+        transition: opacity 0.3s ease;
+        font-size: 24px;
+    }
+    
+    .contact-info a:hover {
+        opacity: 0.8;
+    }
+    
+    .social-links a {
+        color: white;
+        margin-left: var(--space-md);
+        transition: opacity 0.3s ease;
+    }
+    .main-nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
     }
     .logo img {
-        height: 400px;
+        height: 200px;
         width: auto;
     }
 
     .hero-carousel {
         min-height: 800px;
-        height: 60vh;
+        height: 80vh;
+        max-height: 1500px;
+        overflow: hidden;
     }
     .search-form input[type="text"] {
         padding: var(--space-xs) var(--space-xs);
@@ -1166,10 +1200,6 @@ body {
         gap: var(--space-xl);
     }
 
-    .card-image {
-        height: 600px;
-    }
-
     .catalog-layout {
         grid-template-columns: 400px 1fr;
         gap: var(--space-xl);
@@ -1179,8 +1209,11 @@ body {
         text-decoration: none;
         color: var(--light-gray);
         font-weight: 500;
-        font-size: var(--font-lg);
+        font-size: var(--font-xl);
         transition: color 0.3s ease;
+    }
+    .section-title {
+        font-size: 5rem;
     }
     .hero-content {
         max-width: var(--container-width);
@@ -1202,21 +1235,37 @@ body {
         transform: translateY(30px);
         transition: opacity 1s ease-out, transform 1s ease-out;
     }
+    .what-we-do .container {
+        max-width: 2880px;
+    }
     .what-we-do {
         padding: var(--space-ls) var(--space-lg);
         background-color: var(--light-gray);
     }
     .content-wrapper {
-        display: flex;
-        flex-direction: row;
-        gap: var(--space-lg);
-        padding-bottom: var(--space-lg);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--space-xs);
+        align-items: start;
+        margin: 20px;
     }
     .what-we-do .container {
         max-width: 3480px;
         margin: 0 auto;
     }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+        gap: var(--space-lg);
+        padding: 20px;
+    }
+    .side-image img {
+        max-height: auto;
+        max-width: auto;
+    }
     .service-card {
+        height: 400px;
+        width: 100%;
         background: white;
         padding: var(--space-lg);
         border-radius: var(--radius-md);
@@ -1225,13 +1274,164 @@ body {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .side-image img {
-        max-height: 1200px;
+    .card-image {
+        height: 400px;
     }
 
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+    .course-card {
+        background: white;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.3s ease;
+    }
+    
+    .course-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .course-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .course-content p {
+        font-size: 32px;
+    }
+    .course-meta {
+        display: flex;
+        gap: var(--space-md);
+        margin: var(--space-md) 0;
+        color: var(--text-light);
+    }
+
+    .course-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: var(--space-lg);
+    }
+    .price {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .client-section {
+        background-color: var(--color-bg-light);
+        padding: var(--space-xs) 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .client-section-title {
+        margin-bottom: var(--space-xs);
+    }
+
+    .client-section-title h2 {
+        font-size: 5rem;
+    }
+
+    .client-section-title p {
+        font-size: 2.5rem;
+        max-width: 1000px;
+    }
+
+    .client-logo-marquee {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+        width: 100%;
+        margin-top: auto;
+        height: 300px;
+    }
+    
+    .client-logo-track {
+        display: flex;
+        width: calc(300px * 12); /* Adjust based on number of logos */
+        animation: scroll 20s linear infinite;
+    }
+    
+    .client-logo-track:hover {
+        animation-play-state: paused;
+    }
+    
+    .client-logo-item {
+        flex: 0 0 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--space-md);
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+        gap: var(--space-lg);
+    }
+    
+    .testimonial-card {
+        background: white;
+        padding: var(--space-lg);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        height: 600px;
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: var(--space-ls);
+        margin-top: var(--space-lg);
+    }
+    
+    .testimonial-author img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        height: 50px;
+    }    
+    .catalog-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .catalog-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.75rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .card-header h3 {
+        margin: 0;
+        font-size: 2.75rem;
+    }
+    
     .footer-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: var(--space-xl);
+        gap: var(--space-ls);
     }
 }
 
@@ -1241,7 +1441,7 @@ body {
         --container-width: 2400px;
     }
     .header-top .container {
-        height: 75px;
+        height: 100px;
     }
     .logo img {
         height: 300px;
@@ -1382,7 +1582,7 @@ body {
     .nav-links {
         display: none;
         position: absolute;
-        top: 80%;
+        top: 90%;
         left: 0;
         right: 0;
         background: black;

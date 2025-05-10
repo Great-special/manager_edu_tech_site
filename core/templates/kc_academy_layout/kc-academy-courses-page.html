@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Academy - Projects, Contracts and Purchasing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: #14151a;
+            padding: 15px 0;
+        }
+        
+        .navbar-brand img {
+            height: 30px;
+        }
+        
+        .nav-link {
+            color: #adadad !important;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        
+        .nav-link:hover {
+            color: #ffffff !important;
+        }
+        
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+        
+        .search-btn {
+            color: #ffffff;
+            background: transparent;
+            border: none;
+        }
+        
+        .hero-section {
+            background-color: #8d7e75;
+            color: white;
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .hero-section::before {
+            content: "";
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            top: 110px;
+            left: 125px;
+        }
+        
+        .breadcrumb {
+            background-color: transparent;
+            padding: 15px 0;
+        }
+        
+        .breadcrumb-item a {
+            color: #888;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item.active {
+            color: #888;
+        }
+        
+        .course-filter {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        
+        .filter-section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .form-check {
+            margin-bottom: 8px;
+        }
+        
+        .form-check-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .course-content {
+            padding: 20px;
+        }
+        
+        .course-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .course-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .course-duration, .course-venue {
+            font-size: 13px;
+            color: #777;
+        }
+        
+        .course-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .course-btn {
+            display: block;
+            width: 100%;
+            background-color: #3d1a1a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .course-btn:hover {
+            background-color: #2c1212;
+            color: white;
+        }
+        
+        .pagination {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+        
+        .page-link {
+            color: #3d1a1a;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+        }
+        
+        .page-link:hover {
+            background-color: #f5f5f5;
+            color: #3d1a1a;
+            border-color: #ddd;
+        }
+        
+        .page-item.active .page-link {
+            background-color: #3d1a1a;
+            border-color: #3d1a1a;
+        }
+        
+        .side-tab {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #3d1a1a;
+            color: white;
+            padding: 15px 10px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            border-radius: 0 0 5px 5px;
+            font-size: 12px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #666;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .featured-badge {
+            display: inline-block;
+            background-color: #3d1a1a;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .footer {
+            background-color: #14151a;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adadad;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 12px;
+            color: #adadad;
+        }
+    </style>
+</head>
+<body>
+    <!-- Side Tab -->
+    <div class="side-tab">
+        CLICK TO EXPLORE CATEGORIES
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/api/placeholder/140/40" alt="KC Academy Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Course Finder</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="calendarDropdown" role="button" data-bs-toggle="dropdown">
+                            Calendars
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="topicsDropdown" role="button" data-bs-toggle="dropdown">
+                            Training Topics
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="venuesDropdown" role="button" data-bs-toggle="dropdown">
+                            Training Venues
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="certificatesDropdown" role="button" data-bs-toggle="dropdown">
+                            Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="formatsDropdown" role="button" data-bs-toggle="dropdown">
+                            Formats
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="search-btn ms-3">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-6 fw-bold">PROJECTS, CONTRACTS AND PURCHASING</h1>
+            <p class="lead">Discover professional training courses in project management, contract management, and procurement.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Training Courses</a></li>
+                <li class="breadcrumb-item active">Projects, Contracts and Purchasing</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3">
+                <div class="course-filter">
+                    <h4 class="filter-title">Filter Courses</h4>
+                    
+                    <div class="filter-section">
+                        <h5 class="filter-section-title">Training Topics</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="topic1">
+                            <label class="form-check-label" for="topic1">
+                                Contract Management
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="topic2">
+                            <label class="form-check-label" for="topic2">
+                                Project Management
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="topic3">
+                            <label class="form-check-label" for="topic3">
+                                Procurement & Purchasing
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="topic4">
+                            <label class="form-check-label" for="topic4">
+                                Risk Management
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="topic5">
+                            <label class="form-check-label" for="topic5">
+                                Tendering & Bid Management
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h5 class="filter-section-title">Training Venues</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="venue1">
+                            <label class="form-check-label" for="venue1">
+                                London
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="venue2">
+                            <label class="form-check-label" for="venue2">
+                                Dubai
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="venue3">
+                            <label class="form-check-label" for="venue3">
+                                Singapore
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="venue4">
+                            <label class="form-check-label" for="venue4">
+                                Online
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h5 class="filter-section-title">Duration</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="duration1">
+                            <label class="form-check-label" for="duration1">
+                                1-2 Days
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="duration2">
+                            <label class="form-check-label" for="duration2">
+                                3-5 Days
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="duration3">
+                            <label class="form-check-label" for="duration3">
+                                1-2 Weeks
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h5 class="filter-section-title">Price Range</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="price1">
+                            <label class="form-check-label" for="price1">
+                                Under £1,000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="price2">
+                            <label class="form-check-label" for="price2">
+                                £1,000 - £2,000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="price3">
+                            <label class="form-check-label" for="price3">
+                                £2,000 - £3,000
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="price4">
+                            <label class="form-check-label" for="price4">
+                                £3,000+
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn course-btn mt-3">Apply Filters</button>
+                    <button class="btn btn-outline-secondary w-100 mt-2">Reset</button>
+                </div>
+            </div>
+            
+            <!-- Course Listings -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <!-- Course Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <img src="/api/placeholder/400/250" alt="Project Management" class="course-image">
+                            <div class="course-content">
+                                <span class="featured-badge">Featured</span>
+                                <span class="category-badge">Project Management</span>
+                                <h3 class="course-title">Project Management Professional (PMP)</h3>
+                                <p class="course-description">Comprehensive training program designed to prepare professionals for the globally recognized PMP certification.</p>
+                                <div class="course-meta">
+                                    <div>
+                                        <div class="course-duration"><i class="far fa-clock me-1"></i> 5 Days</div>
+                                        <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> London, Dubai</div>
+                                    </div>
+                                    <div class="course-price">£2,450</div>
+                                </div>
+                                <a href="#" class="course-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <img src="/api/placeholder/400/250" alt="Contract Management" class="course-image">
+                            <div class="course-content">
+                                <span class="category-badge">Contract Management</span>
+                                <h3 class="course-title">Advanced Contract Management</h3>
+                                <p class="course-description">Master the complexities of managing contracts effectively in international business environments.</p>
+                                <div class="course-meta">
+                                    <div>
+                                        <div class="course-duration"><i class="far fa-clock me-1"></i> 4 Days</div>
+                                        <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> Dubai, Singapore</div>
+                                    </div>
+                                    <div class="course-price">£2,150</div>
+                                </div>
+                                <a href="#" class="course-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <img src="/api/placeholder/400/250" alt="Procurement" class="course-image">
+                            <div class="course-content">
+                                <span class="category-badge">Procurement</span>
+                                <h3 class="course-title">Strategic Procurement & Purchasing</h3>
+                                <p class="course-description">Develop strategic approaches to procurement that drive cost savings and business value.</p>
+                                <div class="course-meta">
+                                    <div>
+                                        <div class="course-duration"><i class="far fa-clock me-1"></i> 3 Days</div>
+                                        <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> London, Online</div>
+                                    </div>
+                                    <div class="course-price">£1,850</div>
+                                </div>
+                                <a href="#" class="course-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <img src="/api/placeholder/400/250" alt="Risk Management" class="course-image">
+                            <div class="course-content">
+                                <span class="featured-badge">Featured</span>
+                                <span class="category-badge">Risk Management</span>
+                                <h3 class="course-title">Project Risk Management</h3>
+                                <p class="course-description">Learn how to identify, analyze, and respond to project risks effectively to ensure project success.</p>
+                                <div class="course-meta">
+                                    <div>
+                                        <div class="course-duration"><i class="far fa-clock me-1"></i> 3 Days</div>
+                                        <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> Dubai, Singapore</div>
+                                    </div>
+                                    <div class="course-price">£1,950</div>
+                                </div>
+                                <a href="#" class="course-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <img src="/api/placeholder/400/250" alt="Tendering" class="course-image">
+                            <div class="course-content">
+                                <span class="category-badge">Tendering</span>
+                                <h3 class="course-title">Tendering & Bid Management</h3>
+                                <p class="course-description">Master the art of creating winning tenders and managing the bid process from start to finish.</p>
+                                <div class="course-meta">
+                                    <div>
+                                        <div class="course-duration"><i class="far fa-clock me-1"></i> 4 Days</div>
+                                        <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> London, Online</div>
+                                    </div>
+                                    <div class="course-price">£2,050</div>
+                                </div>
+                                <a href="#" class="course-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Course Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <img src="/api/placeholder/400/250" alt="FIDIC Contracts" class="course-image">
+                            <div class="course-content">
+                                <span class="category-badge">Contract Management</span>
+                                <h3 class="course-title">FIDIC Contracts & Management</h3>
+                                <p class="course-description">Comprehensive guide to understanding and managing FIDIC contracts in international construction projects.</p>
+                                <div class="course-meta">
+                                    <div>
+                                        <div class="course-duration"><i class="far fa-clock me-1"></i> 5 Days</div>
+                                        <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> Dubai</div>
+                                    </div>
+                                    <div class="course-price">£2,350</div>
+                                </div>
+                                <a href="#" class="course-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="footer-title">ABOUT KC ACADEMY</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Trainers</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News & Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">TRAINING TOPICS</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Executive Management</a></li>
+                        <li><a href="#">Leadership & Management</a></li>
+                        <li><a href="#">Projects & Contracts</a></li>
+                        <li><a href="#">Finance & Accounting</a></li>
+                        <li><a href="#">Human Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">RESOURCES</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Course Finder</a></li>
+                        <li><a href="#">Training Calendar</a></li>
+                        <li><a href="#">Certificates</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">CONTACT US</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">London Office</a></li>
+                        <li><a href="#">Dubai Office</a></li>
+                        <li><a href="#">Singapore Office</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 KC Academy. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

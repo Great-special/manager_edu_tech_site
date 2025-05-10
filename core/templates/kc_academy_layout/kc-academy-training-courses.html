@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC Academy - Training Courses</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: #14151a;
+            padding: 15px 0;
+        }
+        
+        .navbar-brand img {
+            height: 30px;
+        }
+        
+        .nav-link {
+            color: #adadad !important;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        
+        .nav-link:hover {
+            color: #ffffff !important;
+        }
+        
+        .dropdown-toggle::after {
+            vertical-align: middle;
+        }
+        
+        .search-btn {
+            color: #ffffff;
+            background: transparent;
+            border: none;
+        }
+        
+        .hero-section {
+            background-color: #8d7e75;
+            color: white;
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .hero-section::before {
+            content: "";
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            top: 110px;
+            left: 125px;
+        }
+        
+        .breadcrumb {
+            background-color: transparent;
+            padding: 15px 0;
+        }
+        
+        .breadcrumb-item a {
+            color: #888;
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item.active {
+            color: #888;
+        }
+        
+        .intro-section {
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+        
+        .intro-text {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .categories-section {
+            padding: 30px 0;
+        }
+        
+        .section-heading {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3d1a1a;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .category-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .category-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .category-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .category-btn {
+            display: block;
+            width: 100%;
+            background-color: #3d1a1a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            margin-top: auto;
+        }
+        
+        .category-btn:hover {
+            background-color: #2c1212;
+            color: white;
+        }
+        
+        .popular-courses {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .course-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .course-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .course-duration, .course-venue {
+            font-size: 13px;
+            color: #777;
+        }
+        
+        .course-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .course-btn {
+            display: block;
+            width: 100%;
+            background-color: #3d1a1a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .course-btn:hover {
+            background-color: #2c1212;
+            color: white;
+        }
+        
+        .features-section {
+            padding: 50px 0;
+            background-color: white;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #3d1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .testimonials {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: "\201C";
+            font-family: Georgia, serif;
+            font-size: 80px;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            color: #f0f0f0;
+            z-index: 0;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .testimonial-position {
+            font-size: 13px;
+            color: #777;
+        }
+        
+        .cta-section {
+            padding: 60px 0;
+            background-color: #3d1a1a;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: white;
+            color: #3d1a1a;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            background-color: #f0f0f0;
+            color: #3d1a1a;
+        }
+        
+        .footer {
+            background-color: #14151a;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adadad;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 12px;
+            color: #adadad;
+        }
+        
+        .side-tab {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #3d1a1a;
+            color: white;
+            padding: 15px 10px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            border-radius: 0 0 5px 5px;
+            font-size: 12px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: #666;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .featured-badge {
+            display: inline-block;
+            background-color: #3d1a1a;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Side Tab -->
+    <div class="side-tab">
+        CLICK TO EXPLORE CATEGORIES
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/api/placeholder/140/40" alt="KC Academy Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Course Finder</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="calendarDropdown" role="button" data-bs-toggle="dropdown">
+                            Calendars
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="topicsDropdown" role="button" data-bs-toggle="dropdown">
+                            Training Topics
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="venuesDropdown" role="button" data-bs-toggle="dropdown">
+                            Training Venues
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="certificatesDropdown" role="button" data-bs-toggle="dropdown">
+                            Certificates
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="formatsDropdown" role="button" data-bs-toggle="dropdown">
+                            Formats
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="search-btn ms-3">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-6 fw-bold">TRAINING COURSES</h1>
+            <p class="lead">Discover professional training courses that build capabilities and deliver real-world impact.</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Training Courses</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="intro-text">
+                        Welcome to KC Academy's comprehensive selection of professional training courses. Our programs are designed to empower individuals with practical skills and knowledge that can be immediately applied in their respective fields. Led by industry experts with extensive experience, our courses combine theoretical foundations with practical applications, case studies, and hands-on exercises to ensure a well-rounded learning experience.
+                    </p>
+                    <p class="intro-text">
+                        Whether you're looking to advance your career, enhance your team's capabilities, or transform your organization, our diverse range of training courses offers something for professionals at all levels. Explore our categories below to find the perfect training solution for your needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-heading">TRAINING CATEGORIES</h2>
+            <div class="row">
+                <!-- Category 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="/api/placeholder/400/250" alt="Executive Management" class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Executive Management</h3>
+                            <p class="category-description">
+                                Elevate your leadership capabilities with our executive management courses designed for senior professionals. Learn advanced strategies for organizational leadership, decision-making, and driving business transformation.
+                            </p>
+                            <a href="#" class="category-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="/api/placeholder/400/250" alt="Leadership and Management" class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Leadership and Management</h3>
+                            <p class="category-description">
+                                Develop essential leadership skills and management techniques to inspire teams, manage resources effectively, and drive organizational success in today's competitive business environment.
+                            </p>
+                            <a href="#" class="category-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="/api/placeholder/400/250" alt="Projects, Contracts and Purchasing" class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Projects, Contracts and Purchasing</h3>
+                            <p class="category-description">
+                                Master the complexities of project management, contract administration, and procurement strategies to deliver projects on time, within budget, and to specification.
+                            </p>
+                            <a href="#" class="category-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="/api/placeholder/400/250" alt="Finance and Accounting" class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Finance and Accounting</h3>
+                            <p class="category-description">
+                                Enhance your financial acumen with courses covering financial reporting, analysis, budgeting, cost management, and other critical aspects of corporate finance and accounting.
+                            </p>
+                            <a href="#" class="category-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 5 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="/api/placeholder/400/250" alt="Strategy, Innovation & Transformation" class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Strategy, Innovation & Transformation</h3>
+                            <p class="category-description">
+                                Learn to develop and implement strategic initiatives, foster innovation, and lead organizational transformation in a rapidly evolving business landscape.
+                            </p>
+                            <a href="#" class="category-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Category 6 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="category-card">
+                        <img src="/api/placeholder/400/250" alt="Human Resources" class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Human Resources</h3>
+                            <p class="category-description">
+                                Develop expertise in talent management, employee engagement, performance management, and other critical HR functions to build and maintain a high-performing workforce.
+                            </p>
+                            <a href="#" class="category-btn">Explore Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section class="popular-courses">
+        <div class="container">
+            <h2 class="section-heading">POPULAR COURSES</h2>
+            <div class="row">
+                <!-- Course 1 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="course-card">
+                        <img src="/api/placeholder/400/250" alt="Project Management Professional" class="course-image">
+                        <div class="course-content">
+                            <span class="featured-badge">Featured</span>
+                            <span class="category-badge">Project Management</span>
+                            <h3 class="course-title">Project Management Professional (PMP)</h3>
+                            <p class="course-description">
+                                Comprehensive training program designed to prepare professionals for the globally recognized PMP certification examination and enhance project management capabilities.
+                            </p>
+                            <div class="course-meta">
+                                <div>
+                                    <div class="course-duration"><i class="far fa-clock me-1"></i> 5 Days</div>
+                                    <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> London, Dubai</div>
+                                </div>
+                                <div class="course-price">£2,450</div>
+                            </div>
+                            <a href="#" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="course-card">
+                        <img src="/api/placeholder/400/250" alt="Strategic Leadership" class="course-image">
+                        <div class="course-content">
+                            <span class="category-badge">Leadership</span>
+                            <h3 class="course-title">Strategic Leadership Excellence</h3>
+                            <p class="course-description">
+                                Develop advanced leadership skills and strategic thinking to lead teams effectively and drive organizational success in today's complex business environment.
+                            </p>
+                            <div class="course-meta">
+                                <div>
+                                    <div class="course-duration"><i class="far fa-clock me-1"></i> 4 Days</div>
+                                    <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> Dubai, Singapore</div>
+                                </div>
+                                <div class="course-price">£2,150</div>
+                            </div>
+                            <a href="#" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="course-card">
+                        <img src="/api/placeholder/400/250" alt="Financial Analysis" class="course-image">
+                        <div class="course-content">
+                            <span class="featured-badge">Featured</span>
+                            <span class="category-badge">Finance</span>
+                            <h3 class="course-title">Advanced Financial Analysis & Modeling</h3>
+                            <p class="course-description">
+                                Master the skills of financial analysis, forecasting, and building complex financial models for better decision-making and business planning.
+                            </p>
+                            <div class="course-meta">
+                                <div>
+                                    <div class="course-duration"><i class="far fa-clock me-1"></i> 5 Days</div>
+                                    <div class="course-venue"><i class="fas fa-map-marker-alt me-1"></i> London, Online</div>
+                                </div>
+                                <div class="course-price">£2,350</div>
+                            </div>
+                            <a href="#" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-heading">WHY CHOOSE KC ACADEMY</h2>
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="feature-title">Expert Trainers</h3>
+                        <p class="feature-description">
+                            Learn from industry professionals with extensive experience and deep expertise in their respective fields.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="feature-title">Practical Approach</h3>
+                        <p class="feature-description">
+                            Our courses focus on practical applications and real-world scenarios that you can implement immediately.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="feature-title">Accredited Programs</h3>
+                        <p class="feature-description">
+                            Many of our courses are accredited by leading international professional bodies and organizations.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="feature-title">Global Locations</h3>
+                        <p class="feature-description">
+                            Choose from multiple training venues worldwide or attend our courses virtually from anywhere.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Networking Opportunities</h3>
+                        <p class="feature-description">
+                            Connect with professionals from diverse industries and build valuable relationships.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3 class="feature-title">Flexible Learning</h3>
+                        <p class="feature-description">
+                            Choose from in-person, virtual, and hybrid learning formats to suit your preferences and schedule.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-heading">TESTIMONIALS</h2>
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The Project Management Professional course at KC Academy was transformative for my career. The trainer's expertise and the practical approach helped me not only pass the PMP exam but also improve my project management skills significantly."
+                            </p>
+                            <div class="testimonial-author">Sarah Johnson</div>
+                            <div class="testimonial-position">Senior Project Manager, Global Technologies</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "The Strategic Leadership Excellence program provided invaluable insights and practical tools that I've been able to implement immediately in my organization. The interactive sessions and networking opportunities were outstanding."
+                            </p>
+                            <div class="testimonial-author">Michael Chen</div>
+                            <div class="testimonial-position">Director of Operations, Innovate Solutions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Advance Your Career?</h2>
+            <p class="cta-description">
+                Browse our comprehensive selection of training courses an

@@ -1,0 +1,145 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% block title %}I-Citadel - Category{% endblock %}
+
+{% load static %}
+{% load i18n %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'academy_layout/css/category.css' %}">
+{% endblock style %}
+
+    {% block content %}
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="custom-container">
+                <h1 class="hero-title">TRAINING CATEGORIES</h1>
+                <p class="hero-subtitle">
+                    Discover training courses that empower professionals, build capabilities, and deliver real-world impact.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="custom-container training-categories">
+
+            <!-- Executive Management Category -->
+            <div class="category-card">
+                <div class="category-row">
+                    <div class="category-image-wrapper">
+                        <img src="/api/placeholder/550/350" alt="Executive Management" class="category-image">
+                    </div>
+                    <div class="category-content-wrapper">
+                        <div class="category-content">
+                            <h3 class="category-title">EXECUTIVE MANAGEMENT</h3>
+                            <p class="category-description">
+                                Executive Management Training Courses are essential for professionals aspiring to lead with vision, influence, and innovation...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category-courses-wrapper">
+                        <div class="featured-courses">
+                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
+                            <ul class="course-list">
+                                <li>Leading Beyond Ego</li>
+                                <li>Masterclass in Advanced Critical Thinking Skills</li>
+                                <li>Operational Excellence</li>
+                                <li>Executive Challenge</li>
+                            </ul>
+                            <a href="#" class="btn view-all-btn">VIEW ALL COURSES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership and Management Category -->
+            <div class="category-card">
+                <div class="category-row">
+                    <div class="category-image-wrapper">
+                        <img src="/api/placeholder/550/350" alt="Leadership and Management" class="category-image">
+                    </div>
+                    <div class="category-content-wrapper">
+                        <div class="category-content">
+                            <h3 class="category-title">LEADERSHIP AND MANAGEMENT</h3>
+                            <p class="category-description">
+                                Leadership and Management training courses are a vital stepping-stone for professionals aiming to lead with purpose and manage with precision...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category-courses-wrapper">
+                        <div class="featured-courses">
+                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
+                            <ul class="course-list">
+                                <li>Masterclass in Advanced Critical Thinking Skills</li>
+                                <li>Artificial Intelligence for Professionals</li>
+                                <li>Structured Problem Solving using Lean Sigma</li>
+                            </ul>
+                            <a href="#" class="btn view-all-btn">VIEW ALL COURSES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategy, Innovation & Transformation Category -->
+            <div class="category-card">
+                <div class="category-row">
+                    <div class="category-image-wrapper">
+                        <img src="/api/placeholder/550/350" alt="Strategy, Innovation & Transformation" class="category-image">
+                    </div>
+                    <div class="category-content-wrapper">
+                        <div class="category-content">
+                            <h3 class="category-title">STRATEGY, INNOVATION & TRANSFORMATION</h3>
+                            <p class="category-description">
+                                Strategy, Innovation & Transformation Training Courses are essential for professionals seeking to lead meaningful change...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category-courses-wrapper">
+                        <div class="featured-courses">
+                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
+                            <ul class="course-list">
+                                <li>Leading Beyond Ego</li>
+                                <li>Sustainable Investment</li>
+                                <li>Certified Administrative Professional</li>
+                            </ul>
+                            <a href="#" class="btn view-all-btn">VIEW ALL COURSES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Categories (Django loop) -->
+            {% for category in categories %}
+            <div class="category-card">
+                <div class="category-row">
+                    <div class="category-image-wrapper">
+                        {% if category.image %}
+                        <img src="{{ category.image.url }}" alt="{{ category.name }}" class="category-image">
+                        {% else %}
+                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="{{ category.name }}" class="category-image">
+                        {% endif %}
+                    </div>
+                    <div class="category-content-wrapper">
+                        <div class="category-content">
+                            <h3 class="category-title">{{ category.name }}</h3>
+                            <p class="category-description">{{ category.description|truncatewords:30 }}</p>
+                        </div>
+                    </div>
+                    <div class="category-courses-wrapper">
+                        <div class="featured-courses">
+                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
+                            <ul class="course-list">
+                                <li>Leading Beyond Ego</li>
+                                <li>Sustainable Investment</li>
+                                <li>Certified Administrative Professional</li>
+                            </ul>
+                            <a href="{% url 'category_details' category.slug %}" class="btn view-all-btn">VIEW ALL COURSES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% endblock %}

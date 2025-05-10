@@ -22,10 +22,19 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 # Create your views here.
 
 
+def test_courses_page(request):
+    return render(request, 'kc_academy_layout/kc-academy-courses.html')
+
+
+
 def index_page(request):
     try:
         categories = Category.objects.all()
         popular_courses = Course.objects.filter(is_popular=True)
+        if len(popular_courses) >= 6:
+            popular_courses = popular_courses[:6]
+        else:
+            popular_courses = popular_courses[:3]
     except Exception as e:
         print(e)
         categories = None
@@ -41,7 +50,7 @@ def index_page(request):
         'popular_courses': popular_courses,
         'testimonials':testimonials
     }
-    return render(request, 'ihrdc_layout/index.html', context)
+    return render(request, 'kc_academy_layout/kc-academy-index.html', context)
 
 
 def search_courses(request):
@@ -70,26 +79,36 @@ def category_detail(request, slug):
     courses = Course.objects.filter(category=category)
     return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
 
+def category_detail_by_search(request, word):
+    category = Category.objects.filter(name__icontains=word)
+    if not category.exists():
+        category = Category.objects.filter(slug__icontains=word)
+    else:
+        courses = Course.objects.filter(title__icontains=word)
+    courses = Course.objects.filter(category=category)
+    return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
+
 def get_categories(request):
     categories = Category.objects.all()
-    return render(request, 'ihrdc_layout/categories.html', {'categories':categories})
+    return render(request, 'kc_academy_layout/kc-academy-categories.html', {'categories':categories})
 
 def about_page(request):
-    return render(request, 'ihrdc_layout/about.html')
+    return render(request, 'kc_academy_layout/kc-academy-about.html')
 
 def contact_page(request):
     if request.method == 'POST':
         name = request.POST.get('name', '')
         email = request.POST.get('email', '')
         message = request.POST.get('message', '')
-        
+        print(name, email, message)
         FeedBack.objects.create(
             name=name,
             email=email,
             message=message
         )
-        return render(request, 'ihrdc_layout/thank_you.html')
-    return render(request, 'ihrdc_layout/contact.html')
+        messages.success(request, 'Your message has been sent successfully!')   
+        return redirect('contact')
+    return render(request, 'kc_academy_layout\kc-academy-contact-page.html')
 
 def professional_training(request):
     context = {

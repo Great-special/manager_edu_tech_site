@@ -1,0 +1,246 @@
+:root {
+    /* Color Variables */
+    --primary-color: #ff7b00;        /* Main brand orange */
+    --primary-light: #ff9838;        /* Lighter orange */
+    --primary-dark: #d36703;         /* Darker orange (accent) */
+    --secondary-color: #000000;      /* Black */
+    --secondary-light: #333333;      /* Dark gray */
+    --secondary-lighter: #555555;    /* Medium gray */
+    --accent-color: #d36703;         /* Dark orange accent */
+    --dark-blue: #024269;            /* Dark blue */
+    --light-bg: #f9f9f9;             /* Light background */
+    --lighter-bg: #ffffff;           /* White background */
+    --text-dark: #000000;            /* Black text */
+    --text-medium: #555555;          /* Medium gray text */
+    --text-light: #cccccc;           /* Light gray text */
+    --text-white: #ffffff;           /* White text */
+    --overlay-dark: rgba(0,0,0,0.7); /* Dark overlay */
+    --overlay-light: rgba(0,0,0,0.1);/* Light overlay */
+    --shadow-light: 0 5px 15px rgba(0,0,0,0.05); /* Light shadow */
+    --shadow-medium: 0 10px 25px rgba(0,0,0,0.1); /* Medium shadow */
+    
+    /* Spacing Variables */
+    --section-padding: 80px;
+    --card-padding: 30px;
+    --btn-padding: 12px 30px;
+    --nav-padding: 8px 0;
+    
+    /* Typography Variables */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.1rem;
+    --font-size-xl: 1.3rem;
+    --font-size-xxl: 2.5rem;
+    --line-height-base: 1.6;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: var(--line-height-base);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: var(--nav-padding);
+    font-size: 0.9rem;
+}
+
+/* Navigation */
+.navbar-custom {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow-light);
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.nav-link {
+    color: var(--text-white);
+    font-weight: 500;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-contact,
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border-radius: 30px;
+    padding: var(--btn-padding);
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-contact:hover,
+.btn-primary-custom:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Hero/Header Sections */
+.hero-section,
+.page-header {
+    background: linear-gradient(var(--overlay-dark), var(--overlay-dark)), 
+                url('../images/hero-image.jpeg') center/cover no-repeat;
+    color: var(--text-white);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-title,
+.page-title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-lg);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Sections */
+.section-title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Cards */
+.feature-card,
+.mission-card,
+.vision-card,
+.team-card,
+.course-card,
+.testimonial-card {
+    background-color: var(--lighter-bg);
+    border-radius: 10px;
+    padding: var(--card-padding);
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.feature-card:hover,
+.mission-card:hover,
+.vision-card:hover,
+.team-card:hover,
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: #fcc07b; /* Light orange background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+/* Team Section */
+.team-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.7);
+    transition: bottom 0.3s;
+    text-align: center;
+}
+
+.team-card:hover .team-social {
+    bottom: 0;
+}
+
+.team-social a {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+.team-social a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(var(--overlay-dark), var(--overlay-dark)), 
+                url('../images/stats-bg.jpeg') center/cover no-repeat;
+    color: var(--text-white);
+    padding: var(--section-padding) 0;
+}
+
+.stat-icon {
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
+    padding: var(--section-padding) 0 30px;
+}
+
+.footer-title:after {
+    background-color: var(--primary-color);
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+    color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.footer-contact-icon {
+    color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px;
+        --font-size-xxl: 1.8rem;
+    }
+    
+    .hero-section,
+    .page-header {
+        padding: 80px 0;
+    }
+}

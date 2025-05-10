@@ -21,4 +21,6 @@ urlpatterns = [
     path('cancel/', views.cancel, name='cancel'),
     path('success/', views.success, name='success'),
     path("webhooks/stripe/", views.stripe_webhook, name="stripe_webhook"),
+    
+    path('test-courses/', views.test_courses_page, name='test_courses'),
 ]

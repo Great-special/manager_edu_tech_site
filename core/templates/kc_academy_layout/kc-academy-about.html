@@ -1,0 +1,259 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}About Us - I-Citadel{% endblock %}
+{% block style %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'academy_layout/css/about.css' %}">
+{% endblock style %}
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">About Us</h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        {% blocktrans %}
+                        <h2 class="section-title">Our Story</h2>
+                        <p>Founded in 2010, I-Citadelexz Excellenz has established itself as a leading provider of healthcare education and training in the United Kingdom. What began as a small training center with just a handful of courses has grown into a comprehensive educational institution offering a wide range of accredited healthcare programs.</p>
+                        <p>Our journey started with a clear vision: to bridge the gap between theoretical knowledge and practical skills in healthcare education. We recognized the growing demand for well-trained healthcare professionals and the need for quality education that prepares students for the real challenges of the industry.</p>
+                        <p>Over the years, we have continuously evolved and expanded our offerings to meet the changing needs of the healthcare sector. Through strategic partnerships with healthcare institutions, industry professionals, and accrediting bodies, we have developed courses that are not only academically rigorous but also relevant to the current job market.</p>
+                        {% endblocktrans %}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'layout\images\Training.jpeg' %}" alt="KC Academy History" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    {% blocktrans %}
+                    <p>Today, I-Citadelexz Excellenz stands as a testament to our commitment to excellence in healthcare education. With state-of-the-art facilities, expert instructors, and a curriculum that balances theory with practical experience, we continue to produce graduates who are making significant contributions to the healthcare sector across the UK and beyond.</p>
+                    <p>We take pride in our high student satisfaction rates, excellent employment outcomes, and the positive impact our graduates have on patient care. As we look to the future, we remain dedicated to our mission of training and developing healthcare professionals who are not only skilled and knowledgeable but also compassionate and ethical in their practice.</p>
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="mission-card">
+                        {% blocktrans %}
+                        <h3>Our Mission</h3>
+                        <p>At I-Citadelexz Excellenz, our mission is to provide high-quality, accessible healthcare education that equips students with the knowledge, skills, and confidence needed to excel in their chosen healthcare careers. We are committed to:</p>
+                        <ul class="mt-3">
+                            <li class="mb-2">Delivering education that meets industry standards and employer expectations</li>
+                            <li class="mb-2">Providing a supportive and inclusive learning environment that encourages growth and development</li>
+                            <li class="mb-2">Offering practical, hands-on training that prepares students for real-world healthcare settings</li>
+                            <li class="mb-2">Fostering ethical practice and compassionate care in all our graduates</li>
+                            <li>Continuously improving and updating our curriculum to reflect advances in healthcare</li>
+                        </ul>
+                        {% endblocktrans %}
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="vision-card">
+                        {% blocktrans %}
+                        <h3>Our Vision</h3>
+                        <p>Our vision is to be recognized as the premier institution for healthcare education in the UK, known for:</p>
+                        <ul class="mt-3">
+                            <li class="mb-2">Excellence in teaching and learning</li>
+                            <li class="mb-2">Innovation in healthcare education</li>
+                            <li class="mb-2">Strong connections with the healthcare industry</li>
+                            <li class="mb-2">Graduates who make a positive impact on patient care</li>
+                            <li>Contributing to the advancement of healthcare education nationally and internationally</li>
+                        </ul>
+                        <p class="mt-3">We aspire to shape the future of healthcare education and contribute to the development of a healthcare workforce that is skilled, compassionate, and responsive to the evolving needs of society.</p>
+                        {% endblocktrans %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title text-center">Our Leadership Team</h2>
+            <p class="text-center mb-5">Meet the passionate educators and healthcare professionals who lead I-Citadelexz Excellenz.</p>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="{% static 'layout\images\user.png' %}" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Dr. Katherine Collins</h4>
+                            <p class="team-position">Founder & Director</p>
+                            <p class="team-bio">With over 20 years of experience in healthcare and education, Dr. Collins founded KC Academy to transform healthcare training.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="{% static 'layout\images\user.png' %}" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Prof. James Wilson</h4>
+                            <p class="team-position">Academic Director</p>
+                            <p class="team-bio">Prof. Wilson oversees our curriculum development and ensures all courses meet the highest academic standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="{% static 'layout\images\user.png' %}" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Sarah Thompson</h4>
+                            <p class="team-position">Head of Student Services</p>
+                            <p class="team-bio">Sarah ensures our students receive comprehensive support throughout their educational journey.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="{% static 'layout\images\user.png' %}" alt="Team Member">
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h4 class="team-name">Dr. Michael Chen</h4>
+                            <p class="team-position">Industry Partnerships</p>
+                            <p class="team-bio">Dr. Chen develops and maintains our crucial relationships with healthcare providers and industry partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="stat-count">5,000+</h3>
+                        <p class="stat-title">{% trans "Graduates" %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="stat-count">50+</h3>
+                        <p class="stat-title">{% trans "Expert Instructors" %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="stat-count">25+</h3>
+                        <p class="stat-title">{% trans "Courses Offered" %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="stat-count">100+</h3>
+                        <p class="stat-title">{% trans "Industry Partners" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            {% blocktrans %}
+            <h2 class="section-title text-center">Our Partners</h2>
+            <p class="text-center mb-5">We collaborate with leading healthcare institutions and organizations to provide our students with the best opportunities.</p>
+            {% endblocktrans %}
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\aiafd_aadfi.png' %}" alt="aiafd aadfi" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\shell.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\st. Andrews.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\aiafd_aadfi.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\aiafd_aadfi.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\aiafd_aadfi.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\aiafd_aadfi.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="partner-logo">
+                        <img src="{% static 'layout\images\aiafd_aadfi.png' %}" alt="Partner Logo" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock content %}

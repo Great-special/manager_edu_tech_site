@@ -6,129 +6,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I-CITADEL | {% block title %}{% endblock %}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'academy_layout/css/index.css' %}" rel="stylesheet">
     {% block style %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'layout/css/old.css' %}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script src="https://js.paypal.com/js/paypal.min.js"></script>
     <link rel="icon" type="image/x-icon" href="{% static 'layout/images/logo.png' %}">
 </head>
 
 <body>
-    <header class="main-header">
-
-        <div class="header-top">
+        <!-- Header -->
+        <div class="top-bar">
             <div class="container">
-                <div class="contact-info">
-                    <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a>
-                    <a href="mailto:info@i-citadelexz.com"><i class="fas fa-envelope"></i> info@i-citadelexz.com</a>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
-                
-                <div class="social-links">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    {% for lang in languages %}
-                    <a href="/{{lang.code}}/">{{lang.name_local}}</i></a>
-                    {% endfor %}
+                <div class="row justify-content-between">
+                    <div class="col-md-4 text-center">
+                        <span><i class="fas fa-envelope me-2"></i>info@i-citadelexz.com</span>
+                        <span class="ms-3"><i class="fas fa-phone me-2"></i>+44 20 1234 5678</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <span><i class="fas fa-clock me-2"></i>Mon-Fri: 9:00am - 5:00pm</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for lang in languages %}
+                        <a href="/{{lang.code}}/">{{lang.name_local}}</a>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
-        <nav class="main-nav">
+        <header>    
             <div class="container">
-                <div class="logo">
-                    <a href="{% url 'home' %}">
-                        <img src="{% static 'layout/images/FullLogo.png' %}" alt="Company Logo">
+                <nav>
+                    <a class="logo" href="{% url 'home' %}">
+                        <div class="row">
+                            <div class="d-flex align-items-center">
+                                <img src="{% static 'layout/images/logo.png' %}" alt="Company Logo">
+                                <div style="font-weight: bold; color: var(--primary-color);">
+                                    I-Citadel <span style="color: var(--primary-color);">Excellenz</span>
+                                </div>
+                            </div> 
+                            <!-- <div class="text-center">
+                                <p style="color: var(--text-white); font-size: var(--text-xs); margin: 0;">
+                                    With Pride
+                                </p>
+                            </div> -->
+                        </div>
                     </a>
-                </div>
-                <div class="column">
-                    <!-- Search Form -->
-                    <form class="search-form" action="{% url 'search' %}" method="get">
-                        <input type="text" name="q" placeholder="{% trans 'Search...' %}" aria-label="Search">
-                        <button type="submit">
-                            <i class="fas fa-search"></i> <!-- Assuming you're using Font Awesome for icons -->
-                        </button>
-                    </form>
-                    <ul class="nav-links">
-                        <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
-                        <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
-                        <li class="dropdown">
-                            <a href="{% url 'courses' %}">{% trans "Courses" %}</a>
-                        </li>
-                        <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
-                    </ul>
-                    <button class="mobile-menu-toggle">
+                    <div class="main-nav">
+                        
+                        <a href="{% url "categories" %}">Course Catalog</a>
+                        <!-- Dropdown Menu -->
+                        <div class="">
+                            <a href="#">Training Format</a>
+                            <div class="dropdown-menu">
+                                <a href="/service-1">Online Training</a>
+                                <a href="/service-2">Classroom Training</a>
+                                <a href="/service-3">Executive Coaching</a>
+                                <a href="/service-3">Bespoke Training</a>
+                            </div>
+                        </div>
+                        <a href="{% url "consultancy" %}">Consultancy</a>
+                        
+                        <!-- Dropdown Menu -->
+                        <div class="">
+                            <a href="#">Services</a>
+                            <div class="dropdown-menu">
+                                <a href="/service-1">Digital Transformation</a>
+                                <a href="/service-2">Data Management</a>
+                                <a href="/service-3">Managed Training Service</a>
+                                <a href="/service-1">Learning Pathways</a>
+                                <a href="/service-2">Training Delivery Platform</a>
+                                <a href="/service-3">Resources</a>
+                            </div>
+                        </div>
+                        <a href="{% url "about" %}">About Us</a>
+                        <a href="{% url "contact" %}">Contact Us</a>
+                    </div>
+
+                    {% comment %} <button class="mobile-menu-toggle">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button>
-                </div>
-                
+                    </button> {% endcomment %}
+                </nav>
             </div>
-        </nav>
-    </header>
+        </header>
 
     <main>
         {% block content %}
         {% endblock %}
     </main>
 
-
-    <footer class="main-footer">
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>{% translate "About Us" %}</h3>
-                    <p>{% trans "Leading provider of training solutions for the energy industry worldwide." %}</p>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="{% static 'layout/images/FullLogo.png' %}" alt="I-Citadel UK Logo">
+                    </div>
+                    <p>I-Citadel is committed to providing quality healthcare education and training to develop the next generation of healthcare professionals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h3>{% trans "Quick Links" %}</h3>
                     <ul>
                         <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
                         <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
                         <li><a href="{% url 'courses' %}">{% trans "Courses" %}</a></li>
                         <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
+                        <li><a href="{% url "consultancy" %}">Consultancy</a></li>
                     </ul>
                 </div>
-    
-                {% blocktrans %}
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-list">
-                        <li><i class="fas fa-map-marker-alt"></i>123 Training St, City, Country</li>
-                        <li><i class="fas fa-phone"></i> +1 (234) 567-890</li>
-                        <li><i class="fas fa-envelope"></i> info@i-citadelexz.com</li>
+                
+                <div class="footer-col">
+                    <h3>Training Categories</h3>
+                    <ul>
+                        <li><a href="#">Leadership Development</a></li>
+                        <li><a href="#">Professional Skills</a></li>
+                        <li><a href="#">Technical Training</a></li>
+                        <li><a href="#">Change Management</a></li>
+                        <li><a href="#">Project Management</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+                
+                <div class="footer-col">
+                    <h3>{% trans "Contact Us" %}</h3>
+                    {% blocktrans %}
+                    <ul>
+                        <li><a href="tel:+49176416">+49 176 41659257</a></li>
+                        <li><a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></li>
+                        <li>I-Citadel Excellenz<br>Business District<br>Frankfurt, Germany</li>
+                    </ul>
+                    {% endblocktrans %}
                 </div>
-            </div>
-            {% endblocktrans %}
-            <div class="footer-section">
-                <h3>{% trans "Staff Links" %}</h3>
-                <ul>
-                    <li><a href="https://i-citadelexz.com:2096/">{% trans "Mailing" %}</a></li>
-                </ul>
-                <ul>
-                    <li><a href="https://i-citadelexz.com/admin/">{% trans "Staff" %}</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; {% now "Y" %} {% trans "I-Citadelexz Training Platform. All rights reserved." %}</p>
+
+                <div class="footer-col">
+                    <h3>{% trans "Staff Links" %}</h3>
+                    <ul>
+                        <li><a href="https://i-citadelexz.com:2096/">{% trans "Mailing" %}</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://i-citadelexz.com/admin/">{% trans "Staff" %}</a></li>
+                    </ul>
+                </div>
             </div>
             
+            <div class="copyright">
+                <p>&copy; {% now "Y" %} {% trans "I-Citadelexz Training Platform. All Rights Reserved." %}</p>
+            </div>
         </div>
-        {% block script %}{% endblock script %}
     </footer>
-    <script src="{% static 'layout/js/scripts.js' %}"></script>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                indicators[i].classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+        // Initial call to show the first slide
+        showSlide(currentSlide);
+    </script>
+    <!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

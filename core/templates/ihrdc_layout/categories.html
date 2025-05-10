@@ -1,15 +1,14 @@
 {% extends 'ihrdc_layout/base.html' %}
 {% load static %}
 {% load i18n %}
-{% load humanize %}
 
-{% block title %}Courses{% endblock %}
+{% block title %}Categories{% endblock %}
 
 {% block content %}
     <!-- Course Catalog Section -->
     <section class="course-catalog">
         <div class="container">
-            <h2 class="section-title">{{category.name}} {% trans "Courses" %}</h2>
+            <h2 class="section-title">Training Categories</h2>
             <div class="catalog-header">
                 <div class="filters">
                     <select>
@@ -26,20 +25,17 @@
                 </div>
             </div>
             <div class="catalog-grid">
-                {% for course in courses %}
+                {% for course in categories %}
                 <div class="catalog-card">
                     <div class="card-header">
-                        <h3>{{course.title}}</h3>
+                        <h3>{{course.name}}</h3>
+                        <div class="card-image">
+                            <img src="{{course.image.url}}" alt="{{course.name}}">
+                        </div>
                     </div>
-                    <div class="card-image">
-                        <img src="{{course.image.url}}" alt="{{course.title}}">
-                    </div>
-                    <span class="price">${{course.price| intcomma}}</span>
                     <div class="card-details">
-                        <span><i class="fas fa-clock"></i> {{course.duration}}</span>
-                        <span><i class="fas fa-users"></i>{{course.mode}}</span>
+                        <p>{{course.description | truncatewords:25}}</p>
                     </div>
-                    <p>{{course.description | truncatewords:25}}</p>
                     <div class="card-footer">
                         <a href="{% url 'course_detail' course.id %}" class="btn btn-outline">{% translate "Learn More" %}</a>
                         <a href="{% url 'payment_page' course.id %}" class="btn btn-primary">{% translate "Enroll Now" %}</a>

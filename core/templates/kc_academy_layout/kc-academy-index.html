@@ -1,0 +1,207 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% block title %}I-Citadel - Home{% endblock %}
+
+{% load static %}
+{% load i18n %}
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Hero Slideshow Section -->
+        <section class="hero-slideshow">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\hero-image.jpeg' %});">
+                <div class="slide-content">
+                    {% blocktrans %}
+                    <h2>Excellence in Professional Development</h2>
+                    <p>Transforming organizations through tailored training solutions that deliver measurable results</p>
+                    {% endblocktrans %}
+                    <a href="{% url 'categories' %}" class="btn">{% trans "Explore Our Programs" %}</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'layout\images\mission.jpeg' %});">
+                <div class="slide-content">
+                    {% blocktrans %}
+                        <h2>Expert-Led Training Solutions</h2>
+                        <p>Learn from industry leaders with decades of experience in their respective fields</p>
+                    {% endblocktrans %}
+                    <a href="{% url 'categories' %}" class="btn">Our Approach</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\hero-image.jpeg' %});">
+                <div class="slide-content">
+                    {% blocktrans %}
+                    <h2>Bespoke Training Programs</h2>
+                    <p>Custom solutions designed to address your organization's unique challenges and goals</p>
+                    {% endblocktrans %}
+                    <a href="{% url "categories" %}" class="btn">Our Courses</a>
+                </div>
+            </div>
+            <div class="slide-indicators">
+                <div class="indicator active"></div>
+                <div class="indicator"></div>
+                <div class="indicator"></div>
+            </div>
+        </section>
+
+        <!-- Training Categories Section -->
+        <section class="training-categories" id="courses">
+            <div class="container">
+                {% blocktrans %}
+                <div class="categories-header">
+                    <h2>Training Categories</h2>
+                    <h3>Diverse training for an evolving society</h3>
+                </div>
+                
+                <div class="category-grid">
+                    <div class="category-card">
+                        <h4>Leadership Development</h4>
+                        <p>Transform your organization's leadership capacity with programs designed to empower decision-makers at all levels.</p>
+                    </div>
+                    
+                    <div class="category-card">
+                        <h4>Professional Skills</h4>
+                        <p>Enhance core competencies essential for workplace success and career advancement in any industry.</p>
+                    </div>
+                    
+                    <div class="category-card">
+                        <h4>Technical Training</h4>
+                        <p>Master specialized skills and stay current with the latest industry developments and technologies.</p>
+                    </div>
+                </div>
+                {% endblocktrans %}
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="what-we-do">
+            <div class="container">
+                {% blocktrans %}
+                <h2>What We Do</h2>
+                
+                <div class="offerings-grid">
+                    <div class="offering-card">
+                        <h3>Professional Training</h3>
+                        <p>Industry-specific, in-person training programs delivered by experts.</p>
+                    </div>
+                    
+                    <div class="offering-card">
+                        <h3>Upskilling/Reskilling</h3>
+                        <p>Keep your talent ahead of trends with adaptive learning solutions.</p>
+                    </div>
+                    
+                    <div class="offering-card">
+                        <h3>Certification</h3>
+                        <p>Recognized qualifications that validate professional expertise.</p>
+                    </div>
+                    
+                    <div class="offering-card">
+                        <h3>Consultancy</h3>
+                        <p>Custom frameworks and solutions for organizational development.</p>
+                    </div>
+                    {% endblocktrans %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Courses Section -->
+        <section class="popular-courses">
+            <div class="container">
+                <h2 class="section-title">{% trans "Popular Courses" %}</h2>
+                <div class="courses-grid">
+                    {% for course in popular_courses %}
+                    <div class="course-card">
+                        {% if course.image %}
+                        <div class="course-image">
+                            <img src="{{ course.image.url }}" alt="{{ course.title }}">
+                        </div>
+                        {% else %}
+                        <div class="course-image">
+                            <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="{{ course.title }}">
+                        </div>
+                        {% endif %}
+                        <div class="course-content">
+                            <span class="course-category">{{ course.category }}</span>
+                            <h3>{{ course.title }}</h3>
+                            <p>{{ course.description|truncatewords:20 }}</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-clock"></i> {{ course.duration }}</span>
+                                <span><i class="fas fa-user-graduate"></i> {{ course.enrolled_students }} students</span>
+                            </div>
+                            <div class="course-footer">
+                                <span class="price">${{ course.price }}</span>
+                                <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">{% translate "learn more" %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="text-center">
+                    <a href="{% url 'courses' %}" style="margin-top: 20px;" class="btn bespoke-btn">{% trans "View All Courses" %}</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Bespoke Training Section -->
+        <section class="bespoke-training">
+            <div class="container">
+                {% blocktrans %}
+                <h2>Bespoke Training: Your Uniquely Crafted Learning Journey</h2>
+                <p>Discover custom training solutions designed specifically for your organization's needs and challenges.</p>
+                {% endblocktrans %}
+                <a href="{% url "courses" %}" class="btn bespoke-btn">{% trans "Discover Custom Training" %}</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="{% static 'layout\images\Training.jpeg' %}" alt="Service 1" class="service-image">
+                        <div class="service-overlay">
+                            <h3>Executive Coaching</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <img src="{% static 'layout\images\Training.jpeg' %}" alt="Service 1" class="service-image">
+                        <div class="service-overlay">
+                            <h3>Bespoke Training</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us" id="about">
+            <div class="container">
+                <div class="choose-header">
+                    <h2>Why Choose I-Citadel Excellenz</h2>
+                </div>
+                
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <h3>Expert Facilitators</h3>
+                        <p>Learn from industry leaders with proven expertise and real-world experience.</p>
+                    </div>
+                    
+                    <div class="reason-card">
+                        <h3>Tailored Approach</h3>
+                        <p>Programs customized to address your specific organizational challenges and goals.</p>
+                    </div>
+                    
+                    <div class="reason-card">
+                        <h3>Measurable Results</h3>
+                        <p>Training solutions focused on delivering tangible outcomes and ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    
+</body>
+</html>
