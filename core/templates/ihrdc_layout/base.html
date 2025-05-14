@@ -8,8 +8,8 @@
     <title>I-CITADEL | {% block title %}{% endblock %}</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="{% static 'academy_layout/css/index.css' %}" rel="stylesheet">
     {% block style %}{% endblock %}
+    <link href="{% static 'academy_layout/css/index.css' %}" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{% static 'layout/images/logo.png' %}">
 </head>
 
@@ -20,7 +20,7 @@
                 <div class="row justify-content-between">
                     <div class="col-md-4 text-center">
                         <span><i class="fas fa-envelope me-2"></i>info@i-citadelexz.com</span>
-                        <span class="ms-3"><i class="fas fa-phone me-2"></i>+44 20 1234 5678</span>
+                        <span class="ms-3"><i class="fas fa-phone me-2"></i>+49 176 4165 9257</span>
                     </div>
                     <div class="col-md-4 text-center">
                         <span><i class="fas fa-clock me-2"></i>Mon-Fri: 9:00am - 5:00pm</span>
@@ -56,40 +56,40 @@
                     </a>
                     <div class="main-nav">
                         
-                        <a href="{% url "categories" %}">Course Catalog</a>
+                        <a href="{% url "categories" %}">{% trans "Course Catalog" %}</a>
                         <!-- Dropdown Menu -->
                         <div class="">
-                            <a href="#">Training Format</a>
+                            <a href="#">{% trans "Training Format" %}</a>
                             <div class="dropdown-menu">
-                                <a href="/service-1">Online Training</a>
-                                <a href="/service-2">Classroom Training</a>
-                                <a href="/service-3">Executive Coaching</a>
-                                <a href="/service-3">Bespoke Training</a>
+                                <a href="/service-1">{% trans "Online Training" %}</a>
+                                <a href="/service-2">{% trans "Classroom Training" %}</a>
+                                <a href="/service-3">{% trans "Executive Coaching" %}</a>
+                                <a href="/service-3">{% trans "Bespoke Training" %}</a>
                             </div>
                         </div>
-                        <a href="{% url "consultancy" %}">Consultancy</a>
+                        <a href="{% url "consultancy" %}">{% trans "Consultancy" %}</a>
                         
                         <!-- Dropdown Menu -->
                         <div class="">
-                            <a href="#">Services</a>
+                            <a href="#">{% trans "Services" %}</a>
                             <div class="dropdown-menu">
-                                <a href="/service-1">Digital Transformation</a>
-                                <a href="/service-2">Data Management</a>
-                                <a href="/service-3">Managed Training Service</a>
-                                <a href="/service-1">Learning Pathways</a>
-                                <a href="/service-2">Training Delivery Platform</a>
-                                <a href="/service-3">Resources</a>
+                                <a href="/service-1">{% trans "Digital Transformation" %}</a>
+                                <a href="/service-2">{% trans "Data Management" %}</a>
+                                <a href="/service-3">{% trans "Managed Training Service" %}</a>
+                                <a href="/service-1">{% trans "Learning Pathways" %}</a>
+                                <a href="/service-2">{% trans "Training Delivery Platform" %}</a>
+                                <a href="/service-3">{% trans "Resources" %}</a>
                             </div>
                         </div>
-                        <a href="{% url "about" %}">About Us</a>
-                        <a href="{% url "contact" %}">Contact Us</a>
+                        <a href="{% url "about" %}">{% trans "About Us" %}</a>
+                        <a href="{% url "contact" %}">{% trans "Contact Us" %}</a>
                     </div>
 
-                    {% comment %} <button class="mobile-menu-toggle">
+                    <button class="mobile-menu-toggle">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button> {% endcomment %}
+                    </button>
                 </nav>
             </div>
         </header>
@@ -106,7 +106,7 @@
                     <div class="footer-logo">
                         <img src="{% static 'layout/images/FullLogo.png' %}" alt="I-Citadel UK Logo">
                     </div>
-                    <p>I-Citadel is committed to providing quality healthcare education and training to develop the next generation of healthcare professionals.</p>
+                    <p>{% trans "I-Citadel is committed to providing quality healthcare education and training to develop the next generation of healthcare professionals." %}</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -121,18 +121,18 @@
                         <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
                         <li><a href="{% url 'courses' %}">{% trans "Courses" %}</a></li>
                         <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
-                        <li><a href="{% url "consultancy" %}">Consultancy</a></li>
+                        <li><a href="{% url "consultancy" %}">{% trans "Consultancy" %}</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3>Training Categories</h3>
+                    <h3>{% trans "Training Categories" %}</h3>
                     <ul>
-                        <li><a href="#">Leadership Development</a></li>
-                        <li><a href="#">Professional Skills</a></li>
-                        <li><a href="#">Technical Training</a></li>
-                        <li><a href="#">Change Management</a></li>
-                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">{% trans "Leadership Development" %}</a></li>
+                        <li><a href="#">{% trans "Professional Skills" %}</a></li>
+                        <li><a href="#">{% trans "Technical Training" %}</a></li>
+                        <li><a href="#">{% trans "Change Management" %}</a></li>
+                        <li><a href="#">{% trans "Project Management" %}</a></li>
                     </ul>
                 </div>
                 
@@ -140,7 +140,7 @@
                     <h3>{% trans "Contact Us" %}</h3>
                     {% blocktrans %}
                     <ul>
-                        <li><a href="tel:+49176416">+49 176 41659257</a></li>
+                        <li><a href="tel:+49176416">+49 176 4165 9257</a></li>
                         <li><a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></li>
                         <li>I-Citadel Excellenz<br>Business District<br>Frankfurt, Germany</li>
                     </ul>
@@ -194,5 +194,6 @@
     </script>
     <!-- Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'academy_layout/js/scripts.js' %}"></script>
 </body>
 </html>

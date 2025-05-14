@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 17:00+0100\n"
+"POT-Creation-Date: 2025-05-14 11:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -122,6 +122,7 @@ msgid "Email"
 msgstr "E-Mail"
 
 #: .\core\models.py:72 .\core\templates\ihrdc_layout\course_payment.html:62
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:73
 msgid "Phone Number"
 msgstr "Telefonnummer"
 
@@ -197,103 +198,235 @@ msgstr "Nachricht"
 msgid ""
 "\n"
 "            <h1>About Us</h1>\n"
-"            <p>I-Citadel Exzellenz is an international training and consultancy group, delivering high quality courses to every sector, covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>\n"
+"            <p>I-Citadel Exzellenz is an international training and "
+"consultancy group, delivering high quality courses to every sector, "
+"covering: Artificial Intelligence, IT, Management, Applied Statistics.</p>\n"
 "            "
 msgstr ""
 "<h1>Über uns</h1>\n"
-"<p>I-Citadel Exzellenz ist eine internationale Schulungs- und Beratungsgruppe, die hochwertige Kurse für alle Branchen anbietet, darunter: Künstliche Intelligenz, IT, Management, Angewandte Statistik.</p>"
+"<p>I-Citadel Exzellenz ist eine internationale Schulungs- und "
+"Beratungsgruppe, die hochwertige Kurse für alle Branchen anbietet, darunter: "
+"Künstliche Intelligenz, IT, Management, Angewandte Statistik.</p>"
 
 #: .\core\templates\ihrdc_layout\about.html:20
 msgid ""
 "\n"
 "                    <h2>Our Mission</h2>\n"
-"                    <p>Our mission is to provide comprehensive training and consultancy solutions all over the world, in an effective, tailored to consumers' needs and accessible way. \n"
-"                        We aim at full optimization of training organization process in order to make it quick and easy for each of the involved parties.</p>\n"
+"                    <p>Our mission is to provide comprehensive training and "
+"consultancy solutions all over the world, in an effective, tailored to "
+"consumers' needs and accessible way. \n"
+"                        We aim at full optimization of training organization "
+"process in order to make it quick and easy for each of the involved parties."
+"</p>\n"
 "                    "
 msgstr ""
 "<h2>Unsere Mission</h2>\n"
-"<p>Unsere Mission ist es, umfassende Schulungs- und Beratungslösungen auf der ganzen Welt anzubieten, und zwar auf effektive, auf die Bedürfnisse der Verbraucher zugeschnittene und zugängliche Weise.\n"
+"<p>Unsere Mission ist es, umfassende Schulungs- und Beratungslösungen auf "
+"der ganzen Welt anzubieten, und zwar auf effektive, auf die Bedürfnisse der "
+"Verbraucher zugeschnittene und zugängliche Weise.\n"
 "\n"
-"Wir streben eine vollständige Optimierung des Schulungsorganisationsprozesses an, um ihn für alle Beteiligten schnell und einfach zu gestalten.</p>"
+"Wir streben eine vollständige Optimierung des "
+"Schulungsorganisationsprozesses an, um ihn für alle Beteiligten schnell und "
+"einfach zu gestalten.</p>"
 
-#: .\core\templates\ihrdc_layout\base.html:51
-msgid "Search..."
-msgstr "Suchen..."
-
-#: .\core\templates\ihrdc_layout\base.html:57
-#: .\core\templates\ihrdc_layout\base.html:90
-msgid "Home"
-msgstr "Heim"
-
-#: .\core\templates\ihrdc_layout\base.html:58
-#: .\core\templates\ihrdc_layout\base.html:91
-msgid "About"
-msgstr "Um"
-
-#: .\core\templates\ihrdc_layout\base.html:60
-#: .\core\templates\ihrdc_layout\base.html:92
-msgid "Courses"
-msgstr "Kurse"
+#: .\core\templates\ihrdc_layout\base.html:59
+#: .\core\templates\ihrdc_layout\courses.html:12
+msgid "Course Catalog"
+msgstr "Vorlesungsverzeichnis"
 
 #: .\core\templates\ihrdc_layout\base.html:62
-#: .\core\templates\ihrdc_layout\base.html:93
-msgid "Contact"
-msgstr "Kontakt"
+msgid "Training Format"
+msgstr "Trainingsformat"
+
+#: .\core\templates\ihrdc_layout\base.html:64
+#, fuzzy
+#| msgid "Professional Training"
+msgid "Online Training"
+msgstr "Berufstraining"
+
+#: .\core\templates\ihrdc_layout\base.html:65
+#, fuzzy
+#| msgid "Classroom"
+msgid "Classroom Training"
+msgstr "Klassenzimmer"
+
+#: .\core\templates\ihrdc_layout\base.html:66
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:163
+msgid "Executive Coaching"
+msgstr "Executive Coaching"
+
+#: .\core\templates\ihrdc_layout\base.html:67
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:170
+#, fuzzy
+#| msgid "Professional Training"
+msgid "Bespoke Training"
+msgstr "Berufstraining"
+
+#: .\core\templates\ihrdc_layout\base.html:70
+#: .\core\templates\ihrdc_layout\base.html:124
+#, fuzzy
+#| msgid "Expert Consultancy"
+msgid "Consultancy"
+msgstr "Expertenberatung"
+
+#: .\core\templates\ihrdc_layout\base.html:74
+#, fuzzy
+#| msgid "Service Areas"
+msgid "Services"
+msgstr "Servicebereiche"
+
+#: .\core\templates\ihrdc_layout\base.html:76
+#, fuzzy
+#| msgid "Career Transformation Support"
+msgid "Digital Transformation"
+msgstr "Unterstützung bei der Karriere -Transformation"
+
+#: .\core\templates\ihrdc_layout\base.html:77
+msgid "Data Management"
+msgstr "Datenverwaltung"
+
+#: .\core\templates\ihrdc_layout\base.html:78
+msgid "Managed Training Service"
+msgstr "Managed Training Service"
+
+#: .\core\templates\ihrdc_layout\base.html:79
+#, fuzzy
+#| msgid "Tailored Learning Paths"
+msgid "Learning Pathways"
+msgstr "MEMAKTE LERNUNGSPURE"
+
+#: .\core\templates\ihrdc_layout\base.html:80
+msgid "Training Delivery Platform"
+msgstr "Schulungslieferungsplattform"
+
+#: .\core\templates\ihrdc_layout\base.html:81
+msgid "Resources"
+msgstr "Ressourcen"
 
 #: .\core\templates\ihrdc_layout\base.html:84
 msgid "About Us"
 msgstr "Über uns"
 
 #: .\core\templates\ihrdc_layout\base.html:85
-msgid ""
-"Leading provider of training solutions for the energy industry worldwide."
-msgstr ""
-"Weltweit führender Anbieter von Schulungslösungen für die Energiebranche."
+#: .\core\templates\ihrdc_layout\base.html:140
+#: .\core\templates\ihrdc_layout\certification.html:39
+#: .\core\templates\ihrdc_layout\consultancy.html:42
+#: .\core\templates\ihrdc_layout\skilling.html:39
+#: .\core\templates\ihrdc_layout\training.html:39
+#, fuzzy
+#| msgid "Contact"
+msgid "Contact Us"
+msgstr "Kontakt"
 
-#: .\core\templates\ihrdc_layout\base.html:88
+#: .\core\templates\ihrdc_layout\base.html:109
+msgid ""
+"I-Citadel is committed to providing quality healthcare education and "
+"training to develop the next generation of healthcare professionals."
+msgstr ""
+
+#: .\core\templates\ihrdc_layout\base.html:118
 msgid "Quick Links"
 msgstr "Direktlinks"
 
-#: .\core\templates\ihrdc_layout\base.html:96
+#: .\core\templates\ihrdc_layout\base.html:120
+msgid "Home"
+msgstr "Heim"
+
+#: .\core\templates\ihrdc_layout\base.html:121
+msgid "About"
+msgstr "Um"
+
+#: .\core\templates\ihrdc_layout\base.html:122
+#: .\core\templates\ihrdc_layout\category.html:12
+msgid "Courses"
+msgstr "Kurse"
+
+#: .\core\templates\ihrdc_layout\base.html:123
+msgid "Contact"
+msgstr "Kontakt"
+
+#: .\core\templates\ihrdc_layout\base.html:129
+#, fuzzy
+#| msgid "Categories"
+msgid "Training Categories"
+msgstr "Kategorien"
+
+#: .\core\templates\ihrdc_layout\base.html:131
+#, fuzzy
+#| msgid "Personalized Skill Development"
+msgid "Leadership Development"
+msgstr "Personalisierte Fähigkeitenentwicklung"
+
+#: .\core\templates\ihrdc_layout\base.html:132
+#, fuzzy
+#| msgid "Professional Training"
+msgid "Professional Skills"
+msgstr "Berufstraining"
+
+#: .\core\templates\ihrdc_layout\base.html:133
+#, fuzzy
+#| msgid "Professional Training"
+msgid "Technical Training"
+msgstr "Berufstraining"
+
+#: .\core\templates\ihrdc_layout\base.html:134
+msgid "Change Management"
+msgstr "Änderungsmanagement"
+
+#: .\core\templates\ihrdc_layout\base.html:135
+msgid "Project Management"
+msgstr "Projektmanagement"
+
+#: .\core\templates\ihrdc_layout\base.html:141
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                    <ul>\n"
+#| "                        <li><a href=\"tel:+49176416\">+49 176 41659257</"
+#| "a></li>\n"
+#| "                        <li><a href=\"mailto:info@i-"
+#| "citadelexz.com\">info@i-citadelexz.com</a></li>\n"
+#| "                        <li>I-Citadel Excellenz<br>Business "
+#| "District<br>Frankfurt, Germany</li>\n"
+#| "                    </ul>\n"
+#| "                    "
 msgid ""
 "\n"
-"                <div class=\"footer-section\">\n"
-"                    <h3>Contact Info</h3>\n"
-"                    <ul class=\"contact-list\">\n"
-"                        <li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, City, Country</li>\n"
-"                        <li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
-"                        <li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
+"                    <ul>\n"
+"                        <li><a href=\"tel:+49176416\">+49 176 4165 9257</a></"
+"li>\n"
+"                        <li><a href=\"mailto:info@i-citadelexz.com\">info@i-"
+"citadelexz.com</a></li>\n"
+"                        <li>I-Citadel Excellenz<br>Business "
+"District<br>Frankfurt, Germany</li>\n"
 "                    </ul>\n"
-"                </div>\n"
-"                <div class=\"footer-section\">\n"
-"                    <h3>Newsletter</h3>\n"
-"                    <form class=\"newsletter-form\">\n"
-"                        <input type=\"email\" placeholder=\"Enter your email\">\n"
-"                        <button type=\"submit\" class=\"btn btn-primary\">Subscribe</button>\n"
-"                    </form>\n"
-"                </div>\n"
-"            </div>\n"
-"            "
+"                    "
 msgstr ""
-"<div class=\"footer-section\">\n"
-"<h3>Kontaktinformationen</h3>\n"
-"<ul class=\"contact-list\">\n"
-"<li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, Stadt, Land</li>\n"
-"<li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
-"<li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
-"</ul>\n"
-"</div>\n"
-"<div class=\"footer-section\">\n"
-"<h3>Newsletter</h3>\n"
-"<form class=\"newsletter-form\">\n"
-"<input type=\"email\" placeholder=\"Geben Sie Ihre E-Mail-Adresse ein\">\n"
-"<button type=\"submit\" class=\"btn btn-primary\">Abonnieren</button>\n"
-"</form>\n"
-"</div>\n"
-"</div>"
+"<ul>\n"
+"                        <li> <a href = \"Tel: +49176416\">+49 176 41659257 </"
+"a> </li>>\n"
+"                        <li> <a href = \"mailto: info@i-citadelexz.com\"> "
+"info@i-citadelexz.com </a> </li>\n"
+"                        <li> i-citadel excellenz <br> Geschäftsviertel <br> "
+"Frankfurt, Deutschland </li>\n"
+"                    </ul>"
 
-#: .\core\templates\ihrdc_layout\base.html:115
-msgid "Training Platform. All rights reserved."
+#: .\core\templates\ihrdc_layout\base.html:151
+msgid "Staff Links"
+msgstr "Personalverbindungen"
+
+#: .\core\templates\ihrdc_layout\base.html:153
+msgid "Mailing"
+msgstr "Mailing"
+
+#: .\core\templates\ihrdc_layout\base.html:156
+msgid "Staff"
+msgstr "Personal"
+
+#: .\core\templates\ihrdc_layout\base.html:162
+#, fuzzy
+#| msgid "Training Platform. All rights reserved."
+msgid "I-Citadelexz Training Platform. All Rights Reserved."
 msgstr "Trainingsplattform. Alle Rechte vorbehalten."
 
 #: .\core\templates\ihrdc_layout\cancel.html:10
@@ -312,12 +445,14 @@ msgstr ""
 msgid "Go to Courses"
 msgstr "Gehe zu den Kursen"
 
-#: .\core\templates\ihrdc_layout\category.html:40
-#: .\core\templates\ihrdc_layout\courses.html:67
+#: .\core\templates\ihrdc_layout\categories.html:40
+#: .\core\templates\ihrdc_layout\category.html:46
+#: .\core\templates\ihrdc_layout\courses.html:74
 msgid "Learn More"
 msgstr "Mehr erfahren"
 
-#: .\core\templates\ihrdc_layout\category.html:41
+#: .\core\templates\ihrdc_layout\categories.html:41
+#: .\core\templates\ihrdc_layout\category.html:47
 #: .\core\templates\ihrdc_layout\certification.html:38
 #: .\core\templates\ihrdc_layout\consultancy.html:41
 #: .\core\templates\ihrdc_layout\course_detail.html:39
@@ -382,15 +517,6 @@ msgstr "Branchenspezifische Qualifikationen"
 #: .\core\templates\ihrdc_layout\certification.html:33
 msgid "Global Recognition Programs"
 msgstr "Globale Anerkennungsprogramme"
-
-#: .\core\templates\ihrdc_layout\certification.html:39
-#: .\core\templates\ihrdc_layout\consultancy.html:42
-#: .\core\templates\ihrdc_layout\skilling.html:39
-#: .\core\templates\ihrdc_layout\training.html:39
-#, fuzzy
-#| msgid "Contact"
-msgid "Contact Us"
-msgstr "Kontakt"
 
 #: .\core\templates\ihrdc_layout\consultancy.html:21
 msgid "Expert Consultancy"
@@ -458,15 +584,21 @@ msgstr "123 Main Street, Anytown, USA"
 #: .\core\templates\ihrdc_layout\contact.html:31
 msgid ""
 "\n"
-"                        <input type=\"text\" name=\"name\" placeholder=\"Your Name\" required>\n"
-"                        <input type=\"email\" name=\"email\" placeholder=\"Your Email\" required>\n"
-"                        <textarea name=\"message\" placeholder=\"Your Message\" rows=\"5\" required></textarea>\n"
-"                        <button type=\"submit\" class=\"btn\">Send Message</button>\n"
+"                        <input type=\"text\" name=\"name\" "
+"placeholder=\"Your Name\" required>\n"
+"                        <input type=\"email\" name=\"email\" "
+"placeholder=\"Your Email\" required>\n"
+"                        <textarea name=\"message\" placeholder=\"Your "
+"Message\" rows=\"5\" required></textarea>\n"
+"                        <button type=\"submit\" class=\"btn\">Send Message</"
+"button>\n"
 "                        "
 msgstr ""
 "<input type=\"text\" name=\"name\" placeholder=\"Ihr Name\" erforderlich>\n"
-"<input type=\"email\" name=\"email\" placeholder=\"Ihre E-Mail\" erforderlich>\n"
-"<textarea name=\"message\" placeholder=\"Ihre Nachricht\" rows=\"5\" erforderlich></textarea>\n"
+"<input type=\"email\" name=\"email\" placeholder=\"Ihre E-Mail\" "
+"erforderlich>\n"
+"<textarea name=\"message\" placeholder=\"Ihre Nachricht\" rows=\"5\" "
+"erforderlich></textarea>\n"
 "<button type=\"submit\" class=\"btn\">Nachricht senden</button>"
 
 #: .\core\templates\ihrdc_layout\course_detail.html:9
@@ -541,14 +673,6 @@ msgstr "GBP"
 msgid "Pay"
 msgstr "Zahlen"
 
-#: .\core\templates\ihrdc_layout\courses.html:11
-msgid "Course Catalog"
-msgstr "Vorlesungsverzeichnis"
-
-#: .\core\templates\ihrdc_layout\courses.html:22
-msgid "Categories"
-msgstr "Kategorien"
-
 #: .\core\templates\ihrdc_layout\courses.html:37
 msgid ""
 "\n"
@@ -581,7 +705,7 @@ msgstr ""
 "</select>\n"
 "</div>"
 
-#: .\core\templates\ihrdc_layout\courses.html:68
+#: .\core\templates\ihrdc_layout\courses.html:75
 msgid "Book Course"
 msgstr "Kurs buchen"
 
@@ -589,13 +713,17 @@ msgstr "Kurs buchen"
 #, fuzzy
 #| msgid ""
 #| "\n"
-#| "                <h1>Transform Your Career with Industry-Leading Training</h1>\n"
-#| "                <p>Expert-led courses across diverse sectors and industries</p>\n"
+#| "                <h1>Transform Your Career with Industry-Leading Training</"
+#| "h1>\n"
+#| "                <p>Expert-led courses across diverse sectors and "
+#| "industries</p>\n"
 #| "                "
 msgid ""
 "\n"
-"                    <h1>Transform Your Career with Industry-Leading Training</h1>\n"
-"                    <p>Expert-led courses across diverse sectors and industries</p>\n"
+"                    <h1>Transform Your Career with Industry-Leading "
+"Training</h1>\n"
+"                    <p>Expert-led courses across diverse sectors and "
+"industries</p>\n"
 "                    "
 msgstr ""
 "<h1>Verwandeln Sie Ihre Karriere mit branchenführenden Schulungen</h1>\n"
@@ -609,13 +737,17 @@ msgstr "Kurse erkunden"
 #, fuzzy
 #| msgid ""
 #| "\n"
-#| "                <h1>Transform Your Career with Industry-Leading Training</h1>\n"
-#| "                <p>Expert-led courses across diverse sectors and industries</p>\n"
+#| "                <h1>Transform Your Career with Industry-Leading Training</"
+#| "h1>\n"
+#| "                <p>Expert-led courses across diverse sectors and "
+#| "industries</p>\n"
 #| "                "
 msgid ""
 "\n"
-"                    <h1>Unlock Your Potential with Cutting-Edge Learning</h1>\n"
-"                    <p>Flexible online and in-person programs for every career stage</p>\n"
+"                    <h1>Unlock Your Potential with Cutting-Edge Learning</"
+"h1>\n"
+"                    <p>Flexible online and in-person programs for every "
+"career stage</p>\n"
 "                    "
 msgstr ""
 "<h1>Verwandeln Sie Ihre Karriere mit branchenführenden Schulungen</h1>\n"
@@ -635,7 +767,8 @@ msgstr "Programme anzeigen"
 msgid ""
 "\n"
 "                    <h1>Learn from Industry Experts</h1>\n"
-"                    <p>Connect with top professionals and gain real-world insights</p>\n"
+"                    <p>Connect with top professionals and gain real-world "
+"insights</p>\n"
 "                    "
 msgstr ""
 "<h3>Beratung</h3>\n"
@@ -653,21 +786,25 @@ msgstr "Was wir tun"
 msgid ""
 "\n"
 "                        <h3>Professional Training</h3>\n"
-"                        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>\n"
+"                        <p>Industry-specific courses designed by experts, "
+"customized training programs for organizations</p>\n"
 "                        "
 msgstr ""
 "<h3>Professionelle Schulung</h3>\n"
-"<p>Branchenspezifische Kurse von Experten, maßgeschneiderte Schulungsprogramme für Organisationen</p>"
+"<p>Branchenspezifische Kurse von Experten, maßgeschneiderte "
+"Schulungsprogramme für Organisationen</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:72
 msgid ""
 "\n"
 "                        <h3>Upskilling/Reskilling</h3>\n"
-"                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
+"                        <p>Re-tooling your skillsets and acquired knowledge "
+"to adapt to the changing business climate....</p>\n"
 "                        "
 msgstr ""
 "<h3>Weiterbildung/Umschulung</h3>\n"
-"<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das veränderte Geschäftsklima anzupassen...</p>"
+"<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das "
+"veränderte Geschäftsklima anzupassen...</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:79
 msgid ""
@@ -690,14 +827,17 @@ msgstr ""
 "<p>Engpässe innerhalb von Minuten beheben</p>"
 
 #: .\core\templates\ihrdc_layout\index.html:101
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:109
 msgid "Popular Courses"
 msgstr "Beliebte Kurse"
 
 #: .\core\templates\ihrdc_layout\index.html:124
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:132
 msgid "learn more"
 msgstr "Mehr erfahren"
 
 #: .\core\templates\ihrdc_layout\index.html:131
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:139
 msgid "View All Courses"
 msgstr "Alle Kurse anzeigen"
 
@@ -705,13 +845,17 @@ msgstr "Alle Kurse anzeigen"
 msgid ""
 "\n"
 "                <h2>Trusted by Leading Companies</h2>\n"
-"                <p>Our training programs have empowered professionals from a diverse range of industries, helping them achieve their career goals and drive organizational success.</p>\n"
+"                <p>Our training programs have empowered professionals from a "
+"diverse range of industries, helping them achieve their career goals and "
+"drive organizational success.</p>\n"
 "            "
 msgstr ""
 "<h2> vertrauen von führenden Unternehmen </h2>\n"
-"                <p> Unsere Schulungsprogramme haben Fachleute aus verschiedenen Branchen befähigt, die ihnen helfen, ihre Karriereziele zu erreichen und den organisatorischen Erfolg zu fördern. </p>"
+"                <p> Unsere Schulungsprogramme haben Fachleute aus "
+"verschiedenen Branchen befähigt, die ihnen helfen, ihre Karriereziele zu "
+"erreichen und den organisatorischen Erfolg zu fördern. </p>"
 
-#: .\core\templates\ihrdc_layout\index.html:208
+#: .\core\templates\ihrdc_layout\index.html:199
 msgid "What Our Students Say"
 msgstr "Was unsere Studenten sagen"
 
@@ -720,32 +864,38 @@ msgstr "Was unsere Studenten sagen"
 #| msgid ""
 #| "\n"
 #| "                        <h3>Professional Training</h3>\n"
-#| "                        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>\n"
+#| "                        <p>Industry-specific courses designed by experts, "
+#| "customized training programs for organizations</p>\n"
 #| "                        "
 msgid ""
 "\n"
 "        <h3>Professional Training</h3>\n"
-"        <p>Industry-specific courses designed by experts, customized training programs for organizations</p>\n"
+"        <p>Industry-specific courses designed by experts, customized "
+"training programs for organizations</p>\n"
 "        "
 msgstr ""
 "<h3>Professionelle Schulung</h3>\n"
-"<p>Branchenspezifische Kurse von Experten, maßgeschneiderte Schulungsprogramme für Organisationen</p>"
+"<p>Branchenspezifische Kurse von Experten, maßgeschneiderte "
+"Schulungsprogramme für Organisationen</p>"
 
 #: .\core\templates\ihrdc_layout\old_work.html:11
 #, fuzzy
 #| msgid ""
 #| "\n"
 #| "                        <h3>Upskilling/Reskilling</h3>\n"
-#| "                        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
+#| "                        <p>Re-tooling your skillsets and acquired "
+#| "knowledge to adapt to the changing business climate....</p>\n"
 #| "                        "
 msgid ""
 "\n"
 "        <h3>Upskilling/Reskilling</h3>\n"
-"        <p>Re-tooling your skillsets and acquired knowledge to adapt to the changing business climate....</p>\n"
+"        <p>Re-tooling your skillsets and acquired knowledge to adapt to the "
+"changing business climate....</p>\n"
 "        "
 msgstr ""
 "<h3>Weiterbildung/Umschulung</h3>\n"
-"<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das veränderte Geschäftsklima anzupassen...</p>"
+"<p>Umrüstung Ihrer Fähigkeiten und Ihres erworbenen Wissens, um sich an das "
+"veränderte Geschäftsklima anzupassen...</p>"
 
 #: .\core\templates\ihrdc_layout\old_work.html:18
 #, fuzzy
@@ -830,8 +980,8 @@ msgid ""
 "Our industry-specific courses are meticulously designed by experts to "
 "provide cutting-edge knowledge and skills."
 msgstr ""
-"Unsere branchenspezifischen Kurse wurden von Experten sorgfältig entwickelt,"
-" um hochmoderne Kenntnisse und Fähigkeiten zu vermitteln."
+"Unsere branchenspezifischen Kurse wurden von Experten sorgfältig entwickelt, "
+"um hochmoderne Kenntnisse und Fähigkeiten zu vermitteln."
 
 #: .\core\templates\ihrdc_layout\training.html:30
 msgid "Tailored Learning Paths"
@@ -851,15 +1001,557 @@ msgstr "Branchen-Strom-Lehrplan"
 msgid "Flexible Learning Options"
 msgstr "Flexible Lernoptionen"
 
-#: .\edusite\settings.py:129
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:24
+msgid ""
+"\n"
+"                        <h2 class=\"section-title\">Our Story</h2>\n"
+"                        <p>Founded in 2010, I-Citadelexz Excellenz has "
+"established itself as a leading provider of healthcare education and "
+"training in the United Kingdom. What began as a small training center with "
+"just a handful of courses has grown into a comprehensive educational "
+"institution offering a wide range of accredited healthcare programs.</p>\n"
+"                        <p>Our journey started with a clear vision: to "
+"bridge the gap between theoretical knowledge and practical skills in "
+"healthcare education. We recognized the growing demand for well-trained "
+"healthcare professionals and the need for quality education that prepares "
+"students for the real challenges of the industry.</p>\n"
+"                        <p>Over the years, we have continuously evolved and "
+"expanded our offerings to meet the changing needs of the healthcare sector. "
+"Through strategic partnerships with healthcare institutions, industry "
+"professionals, and accrediting bodies, we have developed courses that are "
+"not only academically rigorous but also relevant to the current job market.</"
+"p>\n"
+"                        "
+msgstr ""
+"<H2 class = \"Section-Title\"> Unsere Geschichte </H2>\n"
+"                        <p> im Jahr 2010 gegründet und hat sich als "
+"führender Anbieter von Gesundheitserziehung und Ausbildung im Vereinigten "
+"Königreich etabliert. Was als kleines Trainingszentrum mit nur einer "
+"Handvoll Kurse begann, hat sich zu einer umfassenden Bildungseinrichtung "
+"entwickelt, die eine breite Palette von akkreditierten Gesundheitsprogrammen "
+"anbietet.\n"
+"                        <p> Unsere Reise begann mit einer klaren Vision: die "
+"Lücke zwischen theoretischen Kenntnissen und praktischen Fähigkeiten im "
+"Gesundheitswesen zu schließen. Wir haben die wachsende Nachfrage nach gut "
+"ausgebildeten Angehörigen der Gesundheitsberufe und die Notwendigkeit einer "
+"qualitativ hochwertigen Bildung erkannt, die die Schüler auf die "
+"tatsächlichen Herausforderungen der Branche vorbereitet. </P>\n"
+"                        <p> Im Laufe der Jahre haben wir unsere Angebote "
+"kontinuierlich weiterentwickelt und erweitert, um den sich ändernden "
+"Bedürfnissen des Gesundheitssektors gerecht zu werden. Durch strategische "
+"Partnerschaften mit Gesundheitseinrichtungen, Branchenfachleuten und "
+"Akkreditierungsstellen haben wir Kurse entwickelt, die nicht nur akademisch "
+"streng, sondern auch für den aktuellen Arbeitsmarkt relevant sind. </P>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:38
+msgid ""
+"\n"
+"                    <p>Today, I-Citadelexz Excellenz stands as a testament "
+"to our commitment to excellence in healthcare education. With state-of-the-"
+"art facilities, expert instructors, and a curriculum that balances theory "
+"with practical experience, we continue to produce graduates who are making "
+"significant contributions to the healthcare sector across the UK and beyond."
+"</p>\n"
+"                    <p>We take pride in our high student satisfaction rates, "
+"excellent employment outcomes, and the positive impact our graduates have on "
+"patient care. As we look to the future, we remain dedicated to our mission "
+"of training and developing healthcare professionals who are not only skilled "
+"and knowledgeable but also compassionate and ethical in their practice.</p>\n"
+"                    "
+msgstr ""
+"<p> Heute ist i-citadelexz excellenz ein Beweis für unser Engagement für "
+"Exzellenz in der Gesundheitserziehung. Mit hochmodernen Einrichtungen, "
+"Expertenausbilder und einem Lehrplan, das die Theorie mit praktischen "
+"Erfahrung in Einklang bringt, produzieren wir weiterhin Absolventen, die "
+"erhebliche Beiträge zum Gesundheitssektor in ganz Großbritannien und darüber "
+"hinaus leisten. </P>\n"
+"                    <p> Wir sind stolz auf unsere hohen Zufriedenheitsraten "
+"der Schüler, hervorragende Beschäftigungsergebnisse und die positiven "
+"Auswirkungen unserer Absolventen auf die Patientenversorgung. Wenn wir in "
+"die Zukunft schauen, bleiben wir weiterhin unserer Mission, medizinische "
+"Fachkräfte auszubilden und zu entwickeln, die nicht nur qualifiziert und "
+"sachkundig, sondern auch mitfühlend und ethisch in ihrer Praxis sind. </P>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:53
+msgid ""
+"\n"
+"                        <h3>Our Mission</h3>\n"
+"                        <p>At I-Citadelexz Excellenz, our mission is to "
+"provide high-quality, accessible healthcare education that equips students "
+"with the knowledge, skills, and confidence needed to excel in their chosen "
+"healthcare careers. We are committed to:</p>\n"
+"                        <ul class=\"mt-3\">\n"
+"                            <li class=\"mb-2\">Delivering education that "
+"meets industry standards and employer expectations</li>\n"
+"                            <li class=\"mb-2\">Providing a supportive and "
+"inclusive learning environment that encourages growth and development</li>\n"
+"                            <li class=\"mb-2\">Offering practical, hands-on "
+"training that prepares students for real-world healthcare settings</li>\n"
+"                            <li class=\"mb-2\">Fostering ethical practice "
+"and compassionate care in all our graduates</li>\n"
+"                            <li>Continuously improving and updating our "
+"curriculum to reflect advances in healthcare</li>\n"
+"                        </ul>\n"
+"                        "
+msgstr ""
+"<h3> unsere Mission </h3>\n"
+"                        <p> Bei i-citadelexz excellenz ist unsere Mission "
+"es, eine qualitativ hochwertige, zugängliche Erziehung im Gesundheitswesen "
+"bereitzustellen, die den Schülern das Wissen, die Fähigkeiten und das "
+"Vertrauen ausstößt, die erforderlich sind, um sich in ihrer gewählten "
+"Karriere im Gesundheitswesen zu übertreffen. Wir sind verpflichtet: </p>\n"
+"                        <ul class = \"mt-3\">\n"
+"                            <li class = \"mb-2\"> liefern Bildung, die den "
+"Branchenstandards und den Erwartungen des Arbeitgebers erfüllt </li>\n"
+"                            <li class = \"mb-2\"> eine unterstützende und "
+"integrative Lernumgebung, die Wachstum und Entwicklung fördert </li>\n"
+"                            <li class = \"mb-2\"> bietet praktische, "
+"praktische Schulungen, die die Schüler auf die reale "
+"Gesundheitseinstellungen vorbereitet. </li>\n"
+"                            <li class = \"mb-2\"> fördern ethische Praxis "
+"und mitfühlende Versorgung in all unseren Absolventen </li>\n"
+"                            <li> Verbesserung und Aktualisierung unseres "
+"Lehrplans, um die Fortschritte im Gesundheitswesen zu widerspiegeln. </li>\n"
+"                        </ul>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:68
+msgid ""
+"\n"
+"                        <h3>Our Vision</h3>\n"
+"                        <p>Our vision is to be recognized as the premier "
+"institution for healthcare education in the UK, known for:</p>\n"
+"                        <ul class=\"mt-3\">\n"
+"                            <li class=\"mb-2\">Excellence in teaching and "
+"learning</li>\n"
+"                            <li class=\"mb-2\">Innovation in healthcare "
+"education</li>\n"
+"                            <li class=\"mb-2\">Strong connections with the "
+"healthcare industry</li>\n"
+"                            <li class=\"mb-2\">Graduates who make a positive "
+"impact on patient care</li>\n"
+"                            <li>Contributing to the advancement of "
+"healthcare education nationally and internationally</li>\n"
+"                        </ul>\n"
+"                        <p class=\"mt-3\">We aspire to shape the future of "
+"healthcare education and contribute to the development of a healthcare "
+"workforce that is skilled, compassionate, and responsive to the evolving "
+"needs of society.</p>\n"
+"                        "
+msgstr ""
+"<h3> Unsere Vision </h3>\n"
+"                        <p> Unsere Vision ist als führende Institution für "
+"Gesundheitsausbildung in Großbritannien anerkannt, bekannt für: </p>\n"
+"                        <ul class = \"mt-3\">\n"
+"                            <li class = \"mb-2\"> Exzellenz im Lehren und "
+"Lernen </li>\n"
+"                            <li class = \"mb-2\"> Innovation in der "
+"Gesundheitserziehung </li>\n"
+"                            <li class = \"mb-2\"> Starke Verbindungen zur "
+"Gesundheitsbranche </li>\n"
+"                            <li class = \"mb-2\"> Absolventen, die einen "
+"positiven Einfluss auf die Patientenversorgung haben </li>\n"
+"                            <li> beiträgt zur Weiterentwicklung der "
+"Gesundheitserziehung national und international </li> bei </li>\n"
+"                        </ul>\n"
+"                        <p class = \"mt-3\"> Wir streben danach, die Zukunft "
+"der Gesundheitserziehung zu gestalten und zur Entwicklung einer "
+"qualifizierten, mitfühlenden und reagierenden Bedürfnisse der Gesellschaft "
+"zu entwickeln."
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:89
+#, fuzzy
+#| msgid "Personalized Skill Development"
+msgid "Our Leadership Team"
+msgstr "Personalisierte Fähigkeitenentwicklung"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:90
+msgid ""
+"Meet the passionate educators and healthcare professionals who lead I-"
+"Citadelexz Excellenz."
+msgstr ""
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:174
+msgid "Graduates"
+msgstr "Absolventen"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:183
+#, fuzzy
+#| msgid "Expert Consultancy"
+msgid "Expert Instructors"
+msgstr "Expertenberatung"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:192
+#, fuzzy
+#| msgid "Courses"
+msgid "Courses Offered"
+msgstr "Kurse"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:201
+msgid "Industry Partners"
+msgstr "Branchenpartner"
+
+#: .\core\templates\kc_academy_layout\kc-academy-about.html:211
+msgid ""
+"\n"
+"            <h2 class=\"section-title text-center\">Our Partners</h2>\n"
+"            <p class=\"text-center mb-5\">We collaborate with leading "
+"healthcare institutions and organizations to provide our students with the "
+"best opportunities.</p>\n"
+"            "
+msgstr ""
+"<H2 class = \"Abschnitts-Title-Text-Center\"> Unsere Partner </H2>\n"
+"            <p class = \"Text-zentrale MB-5\"> Wir arbeiten mit führenden "
+"Gesundheitseinrichtungen und Organisationen zusammen, um unseren Schülern "
+"die besten Chancen zu bieten. </p>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:61
+msgid "Send Us a Message"
+msgstr "Senden Sie uns eine Nachricht"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:66
+#, fuzzy
+#| msgid "Course Name"
+msgid "Your Name"
+msgstr "Kursname"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:69
+#, fuzzy
+#| msgid "Email"
+msgid "Your Email"
+msgstr "E-Mail"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:72
+#, fuzzy
+#| msgid "A JSON object"
+msgid "Subject"
+msgstr "Ein JSON-Objekt"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:74
+#, fuzzy
+#| msgid "Messages"
+msgid "Your Message"
+msgstr "Nachrichten"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:75
+#, fuzzy
+#| msgid "Messages"
+msgid "Send Message"
+msgstr "Nachrichten"
+
+#: .\core\templates\kc_academy_layout\kc-academy-contact-page.html:78
+msgid ""
+"\n"
+"                <div class=\"col-lg-6\">\n"
+"                    <h3 class=\"mb-4\" style=\"color: var(--primary-color);"
+"\">Office Hours</h3>\n"
+"                    <div class=\"contact-info\">\n"
+"                        <div class=\"contact-item\">\n"
+"                            <div class=\"contact-icon\">\n"
+"                                <i class=\"fas fa-clock\"></i>\n"
+"                            </div>\n"
+"                            <div>\n"
+"                                <strong>Monday - Friday</strong>\n"
+"                                <p>9:00 AM - 5:00 PM</p>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                        <div class=\"contact-item\">\n"
+"                            <div class=\"contact-icon\">\n"
+"                                <i class=\"fas fa-clock\"></i>\n"
+"                            </div>\n"
+"                            <div>\n"
+"                                <strong>Saturday</strong>\n"
+"                                <p>10:00 AM - 2:00 PM</p>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                        <div class=\"contact-item\">\n"
+"                            <div class=\"contact-icon\">\n"
+"                                <i class=\"fas fa-clock\"></i>\n"
+"                            </div>\n"
+"                            <div>\n"
+"                                <strong>Sunday</strong>\n"
+"                                <p>Closed</p>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                    </div>\n"
+"                    <h3 class=\"mb-4 mt-5\" style=\"color: var(--primary-"
+"color);\">Follow Us</h3>\n"
+"                    <div class=\"social-media\">\n"
+"                        <a href=\"#\" class=\"social-icon\"><i class=\"fab "
+"fa-facebook-f\"></i></a>\n"
+"                        <a href=\"#\" class=\"social-icon\"><i class=\"fab "
+"fa-twitter\"></i></a>\n"
+"                        <a href=\"#\" class=\"social-icon\"><i class=\"fab "
+"fa-instagram\"></i></a>\n"
+"                        <a href=\"#\" class=\"social-icon\"><i class=\"fab "
+"fa-linkedin-in\"></i></a>\n"
+"                        <a href=\"#\" class=\"social-icon\"><i class=\"fab "
+"fa-youtube\"></i></a>\n"
+"                    </div>\n"
+"                </div>\n"
+"                "
+msgstr ""
+"<div class = \"col-lg-6\">\n"
+"                    <H3 class = \"mb-4\" style = \"color: var (-"
+"primärfarben);\"> Bürozeiten </h3>\n"
+"                    <div class = \"contact-info\">\n"
+"                        <div class = \"contact-item\">\n"
+"                            <div class = \"contact-icon\">\n"
+"                                <i class = \"fas fa-clock\"> </i>\n"
+"                            </div>\n"
+"                            <div>\n"
+"                                <strong> Montag - Freitag </strong>\n"
+"                                <p> 9:00 - 17:00 Uhr </p>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                        <div class = \"contact-item\">\n"
+"                            <div class = \"contact-icon\">\n"
+"                                <i class = \"fas fa-clock\"> </i>\n"
+"                            </div>\n"
+"                            <div>\n"
+"                                <strong> Samstag </strong>\n"
+"                                <p> 10:00 - 14:00 Uhr </p>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                        <div class = \"contact-item\">\n"
+"                            <div class = \"contact-icon\">\n"
+"                                <i class = \"fas fa-clock\"> </i>\n"
+"                            </div>\n"
+"                            <div>\n"
+"                                <strong> Sonntag </strong>\n"
+"                                <p> geschlossen </p>\n"
+"                            </div>\n"
+"                        </div>\n"
+"                    </div>\n"
+"                    <H3 class = \"MB-4 MT-5\" style = \"color: var (-"
+"primärfarben);\"> Folgen Sie uns </H3>\n"
+"                    <div class = \"Social-Media\">\n"
+"                        <a href = \"#\" class = \"Social-icon\"> <i class = "
+"\"fab fa-facebook-f\"> </i> </a>\n"
+"                        <a href = \"#\" class = \"Social-icon\"> <i class = "
+"\"fab fa-twitter\"> </i> </a>\n"
+"                        <a href = \"#\" class = \"Social-icon\"> <i class = "
+"\"fab fa-intagram\"> </i> </a>\n"
+"                        <a href = \"#\" class = \"Social-icon\"> <i class = "
+"\"fab fa-linkedin-in\"> </i> </a>\n"
+"                        <a href = \"#\" class = \"Social-icon\"> <i class = "
+"\"fab fa-youtube\"> </i> </a>\n"
+"                    </div>\n"
+"                </div>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:14
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Consultancy</h3>\n"
+#| "                        <p>Resolve bottlenecks within minutes</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"                    <h2>Excellence in Professional Development</h2>\n"
+"                    <p>Transforming organizations through tailored training "
+"solutions that deliver measurable results</p>\n"
+"                    "
+msgstr ""
+"<h3>Beratung</h3>\n"
+"<p>Engpässe innerhalb von Minuten beheben</p>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:18
+#, fuzzy
+#| msgid "Explore Courses"
+msgid "Explore Our Programs"
+msgstr "Kurse erkunden"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:23
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Certification</h3>\n"
+#| "                        <p>Internationally recognized certifications</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"                        <h2>Expert-Led Training Solutions</h2>\n"
+"                        <p>Learn from industry leaders with decades of "
+"experience in their respective fields</p>\n"
+"                    "
+msgstr ""
+"<h3>Zertifizierung</h3>\n"
+"<p>International anerkannte Zertifizierungen</p>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:27
+msgid "Our Approach"
+msgstr "Unser Ansatz"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:32
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "                        <h3>Professional Training</h3>\n"
+#| "                        <p>Industry-specific courses designed by experts, "
+#| "customized training programs for organizations</p>\n"
+#| "                        "
+msgid ""
+"\n"
+"                    <h2>Bespoke Training Programs</h2>\n"
+"                    <p>Custom solutions designed to address your "
+"organization's unique challenges and goals</p>\n"
+"                    "
+msgstr ""
+"<h3>Professionelle Schulung</h3>\n"
+"<p>Branchenspezifische Kurse von Experten, maßgeschneiderte "
+"Schulungsprogramme für Organisationen</p>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:36
+#, fuzzy
+#| msgid "Courses"
+msgid "Our Courses"
+msgstr "Kurse"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:49
+msgid ""
+"\n"
+"                <div class=\"categories-header\">\n"
+"                    <h2>Training Categories</h2>\n"
+"                    <h3>Diverse training for an evolving society</h3>\n"
+"                </div>\n"
+"                \n"
+"                <div class=\"category-grid\">\n"
+"                    <div class=\"category-card\">\n"
+"                        <h4>Leadership Development</h4>\n"
+"                        <p>Transform your organization's leadership capacity "
+"with programs designed to empower decision-makers at all levels.</p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class=\"category-card\">\n"
+"                        <h4>Professional Skills</h4>\n"
+"                        <p>Enhance core competencies essential for workplace "
+"success and career advancement in any industry.</p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class=\"category-card\">\n"
+"                        <h4>Technical Training</h4>\n"
+"                        <p>Master specialized skills and stay current with "
+"the latest industry developments and technologies.</p>\n"
+"                    </div>\n"
+"                </div>\n"
+"                "
+msgstr ""
+"<div class = \"category-Header\">\n"
+"                    <h2> Trainingskategorien </H2>\n"
+"                    <h3> vielfältiges Training für eine sich entwickelnde "
+"Gesellschaft </H3>\n"
+"                </div>\n"
+"                \n"
+"                <div class = \"category-Grid\">\n"
+"                    <div class = \"category card\">\n"
+"                        <h4> Führungskräfteentwicklung </h4>\n"
+"                        <p> Verwandeln Sie die Führungskapazität Ihrer "
+"Organisation mit Programmen, um Entscheidungsträger auf allen Ebenen zu "
+"befähigen. </p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class = \"category card\">\n"
+"                        <h4> Professionelle Fähigkeiten </h4>\n"
+"                        <p> Verbesserung der Kernkompetenzen, die für den "
+"Erfolg am Arbeitsplatz und den beruflichen Fortschritt in jeder Branche "
+"wesentlich sind. </p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class = \"category card\">\n"
+"                        <h4> Technisches Training </h4>\n"
+"                        <p> Master Specialized Skills und bleiben mit den "
+"neuesten Branchenentwicklungen und -technologien auf dem Laufenden. </p>\n"
+"                    </div>\n"
+"                </div>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:78
+msgid ""
+"\n"
+"                <h2>What We Do</h2>\n"
+"                \n"
+"                <div class=\"offerings-grid\">\n"
+"                    <div class=\"offering-card\">\n"
+"                        <h3>Professional Training</h3>\n"
+"                        <p>Industry-specific, in-person training programs "
+"delivered by experts.</p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class=\"offering-card\">\n"
+"                        <h3>Upskilling/Reskilling</h3>\n"
+"                        <p>Keep your talent ahead of trends with adaptive "
+"learning solutions.</p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class=\"offering-card\">\n"
+"                        <h3>Certification</h3>\n"
+"                        <p>Recognized qualifications that validate "
+"professional expertise.</p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class=\"offering-card\">\n"
+"                        <h3>Consultancy</h3>\n"
+"                        <p>Custom frameworks and solutions for "
+"organizational development.</p>\n"
+"                    </div>\n"
+"                    "
+msgstr ""
+"<h2> was wir tun </h2>\n"
+"                \n"
+"                <div class = \"Opfergitter\">\n"
+"                    <div class = \"Angebotskarte\">\n"
+"                        <h3> Berufstraining </h3>\n"
+"                        <p> branchenspezifische, persönliche "
+"Schulungsprogramme, die von Experten geliefert werden. </p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class = \"Angebotskarte\">\n"
+"                        <h3> upskilling/reskilling </h3>\n"
+"                        <p> Halten Sie Ihr Talent vor Trends mit adaptiven "
+"Lernlösungen. </p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class = \"Angebotskarte\">\n"
+"                        <h3> Zertifizierung </h3>\n"
+"                        <p> Anerkannte Qualifikationen, die Fachkenntnisse "
+"validieren. </p>\n"
+"                    </div>\n"
+"                    \n"
+"                    <div class = \"Angebotskarte\">\n"
+"                        <h3> Beratung </h3>\n"
+"                        <p> benutzerdefinierte Frameworks und Lösungen für "
+"die Organisationsentwicklung. </p>\n"
+"                    </div>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:148
+msgid ""
+"\n"
+"                <h2>Bespoke Training: Your Uniquely Crafted Learning "
+"Journey</h2>\n"
+"                <p>Discover custom training solutions designed specifically "
+"for your organization's needs and challenges.</p>\n"
+"                "
+msgstr ""
+"<h2> maßgeschneidertes Training: Ihre einzigartig gestaltete Lernreise </"
+"H2>\n"
+"                <p> Entdecken Sie benutzerdefinierte Schulungslösungen, die "
+"speziell für die Bedürfnisse und Herausforderungen Ihres Unternehmens "
+"entwickelt wurden. </p>"
+
+#: .\core\templates\kc_academy_layout\kc-academy-index.html:152
+#, fuzzy
+#| msgid "Live Training"
+msgid "Discover Custom Training"
+msgstr "Live-Schulung"
+
+#: .\edusite\settings.py:130
 msgid "English"
 msgstr "Englisch"
 
-#: .\edusite\settings.py:130
+#: .\edusite\settings.py:131
 msgid "French"
 msgstr "Französisch"
 
-#: .\edusite\settings.py:131
+#: .\edusite\settings.py:132
 msgid "German"
 msgstr "Deutsch"
 
@@ -924,8 +1616,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:264
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
-" hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
 msgstr ""
 "Geben Sie einen gültigen „Slug“ ein, der aus Unicode-Buchstaben, Zahlen, "
 "Unterstrichen oder Bindestrichen besteht."
@@ -961,8 +1653,7 @@ msgstr ""
 #, python-format
 msgid "Ensure this value is less than or equal to %(limit_value)s."
 msgstr ""
-"Stellen Sie sicher, dass dieser Wert kleiner oder gleich %(limit_value)s "
-"ist."
+"Stellen Sie sicher, dass dieser Wert kleiner oder gleich %(limit_value)s ist."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:398
 #, python-format
@@ -1122,8 +1813,8 @@ msgid ""
 "“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
 "format."
 msgstr ""
-"Der Wert „%(value)s“ hat ein ungültiges Datumsformat. Er muss im Format "
-"JJJJ-MM-TT vorliegen."
+"Der Wert „%(value)s“ hat ein ungültiges Datumsformat. Er muss im Format JJJJ-"
+"MM-TT vorliegen."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1358
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1493
@@ -1145,18 +1836,17 @@ msgid ""
 "“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
 "HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
-"Der Wert „%(value)s“ hat ein ungültiges Format. Er muss im Format JJJJ-MM-TT"
-" HH:MM[:ss[.uuuuuu]][TZ] vorliegen."
+"Der Wert „%(value)s“ hat ein ungültiges Format. Er muss im Format JJJJ-MM-TT "
+"HH:MM[:ss[.uuuuuu]][TZ] vorliegen."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1497
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
 msgstr ""
-"Der Wert „%(value)s“ hat das richtige Format (JJJJ-MM-TT "
-"HH:MM[:ss[.uuuuuu]][TZ]), aber es handelt sich um ein ungültiges Datum/eine "
-"ungültige Uhrzeit."
+"Der Wert „%(value)s“ hat das richtige Format (JJJJ-MM-TT HH:MM[:ss[.uuuuuu]]"
+"[TZ]), aber es handelt sich um ein ungültiges Datum/eine ungültige Uhrzeit."
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1502
 msgid "Date (with time)"
@@ -1336,8 +2026,7 @@ msgid "Many-to-many relationship"
 msgstr "Viele-zu-viele-Beziehung"
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the
-#. label
+#. characters will prevent the default label_suffix to be appended to the label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:184
 msgid ":?.!"
 msgstr ""
@@ -1389,8 +2078,7 @@ msgstr "Die übermittelte Datei ist leer."
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:622
 #, python-format
-msgid ""
-"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -1511,11 +2199,10 @@ msgid "The inline value did not match the parent instance."
 msgstr "Der Inline-Wert stimmte nicht mit der übergeordneten Instanz überein."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1429
-msgid ""
-"Select a valid choice. That choice is not one of the available choices."
+msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr ""
-"Wählen Sie eine gültige Option. Diese Option ist nicht unter den verfügbaren"
-" Optionen."
+"Wählen Sie eine gültige Option. Diese Option ist nicht unter den verfügbaren "
+"Optionen."
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1568
 #, python-format
@@ -1528,8 +2215,8 @@ msgid ""
 "%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
 "may be ambiguous or it may not exist."
 msgstr ""
-"%(datetime)s konnte in der Zeitzone %(current_timezone)s nicht interpretiert"
-" werden; es ist möglicherweise nicht eindeutig oder existiert nicht."
+"%(datetime)s konnte in der Zeitzone %(current_timezone)s nicht interpretiert "
+"werden; es ist möglicherweise nicht eindeutig oder existiert nicht."
 
 #: .\venv\Lib\site-packages\django\forms\widgets.py:439
 msgid "Clear"
@@ -1983,10 +2670,10 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
-" including the “Referrer-Policy: no-referrer” header, please remove them. "
-"The CSRF protection requires the “Referer” header to do strict referer "
-"checking. If you’re concerned about privacy, use alternatives like <a "
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 "Wenn Sie das Tag <meta name=\"referrer\" content=\"no-referrer\"> verwenden "
@@ -2061,8 +2748,7 @@ msgstr ""
 #, python-format
 msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
 msgstr ""
-"Ungültige Datumszeichenfolge „%(datestr)s“ im angegebenen Format "
-"„%(format)s“"
+"Ungültige Datumszeichenfolge „%(datestr)s“ im angegebenen Format „%(format)s“"
 
 #: .\venv\Lib\site-packages\django\views\generic\detail.py:56
 #, python-format
@@ -2102,8 +2788,7 @@ msgstr "Index von %(Verzeichnis)s"
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 msgid "The install worked successfully! Congratulations!"
-msgstr ""
-"Die Installation hat erfolgreich funktioniert! Herzlichen Glückwunsch!"
+msgstr "Die Installation hat erfolgreich funktioniert! Herzlichen Glückwunsch!"
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:207
 #, python-format
@@ -2111,21 +2796,20 @@ msgid ""
 "View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
 "target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
 msgstr ""
-"Sehen Sie sich die <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">Versionshinweise</a> für Django "
-"%(version)s an."
+"Sehen Sie sich die <a href=\"https://docs.djangoproject.com/en/%(version)s/"
+"releases/\" target=\"_blank\" rel=\"noopener\">Versionshinweise</a> für "
+"Django %(version)s an."
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
-"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
-"and you have not configured any URLs."
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
 msgstr ""
-"Sie sehen diese Seite, weil in Ihrer Einstellungsdatei <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"Sie sehen diese Seite, weil in Ihrer Einstellungsdatei <a href=\"https://"
+"docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
 "target=\"_blank\" rel=\"noopener\">DEBUG=True</a> steht und Sie keine URLs "
 "konfiguriert haben."
 
@@ -2157,11 +2841,56 @@ msgstr "Vernetzen, Hilfe erhalten oder beitragen"
 msgid "None"
 msgstr "Keiner"
 
+#~ msgid "Search..."
+#~ msgstr "Suchen..."
+
+#~ msgid ""
+#~ "Leading provider of training solutions for the energy industry worldwide."
+#~ msgstr ""
+#~ "Weltweit führender Anbieter von Schulungslösungen für die Energiebranche."
+
+#~ msgid ""
+#~ "\n"
+#~ "                <div class=\"footer-section\">\n"
+#~ "                    <h3>Contact Info</h3>\n"
+#~ "                    <ul class=\"contact-list\">\n"
+#~ "                        <li><i class=\"fas fa-map-marker-alt\"></i>123 "
+#~ "Training St, City, Country</li>\n"
+#~ "                        <li><i class=\"fas fa-phone\"></i> +1 (234) "
+#~ "567-890</li>\n"
+#~ "                        <li><i class=\"fas fa-envelope\"></i> "
+#~ "info@example.com</li>\n"
+#~ "                    </ul>\n"
+#~ "                </div>\n"
+#~ "                <div class=\"footer-section\">\n"
+#~ "                    <h3>Newsletter</h3>\n"
+#~ "                    <form class=\"newsletter-form\">\n"
+#~ "                        <input type=\"email\" placeholder=\"Enter your "
+#~ "email\">\n"
+#~ "                        <button type=\"submit\" class=\"btn btn-"
+#~ "primary\">Subscribe</button>\n"
+#~ "                    </form>\n"
+#~ "                </div>\n"
+#~ "            </div>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<div class=\"footer-section\">\n"
+#~ "<h3>Kontaktinformationen</h3>\n"
+#~ "<ul class=\"contact-list\">\n"
+#~ "<li><i class=\"fas fa-map-marker-alt\"></i>123 Training St, Stadt, Land</"
+#~ "li>\n"
+#~ "<li><i class=\"fas fa-phone\"></i> +1 (234) 567-890</li>\n"
+#~ "<li><i class=\"fas fa-envelope\"></i> info@example.com</li>\n"
+#~ "</ul>\n"
+#~ "</div>\n"
+#~ "<div class=\"footer-section\">\n"
+#~ "<h3>Newsletter</h3>\n"
+#~ "<form class=\"newsletter-form\">\n"
+#~ "<input type=\"email\" placeholder=\"Geben Sie Ihre E-Mail-Adresse ein\">\n"
+#~ "<button type=\"submit\" class=\"btn btn-primary\">Abonnieren</button>\n"
+#~ "</form>\n"
+#~ "</div>\n"
+#~ "</div>"
+
 #~ msgid "Online"
 #~ msgstr "Online"
-
-#~ msgid "Classroom"
-#~ msgstr "Klassenzimmer"
-
-#~ msgid "Live Training"
-#~ msgstr "Live-Schulung"

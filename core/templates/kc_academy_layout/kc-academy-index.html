@@ -3,6 +3,7 @@
 
 {% load static %}
 {% load i18n %}
+{% load humanize %}
     <!-- Main Content -->
     <main>
         {% block content %}
@@ -23,7 +24,7 @@
                         <h2>Expert-Led Training Solutions</h2>
                         <p>Learn from industry leaders with decades of experience in their respective fields</p>
                     {% endblocktrans %}
-                    <a href="{% url 'categories' %}" class="btn">Our Approach</a>
+                    <a href="{% url 'categories' %}" class="btn">{% trans "Our Approach" %}</a>
                 </div>
             </div>
             <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\hero-image.jpeg' %});">
@@ -32,7 +33,7 @@
                     <h2>Bespoke Training Programs</h2>
                     <p>Custom solutions designed to address your organization's unique challenges and goals</p>
                     {% endblocktrans %}
-                    <a href="{% url "categories" %}" class="btn">Our Courses</a>
+                    <a href="{% url "categories" %}" class="btn">{% trans "Our Courses" %}</a>
                 </div>
             </div>
             <div class="slide-indicators">
@@ -127,7 +128,7 @@
                                 <span><i class="fas fa-user-graduate"></i> {{ course.enrolled_students }} students</span>
                             </div>
                             <div class="course-footer">
-                                <span class="price">${{ course.price }}</span>
+                                <span class="price">${{ course.price| intcomma }}</span>
                                 <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">{% translate "learn more" %}</a>
                             </div>
                         </div>
@@ -159,14 +160,14 @@
                     <div class="service-card">
                         <img src="{% static 'layout\images\Training.jpeg' %}" alt="Service 1" class="service-image">
                         <div class="service-overlay">
-                            <h3>Executive Coaching</h3>
+                            <h3>{% trans "Executive Coaching" %}</h3>
                         </div>
                     </div>
                     
                     <div class="service-card">
                         <img src="{% static 'layout\images\Training.jpeg' %}" alt="Service 1" class="service-image">
                         <div class="service-overlay">
-                            <h3>Bespoke Training</h3>
+                            <h3>{% trans "Bespoke Training" %}</h3>
                         </div>
                     </div>
                 </div>

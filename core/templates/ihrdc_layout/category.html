@@ -7,7 +7,7 @@
 
 {% block content %}
     <!-- Course Catalog Section -->
-    <section class="course-catalog">
+    <section style="height: 100vh;" class="course-catalog">
         <div class="container">
             <h2 class="section-title">{{category.name}} {% trans "Courses" %}</h2>
             <div class="catalog-header">
@@ -32,7 +32,9 @@
                         <h3>{{course.title}}</h3>
                     </div>
                     <div class="card-image">
+                        {% if course.image %}
                         <img src="{{course.image.url}}" alt="{{course.title}}">
+                        {% endif %}
                     </div>
                     <span class="price">${{course.price| intcomma}}</span>
                     <div class="card-details">

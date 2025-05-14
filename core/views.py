@@ -22,11 +22,6 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 # Create your views here.
 
 
-def test_courses_page(request):
-    return render(request, 'kc_academy_layout/kc-academy-courses.html')
-
-
-
 def index_page(request):
     try:
         categories = Category.objects.all()
