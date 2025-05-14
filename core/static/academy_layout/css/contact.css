@@ -1,3 +1,15 @@
+h3 {
+    font-size: var(--text-lg);
+}
+
+input {
+    font-size: var(--text-base);
+}
+
+div {
+    font-size: var(--text-sm);
+}
+
 .btn-contact {
     background-color: var(--primary-color);
     color: var(--text-white);
@@ -20,15 +32,15 @@
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: var(--text-xl);
     font-weight: 700;
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: var(--text-md);
     margin-bottom: 30px;
-    max-width: 700px;
+    max-width: var(--container-width)/2;
     margin-left: auto;
     margin-right: auto;
 }
@@ -53,7 +65,7 @@
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: var(--text-lg);
     font-weight: 700;
     margin-bottom: 50px;
     text-align: center;
@@ -71,7 +83,7 @@
 
 .contact-icon {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: var(--text-base);
     margin-right: 15px;
 }
 
@@ -101,14 +113,19 @@
     align-items: center;
     justify-content: center;
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: var(--text-sm);
 }
 
 .contact-card h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl);
     font-weight: 600;
     margin-bottom: 15px;
     color: var(--primary-color);
+}
+
+
+.contact-card p {
+    font-size: var(--text-sm);
 }
 
 .contact-form input,
@@ -128,5 +145,6 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    height: 400px;
+    max-height: 1000px;
+    height: 800px;
 }

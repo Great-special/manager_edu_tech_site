@@ -324,7 +324,7 @@ nav {
 /* ======================
    POPULAR COURSES (UPDATED)
    ====================== */
-   .popular-courses {
+.popular-courses {
     padding: var(--section-padding) 0;
     background-color: var(--bg-white);
 }
@@ -691,7 +691,7 @@ footer {
 .slide-content {
     text-align: center;
     color: var(--text-white);
-    max-width: 800px;
+    max-width: var(--container-width)/2;
     padding: var(--gap-small);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: var(--border-radius);
@@ -751,7 +751,7 @@ footer {
 }
 
 .course-catalog .container {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
@@ -954,6 +954,155 @@ footer {
 }
 
 
+/* Hero Section */
+.course-details-hero {
+    background: linear-gradient(135deg, var(--primary-color), #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-details-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.course-details-hero h1 {
+    font-size: var(--text-xxl);
+    margin-bottom: 1rem;
+    position: relative;
+    animation: fadeInDown 0.8s ease;
+}
+
+.course-details-hero p {
+    font-size: var(--text-sm);
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Service Detail Container */
+.service-detail {
+    max-width: var(--container-width);
+    margin: 0 auto 5rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+/* Service Header */
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(var(--primary-color-rgb), 0.1);
+}
+
+.service-header i {
+    font-size: var(--text-xl);
+    color: var(--primary-color);
+    background: rgba(var(--primary-color-rgb), 0.1);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.service-header h1 {
+    font-size: var(--text-xl);
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Service Description */
+.service-description {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--primary-color);
+}
+
+.service-description p {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+/* Service Benefits */
+.service-benefits {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-benefits h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: var(--text-lg);
+}
+
+.service-benefits ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.service-benefits li {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative;
+    padding-left: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-benefits li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-benefits li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--primary-color);
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+}
+
+/* Call to Action */
+.call-to-action {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+
 
 /* ======================
    RESPONSIVE STYLES
@@ -1033,7 +1182,7 @@ footer {
         --header-height: 400px;
     }
 
-        .catalog-layout {
+    .catalog-layout {
         grid-template-columns: 1fr;
     }
 
@@ -1093,53 +1242,130 @@ footer {
 ====================== */
 @media (min-width: 2560px) {
     :root {
-      --section-padding: 100px;
-      --card-height: 500px;
-      --card-height-sm: 320px;
-      --header-height: 800px;
-      --container-width: 2220px;
-      --gap-small: 30px;
-      --gap-medium: 50px;
-      --gap-large: 70px;
-      --border-radius: 10px;
-      --nav-gap: 50px;
+      --section-padding: 180px;
+      --card-height: 750px;
+      --card-height-sm: 600px;
+      --header-height: 1200px;
+      --container-width: 3600px;
+      --gap-small: 50px;
+      --gap-medium: 90px;
+      --gap-large: 120px;
+      --border-radius: 15px;
+      --nav-gap: 70px;
   
-      --text-xs: 1.5rem;
-      --text-sm: 18px;
-      --text-base: 20px;
-      --text-md: 24px;
-      --text-lg: 28px;
-      --text-xl: 36px;
-      --text-xxl: 48px;
+      --text-xs: 2.5rem;
+      --text-sm: 40px;
+      --text-base: 48px;
+      --text-md: 54px;
+      --text-lg: 60px;
+      --text-xl: 72px;
+      --text-xxl: 108px;
     }
   
     .container {
-      padding: 0 40px;
+      padding: 0 50px;
+      max-width: 95%;
     }
   
     .btn {
       padding: 12px 30px;
       font-size: var(--text-base);
     }
-  
+    
+    .course-catalog {
+        height: 100vmin;
+    }
+
+    .course-card {
+      min-width: 850px;
+      max-width: 1200px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: var(--text-lg);
+        margin: 10px;
+    }
+
     .course-image img {
-      height: 220px;
+      height: 540px;
     }
   
+    .price {
+        font-size: var(--text-md);
+        margin: 10px;
+    }
+
     .course-content {
       padding: var(--gap-large);
     }
   
+    .bespoke-training h2 {
+        font-size: var(--text-xl);
+        margin-bottom: var(--gap-small);
+    }
+
     .bespoke-training p {
-      font-size: var(--text-md);
+        max-width: 2000px;
+        margin: 0 auto 30px;
+        font-size: var(--text-base);
     }
   
     .main-nav a {
-      font-size: var(--text-lg);
+      font-size: var(--text-base);
     }
   
     .logo img {
-      max-height: 100px;
+      max-height: 140px;
+    }
+
+    .choose-header h2 {
+        font-size: var(--text-xl);
+        margin-bottom: var(--gap-large);
+    }
+
+    .reason-card h3 {
+        font-size: var(--text-lg);
+    }
+
+    .reason-card p {
+        font-size: var(--text-sm);
+    }
+
+    .footer-col {
+        min-width: 500px;
+    }
+
+    .footer-col h3 {
+        font-size: var(--text-md);
+    }
+
+    .footer-col ul li a {
+        font-size: var(--text-sm);
+    }
+
+    .footer-col ul li {
+        font-size: var(--text-sm);
+    }
+
+    .footer-col p {
+        font-size: var(--text-sm);
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        margin-top: 30px;
+    }
+
+    .social-links a {
+        width: 90px;
+        height: 90px;
     }
   }
   
