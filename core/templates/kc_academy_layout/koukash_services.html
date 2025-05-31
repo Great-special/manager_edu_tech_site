@@ -1,0 +1,392 @@
+{% extends 'ihrdc_layout/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}Service{% endblock %}
+{% block style %}
+<link href="{% static 'academy_layout/css/services.css' %}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-container">
+                <button class="nav-btn active" onclick="showService('digital-transformation')">Digital Transformation</button>
+                <button class="nav-btn" onclick="showService('data-management')">Data Management</button>
+                <button class="nav-btn" onclick="showService('managed-training')">Managed Training</button>
+                <button class="nav-btn" onclick="showService('learning-pathways')">Learning Pathways</button>
+                <button class="nav-btn" onclick="showService('training-platform')">Training Platform</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Digital Transformation -->
+            <div id="digital-transformation" class="service-page active">
+                <div class="service-hero">
+                    <div class="service-hero-content">
+                        <h1>Digital Transformation</h1>
+                        <p>Transform your organization with comprehensive digital strategies that drive innovation, efficiency, and competitive advantage in today's rapidly evolving business landscape.</p>
+                    </div>
+                    <div class="service-hero-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Digital Transformation" />
+                    </div>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">🚀</div>
+                        <h3>Strategic Planning</h3>
+                        <p>Develop comprehensive digital roadmaps aligned with business objectives, ensuring seamless transformation across all organizational levels.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">⚡</div>
+                        <h3>Process Optimization</h3>
+                        <p>Streamline operations through automation and digital workflows, reducing costs while improving efficiency and productivity.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🎯</div>
+                        <h3>Technology Integration</h3>
+                        <p>Implement cutting-edge solutions that integrate seamlessly with existing systems, ensuring minimal disruption and maximum impact.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>Transformation Features</h2>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Digital Strategy Development</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Change Management Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Technology Assessment</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Implementation Roadmapping</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Performance Monitoring</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Continuous Improvement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Ready to Transform?</h2>
+                    <p>Let's discuss how digital transformation can accelerate your business growth and competitive positioning.</p>
+                    <button class="cta-btn">Start Your Journey</button>
+                </div>
+            </div>
+
+            <!-- Data Management -->
+            <div id="data-management" class="service-page">
+                <div class="service-hero">
+                    <div class="service-hero-content">
+                        <h1>Data Management</h1>
+                        <p>Unlock the power of your data with comprehensive management solutions that ensure quality, security, and accessibility across your organization.</p>
+                    </div>
+                    <div class="service-hero-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Data Management" />
+                    </div>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">📊</div>
+                        <h3>Data Architecture</h3>
+                        <p>Design robust data infrastructures that support scalability, performance, and future growth while maintaining data integrity.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🔒</div>
+                        <h3>Data Security</h3>
+                        <p>Implement comprehensive security measures to protect sensitive information and ensure compliance with regulatory requirements.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">📈</div>
+                        <h3>Analytics & Insights</h3>
+                        <p>Transform raw data into actionable insights through advanced analytics and business intelligence solutions.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>Data Management Capabilities</h2>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Data Governance Framework</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Quality Assurance Processes</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Master Data Management</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Data Integration Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Backup & Recovery Systems</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Compliance Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Harness Your Data</h2>
+                    <p>Transform your data from liability to asset with our comprehensive management solutions.</p>
+                    <button class="cta-btn">Get Started</button>
+                </div>
+            </div>
+
+            <!-- Managed Training Service -->
+            <div id="managed-training" class="service-page">
+                <div class="service-hero">
+                    <div class="service-hero-content">
+                        <h1>Managed Training Service</h1>
+                        <p>Comprehensive training solutions managed end-to-end, ensuring your team develops the skills needed for success in today's digital workplace.</p>
+                    </div>
+                    <div class="service-hero-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Managed Training Service" />
+                    </div>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">🎓</div>
+                        <h3>Curriculum Design</h3>
+                        <p>Custom training programs tailored to your organization's specific needs, objectives, and industry requirements.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">👥</div>
+                        <h3>Expert Instructors</h3>
+                        <p>Access to industry-leading trainers and subject matter experts who deliver engaging and effective learning experiences.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">📋</div>
+                        <h3>Progress Tracking</h3>
+                        <p>Comprehensive monitoring and reporting systems to track learning progress and measure training effectiveness.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>Training Management Features</h2>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Training Needs Analysis</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Content Development</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Scheduling & Coordination</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Multi-Modal Delivery</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Assessment & Certification</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>ROI Measurement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Invest in Your Team</h2>
+                    <p>Empower your workforce with professionally managed training that delivers measurable results.</p>
+                    <button class="cta-btn">Explore Training</button>
+                </div>
+            </div>
+
+            <!-- Learning Pathways -->
+            <div id="learning-pathways" class="service-page">
+                <div class="service-hero">
+                    <h1>Learning Pathways</h1>
+                    <p>Structured learning journeys that guide individuals and teams through progressive skill development, ensuring continuous growth and career advancement.</p>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">🛤️</div>
+                        <h3>Structured Progression</h3>
+                        <p>Carefully designed learning sequences that build skills progressively, ensuring solid foundations and advanced competencies.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🎯</div>
+                        <h3>Personalized Tracks</h3>
+                        <p>Customized learning paths based on individual roles, career goals, and current skill levels for maximum relevance.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🏆</div>
+                        <h3>Milestone Recognition</h3>
+                        <p>Clear achievement markers and certifications to recognize progress and motivate continued learning.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>Pathway Components</h2>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Skills Assessment</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Learning Objectives Mapping</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Interactive Learning Modules</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Practical Assignments</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Peer Collaboration</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Mentorship Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Chart Your Learning Journey</h2>
+                    <p>Discover structured pathways that accelerate professional development and career growth.</p>
+                    <button class="cta-btn">Explore Pathways</button>
+                </div>
+            </div>
+
+            <!-- Training Delivery Platform -->
+            <div id="training-platform" class="service-page">
+                <div class="service-hero">
+                    <h1>Training Delivery Platform</h1>
+                    <p>Advanced learning management system that delivers engaging, interactive training experiences across multiple devices and formats.</p>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="icon">💻</div>
+                        <h3>Multi-Device Access</h3>
+                        <p>Seamless learning experience across desktop, tablet, and mobile devices with offline capability for uninterrupted learning.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🎮</div>
+                        <h3>Interactive Content</h3>
+                        <p>Engaging multimedia content including videos, simulations, gamification elements, and virtual reality experiences.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">📊</div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Comprehensive reporting and analytics to track learner progress, engagement, and training effectiveness.</p>
+                    </div>
+                </div>
+
+                <div class="features-section">
+                    <h2>Platform Capabilities</h2>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Learning Management System</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Content Authoring Tools</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Virtual Classroom Integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Social Learning Features</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>API Integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>White-Label Options</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h2>Experience Next-Gen Learning</h2>
+                    <p>Discover how our platform transforms traditional training into engaging, effective learning experiences.</p>
+                    <button class="cta-btn">Request Demo</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showService(serviceId) {
+            // Hide all service pages
+            const pages = document.querySelectorAll('.service-page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Remove active class from all nav buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected service page
+            document.getElementById(serviceId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Add hover effects for service cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Add click handlers for CTA buttons
+            const ctaButtons = document.querySelectorAll('.cta-btn');
+            ctaButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Thank you for your interest! We will contact you soon to discuss your requirements.');
+                });
+            });
+        });
+    </script>
+{% endblock %}

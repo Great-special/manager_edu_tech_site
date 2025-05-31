@@ -77,12 +77,16 @@
     font-size: var(--text-sm);
 }
 
-.view-all-btn {
+.featured-courses .view-all-btn {
     display: inline-block;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
 
+}
+
+.featured-courses .view-all-btn:hover {
+    color: var(--text-white);
 }

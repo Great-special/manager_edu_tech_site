@@ -18,8 +18,11 @@ class Category(models.Model):
         return self.name
     
     def save(self, *args, **kwargs):
+        if self.name:
+            self.name = self.name.strip().title()
+        # Automatically generate slug from name if not provided
         if self.name and not self.slug:
-            self.slug = slugify(self.name)
+            self.slug = slugify(self.name.lower())
         super().save(*args, **kwargs)
 
 

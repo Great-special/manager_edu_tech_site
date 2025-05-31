@@ -277,6 +277,11 @@ nav {
     color: var(--secondary-lighter);
 }
 
+.category-card a {
+    font-size: var(--text-sm);
+    color: var(--primary-color);
+}
+
 /* ======================
    WHAT WE DO SECTION
    ====================== */
@@ -318,6 +323,12 @@ nav {
 .offering-card p {
     font-size: var(--text-sm);
     color: var(--secondary-lighter);
+    text-align: center;
+}
+
+.offering-card a {
+    font-size: var(--text-sm);
+    color: var(--primary-color);
     text-align: center;
 }
 

@@ -73,12 +73,12 @@
                         <div class="">
                             <a href="#">{% trans "Services" %}</a>
                             <div class="dropdown-menu">
-                                <a href="/service-1">{% trans "Digital Transformation" %}</a>
-                                <a href="/service-2">{% trans "Data Management" %}</a>
-                                <a href="/service-3">{% trans "Managed Training Service" %}</a>
-                                <a href="/service-1">{% trans "Learning Pathways" %}</a>
-                                <a href="/service-2">{% trans "Training Delivery Platform" %}</a>
-                                <a href="/service-3">{% trans "Resources" %}</a>
+                                <a href="{% url "services" %}">{% trans "Digital Transformation" %}</a>
+                                <a href="{% url "services" %}">{% trans "Data Management" %}</a>
+                                <a href="{% url "services" %}">{% trans "Managed Training Service" %}</a>
+                                <a href="{% url "services" %}">{% trans "Learning Pathways" %}</a>
+                                <a href="{% url "services" %}">{% trans "Training Delivery Platform" %}</a>
+                                <a href="{% url "services" %}">{% trans "Resources" %}</a>
                             </div>
                         </div>
                         <a href="{% url "about" %}">{% trans "About Us" %}</a>

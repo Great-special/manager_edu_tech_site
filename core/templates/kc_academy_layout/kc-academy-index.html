@@ -51,54 +51,54 @@
                     <h2>Training Categories</h2>
                     <h3>Diverse training for an evolving society</h3>
                 </div>
-                
+                {% endblocktrans %}
                 <div class="category-grid">
                     <div class="category-card">
-                        <h4>Leadership Development</h4>
-                        <p>Transform your organization's leadership capacity with programs designed to empower decision-makers at all levels.</p>
+                        <h4>{% trans "Leadership Development" %}</h4>
+                        <p>{% trans "Transform your organization's leadership capacity with programs designed to empower decision-makers at all levels." %} <a href="{% url "leadership_development" %}">{% trans "See Courses" %}</a></p>
                     </div>
                     
                     <div class="category-card">
-                        <h4>Professional Skills</h4>
-                        <p>Enhance core competencies essential for workplace success and career advancement in any industry.</p>
+                        <h4>{% trans "Professional Skills" %}</h4>
+                        <p>{% trans "Enhance core competencies essential for workplace success and career advancement in any industry." %} <a href="{% url "professional_skills" %}">{% trans "See Courses" %}</a></p>
                     </div>
                     
                     <div class="category-card">
-                        <h4>Technical Training</h4>
-                        <p>Master specialized skills and stay current with the latest industry developments and technologies.</p>
+                        <h4>{% trans "Technical Training" %}</h4>
+                        <p>{% trans "Master specialized skills and stay current with the latest industry developments and technologies." %} <a href="{% url "technical_training" %}">{% trans "See Courses" %}</a></p>
                     </div>
                 </div>
-                {% endblocktrans %}
+                
             </div>
         </section>
 
         <!-- What We Do Section -->
         <section class="what-we-do">
             <div class="container">
-                {% blocktrans %}
-                <h2>What We Do</h2>
+                
+                <h2>{% trans "What We Do" %}</h2>
                 
                 <div class="offerings-grid">
                     <div class="offering-card">
-                        <h3>Professional Training</h3>
-                        <p>Industry-specific, in-person training programs delivered by experts.</p>
+                        <h3>{% trans "Professional Training" %}</h3>
+                        <p>{% trans "Industry-specific, in-person training programs delivered by experts." %} <a href="{% url "leadership_development" %}">{% trans "See Courses" %}</a></p>
                     </div>
                     
                     <div class="offering-card">
-                        <h3>Upskilling/Reskilling</h3>
-                        <p>Keep your talent ahead of trends with adaptive learning solutions.</p>
+                        <h3>{% trans "Upskilling/Reskilling" %}</h3>
+                        <p>{% trans "Keep your talent ahead of trends with adaptive learning solutions." %} <a href="{% url "upskilling_reskilling" %}">{% trans "See Courses" %}</a></p>
                     </div>
                     
                     <div class="offering-card">
-                        <h3>Certification</h3>
-                        <p>Recognized qualifications that validate professional expertise.</p>
+                        <h3>{% trans "Certification" %}</h3>
+                        <p>{% trans "Recognized qualifications that validate professional expertise." %} <a href="{% url "certification" %}">{% trans "See Courses" %}</a></p>
                     </div>
                     
                     <div class="offering-card">
-                        <h3>Consultancy</h3>
-                        <p>Custom frameworks and solutions for organizational development.</p>
+                        <h3>{% trans "Consultancy" %}</h3>
+                        <p>{% trans "Custom frameworks and solutions for organizational development." %}  <a href="{% url "consultancy" %}">{% trans "See Courses" %}</a></p>
                     </div>
-                    {% endblocktrans %}
+                    
                 </div>
             </div>
         </section>

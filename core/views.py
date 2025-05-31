@@ -7,6 +7,8 @@ from django.contrib import messages
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from django.http import HttpResponse
+from django.db.models import Q
+
 import stripe
 from django.conf import settings
 from django.views import View
@@ -75,12 +77,14 @@ def category_detail(request, slug):
     return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
 
 def category_detail_by_search(request, word):
-    category = Category.objects.filter(name__icontains=word)
-    if not category.exists():
-        category = Category.objects.filter(slug__icontains=word)
-    else:
+    try:
+        category = Category.objects.filter(name__icontains=word.strip().title())
+        courses = Course.objects.filter(category__in=category)
+    except Category.DoesNotExist:
+        category = None
+    if not category:
         courses = Course.objects.filter(title__icontains=word)
-    courses = Course.objects.filter(category=category)
+    
     return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
 
 def get_categories(request):
@@ -105,46 +109,142 @@ def contact_page(request):
         return redirect('contact')
     return render(request, 'kc_academy_layout\kc-academy-contact-page.html')
 
-def professional_training(request):
+
+def services_page(request):
+    return render(request, 'kc_academy_layout/koukash_services.html')
+
+
+def professional_skills(request):
+    try:
+        category = Category.objects.filter(
+            Q(name__icontains='Professional Skills') | Q(description__icontains='Professional Skills')
+        )
+        # courses = category.course_set.all()
+        # courses = category.courses.all()
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Professional Skills')
+        
+        
     context = {
-        'page_title': 'Professional Training',
+        'category': 'Professional Skills',
         'description': 'Our industry-specific courses are meticulously designed by experts to provide cutting-edge knowledge and skills.',
         'key_benefits': [
             'Tailored Learning Paths',
             'Expert-Led Courses',
             'Industry-Current Curriculum',
             'Flexible Learning Options'
-        ]
+        ], 
+        'courses':courses
     }
-    return render(request, 'ihrdc_layout/training.html', context)
+    return render(request, 'ihrdc_layout/category.html', context)
+
+
+def technical_training(request):
+    try:
+        category = Category.objects.filter(Q(name__icontains='Technical Training') | Q(description__icontains='Technical Training'))
+        # courses = category.course_set.all()
+        # courses = category.courses.all()
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Technical Training')
+        
+        
+    context = {
+        'category': 'Technical Training',
+        'description': 'Our industry-specific courses are meticulously designed by experts to provide cutting-edge knowledge and skills.',
+        'key_benefits': [
+            'Tailored Learning Paths',
+            'Expert-Led Courses',
+            'Industry-Current Curriculum',
+            'Flexible Learning Options'
+        ], 
+        'courses':courses
+    }
+    return render(request, 'ihrdc_layout/category.html', context)
+
+def leadership_development(request):
+    try:
+        category = Category.objects.filter(Q(name__icontains='Leadership Development') | Q(description__icontains='Leadership Development'))
+        # courses = category.course_set.all()
+        # courses = category.courses.all()
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Leadership Development')
+        
+        
+    context = {
+        'category': 'Leadership Development',
+        'description': 'Our industry-specific courses are meticulously designed by experts to provide cutting-edge knowledge and skills.',
+        'key_benefits': [
+            'Tailored Learning Paths',
+            'Expert-Led Courses',
+            'Industry-Current Curriculum',
+            'Flexible Learning Options'
+        ], 
+        'courses':courses
+    }
+    return render(request, 'ihrdc_layout/category.html', context)
 
 def upskilling_reskilling(request):
+    try:
+        category = Category.objects.filter(Q(name__icontains='Upskilling') | Q(description__icontains='Upskilling') )
+        # courses = category.course_set.all()
+        # courses = category.courses.all()
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Upskilling')
+        
     context = {
-        'page_title': 'Upskilling & Reskilling',
+        'category': 'Upskilling & Reskilling',
         'description': 'Adapt to the changing business landscape by re-tooling your skillsets and expanding your professional capabilities.',
         'key_benefits': [
             'Adaptive Learning Strategies',
             'Career Transformation Support',
             'Emerging Technology Focus',
             'Personalized Skill Development'
-        ]
+        ], 
+        'courses':courses,
     }
-    return render(request, 'ihrdc_layout/skilling.html', context)
+    return render(request, 'ihrdc_layout/category.html', context)
 
 def certification(request):
+    try:
+        category = Category.objects.filter(name__icontains='Upskilling')
+        # courses = category.course_set.all()
+        # courses = category.courses.all()
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Upskilling')
+        
     context = {
-        'page_title': 'Professional Certification',
+        'category': 'Professional Certification',
         'description': 'Earn internationally recognized certifications that validate your expertise and enhance your professional credibility.',
         'certification_types': [
             'Technical Certifications',
             'Professional Development Credentials',
             'Industry-Specific Qualifications',
             'Global Recognition Programs'
-        ]
+        ],
+        'courses': courses,
     }
-    return render(request, 'ihrdc_layout/certification.html', context)
+    return render(request, 'ihrdc_layout/category.html', context)
 
 def consultancy(request):
+    try:
+        category = Category.objects.filter(name__icontains='Consultancy')
+        # courses = category.course_set.all()
+        # courses = category.courses.all()
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Consultancy')
+    
     context = {
         'page_title': 'Expert Consultancy',
         'description': 'Rapid, targeted consulting to resolve organizational bottlenecks and drive strategic improvements.',
@@ -155,7 +255,7 @@ def consultancy(request):
             'Performance Enhancement'
         ]
     }
-    return render(request, 'ihrdc_layout/consultancy.html', context)
+    return render(request, 'ihrdc_layout/category.html', context)
 
 def import_csv_to_model(csv_file_path: str, model_class: Type[Model], field_mapping: dict = {}, skip_header: bool = True) -> tuple[int, list]:
     """

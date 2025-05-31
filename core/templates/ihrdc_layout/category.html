@@ -9,7 +9,8 @@
     <!-- Course Catalog Section -->
     <section class="course-catalog">
         <div class="container">
-            <h2 class="section-title">{{category.name}} {% trans "Courses" %}</h2>
+            <h2 class="section-title">{% if category.name %}{{category.name}} {% else %} {{category}}{% endif %} {% trans "Courses" %}</h2>
+            <p class="section-title">{% if category.description %}{{category.description}}{% endif %} {% if description %} {{description}} {% endif %}</p>
             <div class="catalog-header">
                 <div class="filters">
                     <select>
