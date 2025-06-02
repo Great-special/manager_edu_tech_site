@@ -421,7 +421,7 @@ def createstripe_checkout_session(request, id):
     try:
         image_url = course.image.url
     except:
-        image_url = ''
+        image_url = 'layout/images/default_course_img.jfif'
     
     # creating enrolled customer
     enrolled = EnrolledCustomer.objects.create(
@@ -443,9 +443,9 @@ def createstripe_checkout_session(request, id):
         quantity = quantity,      
     )
     transaction.save()
-    
+    print(f"{current_domain}/{image_url}")
     checkout_session = stripe.checkout.Session.create(
-        payment_method_types=["card", "us_bank_account"],
+        payment_method_types=["card",  "us_bank_account"], # "paypal",
         line_items=[
             {
                 "price_data": {
