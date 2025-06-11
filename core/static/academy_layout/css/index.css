@@ -1118,7 +1118,72 @@ footer {
 /* ======================
    RESPONSIVE STYLES
    ====================== */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    :root {
+        --section-padding: 20px;
+        --gap-small: 10px;
+        --gap-medium: 15px;
+        --gap-large: 20px;
+        --text-xs: 0.75rem;
+        --text-sm: 12px;
+        --text-base: 14px;
+        --text-md: 15px;
+        --text-lg: 16px;
+        --text-xl: 20px;
+        --text-xxl: 24px;
+    }
+
+    .category-card,
+    .offering-card,
+    .reason-card,
+    .service-card {
+        padding: 12px;
+        min-height: 120px;
+    }
+
+    .course-image img {
+        height: 120px;
+    }
+
+    .slide-content {
+        padding: 15px 10px;
+    }
+
+    .slide-content h2 {
+        font-size: var(--text-lg);
+    }
+
+    .slide-content p {
+        font-size: var(--text-sm);
+    }
+}
+
+/* LANDSCAPE PHONE ORIENTATION */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-slideshow {
+        height: 250px;
+    }
+    
+    .slide-content h2 {
+        font-size: var(--text-lg);
+        margin-bottom: 10px;
+    }
+    
+    .slide-content p {
+        font-size: var(--text-sm);
+        margin-bottom: 15px;
+    }
+}
+
+
+
 @media (max-width: 768px) {
+    /* Mobile menu fixes (keep your existing mobile menu code) */
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1163,12 +1228,10 @@ footer {
         padding: 10px 0;
     }
     
-    /* Body scroll lock when menu is open */
     body.menu-open {
         overflow: hidden;
     }
     
-    /* Hamburger icon animation */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -1181,20 +1244,210 @@ footer {
         transform: translateY(-9px) rotate(-45deg);
     }
 
+    /* CONTAINER AND SPACING FIXES */
+    .container {
+        padding: 0 15px; /* Reduce padding for more space */
+        max-width: 100%;
+    }
+
+    /* Update CSS variables for mobile */
+    :root {
+        --section-padding: 30px; /* Reduced from 40px */
+        --header-height: 300px; /* Reduced from 400px */
+        --card-height: auto; /* Allow cards to expand naturally */
+        --card-height-sm: auto;
+        --gap-small: 15px; /* Reduced gaps */
+        --gap-medium: 20px;
+        --gap-large: 25px;
+        --text-xs: 0.8rem; /* Slightly smaller text */
+        --text-sm: 13px;
+        --text-base: 15px;
+        --text-md: 16px;
+        --text-lg: 18px;
+        --text-xl: 22px;
+        --text-xxl: 28px;
+    }
+
+    /* CARD LAYOUT FIXES */
     .category-grid, 
     .services-grid, 
     .offerings-grid, 
-    .reasons-grid {
+    .reasons-grid,
+    .courses-grid {
+        display: flex;
         flex-direction: column;
-    }
-    
-    :root {
-        --section-padding: 40px;
-        --header-height: 400px;
+        gap: var(--gap-small);
     }
 
+    /* Individual card fixes */
+    .category-card,
+    .offering-card,
+    .reason-card {
+        min-width: 100%; /* Full width on mobile */
+        height: auto; /* Allow natural height */
+        min-height: 150px; /* Minimum height instead of fixed */
+        padding: 15px; /* Reduced padding */
+    }
+
+    .course-card {
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* SERVICE CARD IMAGE FIXES */
+    .service-card {
+        min-width: 100%;
+        height: 200px; /* Shorter on mobile */
+        margin-bottom: 20px;
+    }
+
+    .service-card img {
+        width: 100%;
+        height: 70%; /* Leave space for overlay */
+        object-fit: cover;
+    }
+
+    .service-overlay {
+        padding: 10px;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* COURSE IMAGE FIXES */
+    .course-image img {
+        width: 100%;
+        height: 150px; /* Reduced height on mobile */
+        object-fit: cover;
+    }
+
+    /* TEXT OVERFLOW FIXES */
+    .category-card h4,
+    .offering-card h3,
+    .course-content h3 {
+        font-size: var(--text-md);
+        line-height: 1.4;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .category-card p,
+    .offering-card p,
+    .course-content p {
+        font-size: var(--text-sm);
+        line-height: 1.5;
+        margin-bottom: 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* COURSE CARD CONTENT SPACING */
+    .course-content {
+        padding: 15px;
+    }
+
+    .course-category {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+        margin-bottom: 8px;
+    }
+
+    .course-meta {
+        flex-direction: column;
+        gap: 5px;
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+
+    .course-footer {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .enroll-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: var(--text-sm);
+    }
+
+    .price {
+        text-align: center;
+        font-size: var(--text-lg);
+    }
+
+    /* HERO SECTION FIXES */
+    .hero-slideshow {
+        height: var(--header-height);
+    }
+
+    .slide-content {
+        max-width: 90%;
+        padding: 20px 15px;
+    }
+
+    .slide-content h2 {
+        font-size: var(--text-xl);
+        margin-bottom: 15px;
+    }
+
+    .slide-content p {
+        font-size: var(--text-base);
+        margin-bottom: 20px;
+    }
+
+    /* FOOTER FIXES */
+    .footer-content {
+        flex-direction: column;
+        gap: var(--gap-medium);
+    }
+
+    .footer-col {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        height: 50px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* CATALOG PAGE FIXES */
     .catalog-layout {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .category-sidebar {
+        position: static;
+        max-height: none;
+        margin-bottom: 20px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .catalog-card {
+        padding: 15px;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-footer .btn {
+        width: 100%;
+        padding: 12px;
     }
 
     .filters {
@@ -1202,12 +1455,25 @@ footer {
         gap: 0.75rem;
     }
 
-    .card-footer {
-        flex-direction: column;
+    .filters select {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
     }
 
-    .card-footer .btn {
-        width: 100%;
+    /* BESPOKE TRAINING FIXES */
+    .bespoke-training p {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* BUTTONS */
+    .btn {
+        padding: 12px 20px;
+        font-size: var(--text-sm);
+        display: block;
+        text-align: center;
+        margin: 10px 0;
     }
 }
 

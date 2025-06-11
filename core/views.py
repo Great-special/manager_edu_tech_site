@@ -107,7 +107,7 @@ def contact_page(request):
         )
         messages.success(request, 'Your message has been sent successfully!')   
         return redirect('contact')
-    return render(request, 'kc_academy_layout\kc-academy-contact-page.html')
+    return render(request, 'kc_academy_layout/kc-academy-contact-page.html')
 
 
 def services_page(request):
@@ -404,7 +404,7 @@ def createstripe_checkout_session(request, id):
     Create a checkout session and redirect the user to Stripe's checkout page
     """
  
-    current_domain = request.build_absolute_uri('/')
+    current_domain = f"{request.scheme}://{request.get_host()}"
     print(current_domain)
     course = Course.objects.get(id=id)
 
@@ -418,10 +418,9 @@ def createstripe_checkout_session(request, id):
         quantity = request.POST.get('quantity', 1)
         currency = request.POST.get('currency', 'USD')
     
-    try:
-        image_url = course.image.url
-    except:
-        image_url = 'layout/images/default_course_img.jfif'
+   
+    image_url = course.image.url if course.image else '/static/layout/images/default_course_img.jfif'
+    
     
     # creating enrolled customer
     enrolled = EnrolledCustomer.objects.create(
@@ -443,7 +442,8 @@ def createstripe_checkout_session(request, id):
         quantity = quantity,      
     )
     transaction.save()
-    print(f"{current_domain}/{image_url}")
+    
+    # Create a Stripe checkout session
     checkout_session = stripe.checkout.Session.create(
         payment_method_types=["card",  "us_bank_account"], # "paypal",
         line_items=[
@@ -455,7 +455,7 @@ def createstripe_checkout_session(request, id):
                         "name": course.title,
                         "description": course.description,
                         "images": [
-                            f"{current_domain}/{image_url}"
+                            f"{current_domain}{image_url}"
                         ],
                     },
                 },
@@ -483,7 +483,7 @@ def stripe_webhook(request, format=None):
     Stripe webhook view to handle checkout session completed event.
     """
     payload = request.body
-    endpoint_secret = settings.STRIPE_WEBHOOK_SECRET
+    endpoint_secret = settings.STRIPE_SECRET_KEY
     sig_header = request.META["HTTP_STRIPE_SIGNATURE"]
     event = None
 
