@@ -30,7 +30,11 @@
                     <div class="card-header">
                         <h3>{{course.name}}</h3>
                         <div class="card-image">
+                            {% if course.image %}
                             <img src="{{course.image.url}}" alt="{{course.name}}">
+                            {% else %}
+                            <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="{{course.name}}">
+                            {% endif %}
                         </div>
                     </div>
                     <div class="card-details">

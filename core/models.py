@@ -29,7 +29,10 @@ class Category(models.Model):
 class Course(models.Model):
     title = models.CharField(_('title'), max_length=255)
     description = models.TextField(_('description'))
+    objectives = models.TextField(_('objectives'), blank=True, null=True, help_text="use comma separated items eg: Understand the fundamental concepts covered in this course, Develop skills relevant to the course subject matter")
+    outlines = models.TextField(_('outlines'), blank=True, null=True, help_text="use column and comma separated items eg: Module 1:Introduction and Fundamentals, Module 2:Core Concepts and Principles")
     image = models.ImageField(_('image'), upload_to='course_images/', null=True, blank=True)
+    goals = models.TextField(_('goals'), blank=True, null=True, help_text="use comma separated items eg: Provide comprehensive knowledge in the subject area, Prepare participants for industry challenges")
     price = models.DecimalField(_('price'), max_digits=10, decimal_places=2)
     duration = models.CharField(_('duration'), max_length=50)
     category = models.ForeignKey(
@@ -125,4 +128,25 @@ class FeedBack(models.Model):
 
 
     def __str__(self):
-        return f"{self.name} ({self.email})"    
+        return f"{self.name} ({self.email})"
+    
+    
+class CourseRegistration(models.Model):
+    TITLE_CHOICES = [("Mr.", "Mr."), ("Mrs.", "Mrs."), ("Ms.", "Ms."), ("Dr.", "Dr.")]
+    
+    session = models.CharField(max_length=100)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='registrations', verbose_name=_('course'))
+    title = models.CharField(max_length=10, choices=TITLE_CHOICES)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    designation = models.CharField(max_length=100, blank=True)
+    company = models.CharField(max_length=100, blank=True)
+    address = models.CharField(max_length=255)
+    city = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    telephone = models.CharField(max_length=20, blank=True)
+    mobile = models.CharField(max_length=20)
+    fax = models.CharField(max_length=20, blank=True)
+
+    def __str__(self):
+        return f"{self.name} ({self.email})"

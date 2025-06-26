@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Course, Testimonial, Payment, FeedBack
+from .models import Category, Course, Testimonial, Payment, FeedBack, CourseRegistration
 # Register your models here.
 
 
@@ -42,3 +42,9 @@ admin.site.register(Course, CourseAdmin)
 admin.site.register(Testimonial, TestimonialsAdmin)
 admin.site.register(Payment, PaymentAdmin)
 admin.site.register(FeedBack)
+admin.site.register(CourseRegistration)
+
+
+admin.site.site_header = 'i-Citadel Admin'
+admin.site.site_title = 'i-Citadel Admin Portal'
+admin.site.index_title = 'Welcome to i-Citadel Admin Portal'

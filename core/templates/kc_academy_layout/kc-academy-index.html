@@ -9,29 +9,29 @@
         {% block content %}
         <!-- Hero Slideshow Section -->
         <section class="hero-slideshow">
-            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\hero-image.jpeg' %});">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.35)), url({% static 'academy_layout\images\StrategicLeadershipAction.png' %});">
                 <div class="slide-content">
                     {% blocktrans %}
-                    <h2>Excellence in Professional Development</h2>
-                    <p>Transforming organizations through tailored training solutions that deliver measurable results</p>
+                    <h2>Lead the Change: Essential Skills for Today, Vision to Innovate Tomorrow</h2>
+                    <p>Strengthening Talent, Accelerating Impact: Future-Ready Training Strategies</p>
                     {% endblocktrans %}
                     <a href="{% url 'categories' %}" class="btn">{% trans "Explore Our Programs" %}</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'layout\images\mission.jpeg' %});">
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\CollaborativeLeadershipWorkshopProgress.png' %});">
                 <div class="slide-content">
                     {% blocktrans %}
-                        <h2>Expert-Led Training Solutions</h2>
-                        <p>Learn from industry leaders with decades of experience in their respective fields</p>
+                        <h2>Equip for Tomorrow: Skills That Matter, Strategies That Last</h2>
+                        <p>Empowering People, Fueling Progress: Targeted Workforce Development Solutions</p>
                     {% endblocktrans %}
                     <a href="{% url 'categories' %}" class="btn">{% trans "Our Approach" %}</a>
                 </div>
             </div>
-            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\hero-image.jpeg' %});">
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'academy_layout\images\StrategicLeadershipAction.png' %});">
                 <div class="slide-content">
                     {% blocktrans %}
-                    <h2>Bespoke Training Programs</h2>
-                    <p>Custom solutions designed to address your organization's unique challenges and goals</p>
+                    <h2>Building Smarter Teams: Capabilities for Now, Vision for the Future</h2>
+                    <p>Empowering Talent, Advancing Nations: Tailored Training for Growth</p>
                     {% endblocktrans %}
                     <a href="{% url "categories" %}" class="btn">{% trans "Our Courses" %}</a>
                 </div>
@@ -46,10 +46,63 @@
         <!-- Training Categories Section -->
         <section class="training-categories" id="courses">
             <div class="container">
+            <div class="content-wrapper">
                 {% blocktrans %}
                 <div class="categories-header">
                     <h2>Training Categories</h2>
                     <h3>Diverse training for an evolving society</h3>
+                    <p>In today’s rapidly evolving world, continuous growth is key.</p>
+                    <p>i-Citadel Exzellenz provides a wide array of strategic, industry-relevant training programs designed to empower your team with future-ready skills.<p/>
+                        <p>Discover our expert-led offerings and elevate your organization’s performance.</p>
+                </div>
+                {% endblocktrans %}
+                <div class="carousel-container">
+                    <div class="category-carousel" id="categoryCarousel">
+                        <div class="category-card" onclick="location.href='{% url "leadership_development" %}'">
+                            <h4>{% trans "Leadership Development" %}</h4>
+                        <p>{% trans "Transform your organization's leadership capacity with programs designed to empower decision-makers at all levels." %} <a href="{% url "leadership_development" %}">{% trans "Explore Training" %}</a></p>
+                        </div>
+                        
+                        <div class="category-card" onclick="location.href='{% url "professional_skills" %}'">
+                            <h4>{% trans "Professional Skills" %}</h4>
+                        <p>{% trans "Enhance core competencies essential for workplace success and career advancement in any industry." %} <a href="{% url "professional_skills" %}">{% trans "Explore Training" %}</a></p>
+                        </div>
+                        
+                        <div class="category-card" onclick="location.href='{% url "technical_training" %}'">
+                            <h4>{% trans "Technical Training" %}</h4>
+                        <p>{% trans "Master specialized skills and stay current with the latest industry developments and technologies." %} <a href="{% url "technical_training" %}">{% trans "Explore Training" %}</a></p>
+                        </div>
+
+                        <div class="category-card" onclick="location.href='{% url "digital_marketing" %}'">
+                            <h4>Digital Marketing</h4>
+                            <p>Learn cutting-edge digital marketing strategies to grow your business and reach your target audience effectively. <a href="{% url "digital_marketing" %}">{% trans "Explore Training" %}</a></p>
+                        </div>
+
+                        <div class="category-card" onclick="location.href='{% url "project_management" %}'">
+                            <h4>Project Management</h4>
+                            <p>Develop essential project management skills to deliver successful outcomes on time and within budget. <a href="{% url "project_management" %}">{% trans "Explore Training" %}</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prevBtn">‹</button>
+                        <button class="carousel-btn" id="nextBtn">›</button>
+                    </div>
+
+                    <div class="carousel-indicators" id="indicators"></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+            {% comment %} <div class="container">
+                {% blocktrans %}
+                <div class="categories-header">
+                    <h2>Training Categories</h2>
+                    <h3>Diverse training for an evolving society</h3>
+                    <p>Discover our diverse training programs tailored to equip professionals across multiple industries with the skills and knowledge needed to excel.</p>
                 </div>
                 {% endblocktrans %}
                 <div class="category-grid">
@@ -69,7 +122,8 @@
                     </div>
                 </div>
                 
-            </div>
+            </div> {% endcomment %}
+
         </section>
 
         <!-- What We Do Section -->
@@ -81,22 +135,22 @@
                 <div class="offerings-grid">
                     <div class="offering-card">
                         <h3>{% trans "Professional Training" %}</h3>
-                        <p>{% trans "Industry-specific, in-person training programs delivered by experts." %} <a href="{% url "leadership_development" %}">{% trans "See Courses" %}</a></p>
+                        <p>{% trans "Industry-specific, in-person training programs delivered by experts." %} <a href="{% url "leadership_development" %}">{% trans "Explore Training" %}</a></p>
                     </div>
                     
                     <div class="offering-card">
                         <h3>{% trans "Upskilling/Reskilling" %}</h3>
-                        <p>{% trans "Keep your talent ahead of trends with adaptive learning solutions." %} <a href="{% url "upskilling_reskilling" %}">{% trans "See Courses" %}</a></p>
+                        <p>{% trans "Keep your talent ahead of trends with adaptive learning solutions." %} <a href="{% url "upskilling_reskilling" %}">{% trans "Explore Training" %}</a></p>
                     </div>
                     
                     <div class="offering-card">
                         <h3>{% trans "Certification" %}</h3>
-                        <p>{% trans "Recognized qualifications that validate professional expertise." %} <a href="{% url "certification" %}">{% trans "See Courses" %}</a></p>
+                        <p>{% trans "Recognized qualifications that validate professional expertise." %} <a href="{% url "certification" %}">{% trans "Explore Training" %}</a></p>
                     </div>
                     
                     <div class="offering-card">
                         <h3>{% trans "Consultancy" %}</h3>
-                        <p>{% trans "Custom frameworks and solutions for organizational development." %}  <a href="{% url "consultancy" %}">{% trans "See Courses" %}</a></p>
+                        <p>{% trans "Custom frameworks and solutions for organizational development." %}  <a href="{% url "consultancy" %}">{% trans "Explore Training" %}</a></p>
                     </div>
                     
                 </div>
@@ -158,14 +212,14 @@
             <div class="container">
                 <div class="services-grid">
                     <div class="service-card">
-                        <img src="{% static 'layout\images\Training.jpeg' %}" alt="Service 1" class="service-image">
+                        <img src="{% static 'academy_layout\images\training.png' %}" alt="Service 1" class="service-image">
                         <div class="service-overlay">
                             <h3>{% trans "Executive Coaching" %}</h3>
                         </div>
                     </div>
                     
                     <div class="service-card">
-                        <img src="{% static 'layout\images\Training.jpeg' %}" alt="Service 1" class="service-image">
+                        <img src="{% static 'academy_layout\images\bespoken.png' %}" alt="Service 1" class="service-image">
                         <div class="service-overlay">
                             <h3>{% trans "Bespoke Training" %}</h3>
                         </div>
@@ -178,7 +232,7 @@
         <section class="why-choose-us" id="about">
             <div class="container">
                 <div class="choose-header">
-                    <h2>Why Choose I-Citadel Excellenz</h2>
+                    <h2>Why Choose i-Citadel Exzellenz</h2>
                 </div>
                 
                 <div class="reasons-grid">
@@ -199,6 +253,153 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            class CategoryCarousel {
+                constructor() {
+                    this.carousel = document.getElementById('categoryCarousel');
+                    this.prevBtn = document.getElementById('prevBtn');
+                    this.nextBtn = document.getElementById('nextBtn');
+                    this.indicatorsContainer = document.getElementById('indicators');
+                    this.cards = this.carousel.querySelectorAll('.category-card');
+                    this.currentIndex = 0;
+                    this.cardWidth = 320; // 300px + 20px gap
+                    this.visibleCards = this.getVisibleCards();
+                    this.maxIndex = Math.max(0, this.cards.length - this.visibleCards);
+                    
+                    // Auto-scroll settings
+                    this.autoScrollInterval = null;
+                    this.autoScrollDelay = 4000; // 4 seconds
+                    this.isPaused = false;
+                    
+                    this.init();
+                    this.createIndicators();
+                    this.updateCarousel();
+                    this.startAutoScroll();
+                    
+                    // Handle window resize
+                    window.addEventListener('resize', () => {
+                        this.visibleCards = this.getVisibleCards();
+                        this.maxIndex = Math.max(0, this.cards.length - this.visibleCards);
+                        this.currentIndex = Math.min(this.currentIndex, this.maxIndex);
+                        this.updateCarousel();
+                    });
+                }
+                
+                getVisibleCards() {
+                    const containerWidth = this.carousel.parentElement.offsetWidth;
+                    return Math.floor(containerWidth / this.cardWidth);
+                }
+                
+                init() {
+                    this.prevBtn.addEventListener('click', () => {
+                        this.prev();
+                        this.resetAutoScroll();
+                    });
+                    this.nextBtn.addEventListener('click', () => {
+                        this.next();
+                        this.resetAutoScroll();
+                    });
+                    
+                    // Pause on hover
+                    this.carousel.addEventListener('mouseenter', () => this.pauseAutoScroll());
+                    this.carousel.addEventListener('mouseleave', () => this.resumeAutoScroll());
+                    
+                    // Pause on button hover
+                    this.prevBtn.addEventListener('mouseenter', () => this.pauseAutoScroll());
+                    this.prevBtn.addEventListener('mouseleave', () => this.resumeAutoScroll());
+                    this.nextBtn.addEventListener('mouseenter', () => this.pauseAutoScroll());
+                    this.nextBtn.addEventListener('mouseleave', () => this.resumeAutoScroll());
+                }
+                
+                createIndicators() {
+                    this.indicatorsContainer.innerHTML = '';
+                    const totalPages = this.maxIndex + 1;
+                    
+                    for (let i = 0; i < totalPages; i++) {
+                        const indicator = document.createElement('div');
+                        indicator.className = 'indicator';
+                        if (i === 0) indicator.classList.add('active');
+                        indicator.addEventListener('click', () => this.goToSlide(i));
+                        this.indicatorsContainer.appendChild(indicator);
+                    }
+                }
+                
+                updateCarousel() {
+                    const translateX = -this.currentIndex * this.cardWidth;
+                    this.carousel.style.transform = `translateX(${translateX}px)`;
+                    
+                    // Update button states
+                    this.prevBtn.disabled = this.currentIndex === 0;
+                    this.nextBtn.disabled = this.currentIndex >= this.maxIndex;
+                    
+                    // Update indicators
+                    const indicators = this.indicatorsContainer.querySelectorAll('.indicator');
+                    indicators.forEach((indicator, index) => {
+                        indicator.classList.toggle('active', index === this.currentIndex);
+                    });
+                }
+                
+                prev() {
+                    if (this.currentIndex > 0) {
+                        this.currentIndex--;
+                        this.updateCarousel();
+                    }
+                }
+                
+                next() {
+                    if (this.currentIndex < this.maxIndex) {
+                        this.currentIndex++;
+                        this.updateCarousel();
+                    }
+                }
+                
+                goToSlide(index) {
+                    this.currentIndex = Math.min(Math.max(0, index), this.maxIndex);
+                    this.updateCarousel();
+                    this.resetAutoScroll();
+                }
+                
+                startAutoScroll() {
+                    this.autoScrollInterval = setInterval(() => {
+                        if (!this.isPaused) {
+                            if (this.currentIndex >= this.maxIndex) {
+                                // Reset to beginning when reaching the end
+                                this.currentIndex = 0;
+                            } else {
+                                this.currentIndex++;
+                            }
+                            this.updateCarousel();
+                        }
+                    }, this.autoScrollDelay);
+                }
+                
+                stopAutoScroll() {
+                    if (this.autoScrollInterval) {
+                        clearInterval(this.autoScrollInterval);
+                        this.autoScrollInterval = null;
+                    }
+                }
+                
+                pauseAutoScroll() {
+                    this.isPaused = true;
+                }
+                
+                resumeAutoScroll() {
+                    this.isPaused = false;
+                }
+                
+                resetAutoScroll() {
+                    this.stopAutoScroll();
+                    this.startAutoScroll();
+                }
+            }
+            
+            // Initialize carousel when DOM is loaded
+            document.addEventListener('DOMContentLoaded', () => {
+                new CategoryCarousel();
+            });
+        </script>
         {% endblock %}
     </main>
 

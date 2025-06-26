@@ -9,8 +9,10 @@
     <!-- Course Catalog Section -->
     <section class="course-catalog">
         <div class="container">
-            <h2 class="section-title">{% if category.name %}{{category.name}} {% else %} {{category}}{% endif %} {% trans "Courses" %}</h2>
-            <p class="section-title">{% if category.description %}{{category.description}}{% endif %} {% if description %} {{description}} {% endif %}</p>
+            <h2 class="section-title">{% if category.name %}{{category.name.title}} {% else %} {{category}}{% endif %} {% trans "Courses" %}</h2>
+            {% if category.description %}
+            <p class="description">{{category.description}}{% endif %} {% if description %} {{description}}</p>
+            {% endif %}
             <div class="catalog-header">
                 <div class="filters">
                     <select>
@@ -35,12 +37,14 @@
                     <div class="card-image">
                         {% if course.image %}
                         <img src="{{course.image.url}}" alt="{{course.title}}">
+                        {% else %}
+                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="{{course.title}}">
                         {% endif %}
                     </div>
                     <span class="price">${{course.price| intcomma}}</span>
                     <div class="card-details">
                         <span><i class="fas fa-clock"></i> {{course.duration}}</span>
-                        <span><i class="fas fa-users"></i>{{course.mode}}</span>
+                        <span><i class="fas fa-users"></i>{{course.mode.title}}</span>
                     </div>
                     <p>{{course.description | truncatewords:25}}</p>
                     <div class="card-footer">

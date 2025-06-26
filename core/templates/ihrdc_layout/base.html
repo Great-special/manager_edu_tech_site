@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I-CITADEL | {% block title %}{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>i-Citadel | {% block title %}{% endblock %}</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     {% block style %}{% endblock %}
@@ -20,7 +21,7 @@
                 <div class="row justify-content-between">
                     <div class="col-md-4 text-center">
                         <span><i class="fas fa-envelope me-2"></i>info@i-citadelexz.com</span>
-                        <span class="ms-3"><i class="fas fa-phone me-2"></i>+49 176 4165 9257</span>
+                        <span class="ms-3"><i class="fas fa-phone me-2"></i>+49 (0) 251 3790 6631</span>
                     </div>
                     <div class="col-md-4 text-center">
                         <span><i class="fas fa-clock me-2"></i>Mon-Fri: 9:00am - 5:00pm</span>
@@ -42,10 +43,10 @@
                     <a class="logo" href="{% url 'home' %}">
                         <div class="row">
                             <div class="d-flex align-items-center">
-                                <img src="{% static 'layout/images/logo.png' %}" alt="Company Logo">
-                                <div style="font-weight: bold; color: var(--primary-color);">
-                                    I-Citadel <span style="color: var(--primary-color);">Excellenz</span>
-                                </div>
+                                <img src="{% static 'layout/images/i-citadel-exzellenz-logo.png' %}" alt="Company Logo">
+                                {% comment %} <div style="font-weight: bold; color: var(--primary-color);">
+                                    i-Citadel <span style="color: var(--primary-color);">Exzellenz</span>
+                                </div> {% endcomment %}
                             </div> 
                             <!-- <div class="text-center">
                                 <p style="color: var(--text-white); font-size: var(--text-xs); margin: 0;">
@@ -95,8 +96,29 @@
         </header>
 
     <main>
+        {% if messages %}
+        <div id="message-container" >
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
         {% block content %}
         {% endblock %}
+        <script>
+            setTimeout(function () {
+                let messageContainer = document.getElementById('message-container');
+                if (messageContainer) {
+                messageContainer.style.transition = 'opacity 1s ease-out';
+                messageContainer.style.opacity = '0';
+                setTimeout(() => messageContainer.remove(), 1000); // remove from DOM after fade
+                }
+            }, 7000); // 7 seconds
+        </script>
+
     </main>
 
     <footer>
@@ -104,9 +126,10 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <img src="{% static 'layout/images/FullLogo.png' %}" alt="I-Citadel UK Logo">
+                        {% comment %} <img src="{% static 'layout/images/FullLogo.png' %}" alt="I-Citadel UK Logo"> {% endcomment %}
+                        <img src="{% static 'layout/images/i-citadel-exzellenz-logo.png' %}" alt="i-Citadel">
                     </div>
-                    <p>{% trans "I-Citadel is committed to providing quality healthcare education and training to develop the next generation of healthcare professionals." %}</p>
+                    <p>{% trans "i-Citadel Exzellenz empowers professionals and organizations through leadership, innovation, coaching, digital transformation, and emerging technologies." %}</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -140,9 +163,9 @@
                     <h3>{% trans "Contact Us" %}</h3>
                     {% blocktrans %}
                     <ul>
-                        <li><a href="tel:+49176416">+49 176 4165 9257</a></li>
+                        <li><a href="tel:+49176416">+49 (0) 251 3790 6631</a></li>
                         <li><a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></li>
-                        <li>I-Citadel Excellenz<br>Business District<br>Frankfurt, Germany</li>
+                        <li>i-Citadel Exzellenz<br>Business District<br>Frankfurt, Germany</li>
                     </ul>
                     {% endblocktrans %}
                 </div>
@@ -159,7 +182,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; {% now "Y" %} {% trans "I-Citadelexz Training Platform. All Rights Reserved." %}</p>
+                <p>&copy; {% now "Y" %} {% trans "i-Citadelexz Training Platform. All Rights Reserved." %}</p>
             </div>
         </div>
     </footer>

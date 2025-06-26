@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 from django.contrib import messages
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.db.models import Q
 
 import stripe
@@ -15,8 +15,8 @@ from django.views import View
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
-from .models import Course, Category, Testimonial, Payment, FeedBack, EnrolledCustomer
-from .forms import CSVFileUploadForm, FieldMappingFormset
+from .models import Course, Category, Testimonial, Payment, FeedBack, EnrolledCustomer, CourseRegistration
+from .forms import CSVFileUploadForm, FieldMappingFormset, CourseRegistrationForm
 
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -69,7 +69,22 @@ def course_list(request):
 
 def course_detail(request, id):
     course = Course.objects.get(id=id)
-    return render(request, 'ihrdc_layout/course_detail.html', {'course': course})
+    objectives = course.objectives.split(',') if course.objectives else []
+    outline = course.outlines.split(',') if course.outlines else []
+    outlines = [outline_item.split(':') for outline_item in outline]  
+    goals = course.goals.split(',') if course.goals else []
+    
+    form = CourseRegistrationForm()
+    context = {
+        'course': course,
+        'course_objectives': objectives,
+        'course_outlines': outlines,
+        'course_goals': goals,
+        'related_courses': Course.objects.filter(category=course.category).exclude(id=course.id)[:3],
+        'stripe_key': settings.STRIPE_PUBLIC_KEY,
+        'form': form,
+    }
+    return render(request, 'ihrdc_layout/course_detail.html', context)
 
 def category_detail(request, slug):
     category = Category.objects.get(slug=slug)
@@ -186,6 +201,49 @@ def leadership_development(request):
             'Flexible Learning Options'
         ], 
         'courses':courses
+    }
+    return render(request, 'ihrdc_layout/category.html', context)
+
+def digital_marketing(request):
+    try:
+        category = Category.objects.filter(Q(name__icontains='Digital Marketing') | Q(description__icontains='Digital Marketing'))
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Digital Marketing')
+                      
+    context = {
+        'category': 'Digital Marketing',
+        'description': 'Master the digital landscape with our comprehensive marketing courses designed to boost your online presence and drive business growth.',
+        'key_benefits': [
+            'Latest Digital Strategies',
+            'Hands-on Campaign Management',
+            'Analytics & Performance Tracking',
+            'Multi-Platform Expertise'
+        ],
+        'courses': courses
+    }
+    return render(request, 'ihrdc_layout/category.html', context)
+
+
+def project_management(request):
+    try:
+        category = Category.objects.filter(Q(name__icontains='Project Management') | Q(description__icontains='Project Management'))
+        courses = Course.objects.filter(category__in=category)
+        print(courses)
+    except Category.DoesNotExist:
+        courses = Course.objects.filter(title__icontains='Project Management')
+                      
+    context = {
+        'category': 'Project Management',
+        'description': 'Develop essential project management skills with our comprehensive courses covering methodologies, tools, and best practices for successful project delivery.',
+        'key_benefits': [
+            'Industry-Standard Methodologies',
+            'Practical Project Tools',
+            'Risk Management Techniques',
+            'Team Leadership Skills'
+        ],
+        'courses': courses
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -515,5 +573,21 @@ def stripe_webhook(request, format=None):
         #     recipient_list=[customer_email],
         #     from_email="your@email.com",
         # )
-
+        
     return HttpResponse(status=200)
+
+
+
+def register_course(request):
+    if request.method == 'POST':
+        form = CourseRegistrationForm(request.POST)
+        if form.is_valid():
+            reg = form.save(commit=False)
+            reg.course = get_object_or_404(Course, id=request.POST.get('course_id'))
+            reg.save()
+    
+            messages.success(request, "🎉 Registration successful!")
+            return redirect('home')
+        # Redirect back to previous page
+        messages.error(request, "⚠️ There was an error. Please check your input and try again.")
+        return redirect(request.META.get('HTTP_REFERER', 'home'))

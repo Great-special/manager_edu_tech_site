@@ -1,0 +1,92 @@
+.custom-container {
+    max-width: var(--container-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    background-color: var(--accent-color);
+    color: var(--text-white);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+}
+
+.category-card {
+    margin-bottom: 3rem;
+    border: 1px solid  var(--accent-color);
+    padding: 1.5rem;
+    background-color: var(--text-white);
+}
+
+.category-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.category-image-wrapper,
+.category-content-wrapper,
+.category-courses-wrapper {
+    flex: 1;
+    min-width: 200px;
+}
+
+.category-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.category-title {
+    font-size: var(--text-lg);
+    margin-bottom: 1rem;
+}
+
+.category-description {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.featured-courses {
+    background-color: var(--accent-color);
+    padding: 1rem;
+    border-radius: 6px;
+    color: var(--text-white);
+}
+
+.featured-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.course-list {
+    list-style: disc inside;
+    margin: 0 0 1rem 0;
+    font-size: var(--text-sm);
+}
+
+.featured-courses .view-all-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+
+}
+
+.featured-courses .view-all-btn:hover {
+    color: var(--text-white);
+}

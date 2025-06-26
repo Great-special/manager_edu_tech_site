@@ -1,5 +1,5 @@
 {% extends 'ihrdc_layout/base.html' %}
-{% block title %}I-Citadel - Category{% endblock %}
+{% block title %}Category{% endblock %}
 
 {% load static %}
 {% load i18n %}
@@ -23,11 +23,11 @@
         <!-- Main Content -->
         <div class="custom-container training-categories">
 
-            <!-- Executive Management Category -->
+            {% comment %} <!-- Executive Management Category -->
             <div class="category-card">
                 <div class="category-row">
                     <div class="category-image-wrapper">
-                        <img src="/api/placeholder/550/350" alt="Executive Management" class="category-image">
+                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Executive Management" class="category-image">
                     </div>
                     <div class="category-content-wrapper">
                         <div class="category-content">
@@ -56,7 +56,7 @@
             <div class="category-card">
                 <div class="category-row">
                     <div class="category-image-wrapper">
-                        <img src="/api/placeholder/550/350" alt="Leadership and Management" class="category-image">
+                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Leadership and Management" class="category-image">
                     </div>
                     <div class="category-content-wrapper">
                         <div class="category-content">
@@ -84,7 +84,7 @@
             <div class="category-card">
                 <div class="category-row">
                     <div class="category-image-wrapper">
-                        <img src="/api/placeholder/550/350" alt="Strategy, Innovation & Transformation" class="category-image">
+                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Strategy, Innovation & Transformation" class="category-image">
                     </div>
                     <div class="category-content-wrapper">
                         <div class="category-content">
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
 
             <!-- Other Categories (Django loop) -->
             {% for category in categories %}

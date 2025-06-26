@@ -1,44 +1,251 @@
-{% extends 'ihrdc_layout/base.html' %}
-{% load static %}
-{% load i18n %}
+{% extends 'ihrdc_layout/base.html' %} 
+{% load static %} 
+{% load i18n %}  
 
-{% block title %}Course{% endblock %}
+{% block title %}Course{% endblock %}  
 
-{% block content %}
-    <!-- Hero Section -->
-    {% blocktrans %}
-    <section class="course-details-hero">
-        <h1>Course Details</h1>
-        <p>Discover more about this course and what it offers.</p>
-    </section>
-    {% endblocktrans %}
+{% block content %}     
+    <!-- Hero Section -->     
+    {% blocktrans %}     
+    <section class="course-details-hero">         
+        <h1>Course Details</h1>         
+        <p>Discover more about this course and what it offers.</p>     
+    </section>     
+    {% endblocktrans %}      
 
-    <!-- Course Details Section -->
-    <section class="course-details">
+    <!-- Course Details Section with Enhanced Layout -->     
+    <section class="course-details">         
         <div class="container">
-            <div class="course-header">
-                <h2>{{course.title}}</h2>
-                <p>{% trans "Category" %}: <span class="course-category">{{course.category}}</span></p>
+            <!-- Course Header -->
+            <div class="course-header">                 
+                <h2>{{course.title}}</h2>                 
+                <p>{% trans "Category" %}: <a href="{% url 'category_details' course.category.slug %}"><span class="course-category">{{course.category}}</span></a></p>             
             </div>
-            <div class="course-body">
-                {% if course.image %}
-                <div class="course-image">
-                    <img src="{{course.image.url}}" alt="Course Image">
-                </div>
-                {% endif %}
-                <div class="course-description">
-                    <h3>{% trans "About This Course" %}</h3>
-                    <p>
-                        {{course.description}}
-                    </p>
-                    <p><strong>{% trans "Duration" %}:</strong> {{course.duration}}</p>
-                    <p><strong>{% trans "Venue" %}:</strong> {{course.mode}}</p> 
-                </div>
+            
+            <!-- Main Content Grid -->
+            <div class="main-container">
+                <!-- Main Content Section -->
+                <main class="content-section">
+                    <!-- Course Overview -->
+                    <section>
+                        {% if course.image %}                 
+                        <div class="course-image">                     
+                            <img src="{{course.image.url}}" alt="Course Image">                 
+                        </div> 
+                        {% else %}
+                        <div class="course-image">                     
+                            <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Default Course Image">               
+                        {% endif %}
+                        
+                        <h3 class="section-title">{% trans "Course Overview" %}</h3>
+                        <div class="course-description">
+                            <p class="description">{{course.description}}</p>
+                        </div>
+                    </section>
+
+                    <!-- Learning Objectives -->
+                    <section>
+                        <h3 class="section-title">{% trans "Learning Objectives" %}</h3>
+                        <p class="description">{% trans "By the end of this course, participants will be able to:" %}</p>
+                        <ul class="objectives-list">
+                            {% if course.objectives %}
+                                {% for objective in course_objectives %}
+                                <li>{{objective}}</li>
+                                {% endfor %}
+                            {% else %}
+                                <!-- Default objectives if none provided -->
+                                <li>{% trans "Understand the fundamental concepts covered in this course" %}</li>
+                                <li>{% trans "Apply theoretical knowledge to practical scenarios" %}</li>
+                                <li>{% trans "Develop skills relevant to the course subject matter" %}</li>
+                                <li>{% trans "Analyze and evaluate key concepts and methodologies" %}</li>
+                                <li>{% trans "Implement best practices in real-world situations" %}</li>
+                                <li>{% trans "Demonstrate competency in the course material" %}</li>
+                            {% endif %}
+                        </ul>
+                    </section>
+
+                    <!-- Course Outline -->
+                    <section>
+                        <h3 class="section-title">{% trans "Course Outline" %}</h3>
+                        {% if course.outlines %}
+                            <div class="course-outline">
+                                <ul>
+                                    {% for outline in course_outlines %}
+                                        <li><strong>{{outline.0}}:</strong> {{outline.1}}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% else %}
+                            <div class="objectives-list">
+                                <ul>
+                                    <li><strong>{% trans "Module 1:" %}</strong> {% trans "Introduction and Fundamentals" %}</li>
+                                    <li><strong>{% trans "Module 2:" %}</strong> {% trans "Core Concepts and Principles" %}</li>
+                                    <li><strong>{% trans "Module 3:" %}</strong> {% trans "Practical Applications" %}</li>
+                                    <li><strong>{% trans "Module 4:" %}</strong> {% trans "Advanced Topics" %}</li>
+                                    <li><strong>{% trans "Module 5:" %}</strong> {% trans "Implementation and Best Practices" %}</li>
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </section>
+
+                    <!-- Course Goals -->
+                    <section>
+                        <h3 class="section-title">{% trans "Course Goals" %}</h3>
+                        <p class="description">{% trans "This course is designed to:" %}</p>
+                        <ul class="objectives-list">
+                            {% if course.goals %}
+                                {% for goal in course_goals %}
+                                <li>{{goal}}</li>
+                                {% endfor %}
+                            {% else %}
+                                <!-- Default goals if none provided -->
+                                <li>{% trans "Provide comprehensive knowledge in the subject area" %}</li>
+                                <li>{% trans "Enhance professional skills and competencies" %}</li>
+                                <li>{% trans "Prepare participants for industry challenges" %}</li>
+                                <li>{% trans "Foster critical thinking and problem-solving abilities" %}</li>
+                                <li>{% trans "Support career advancement and professional development" %}</li>
+                            {% endif %}
+                        </ul>
+                    </section>
+
+                    <!-- Training Methodology -->
+                    <section>
+                        <h3 class="section-title">{% trans "Training Methodology" %}</h3>
+                        <p class="description">
+                            {% trans "Participants will experience a combination of engaging lectures, group discussions, case studies, and hands-on exercises. Our expert instructors will provide insights and guide you through practical applications relevant to your industry." %}
+                        </p>
+                    </section>
+
+                    <!-- Target Audience -->
+                    <section class="target-audience">
+                        <h3 class="section-title">{% trans "Who Should Attend" %}</h3>
+                        <p class="description">
+                            {% trans "This course is designed for professionals who want to enhance their knowledge and skills in this subject area. Ideal participants include:" %}
+                        </p>
+                        <ul class="objectives-list">
+                            {% if course.target_audience %}
+                                {% for audience in course.target_audience %}
+                                <li>{{audience}}</li>
+                                {% endfor %}
+                            {% else %}
+                                <!-- Default target audience -->
+                                <li>{% trans "Managers and Team Leaders" %}</li>
+                                <li>{% trans "Senior Professionals" %}</li>
+                                <li>{% trans "Department Heads" %}</li>
+                                <li>{% trans "Consultants and Advisors" %}</li>
+                                <li>{% trans "Business Development Professionals" %}</li>
+                            {% endif %}
+                        </ul>
+                    </section>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="course-details-card">
+                        <h3 class="section-title">{% trans "Course Details" %}</h3>
+                        <div class="detail-item">
+                            <span class="detail-label">{% trans "Duration" %}:</span>
+                            <span>{{course.duration.title}}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">{% trans "Mode" %}:</span>
+                            <span>{{course.mode.title}}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">{% trans "Category" %}:</span>
+                            <span>{{course.category.name.title}}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">{% trans "Price" %}:</span>
+                            <span>${{course.price}}</span>
+                        </div>
+                        {% if course.certificate %}
+                        <div class="detail-item">
+                            <span class="detail-label">{% trans "Certificate" %}:</span>
+                            <span>{% trans "Yes" %}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Enroll Button -->
+                    <a href="{% url "payment_page" course.id %}" class="cta-button">{% trans "Enroll Now" %}</a>
+
+                    <!-- Register Button -->
+                    <button id="open-registration-modal" class="cta-button">Register for Course</button>
+                    
+
+                    <!-- Modal container -->
+                    <div id="registration-popup-container">
+                        {% include 'kc_academy_layout/register_course.html' %}
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="course-details-card" style="margin-top: 2rem;">
+                        <h3 class="section-title">{% trans "Key Features" %}</h3>
+                        <ul class="objectives-list">
+                            <li>{% trans "Expert-led sessions" %}</li>
+                            <li>{% trans "Interactive workshops" %}</li>
+                            <li>{% trans "Real-world case studies" %}</li>
+                            <li>{% trans "Practical applications" %}</li>
+                            <li>{% trans "Industry-specific insights" %}</li>
+                            <li>{% trans "Networking opportunities" %}</li>
+                            <li>{% trans "Post-training support" %}</li>
+                            <li>{% trans "Digital resources" %}</li>
+                        </ul>
+                    </div>
+
+                    <!-- Benefits Section -->
+                    {% if course.benefits %}
+                    <div class="course-details-card" style="margin-top: 2rem;">
+                        <h3 class="section-title">{% trans "Course Benefits" %}</h3>
+                        <ul class="objectives-list">
+                            {% for benefit in course.benefits %}
+                            <li>{{benefit}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </aside>
             </div>
-            <div class="course-footer">
-                <a href="{% url "payment_page" course.id %}" class="btn btn-primary">{% trans "Enroll Now" %}</a>
-                <p><strong>{% trans "Price" %}:</strong> ${{course.price}}</p>
+        </div>     
+    </section> 
+
+    <!-- Optional: Benefits Grid Section -->
+    {% if course.organizational_benefits %}
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">{% trans "Organizational Benefits" %}</h2>
+            <p class="description">{% trans "Organizations that enroll their team members in this course will gain:" %}</p>
+            <div class="benefits-grid">
+                {% for benefit in course.organizational_benefits %}
+                <div class="benefit-card">
+                    <h3 class="benefit-title">{{benefit.title}}</h3>
+                    <p class="benefit-description">{{benefit.description}}</p>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
+    {% endif %}
+
+    <script>
+        document.getElementById("open-registration-modal").onclick = function() {
+            document.getElementById("course-registration-modal").style.display = "block";
+        };
+
+        document.querySelector(".close-button").onclick = function() {
+            document.getElementById("course-registration-modal").style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            let modal = document.getElementById("course-registration-modal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+    </script>
+
+
+
 {% endblock %}
