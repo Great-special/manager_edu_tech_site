@@ -75,6 +75,10 @@
                                 <a href="{% url "payment_page" course.id %}" class="btn btn-primary">{% translate "Book Course" %}</a>
                             </div>
                         </div>
+                        {% empty %}
+                        <div class="col-12">
+                            <p class="text-center">No courses available in this category.</p>
+                        </div>
                         {% endfor %}       
                     </div>
                 </main>

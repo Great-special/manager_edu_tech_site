@@ -27,6 +27,7 @@ class Category(models.Model):
 
 
 class Course(models.Model):
+    rank_id = models.IntegerField(_('rank id'), blank=True, null=True, help_text="Rank ID to determine the order of courses")
     title = models.CharField(_('title'), max_length=255)
     description = models.TextField(_('description'))
     objectives = models.TextField(_('objectives'), blank=True, null=True, help_text="use comma separated items eg: Understand the fundamental concepts covered in this course, Develop skills relevant to the course subject matter")
@@ -42,6 +43,7 @@ class Course(models.Model):
         related_name='courses'
     )
     mode = models.CharField(_('Course Mode'), max_length=150, blank=True, null=True)
+    training_format = models.CharField(_('Training Format'), max_length=150, choices=(('Online', 'Online'), ('Classroom', 'Classroom'), ('Executive', 'Executive'), ('Bespoke', 'Bespoke')), default='Online')
     url = models.URLField(_('url'), null=True, blank=True)
     is_popular = models.BooleanField(_('is popular'), default=False)
     is_upcoming = models.BooleanField(_('is upcoming'), default=False)

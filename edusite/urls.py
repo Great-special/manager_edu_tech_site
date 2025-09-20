@@ -19,9 +19,11 @@ from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
+from core.admin import admin_set_up
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
+    path('@gig-admin/', admin_set_up.urls),  # Custom admin path
 ]
 
 urlpatterns += i18n_patterns(

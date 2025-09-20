@@ -37,6 +37,28 @@ class PaymentAdmin(admin.ModelAdmin):
 
 
 
+class FeedBackAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'subject', 'created_at')
+    search_fields = ('name', 'email', 'subject')
+    ordering = ('-created_at',)
+
+
+class AdminSetUp(admin.AdminSite):
+    site_header = 'i-Citadel Admin'
+    site_title = 'i-Citadel Admin Portal'
+    index_title = 'Welcome to i-Citadel Admin Portal'
+    
+
+admin_set_up = AdminSetUp()
+admin_set_up.register(Category, CategoryAdmin)
+admin_set_up.register(Course, CourseAdmin)  
+admin_set_up.register(Testimonial, TestimonialsAdmin)
+admin_set_up.register(Payment, PaymentAdmin)
+admin_set_up.register(FeedBack)
+admin_set_up.register(CourseRegistration)
+
+
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Testimonial, TestimonialsAdmin)

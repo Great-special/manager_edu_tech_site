@@ -87,8 +87,12 @@ def course_detail(request, id):
     return render(request, 'ihrdc_layout/course_detail.html', context)
 
 def category_detail(request, slug):
-    category = Category.objects.get(slug=slug)
-    courses = Course.objects.filter(category=category)
+    try:
+        category = Category.objects.get(slug=slug)
+        courses = Course.objects.filter(category=category)
+    except Category.DoesNotExist:
+        category = None
+        courses = []
     return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
 
 def category_detail_by_search(request, word):
@@ -101,6 +105,50 @@ def category_detail_by_search(request, word):
         courses = Course.objects.filter(title__icontains=word)
     
     return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
+
+def get_online_courses(request):
+    try:
+        categories = Category.objects.all()
+        courses = Course.objects.filter(Q(mode__icontains='online') | Q(training_format__icontains='Online'))
+    except Exception as e:
+        print(e)
+        categories = Category.objects.all()
+        courses = None
+    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+
+
+def get_classroom_courses(request):
+    try:
+        categories = Category.objects.all()
+        courses = Course.objects.filter(Q(mode__icontains='classroom') | Q(training_format__icontains='classroom'))
+    except Exception as e:
+        print(e)
+        categories = Category.objects.all()
+        courses = None
+    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+
+
+def get_executive_courses(request):
+    try:
+        categories = Category.objects.all()
+        courses = Course.objects.filter(Q(mode__icontains='executive') | Q(training_format__icontains='executive'))
+    except Exception as e:
+        print(e)
+        categories = Category.objects.all()
+        courses = None
+    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+
+
+def get_bespoke_courses(request):
+    try:
+        categories = Category.objects.all()
+        courses = Course.objects.filter(Q(mode__icontains='bespoke') | Q(training_format__icontains='bespoke'))
+    except Exception as e:
+        print(e)
+        categories = Category.objects.all()
+        courses = None
+    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+
 
 def get_categories(request):
     categories = Category.objects.all()

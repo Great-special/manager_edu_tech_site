@@ -1,4 +1,6 @@
 .env
 venv
+edu_env
+*.pyc
 .mypy_cache
 __pycache__

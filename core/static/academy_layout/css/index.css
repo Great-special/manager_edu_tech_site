@@ -327,6 +327,7 @@ nav {
     -ms-flex: 1;
     flex: 1;
     position: relative;
+    overflow: hidden;
 }
 
 .category-carousel {
@@ -367,7 +368,6 @@ nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    overflow: hidden;
     -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
     transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
     -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -910,11 +910,24 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap-large);
+    align-items: flex-start; /* top-align columns */
 }
 
 .footer-col {
     flex: 1;
     min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer-links {
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 .footer-col h3 {
@@ -1807,11 +1820,6 @@ footer {
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     
-    html, body {
-    overflow-x: hidden;
-    }
-
-
     /* Container adjustments */
     .container {
         padding: 0 10px;
@@ -1871,16 +1879,10 @@ footer {
         font-size: var(--text-sm);
     }
 
-    .category-card {
-        flex: 0 0 250px;
-        height: auto;
-        min-height: 180px;
-        max-width: 95%;
-    }
 
     .carousel-container {
-        max-width: 100%;
-        margin: 0 -10px;
+        margin: 0 auto;
+        overflow: hidden;
     }
 
 }
@@ -1915,6 +1917,10 @@ footer {
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     
+    html, body {
+        overflow-x: hidden;
+    }
+
     /* Container adjustments */
     .container {
         padding: 0 15px;
@@ -2054,7 +2060,7 @@ footer {
     .course-card,
     .service-card,
     .reason-card {
-        width:auto;
+        width: 100%;
         height: auto;
         margin-bottom: 15px;
     }
@@ -2070,11 +2076,6 @@ footer {
         text-align: center;
     }
 
-    .category-card {
-        flex: 0 0 280px;
-        overflow: hidden;
-    }
-
     .categories-header h2 {
         font-size: 2rem;
     }
@@ -2088,6 +2089,16 @@ footer {
         max-width: 100%;
         height: auto;
         margin-bottom: 20px;
+    }
+
+    .carousel-container,
+    .content-wrapper {
+        overflow-x: hidden; /* Prevents horizontal overflow */
+        max-width: 100%;
+    }
+
+    .content-wrapper {
+        flex-wrap: wrap; /* ensures items don't force overflow */
     }
 
     /* SERVICE CARD IMAGE FIXES */
@@ -2125,7 +2136,8 @@ footer {
         font-size: var(--text-md);
         line-height: 1.4;
         margin-bottom: 10px;
-        overflow: hidden;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .category-card p,
@@ -2134,7 +2146,8 @@ footer {
         font-size: var(--text-sm);
         line-height: 1.5;
         margin-bottom: 15px;
-       
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     /* COURSE CARD CONTENT SPACING */

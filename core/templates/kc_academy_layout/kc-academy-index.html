@@ -182,8 +182,8 @@
                                 <span><i class="fas fa-user-graduate"></i> {{ course.enrolled_students }} students</span>
                             </div>
                             <div class="course-footer">
-                                <span class="price">${{ course.price| intcomma }}</span>
-                                <a href="{% url 'course_detail' course.id %}" class="btn btn-primary">{% translate "learn more" %}</a>
+                                <span class="price m-2">${{ course.price| intcomma }}</span>
+                                <a href="{% url 'course_detail' course.id %}" class="btn btn-primary d-block mx-3 mt-3" style="width:200px">{% translate "learn more" %}</a>
                             </div>
                         </div>
                     </div>

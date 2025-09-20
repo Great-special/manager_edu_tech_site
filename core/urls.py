@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
 
+
+
 urlpatterns = [
     path('', views.index_page, name='home'),
     path('search/', views.search_courses, name='search'),
@@ -17,6 +19,10 @@ urlpatterns = [
     path('upskilling-reskilling/', views.upskilling_reskilling, name='upskilling_reskilling'),
     path('certification/', views.certification, name='certification'),
     path('consultancy/', views.consultancy, name='consultancy'),
+    path('online-courses/', views.get_online_courses, name='online_courses'),
+    path('classroom-courses/', views.get_classroom_courses, name='classroom_courses'),
+    path('executive-courses/', views.get_executive_courses, name='executive_courses'),
+    path('bespoke-courses/', views.get_bespoke_courses, name='bespoke_courses'),
     path('course/<int:id>/', views.course_detail, name='course_detail'),
     path('category/<str:slug>/', views.category_detail, name='category_details'),
     path('register-course/', views.register_course, name='register_course'),
