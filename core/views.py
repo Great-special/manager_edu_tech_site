@@ -60,7 +60,7 @@ def search_courses(request):
 def course_list(request):
     try:
         categories = Category.objects.all()
-        courses = Course.objects.all()
+        courses = Course.objects.all().order_by('rank_id')
     except Exception as e:
         print(e)
         categories = None
@@ -89,7 +89,7 @@ def course_detail(request, id):
 def category_detail(request, slug):
     try:
         category = Category.objects.get(slug=slug)
-        courses = Course.objects.filter(category=category)
+        courses = Course.objects.filter(category=category).order_by('rank_id')
     except Category.DoesNotExist:
         category = None
         courses = []
@@ -98,7 +98,7 @@ def category_detail(request, slug):
 def category_detail_by_search(request, word):
     try:
         category = Category.objects.filter(name__icontains=word.strip().title())
-        courses = Course.objects.filter(category__in=category)
+        courses = Course.objects.filter(category__in=category).order_by('rank_id')
     except Category.DoesNotExist:
         category = None
     if not category:
@@ -109,7 +109,7 @@ def category_detail_by_search(request, word):
 def get_online_courses(request):
     try:
         categories = Category.objects.all()
-        courses = Course.objects.filter(Q(mode__icontains='online') | Q(training_format__icontains='Online'))
+        courses = Course.objects.filter(Q(mode__icontains='online') | Q(training_format__icontains='Online')).order_by('rank_id')
     except Exception as e:
         print(e)
         categories = Category.objects.all()
@@ -120,7 +120,7 @@ def get_online_courses(request):
 def get_classroom_courses(request):
     try:
         categories = Category.objects.all()
-        courses = Course.objects.filter(Q(mode__icontains='classroom') | Q(training_format__icontains='classroom'))
+        courses = Course.objects.filter(Q(mode__icontains='classroom') | Q(training_format__icontains='classroom')).order_by('rank_id')
     except Exception as e:
         print(e)
         categories = Category.objects.all()
@@ -131,7 +131,7 @@ def get_classroom_courses(request):
 def get_executive_courses(request):
     try:
         categories = Category.objects.all()
-        courses = Course.objects.filter(Q(mode__icontains='executive') | Q(training_format__icontains='executive'))
+        courses = Course.objects.filter(Q(mode__icontains='executive') | Q(training_format__icontains='executive')).order_by('rank_id')
     except Exception as e:
         print(e)
         categories = Category.objects.all()
@@ -142,7 +142,7 @@ def get_executive_courses(request):
 def get_bespoke_courses(request):
     try:
         categories = Category.objects.all()
-        courses = Course.objects.filter(Q(mode__icontains='bespoke') | Q(training_format__icontains='bespoke'))
+        courses = Course.objects.filter(Q(mode__icontains='bespoke') | Q(training_format__icontains='bespoke')).order_by('rank_id')
     except Exception as e:
         print(e)
         categories = Category.objects.all()

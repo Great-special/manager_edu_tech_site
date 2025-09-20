@@ -152,3 +152,13 @@ class CourseRegistration(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.email})"
+
+
+class AccessModel(models.Model):
+    mode = models.CharField(max_length=50, verbose_name=_('mode'))
+    description = models.TextField(blank=True, null=True, verbose_name=_('description'))
+    allowed = models.BooleanField(default=True, verbose_name=_('allowed'))
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('created at'))
+    
+    def __str__(self):
+        return self.mode

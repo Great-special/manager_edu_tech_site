@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Course, Testimonial, Payment, FeedBack, CourseRegistration
+from .models import Category, Course, Testimonial, Payment, FeedBack, CourseRegistration, AccessModel
 # Register your models here.
 
 
@@ -43,20 +43,9 @@ class FeedBackAdmin(admin.ModelAdmin):
     ordering = ('-created_at',)
 
 
-class AdminSetUp(admin.AdminSite):
-    site_header = 'i-Citadel Admin'
-    site_title = 'i-Citadel Admin Portal'
-    index_title = 'Welcome to i-Citadel Admin Portal'
-    
 
-admin_set_up = AdminSetUp()
-admin_set_up.register(Category, CategoryAdmin)
-admin_set_up.register(Course, CourseAdmin)  
-admin_set_up.register(Testimonial, TestimonialsAdmin)
-admin_set_up.register(Payment, PaymentAdmin)
-admin_set_up.register(FeedBack)
-admin_set_up.register(CourseRegistration)
-
+class AccessModelAdmin(admin.ModelAdmin):
+    list_display = ("id",)
 
 
 admin.site.register(Category, CategoryAdmin)
@@ -67,6 +56,25 @@ admin.site.register(FeedBack)
 admin.site.register(CourseRegistration)
 
 
+
 admin.site.site_header = 'i-Citadel Admin'
 admin.site.site_title = 'i-Citadel Admin Portal'
 admin.site.index_title = 'Welcome to i-Citadel Admin Portal'
+
+
+
+
+class AdminSetUp(admin.AdminSite):
+    site_header = 'i-Citadel Admin'
+    site_title = 'i-Citadel Admin Portal'
+    index_title = 'Welcome to i-Citadel Admin Portal'
+    
+
+admin_set_up = AdminSetUp(name='dev-admin')
+admin_set_up.register(Category, CategoryAdmin)
+admin_set_up.register(Course, CourseAdmin)  
+admin_set_up.register(Testimonial, TestimonialsAdmin)
+admin_set_up.register(Payment, PaymentAdmin)
+admin_set_up.register(FeedBack)
+admin_set_up.register(CourseRegistration)
+admin_set_up.register(AccessModel, AccessModelAdmin)

@@ -22,8 +22,8 @@ from django.conf.urls.static import static
 from core.admin import admin_set_up
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    path('@gig-admin/', admin_set_up.urls),  # Custom admin path
+    path('admin/', admin.site.urls),
+    path('@gig-admin/', admin_set_up.urls, name='dev-admin'),  # Custom admin path
 ]
 
 urlpatterns += i18n_patterns(
