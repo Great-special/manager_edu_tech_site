@@ -153,11 +153,10 @@
                 <div class="footer-col">
                     <h3>{% trans "Training Categories" %}</h3>
                     <ul class="footer-links">
-                        <li><a href="#">{% trans "Leadership Development" %}</a></li>
-                        <li><a href="#">{% trans "Professional Skills" %}</a></li>
-                        <li><a href="#">{% trans "Technical Training" %}</a></li>
-                        <li><a href="#">{% trans "Change Management" %}</a></li>
-                        <li><a href="#">{% trans "Project Management" %}</a></li>
+                        <li><a href="{% url "leadership_development" %}">{% trans "Leadership Development" %}</a></li>
+                        <li><a href="{% url "professional_skills" %}">{% trans "Professional Skills" %}</a></li>
+                        <li><a href="{% url "technical_training" %}">{% trans "Technical Training" %}</a></li>
+                        <li><a href="{% url "project_management" %}">{% trans "Project Management" %}</a></li>
                     </ul>
                 </div>
                 
