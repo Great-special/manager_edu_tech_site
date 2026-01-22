@@ -1,5 +1,5 @@
 {% extends 'ihrdc_layout/base.html' %}
-{% block title %}I-Citadel - Home{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% load static %}
 {% load i18n %}
@@ -182,8 +182,8 @@
                                 <span><i class="fas fa-user-graduate"></i> {{ course.enrolled_students }} students</span>
                             </div>
                             <div class="course-footer">
-                                <span class="price m-2">${{ course.price| intcomma }}</span>
-                                <a href="{% url 'course_detail' course.id %}" class="btn btn-primary d-block mx-3 mt-3" style="width:200px">{% translate "learn more" %}</a>
+                                <span class="price m-2">€{{ course.price| intcomma }}</span>
+                                <a href="{% url 'course_detail' course.id %}" class="btn btn-primary d-block mx-3 mt-3">{% translate "learn more" %}</a>
                             </div>
                         </div>
                     </div>

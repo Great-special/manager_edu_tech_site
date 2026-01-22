@@ -23,7 +23,7 @@
                         <strong>{% translate "Description" %}:</strong> {{ course.description | truncatewords:25 }}
                     </li>
                     <li class="list-group-item">
-                        <strong>{% translate "Price" %}:</strong> ${{ course.price }}
+                        <strong>{% translate "Price" %}:</strong> €{{ course.price }}
                     </li>
                 </ul>
             </div>
@@ -117,8 +117,8 @@
             <div class="mb-3">
                 <label for="currency" class="form-label fw-bold">{% translate "Currency" %}</label>
                 <select id="currency" name="currency" class="form-select" required>
-                    <option value="USD" selected>{% translate "USD" %}</option>
-                    <option value="EUR">{% translate "EUR" %}</option>
+                    <option value="USD" >{% translate "USD" %}</option>
+                    <option value="EUR" selected>{% translate "EUR" %}</option>
                     <option value="GBP">{% translate "GBP" %}</option>
                 </select>
             </div>

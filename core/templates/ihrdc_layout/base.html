@@ -33,7 +33,7 @@
                         {% get_available_languages as LANGUAGES %}
                         {% get_language_info_list for LANGUAGES as languages %}
                         {% for lang in languages %}
-                        <a href="/{{lang.code}}/">{{lang.name_local}}</a>
+                        <a href="/{{lang.code}}/">{% if lang.name_local == 'English' %}<img src="{% static 'academy_layout/images/united-kingdom.png' %}" alt="English Flag" width="20" height="15">{% elif lang.name_local == 'Deutsch' %}<img src="{% static 'academy_layout/images/german.png' %}" alt="German Flag" width="20" height="15">{% endif %} </a>
                         {% endfor %}
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     <a class="logo" href="{% url 'home' %}">
                         <div class="row">
                             <div class="d-flex align-items-center">
-                                <img src="{% static 'layout/images/i-citadel-exzellenz-logo.png' %}" alt="Company Logo">
+                                <img src="{% static 'academy_layout/images/I-citadel-logo.jpeg' %}" alt="Company Logo">
                                 {% comment %} <div style="font-weight: bold; color: var(--primary-color);">
                                     i-Citadel <span style="color: var(--primary-color);">Exzellenz</span>
                                 </div> {% endcomment %}
@@ -62,7 +62,7 @@
                         <a href="{% url "categories" %}">{% trans "Course Catalog" %}</a>
                         <!-- Dropdown Menu -->
                         <div class="">
-                            <a href="#">{% trans "Training Format" %}</a>
+                            <a href="">{% trans "Training Format" %}</a>
                             <div class="dropdown-menu">
                                 <a href="{% url 'online_courses' %}">{% trans "Online Training" %}</a>
                                 <a href="{% url 'classroom_courses' %}">{% trans "Classroom Training" %}</a>
@@ -74,15 +74,7 @@
                         
                         <!-- Dropdown Menu -->
                         <div class="">
-                            <a href="#">{% trans "Services" %}</a>
-                            <div class="dropdown-menu">
-                                <a href="{% url "services" %}">{% trans "Digital Transformation" %}</a>
-                                <a href="{% url "services" %}">{% trans "Data Management" %}</a>
-                                <a href="{% url "services" %}">{% trans "Managed Training Service" %}</a>
-                                <a href="{% url "services" %}">{% trans "Learning Pathways" %}</a>
-                                <a href="{% url "services" %}">{% trans "Training Delivery Platform" %}</a>
-                                <a href="{% url "services" %}">{% trans "Resources" %}</a>
-                            </div>
+                            <a href="{% url "services" %}">{% trans "Services" %}</a>
                         </div>
                         <a href="{% url "about" %}">{% trans "About Us" %}</a>
                         <a href="{% url "contact" %}">{% trans "Contact Us" %}</a>
@@ -164,7 +156,7 @@
                     <h3>{% trans "Contact Us" %}</h3>
                     {% blocktrans %}
                     <ul class="footer-links">
-                        <li><a href="tel:+49176416">+49 (0) 251 3790 6631</a></li>
+                        <li>+49 (0) 251 3790 6631</li>
                         <li><a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></li>
                         <li>i-Citadel Exzellenz<br>Business District<br>Frankfurt, Germany</li>
                     </ul>
