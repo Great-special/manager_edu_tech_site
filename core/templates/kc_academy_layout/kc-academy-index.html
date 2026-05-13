@@ -212,17 +212,21 @@
             <div class="container">
                 <div class="services-grid">
                     <div class="service-card">
-                        <img src="{% static 'academy_layout\images\training.png' %}" alt="Service 1" class="service-image">
-                        <div class="service-overlay">
-                            <h3>{% trans "Executive Coaching" %}</h3>
-                        </div>
+                        <a href="{% url 'executive_courses' %}">
+                            <img src="{% static 'academy_layout\images\training.png' %}" alt="Service 1" class="service-image">
+                            <div class="service-overlay">
+                                <h3>{% trans "Executive Coaching" %}</h3>
+                            </div>
+                        </a>
                     </div>
                     
                     <div class="service-card">
-                        <img src="{% static 'academy_layout\images\bespoken.png' %}" alt="Service 1" class="service-image">
-                        <div class="service-overlay">
-                            <h3>{% trans "Bespoke Training" %}</h3>
-                        </div>
+                        <a href="{% url 'bespoke_courses' %}">
+                            <img src="{% static 'academy_layout\images\bespoken.png' %}" alt="Service 1" class="service-image">
+                            <div class="service-overlay">
+                                <h3>{% trans "Bespoke Training" %}</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

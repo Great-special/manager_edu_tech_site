@@ -26,7 +26,7 @@
             </div>
             <div class="catalog-grid">
                 {% for course in categories %}
-                <div class="catalog-card">
+                <div class="catalog-card p-1">
                     <div class="card-header">
                         <h3>{{course.name}}</h3>
                         <div class="card-image">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="card-details">
-                        <p>{{course.description | truncatewords:25}}</p>
+                        <p>{{course.description.capitalize | truncatewords:25}}</p>
                     </div>
                     <div class="card-footer">
                         <a href="{% url 'course_detail' course.id %}" class="btn btn-outline">{% translate "Learn More" %}</a>

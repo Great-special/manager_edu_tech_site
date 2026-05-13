@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from django.http import HttpResponse, JsonResponse
+from django.core.paginator import Paginator
 from django.db.models import Q
 
 import stripe
@@ -49,23 +50,32 @@ def index_page(request):
     }
     return render(request, 'kc_academy_layout/kc-academy-index.html', context)
 
+def privacy_policy(request):
+    return render(request, 'ihrdc_layout/privacy-policy.html')
+
+def imprint(request):
+    return render(request, 'ihrdc_layout/imprint.html')
 
 def search_courses(request):
     query = request.GET.get('q', '')
     courses = Course.objects.filter(title__icontains=query)
-    categories = Category.objects.all()
+    categories = Category.objects.all().order_by('name')
     return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
 
 
 def course_list(request):
     try:
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('name')
         courses = Course.objects.all().order_by('rank_id')
+        paginator = Paginator(courses, 12)  # Show 10 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
     except Exception as e:
         print(e)
         categories = None
-        courses = None
-    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+        page_obj = None
+    return render(request, 'ihrdc_layout/courses.html', {'categories': categories, 'page_obj': page_obj})
 
 def course_detail(request, id):
     course = Course.objects.get(id=id)
@@ -90,10 +100,13 @@ def category_detail(request, slug):
     try:
         category = Category.objects.get(slug=slug)
         courses = Course.objects.filter(category=category).order_by('rank_id')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Category.DoesNotExist:
         category = None
-        courses = []
-    return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
+        page_obj = []
+    return render(request, 'ihrdc_layout/category.html', {'page_obj':page_obj, 'category':category})
 
 def category_detail_by_search(request, word):
     try:
@@ -104,55 +117,70 @@ def category_detail_by_search(request, word):
     if not category:
         courses = Course.objects.filter(title__icontains=word)
     
-    return render(request, 'ihrdc_layout/category.html', {'courses':courses, 'category':category})
+    return render(request, 'ihrdc_layout/category.html', {'page_obj':courses, 'category':category})
 
 def get_online_courses(request):
     try:
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('name')
         courses = Course.objects.filter(Q(mode__icontains='online') | Q(training_format__icontains='Online')).order_by('rank_id')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Exception as e:
         print(e)
         categories = Category.objects.all()
         courses = None
-    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+    return render(request, 'ihrdc_layout/courses.html', {'page_obj': page_obj, 'categories': categories})
 
 
 def get_classroom_courses(request):
     try:
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('name')
         courses = Course.objects.filter(Q(mode__icontains='classroom') | Q(training_format__icontains='classroom')).order_by('rank_id')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Exception as e:
         print(e)
         categories = Category.objects.all()
-        courses = None
-    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+        page_obj = None
+    return render(request, 'ihrdc_layout/courses.html', {'page_obj':page_obj, 'categories': categories})
 
 
 def get_executive_courses(request):
     try:
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('name')
         courses = Course.objects.filter(Q(mode__icontains='executive') | Q(training_format__icontains='executive')).order_by('rank_id')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Exception as e:
         print(e)
         categories = Category.objects.all()
         courses = None
-    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+    return render(request, 'ihrdc_layout/courses.html', {'page_obj':page_obj, 'categories': categories})
 
 
 def get_bespoke_courses(request):
     try:
-        categories = Category.objects.all()
+        categories = Category.objects.all().order_by('name')
         courses = Course.objects.filter(Q(mode__icontains='bespoke') | Q(training_format__icontains='bespoke')).order_by('rank_id')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Exception as e:
         print(e)
         categories = Category.objects.all()
         courses = None
-    return render(request, 'ihrdc_layout/courses.html', {'courses': courses, 'categories': categories})
+    return render(request, 'ihrdc_layout/courses.html', {'page_obj':page_obj, 'categories': categories})
 
 
 def get_categories(request):
-    categories = Category.objects.all()
-    return render(request, 'kc_academy_layout/kc-academy-categories.html', {'categories':categories})
+    categories = Category.objects.all().order_by('name')
+    paginator = Paginator(categories, 12)  # Show 12 categories per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'kc_academy_layout/kc-academy-categories.html', {'page_obj': page_obj})
 
 def about_page(request):
     return render(request, 'kc_academy_layout/kc-academy-about.html')
@@ -185,9 +213,14 @@ def professional_skills(request):
         # courses = category.course_set.all()
         # courses = category.courses.all()
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Professional Skills')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
         
         
     context = {
@@ -199,7 +232,7 @@ def professional_skills(request):
             'Industry-Current Curriculum',
             'Flexible Learning Options'
         ], 
-        'courses':courses
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -210,10 +243,14 @@ def technical_training(request):
         # courses = category.course_set.all()
         # courses = category.courses.all()
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Technical Training')
-        
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
         
     context = {
         'category': 'Technical Training',
@@ -224,7 +261,7 @@ def technical_training(request):
             'Industry-Current Curriculum',
             'Flexible Learning Options'
         ], 
-        'courses':courses
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -234,10 +271,14 @@ def leadership_development(request):
         # courses = category.course_set.all()
         # courses = category.courses.all()
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Leadership Development')
-        
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
         
     context = {
         'category': 'Leadership Development',
@@ -248,7 +289,7 @@ def leadership_development(request):
             'Industry-Current Curriculum',
             'Flexible Learning Options'
         ], 
-        'courses':courses
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -256,9 +297,14 @@ def digital_marketing(request):
     try:
         category = Category.objects.filter(Q(name__icontains='Digital Marketing') | Q(description__icontains='Digital Marketing'))
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Digital Marketing')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
                       
     context = {
         'category': 'Digital Marketing',
@@ -269,7 +315,7 @@ def digital_marketing(request):
             'Analytics & Performance Tracking',
             'Multi-Platform Expertise'
         ],
-        'courses': courses
+        'page_obj': page_obj    
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -278,10 +324,16 @@ def project_management(request):
     try:
         category = Category.objects.filter(Q(name__icontains='Project Management') | Q(description__icontains='Project Management'))
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Project Management')
-                      
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+                    
     context = {
         'category': 'Project Management',
         'description': 'Develop essential project management skills with our comprehensive courses covering methodologies, tools, and best practices for successful project delivery.',
@@ -291,7 +343,7 @@ def project_management(request):
             'Risk Management Techniques',
             'Team Leadership Skills'
         ],
-        'courses': courses
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -301,9 +353,15 @@ def upskilling_reskilling(request):
         # courses = category.course_set.all()
         # courses = category.courses.all()
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Upskilling')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
         
     context = {
         'category': 'Upskilling & Reskilling',
@@ -314,19 +372,25 @@ def upskilling_reskilling(request):
             'Emerging Technology Focus',
             'Personalized Skill Development'
         ], 
-        'courses':courses,
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
 def certification(request):
     try:
-        category = Category.objects.filter(name__icontains='Upskilling')
+        category = Category.objects.filter(name__icontains='Certification')
         # courses = category.course_set.all()
         # courses = category.courses.all()
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
     except Category.DoesNotExist:
-        courses = Course.objects.filter(title__icontains='Upskilling')
+        courses = Course.objects.filter(title__icontains='Certification')
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
         
     context = {
         'category': 'Professional Certification',
@@ -337,7 +401,7 @@ def certification(request):
             'Industry-Specific Qualifications',
             'Global Recognition Programs'
         ],
-        'courses': courses,
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 
@@ -347,7 +411,10 @@ def consultancy(request):
         # courses = category.course_set.all()
         # courses = category.courses.all()
         courses = Course.objects.filter(category__in=category)
-        print(courses)
+        paginator = Paginator(courses, 12)  # Show 12 courses per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        
     except Category.DoesNotExist:
         courses = Course.objects.filter(title__icontains='Consultancy')
     
@@ -359,7 +426,8 @@ def consultancy(request):
             'Process Optimization',
             'Technology Integration',
             'Performance Enhancement'
-        ]
+        ],
+        'page_obj': page_obj
     }
     return render(request, 'ihrdc_layout/category.html', context)
 

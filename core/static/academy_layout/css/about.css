@@ -241,10 +241,11 @@
 
 /* Stats Section */
 .stats-section {
-    padding: calc(80px * var(--ui-scale)) 0;
+    padding: calc(30px * var(--ui-scale)) 0;
     background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/stats-bg.jpeg') center/cover no-repeat;
     color: white;
     position: relative;
+    height: auto;
 }
 
 .stats-section::before {

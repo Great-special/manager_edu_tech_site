@@ -11,9 +11,9 @@
         <div class="container">
             <h2 class="section-title">{% if category.name %}{{category.name.title}} {% else %} {{category}}{% endif %} {% trans "Courses" %}</h2>
             {% if category.description %}
-            <p class="description">{{category.description}}{% endif %} {% if description %} {{description}}</p>
+            <p class="description">{{category.description.capitalize}}{% endif %} {% if description %} {{description}}</p>
             {% endif %}
-            <div class="catalog-header">
+            {% comment %} <div class="catalog-header">
                 <div class="filters">
                     <select>
                         <option>Sort by: Popular</option>
@@ -27,11 +27,11 @@
                         <option>1+ Week</option>
                     </select>
                 </div>
-            </div>
+            </div> {% endcomment %}
             <div class="catalog-grid">
-                {% for course in courses %}
-                <div class="catalog-card">
-                    <div class="card-header">
+                {% for course in page_obj %}
+                <div class="catalog-card p-1">
+                    <div class="card-header p-2">
                         <h3>{{course.title}}</h3>
                     </div>
                     <div class="card-image">
@@ -41,18 +41,37 @@
                         <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="{{course.title}}">
                         {% endif %}
                     </div>
-                    <span class="price">${{course.price| intcomma}}</span>
-                    <div class="card-details">
-                        <span><i class="fas fa-clock"></i> {{course.duration}}</span>
+                    <span class="price p-2">€{{course.price| intcomma}}</span>
+                    <div class="card-details p-2">
+                        <span><i class="fas fa-clock"></i> {{course.duration.title}}</span>
                         <span><i class="fas fa-users"></i>{{course.mode.title}}</span>
                     </div>
-                    <p>{{course.description | truncatewords:25}}</p>
+                    <p class="p-2">{{course.description | truncatewords:25}}</p>
                     <div class="card-footer">
                         <a href="{% url 'course_detail' course.id %}" class="btn btn-outline">{% translate "Learn More" %}</a>
                         <a href="{% url 'payment_page' course.id %}" class="btn btn-primary">{% translate "Enroll Now" %}</a>
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+
+            <!-- Pagination controls -->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">next</a>
+                        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
             </div>
         </div>
     </section>

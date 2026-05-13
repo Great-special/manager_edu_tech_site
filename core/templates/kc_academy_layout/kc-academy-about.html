@@ -5,6 +5,7 @@
 {% block style %}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="academy_layout/css/unified-scaling-system.css">
 <link rel="stylesheet" href="{% static 'academy_layout/css/about.css' %}">
 {% endblock style %}
 {% block content %}
@@ -218,7 +219,7 @@
     <section class="stats-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-user-graduate"></i>
@@ -227,7 +228,7 @@
                         <p class="stat-title">{% trans "Graduates" %}</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-chalkboard-teacher"></i>
@@ -236,7 +237,7 @@
                         <p class="stat-title">{% trans "Expert Instructors" %}</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-book"></i>
@@ -245,7 +246,7 @@
                         <p class="stat-title">{% trans "Courses Offered" %}</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-handshake"></i>
@@ -262,7 +263,7 @@
     <section class="partners-section">
         <div class="container">
             {% blocktrans %}
-            <h2 class="section-title text-center">Our Partners</h2>
+            <h2 class="section-title">Our Partners</h2>
             <p class="text-center mb-5">We collaborate with leading healthcare institutions and organizations to provide our students with the best opportunities.</p>
             {% endblocktrans %}
             <div class="row">

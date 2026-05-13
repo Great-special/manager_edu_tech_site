@@ -1,0 +1,479 @@
+{% extends "ihrdc_layout/base.html" %}
+{% load static %}
+{% block title %}Imprint - Impressum{% endblock title %}
+{% block style %}
+    <meta name="description" content="Imprint and legal information for i-Citadel Exzellenz UG - Company details, contact information, and legal notices according to German law.">
+    
+    <!-- Link to your existing stylesheets -->
+    <link rel="stylesheet" href="{% static 'academy_layout/css/imprint.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- Imprint Hero -->
+    <section class="imprint-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="imprint-title">
+                    <i class="fas fa-file-contract"></i>
+                    Imprint
+                </h1>
+                <p class="imprint-subtitle">Impressum</p>
+                <p class="legal-notice">
+                    <i class="fas fa-gavel"></i>
+                    Information according to § 5 TMG (German Telemedia Act)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Toggle -->
+    <section class="language-toggle-section">
+        <div class="container">
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="en">
+                    <i class="fas fa-globe"></i> English Version
+                </button>
+                <button class="lang-btn" data-lang="de">
+                    <i class="fas fa-globe"></i> Deutsche Version
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imprint Content -->
+    <main class="imprint-content">
+        <div class="container">
+            
+            <!-- English Version -->
+            <div class="language-content" data-lang-content="en">
+                
+                <!-- Company Information -->
+                <section class="imprint-section company-info">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-building"></i></span>
+                        <h2>Company Information</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-card primary">
+                                <div class="card-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h3>Company Name</h3>
+                                <p class="company-name">i-Citadel Exzellenz UG</p>
+                                <p class="company-type">(haftungsbeschränkt)</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>Registered Address</h3>
+                                <p>Freiburger Weg<br>
+                                48151 Münster<br>
+                                Germany</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3>Managing Director</h3>
+                                <p class="director-name">Dr. Onyedika Anthony Igbokwe</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Information -->
+                <section class="imprint-section contact-info">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-address-card"></i></span>
+                        <h2>Contact Information</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="contact-grid">
+                            <div class="contact-card">
+                                <div class="contact-icon phone">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+491739362898" class="contact-link">+49 173 936 2898</a>
+                                    <p class="contact-note">Monday - Friday, 9:00 - 17:00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:info@i-citadelexz.com" class="contact-link">info@i-citadelexz.com</a>
+                                    <p class="contact-note">We respond within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon web">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Website</h4>
+                                    <a href="https://www.i-citadelexz.com" class="contact-link" target="_blank">www.i-citadelexz.com</a>
+                                    <p class="contact-note">Visit our online platform</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Legal Information -->
+                <section class="imprint-section legal-info">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-gavel"></i></span>
+                        <h2>Legal Information</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="legal-grid">
+                            <div class="legal-card">
+                                <div class="legal-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <h3>Commercial Register</h3>
+                                <div class="legal-details">
+                                    <p><strong>Register Court:</strong> Amtsgericht Münster</p>
+                                    <p><strong>Register Number:</strong> HRB 22474</p>
+                                </div>
+                            </div>
+                            
+                            <div class="legal-card">
+                                <div class="legal-icon">
+                                    <i class="fas fa-receipt"></i>
+                                </div>
+                                <h3>VAT Identification</h3>
+                                <div class="legal-details">
+                                    <p><strong>VAT ID:</strong> DE453937721</p>
+                                    <p class="legal-note">According to §27a VAT Tax Act</p>
+                                </div>
+                            </div>
+                            
+                            <div class="legal-card">
+                                <div class="legal-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <h3>Content Responsibility</h3>
+                                <div class="legal-details">
+                                    <p><strong>Responsible Person:</strong></p>
+                                    <p>Dr. Onyedika Anthony Igbokwe</p>
+                                    <p class="legal-note">Address as stated above</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dispute Resolution -->
+                <section class="imprint-section dispute-resolution">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-handshake"></i></span>
+                        <h2>Dispute Resolution</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="dispute-box">
+                            <div class="dispute-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="dispute-content">
+                                <p>The European Commission provides a platform for online dispute resolution (ODR):</p>
+                                <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="odr-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    https://ec.europa.eu/consumers/odr
+                                </a>
+                                <p class="dispute-note">Our email address can be found above in the imprint.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="notice-box">
+                            <p><i class="fas fa-exclamation-circle"></i> We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Liability for Content -->
+                <section class="imprint-section liability-content">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-file-alt"></i></span>
+                        <h2>Liability for Content</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="liability-box">
+                            <p>As a service provider, we are responsible for our own content on these pages in accordance with general legislation pursuant to <strong>§ 7 para. 1 TMG</strong>. However, under <strong>§§ 8 to 10 TMG</strong>, we are not obligated, as a service provider, to monitor transmitted or stored third-party information or to investigate circumstances indicating illegal activity.</p>
+                            
+                            <p>Obligations to remove or block the use of information in accordance with general legislation remain unaffected by this. However, liability in this regard is only possible from the time of knowledge of a specific infringement. Upon becoming aware of corresponding legal violations, we will remove this content immediately.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Liability for Links -->
+                <section class="imprint-section liability-links">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-link"></i></span>
+                        <h2>Liability for Links</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="liability-box">
+                            <p>Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages.</p>
+                            
+                            <p>The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the linked pages' content is not reasonable without concrete evidence of infringement. Upon becoming aware of legal violations, we will remove such links immediately.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Copyright -->
+                <section class="imprint-section copyright">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-copyright"></i></span>
+                        <h2>Copyright</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="copyright-box">
+                            <p>The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator.</p>
+                            
+                            <p><strong>Downloads and copies of this site are only permitted for private, non-commercial use.</strong></p>
+                            
+                            <p>Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of legal violations, we will remove such content immediately.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Last Updated -->
+                <div class="last-updated-box">
+                    <i class="far fa-calendar-alt"></i>
+                    <p>Last updated: February 2026</p>
+                </div>
+
+            </div>
+
+            <!-- German Version -->
+            <div class="language-content hidden" data-lang-content="de">
+                
+                <!-- Firmeninformationen -->
+                <section class="imprint-section company-info">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-building"></i></span>
+                        <h2>Angaben gemäß § 5 TMG</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="info-grid">
+                            <div class="info-card primary">
+                                <div class="card-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h3>Firmenname</h3>
+                                <p class="company-name">i-Citadel Exzellenz UG</p>
+                                <p class="company-type">(haftungsbeschränkt)</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h3>Anschrift</h3>
+                                <p>Freiburger Weg<br>
+                                48151 Münster<br>
+                                Deutschland</p>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <h3>Geschäftsführer</h3>
+                                <p class="director-name">Dr. Onyedika Anthony Igbokwe</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Kontaktinformationen -->
+                <section class="imprint-section contact-info">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-address-card"></i></span>
+                        <h2>Kontakt</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="contact-grid">
+                            <div class="contact-card">
+                                <div class="contact-icon phone">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Telefon</h4>
+                                    <a href="tel:+491739362898" class="contact-link">+49 173 936 2898</a>
+                                    <p class="contact-note">Montag - Freitag, 9:00 - 17:00 Uhr</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>E-Mail</h4>
+                                    <a href="mailto:info@i-citadelexz.com" class="contact-link">info@i-citadelexz.com</a>
+                                    <p class="contact-note">Antwort innerhalb von 24 Stunden</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon web">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Website</h4>
+                                    <a href="https://www.i-citadelexz.com" class="contact-link" target="_blank">www.i-citadelexz.com</a>
+                                    <p class="contact-note">Besuchen Sie unsere Plattform</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rechtliche Informationen -->
+                <section class="imprint-section legal-info">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-gavel"></i></span>
+                        <h2>Rechtliche Informationen</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="legal-grid">
+                            <div class="legal-card">
+                                <div class="legal-icon">
+                                    <i class="fas fa-balance-scale"></i>
+                                </div>
+                                <h3>Handelsregister</h3>
+                                <div class="legal-details">
+                                    <p><strong>Registergericht:</strong> Amtsgericht Münster</p>
+                                    <p><strong>Registernummer:</strong> HRB 22474</p>
+                                </div>
+                            </div>
+                            
+                            <div class="legal-card">
+                                <div class="legal-icon">
+                                    <i class="fas fa-receipt"></i>
+                                </div>
+                                <h3>Umsatzsteuer-ID</h3>
+                                <div class="legal-details">
+                                    <p><strong>USt-IdNr.:</strong> DE453937721</p>
+                                    <p class="legal-note">Gemäß §27a Umsatzsteuergesetz</p>
+                                </div>
+                            </div>
+                            
+                            <div class="legal-card">
+                                <div class="legal-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <h3>Inhaltlich verantwortlich</h3>
+                                <div class="legal-details">
+                                    <p><strong>Verantwortliche Person:</strong></p>
+                                    <p>Dr. Onyedika Anthony Igbokwe</p>
+                                    <p class="legal-note">Adresse wie oben angegeben</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Streitschlichtung -->
+                <section class="imprint-section dispute-resolution">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-handshake"></i></span>
+                        <h2>Streitschlichtung</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="dispute-box">
+                            <div class="dispute-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="dispute-content">
+                                <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
+                                <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="odr-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    https://ec.europa.eu/consumers/odr
+                                </a>
+                                <p class="dispute-note">Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="notice-box">
+                            <p><i class="fas fa-exclamation-circle"></i> Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Haftung für Inhalte -->
+                <section class="imprint-section liability-content">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-file-alt"></i></span>
+                        <h2>Haftung für Inhalte</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="liability-box">
+                            <p>Als Diensteanbieter sind wir gemäß <strong>§ 7 Abs.1 TMG</strong> für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach <strong>§§ 8 bis 10 TMG</strong> sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+                            
+                            <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Haftung für Links -->
+                <section class="imprint-section liability-links">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-link"></i></span>
+                        <h2>Haftung für Links</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="liability-box">
+                            <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+                            
+                            <p>Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Urheberrecht -->
+                <section class="imprint-section copyright">
+                    <div class="section-header">
+                        <span class="section-icon"><i class="fas fa-copyright"></i></span>
+                        <h2>Urheberrecht</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="copyright-box">
+                            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+                            
+                            <p><strong>Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</strong></p>
+                            
+                            <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Zuletzt aktualisiert -->
+                <div class="last-updated-box">
+                    <i class="far fa-calendar-alt"></i>
+                    <p>Zuletzt aktualisiert: Februar 2026</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+{% endblock %}

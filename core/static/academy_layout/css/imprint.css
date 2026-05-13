@@ -1,0 +1,686 @@
+/* ======================
+   IMPRINT/IMPRESSUM PAGE STYLES
+   Scalable Architecture for 1K-8K
+   ====================== */
+
+/* ======================
+   IMPRINT HERO SECTION
+   ====================== */
+
+.imprint-hero {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-dark));
+    color: var(--text-white);
+    text-align: center;
+    padding: clamp(3rem, 2rem + 4vw, 6rem) var(--space-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.imprint-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(255, 123, 0, 0.2));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.imprint-title {
+    font-size: clamp(2.5rem, 2rem + 2vw, 5rem);
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.imprint-title i {
+    font-size: clamp(2rem, 1.8rem + 1.5vw, 4rem);
+}
+
+.imprint-subtitle {
+    font-size: clamp(1.2rem, 1rem + 0.6vw, 2rem);
+    color: rgba(255,255,255,0.9);
+    margin-bottom: var(--space-lg);
+    font-weight: 300;
+}
+
+.legal-notice {
+    font-size: var(--text-base);
+    color: rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-weight: 500;
+}
+
+/* ======================
+   LANGUAGE TOGGLE
+   ====================== */
+
+.language-toggle-section {
+    background: var(--bg-light);
+    padding: var(--space-lg) 0;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.language-toggle {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    padding: var(--space-sm) var(--space-xl);
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--text-dark);
+}
+
+.lang-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+/* ======================
+   CONTENT LAYOUT
+   ====================== */
+
+.imprint-content {
+    padding: var(--space-xxl) 0;
+    background: var(--bg-white);
+}
+
+.language-content {
+    display: block;
+}
+
+.language-content.hidden {
+    display: none;
+}
+
+/* ======================
+   IMPRINT SECTIONS
+   ====================== */
+
+.imprint-section {
+    margin-bottom: var(--space-xxl);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-md);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.section-icon {
+    width: clamp(50px, 4vw, 70px);
+    height: clamp(50px, 4vw, 70px);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 1.3rem + 0.5vw, 2.2rem);
+    color: var(--text-white);
+    flex-shrink: 0;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 1.5rem + 1vw, 3rem);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.section-content {
+    font-size: var(--text-base);
+    line-height: 1.8;
+    color: var(--text-medium);
+}
+
+/* ======================
+   INFO GRID (Company Info)
+   ====================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 320px), 1fr));
+    gap: var(--space-lg);
+}
+
+.info-card {
+    background: var(--bg-light);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+.info-card.primary {
+    background: linear-gradient(135deg, rgba(255, 123, 0, 0.05), rgba(122, 92, 61, 0.05));
+    border-color: var(--primary-color);
+}
+
+.card-icon {
+    width: clamp(60px, 5vw, 80px);
+    height: clamp(60px, 5vw, 80px);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    font-size: clamp(1.8rem, 1.5rem + 0.8vw, 2.5rem);
+    color: var(--text-white);
+}
+
+.info-card h3 {
+    font-size: var(--text-lg);
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+}
+
+.company-name {
+    font-size: clamp(1.3rem, 1.1rem + 0.6vw, 2rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: var(--space-xs);
+}
+
+.company-type {
+    font-size: var(--text-sm);
+    color: var(--text-medium);
+    font-style: italic;
+}
+
+.director-name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ======================
+   CONTACT GRID
+   ====================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 28vw, 360px), 1fr));
+    gap: var(--space-lg);
+}
+
+.contact-card {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-xl);
+    display: flex;
+    gap: var(--space-lg);
+    transition: all 0.3s ease;
+    align-items: flex-start;
+}
+
+.contact-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    width: clamp(50px, 4.5vw, 70px);
+    height: clamp(50px, 4.5vw, 70px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.3rem, 1.1rem + 0.5vw, 2rem);
+    color: var(--text-white);
+    flex-shrink: 0;
+}
+
+.contact-icon.phone {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+}
+
+.contact-icon.email {
+    background: linear-gradient(135deg, #2196F3, #42A5F5);
+}
+
+.contact-icon.web {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-details h4 {
+    font-size: var(--text-md);
+    color: var(--text-dark);
+    margin-bottom: var(--space-xs);
+    font-weight: 600;
+}
+
+.contact-link {
+    display: block;
+    font-size: var(--text-lg);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: var(--space-xs);
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.contact-note {
+    font-size: var(--text-sm);
+    color: var(--text-medium);
+    font-style: italic;
+    margin: 0;
+}
+
+/* ======================
+   LEGAL GRID
+   ====================== */
+
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 28vw, 360px), 1fr));
+    gap: var(--space-lg);
+}
+
+.legal-card {
+    background: var(--bg-light);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-xl);
+    transition: all 0.3s ease;
+}
+
+.legal-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.legal-icon {
+    width: clamp(50px, 4.5vw, 70px);
+    height: clamp(50px, 4.5vw, 70px);
+    background: linear-gradient(135deg, var(--accent-color), rgba(122, 92, 61, 0.8));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.3rem, 1.1rem + 0.5vw, 2rem);
+    color: var(--text-white);
+    margin-bottom: var(--space-md);
+}
+
+.legal-card h3 {
+    font-size: var(--text-lg);
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+}
+
+.legal-details p {
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-base);
+}
+
+.legal-details p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-note {
+    font-size: var(--text-sm);
+    color: var(--text-medium);
+    font-style: italic;
+}
+
+/* ======================
+   DISPUTE RESOLUTION BOX
+   ====================== */
+
+.dispute-box {
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.05), rgba(33, 150, 243, 0.1));
+    border: 2px solid #2196F3;
+    border-radius: var(--border-radius);
+    padding: var(--space-xl);
+    display: flex;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.dispute-icon {
+    width: clamp(50px, 4.5vw, 70px);
+    height: clamp(50px, 4.5vw, 70px);
+    background: #2196F3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 1.3rem + 0.5vw, 2.2rem);
+    color: var(--text-white);
+    flex-shrink: 0;
+}
+
+.dispute-content p {
+    margin-bottom: var(--space-md);
+    font-size: var(--text-base);
+}
+
+.odr-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-lg);
+    background: #2196F3;
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: all 0.3s ease;
+}
+
+.odr-link:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.dispute-note {
+    font-size: var(--text-sm);
+    color: var(--text-medium);
+    font-style: italic;
+}
+
+.notice-box {
+    background: rgba(255, 152, 0, 0.1);
+    border-left: 4px solid #FF9800;
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+}
+
+.notice-box p {
+    margin: 0;
+    font-size: var(--text-base);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.notice-box i {
+    color: #FF9800;
+    margin-top: 4px;
+}
+
+/* ======================
+   LIABILITY BOXES
+   ====================== */
+
+.liability-box {
+    background: var(--bg-light);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.liability-box p {
+    margin-bottom: var(--space-lg);
+    font-size: var(--text-base);
+    line-height: 1.8;
+}
+
+.liability-box p:last-child {
+    margin-bottom: 0;
+}
+
+.liability-box strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* ======================
+   COPYRIGHT BOX
+   ====================== */
+
+.copyright-box {
+    background: var(--bg-light);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+    margin-bottom: var(--space-xl);
+}
+
+.copyright-box p {
+    margin-bottom: var(--space-lg);
+    font-size: var(--text-base);
+    line-height: 1.8;
+}
+
+.copyright-box p:last-child {
+    margin-bottom: 0;
+}
+
+.copyright-notice {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-white);
+    padding: var(--space-xl);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    text-align: center;
+}
+
+.copyright-notice i {
+    font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+}
+
+.copyright-notice p {
+    margin: 0;
+    font-size: var(--text-lg);
+}
+
+/* ======================
+   LAST UPDATED BOX
+   ====================== */
+
+.last-updated-box {
+    background: rgba(255, 123, 0, 0.05);
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-lg);
+    text-align: center;
+    margin-top: var(--space-xxl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+.last-updated-box i {
+    font-size: var(--text-xl);
+    color: var(--primary-color);
+}
+
+.last-updated-box p {
+    margin: 0;
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ======================
+   BACK TO TOP BUTTON
+   ====================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: var(--space-xl);
+    right: var(--space-xl);
+    width: clamp(45px, 4vw, 60px);
+    height: clamp(45px, 4vw, 60px);
+    background: var(--primary-color);
+    color: var(--text-white);
+    border: none;
+    border-radius: 50%;
+    font-size: var(--text-lg);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* ======================
+   RESPONSIVE MOBILE
+   ====================== */
+
+@media screen and (max-width: 767px) {
+    .imprint-title {
+        flex-direction: column;
+        font-size: clamp(1.8rem, 1.5rem + 1.2vw, 2.5rem);
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+    
+    .info-grid,
+    .contact-grid,
+    .legal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .dispute-box {
+        flex-direction: column;
+    }
+    
+    .dispute-icon {
+        margin: 0 auto;
+    }
+    
+    .back-to-top {
+        bottom: var(--space-md);
+        right: var(--space-md);
+    }
+}
+
+/* ======================
+   PRINT STYLES
+   ====================== */
+
+@media print {
+    .language-toggle-section,
+    .back-to-top,
+    header,
+    footer {
+        display: none !important;
+    }
+    
+    .imprint-section {
+        page-break-inside: avoid;
+    }
+    
+    .section-header {
+        page-break-after: avoid;
+    }
+    
+    .contact-link {
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+/* ======================
+   ACCESSIBILITY
+   ====================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .info-card,
+    .contact-card,
+    .legal-card {
+        border-width: 3px;
+    }
+}
+
+/* Focus Visible */
+.lang-btn:focus-visible,
+.back-to-top:focus-visible,
+.contact-link:focus-visible,
+.odr-link:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}

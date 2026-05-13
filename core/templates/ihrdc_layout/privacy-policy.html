@@ -1,0 +1,469 @@
+{% extends "ihrdc_layout/base.html" %}
+{% load static %}
+{% block title %}Privacy Policy{% endblock %}
+{% block style %}
+    <meta name="description" content="Privacy Policy and Data Protection Declaration for i-Citadel Exzellenz UG - GDPR compliant information about how we handle your personal data.">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'academy_layout/css/privacy-policy.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- Privacy Policy Hero -->
+    <section class="privacy-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="privacy-title">
+                    <i class="fas fa-shield-alt"></i>
+                    Privacy Policy
+                </h1>
+                <p class="privacy-subtitle">Datenschutzerklärung</p>
+                <p class="last-updated">
+                    <i class="far fa-calendar-alt"></i>
+                    Last updated: February 13, 2026
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Language Toggle -->
+    <section class="language-toggle-section">
+        <div class="container">
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="en">
+                    <i class="fas fa-globe"></i> English Version
+                </button>
+                <button class="lang-btn" data-lang="de">
+                    <i class="fas fa-globe"></i> Deutsche Version
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <main class="privacy-content">
+        <div class="container">
+            <div class="content-layout">
+                
+                <!-- Table of Contents Sidebar -->
+                <aside class="toc-sidebar">
+                    <div class="toc-wrapper">
+                        <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                        <nav class="toc-nav">
+                            <a href="#section-1" class="toc-link active">1. Data Controller</a>
+                            <a href="#section-2" class="toc-link">2. General Information</a>
+                            <a href="#section-3" class="toc-link">3. Data Security</a>
+                            <a href="#section-4" class="toc-link">4. SSL/TLS Encryption</a>
+                            <a href="#section-5" class="toc-link">5. Hosting</a>
+                            <a href="#section-6" class="toc-link">6. Contact Form</a>
+                            <a href="#section-7" class="toc-link">7. Course Registration</a>
+                            <a href="#section-8" class="toc-link">8. Payment (Stripe)</a>
+                            <a href="#section-9" class="toc-link">9. Cookies</a>
+                            <a href="#section-10" class="toc-link">10. Third-Party Content</a>
+                            <a href="#section-11" class="toc-link">11. Social Media</a>
+                            <a href="#section-12" class="toc-link">12. Your Rights</a>
+                            <a href="#section-13" class="toc-link">13. Exercising Rights</a>
+                            <a href="#section-14" class="toc-link">14. Security Measures</a>
+                            <a href="#section-15" class="toc-link">15. Retention Periods</a>
+                            <a href="#section-16" class="toc-link">16. International Transfers</a>
+                            <a href="#section-17" class="toc-link">17. Automated Decisions</a>
+                            <a href="#section-18" class="toc-link">18. Children's Privacy</a>
+                            <a href="#section-19" class="toc-link">19. Changes</a>
+                            <a href="#section-20" class="toc-link">20. Contact</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <article class="privacy-main">
+                    
+                    <!-- English Version -->
+                    <div class="language-content" data-lang-content="en">
+                        
+                        <!-- Section 1 -->
+                        <section id="section-1" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">01</span>
+                                <h2><i class="fas fa-building"></i> Data Controller and Contact</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="info-card">
+                                    <h3>Company Information</h3>
+                                    <p><strong>i-Citadel Exzellenz UG (haftungsbeschränkt)</strong></p>
+                                    <p>Freiburger Weg<br>48151 Münster<br>Germany</p>
+                                </div>
+                                
+                                <div class="info-card">
+                                    <h3>Represented by</h3>
+                                    <p>Dr. Onyedika Anthony Igbokwe, Managing Director</p>
+                                </div>
+                                
+                                <div class="info-card highlight">
+                                    <h3><i class="fas fa-envelope"></i> Contact</h3>
+                                    <p><strong>Phone:</strong> <a href="tel:+491739362898">+49 173 936 2898</a></p>
+                                    <p><strong>Email:</strong> <a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></p>
+                                </div>
+                                
+                                <div class="info-box">
+                                    <p><i class="fas fa-info-circle"></i> <strong>Data Protection Officer:</strong> Not required for our company size, but for data protection inquiries, please contact: <a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2 -->
+                        <section id="section-2" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">02</span>
+                                <h2><i class="fas fa-info-circle"></i> General Information and Principles</h2>
+                            </div>
+                            <div class="section-content">
+                                <p class="intro-text">We take the protection of your personal data very seriously and process it in accordance with the General Data Protection Regulation (GDPR), the German Federal Data Protection Act (BDSG), and the German Telemedia Act (TMG).</p>
+                                
+                                <p>This privacy policy explains what personal data we collect when you use our website, how we process it, and your rights regarding your data.</p>
+                                
+                                <div class="definitions-box">
+                                    <h3><i class="fas fa-book"></i> Definitions</h3>
+                                    <p>In accordance with Art. 4 GDPR:</p>
+                                    <ul class="definition-list">
+                                        <li><strong>Personal data</strong> means any information relating to an identified or identifiable natural person.</li>
+                                        <li><strong>Processing</strong> means any operation performed on personal data, such as collection, storage, use, transmission, or deletion.</li>
+                                        <li><strong>Controller</strong> means the entity that determines the purposes and means of processing personal data (i-Citadel Exzellenz UG).</li>
+                                        <li><strong>Processor</strong> means an entity that processes personal data on behalf of the controller.</li>
+                                        <li><strong>Consent</strong> means any freely given, specific, informed, and unambiguous indication of the data subject's wishes.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3 -->
+                        <section id="section-3" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">03</span>
+                                <h2><i class="fas fa-shield-alt"></i> Security and Protection of Your Personal Data</h2>
+                            </div>
+                            <div class="section-content">
+                                <p>We consider it our primary duty to maintain the confidentiality of the personal data you provide and to protect it against unauthorized access. We therefore apply the utmost care and the most modern security standards to ensure maximum protection of your personal data.</p>
+                                
+                                <p>We have implemented technical and organizational measures to ensure that data protection regulations are observed by us and by our external service providers.</p>
+                            </div>
+                        </section>
+
+                        <!-- Section 4 -->
+                        <section id="section-4" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">04</span>
+                                <h2><i class="fas fa-lock"></i> SSL/TLS Encryption</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="highlight-box">
+                                    <p><i class="fas fa-check-circle"></i> This website uses SSL/TLS encryption for security reasons and to protect the transmission of personal data and other confidential content (e.g., orders or inquiries to the controller).</p>
+                                    <p>You can recognize an encrypted connection by the string <strong>"https://"</strong> and the lock symbol <i class="fas fa-lock"></i> in your browser address bar.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 5 -->
+                        <section id="section-5" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">05</span>
+                                <h2><i class="fas fa-server"></i> Hosting and Server Logs</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="provider-card">
+                                    <h3><i class="fas fa-cloud"></i> Hosting Provider</h3>
+                                    <p><strong>Namecheap, Inc.</strong><br>
+                                    4600 E Washington St #305<br>
+                                    Phoenix, AZ 85034, USA</p>
+                                    <p><strong>Website:</strong> <a href="https://www.namecheap.com" target="_blank">https://www.namecheap.com</a></p>
+                                    <p><strong>Privacy Policy:</strong> <a href="https://www.namecheap.com/legal/general/privacy-policy/" target="_blank">View Policy</a></p>
+                                </div>
+                                
+                                <div class="data-list">
+                                    <h4><i class="fas fa-database"></i> Data Processed</h4>
+                                    <p>When you visit our website, our hosting provider automatically collects and stores the following information in server log files:</p>
+                                    <ul>
+                                        <li>IP address (anonymized after 7 days)</li>
+                                        <li>Date and time of access</li>
+                                        <li>Browser type and version</li>
+                                        <li>Operating system used</li>
+                                        <li>Referrer URL (the previously visited page)</li>
+                                        <li>Requested page/file name</li>
+                                        <li>HTTP status code</li>
+                                        <li>Amount of data transferred</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="legal-basis-box">
+                                    <p><strong><i class="fas fa-balance-scale"></i> Legal Basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in stable, secure, and efficient website operation).</p>
+                                    <p><strong><i class="far fa-clock"></i> Storage Period:</strong> Log files are automatically deleted after 7 days.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 6 -->
+                        <section id="section-6" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">06</span>
+                                <h2><i class="fas fa-envelope-open-text"></i> Contact Form and Email Communication</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="data-collected-box">
+                                    <h4><i class="fas fa-list-check"></i> Data Collected</h4>
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Email address</li>
+                                        <li>Message content</li>
+                                        <li>Any other information you voluntarily provide</li>
+                                    </ul>
+                                </div>
+                                
+                                <p><strong>Purpose:</strong> To respond to your inquiry, provide information about our services, or process pre-contractual or contractual matters.</p>
+                                
+                                <p><strong>Storage Period:</strong> We store your inquiry for 12 months after the inquiry has been resolved, then delete it unless legal obligations require longer storage.</p>
+                            </div>
+                        </section>
+
+                        <!-- Section 7 -->
+                        <section id="section-7" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">07</span>
+                                <h2><i class="fas fa-graduation-cap"></i> Course Registration and Bookings</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="data-collected-box">
+                                    <h4><i class="fas fa-list-check"></i> Data Collected</h4>
+                                    <ul>
+                                        <li>Full name</li>
+                                        <li>Email address</li>
+                                        <li>Phone number (optional)</li>
+                                        <li>Billing address</li>
+                                        <li>Course selection and preferences</li>
+                                        <li>Payment information (processed by Stripe)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="purpose-box">
+                                    <h4><i class="fas fa-bullseye"></i> Purpose</h4>
+                                    <ul>
+                                        <li>To process your course registration</li>
+                                        <li>To provide access to course materials and learning platforms</li>
+                                        <li>To communicate course schedules, updates, and certificates</li>
+                                        <li>To fulfill our contractual obligations</li>
+                                    </ul>
+                                </div>
+                                
+                                <p><strong><i class="far fa-clock"></i> Storage Period:</strong> Course registration data is retained for 10 years to comply with German tax and commercial retention requirements (§§ 147 AO, 257 HGB).</p>
+                            </div>
+                        </section>
+
+                        <!-- Section 8 -->
+                        <section id="section-8" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">08</span>
+                                <h2><i class="fab fa-stripe"></i> Payment Processing via Stripe</h2>
+                            </div>
+                            <div class="section-content">
+                                <p class="intro-text">We use Stripe to process payments for our courses and services securely.</p>
+                                
+                                <div class="provider-card stripe">
+                                    <h3><i class="fab fa-stripe-s"></i> Service Provider</h3>
+                                    <p><strong>Stripe, Inc.</strong><br>
+                                    510 Townsend Street<br>
+                                    San Francisco, CA 94103, USA</p>
+                                    <p><strong>Website:</strong> <a href="https://stripe.com" target="_blank">https://stripe.com</a></p>
+                                    <p><strong>Privacy Policy:</strong> <a href="https://stripe.com/privacy" target="_blank">View Policy</a></p>
+                                </div>
+                                
+                                <div class="warning-box">
+                                    <p><i class="fas fa-info-circle"></i> <strong>Important:</strong> Stripe handles all payment card information securely. We do not store complete credit card numbers on our servers. Stripe uses tokenization and encryption to protect your payment data.</p>
+                                </div>
+                                
+                                <div class="data-list">
+                                    <h4>Data Processed by Stripe</h4>
+                                    <ul>
+                                        <li>Name</li>
+                                        <li>Email address</li>
+                                        <li>Billing address</li>
+                                        <li>Payment information (credit card number, expiration date, CVV)</li>
+                                        <li>Transaction amount, currency, and date</li>
+                                        <li>Device and browser information (for fraud prevention)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 9 -->
+                        <section id="section-9" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">09</span>
+                                <h2><i class="fas fa-cookie-bite"></i> Cookies and Tracking Technologies</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="info-box">
+                                    <h4><i class="fas fa-question-circle"></i> What are Cookies?</h4>
+                                    <p>Cookies are small text files stored on your device when you visit a website. They enable the website to recognize your device and remember certain information about your visit.</p>
+                                </div>
+                                
+                                <div class="cookie-types">
+                                    <div class="cookie-type-card essential">
+                                        <h4><i class="fas fa-check-circle"></i> Essential Cookies</h4>
+                                        <p>Required for basic functionality: session management, security features, form submission, language preferences.</p>
+                                        <p><strong>Legal Basis:</strong> Art. 6(1)(f) GDPR (legitimate interest)</p>
+                                        <p><strong>Consent Required:</strong> No</p>
+                                    </div>
+                                    
+                                    <div class="cookie-type-card analytics">
+                                        <h4><i class="fas fa-chart-line"></i> Analytics Cookies (Optional)</h4>
+                                        <p>Used to analyze visitor behavior and improve our services.</p>
+                                        <p><strong>Legal Basis:</strong> Art. 6(1)(a) GDPR (consent)</p>
+                                        <p><strong>Consent Required:</strong> Yes</p>
+                                    </div>
+                                    
+                                    <div class="cookie-type-card marketing">
+                                        <h4><i class="fas fa-bullhorn"></i> Marketing Cookies (Optional)</h4>
+                                        <p>Used to display personalized advertisements and measure campaign effectiveness.</p>
+                                        <p><strong>Legal Basis:</strong> Art. 6(1)(a) GDPR (consent)</p>
+                                        <p><strong>Consent Required:</strong> Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 12 - Your Rights -->
+                        <section id="section-12" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">12</span>
+                                <h2><i class="fas fa-user-shield"></i> Your Rights Under the GDPR</h2>
+                            </div>
+                            <div class="section-content">
+                                <p class="intro-text">You have the following rights regarding your personal data:</p>
+                                
+                                <div class="rights-grid">
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-eye"></i></div>
+                                        <h4>Right of Access</h4>
+                                        <p>Art. 15 GDPR</p>
+                                        <p>Request confirmation of data processing and obtain a copy of your data.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-edit"></i></div>
+                                        <h4>Right to Rectification</h4>
+                                        <p>Art. 16 GDPR</p>
+                                        <p>Request correction of inaccurate or incomplete personal data.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-trash-alt"></i></div>
+                                        <h4>Right to Erasure</h4>
+                                        <p>Art. 17 GDPR</p>
+                                        <p>Request deletion of your personal data when no longer necessary.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-pause-circle"></i></div>
+                                        <h4>Right to Restriction</h4>
+                                        <p>Art. 18 GDPR</p>
+                                        <p>Request restriction of processing under certain conditions.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-exchange-alt"></i></div>
+                                        <h4>Data Portability</h4>
+                                        <p>Art. 20 GDPR</p>
+                                        <p>Receive your data in a machine-readable format.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-hand-paper"></i></div>
+                                        <h4>Right to Object</h4>
+                                        <p>Art. 21 GDPR</p>
+                                        <p>Object to processing based on legitimate interests.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-undo"></i></div>
+                                        <h4>Withdraw Consent</h4>
+                                        <p>Art. 7(3) GDPR</p>
+                                        <p>Withdraw consent at any time for consent-based processing.</p>
+                                    </div>
+                                    
+                                    <div class="right-card">
+                                        <div class="right-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                        <h4>Lodge a Complaint</h4>
+                                        <p>Art. 77 GDPR</p>
+                                        <p>File a complaint with a supervisory authority.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="authority-box">
+                                    <h4><i class="fas fa-landmark"></i> Supervisory Authority for North Rhine-Westphalia</h4>
+                                    <p><strong>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen</strong><br>
+                                    Kavalleriestraße 2-4<br>
+                                    40213 Düsseldorf, Germany</p>
+                                    <p><strong>Phone:</strong> +49 211 38424-0<br>
+                                    <strong>Email:</strong> <a href="mailto:poststelle@ldi.nrw.de">poststelle@ldi.nrw.de</a><br>
+                                    <strong>Website:</strong> <a href="https://www.ldi.nrw.de" target="_blank">https://www.ldi.nrw.de</a></p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 20 - Contact -->
+                        <section id="section-20" class="privacy-section">
+                            <div class="section-header">
+                                <span class="section-number">20</span>
+                                <h2><i class="fas fa-phone-alt"></i> Contact for Data Protection Inquiries</h2>
+                            </div>
+                            <div class="section-content">
+                                <div class="contact-card-large">
+                                    <p>If you have questions about this privacy policy or how we process your personal data, please contact us at:</p>
+                                    
+                                    <div class="contact-methods">
+                                        <div class="contact-method">
+                                            <i class="fas fa-envelope"></i>
+                                            <div>
+                                                <strong>Email</strong>
+                                                <p><a href="mailto:info@i-citadelexz.com">info@i-citadelexz.com</a></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-method">
+                                            <i class="fas fa-phone"></i>
+                                            <div>
+                                                <strong>Phone</strong>
+                                                <p><a href="tel:+491739362898">+49 173 936 2898</a></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-method">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <div>
+                                                <strong>Mail</strong>
+                                                <p>i-Citadel Exzellenz UG (haftungsbeschränkt)<br>
+                                                Freiburger Weg<br>
+                                                48151 Münster, Germany</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <!-- German Version -->
+                    <div class="language-content hidden" data-lang-content="de">
+                        <!-- German content follows same structure -->
+                        <p class="coming-soon">Deutsche Version wird geladen...</p>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+{% endblock %}

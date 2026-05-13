@@ -39,7 +39,7 @@
                         
                         <h3 class="section-title">{% trans "Course Overview" %}</h3>
                         <div class="course-description">
-                            <p class="description">{{course.description}}</p>
+                            <p class="description">{{course.description.capitalize}}</p>
                         </div>
                     </section>
 
@@ -200,7 +200,7 @@
                         <h3 class="section-title">{% trans "Course Benefits" %}</h3>
                         <ul class="objectives-list">
                             {% for benefit in course.benefits %}
-                            <li>{{benefit}}</li>
+                            <li>{{benefit.capitalize}}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -220,7 +220,7 @@
                 {% for benefit in course.organizational_benefits %}
                 <div class="benefit-card">
                     <h3 class="benefit-title">{{benefit.title}}</h3>
-                    <p class="benefit-description">{{benefit.description}}</p>
+                    <p class="benefit-description">{{benefit.description.capitalize}}</p>
                 </div>
                 {% endfor %}
             </div>

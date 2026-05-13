@@ -22,94 +22,8 @@
 
         <!-- Main Content -->
         <div class="custom-container training-categories">
-
-            {% comment %} <!-- Executive Management Category -->
-            <div class="categories-card">
-                <div class="category-row">
-                    <div class="category-image-wrapper">
-                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Executive Management" class="category-image">
-                    </div>
-                    <div class="category-content-wrapper">
-                        <div class="category-content">
-                            <h3 class="category-title">EXECUTIVE MANAGEMENT</h3>
-                            <p class="category-description">
-                                Executive Management Training Courses are essential for professionals aspiring to lead with vision, influence, and innovation...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="category-courses-wrapper">
-                        <div class="featured-courses">
-                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
-                            <ul class="course-list">
-                                <li>Leading Beyond Ego</li>
-                                <li>Masterclass in Advanced Critical Thinking Skills</li>
-                                <li>Operational Excellence</li>
-                                <li>Executive Challenge</li>
-                            </ul>
-                            <a href="#" class="btn view-all-btn">VIEW ALL COURSES</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Leadership and Management Category -->
-            <div class="categories-card">
-                <div class="category-row">
-                    <div class="category-image-wrapper">
-                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Leadership and Management" class="category-image">
-                    </div>
-                    <div class="category-content-wrapper">
-                        <div class="category-content">
-                            <h3 class="category-title">LEADERSHIP AND MANAGEMENT</h3>
-                            <p class="category-description">
-                                Leadership and Management training courses are a vital stepping-stone for professionals aiming to lead with purpose and manage with precision...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="category-courses-wrapper">
-                        <div class="featured-courses">
-                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
-                            <ul class="course-list">
-                                <li>Masterclass in Advanced Critical Thinking Skills</li>
-                                <li>Artificial Intelligence for Professionals</li>
-                                <li>Structured Problem Solving using Lean Sigma</li>
-                            </ul>
-                            <a href="#" class="btn view-all-btn">VIEW ALL COURSES</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Strategy, Innovation & Transformation Category -->
-            <div class="categories-card">
-                <div class="category-row">
-                    <div class="category-image-wrapper">
-                        <img src="{% static 'layout/images/default_course_img.jfif' %}" alt="Strategy, Innovation & Transformation" class="category-image">
-                    </div>
-                    <div class="category-content-wrapper">
-                        <div class="category-content">
-                            <h3 class="category-title">STRATEGY, INNOVATION & TRANSFORMATION</h3>
-                            <p class="category-description">
-                                Strategy, Innovation & Transformation Training Courses are essential for professionals seeking to lead meaningful change...
-                            </p>
-                        </div>
-                    </div>
-                    <div class="category-courses-wrapper">
-                        <div class="featured-courses">
-                            <h5 class="featured-title">FEATURED TRAINING COURSES</h5>
-                            <ul class="course-list">
-                                <li>Leading Beyond Ego</li>
-                                <li>Sustainable Investment</li>
-                                <li>Certified Administrative Professional</li>
-                            </ul>
-                            <a href="#" class="btn view-all-btn">VIEW ALL COURSES</a>
-                        </div>
-                    </div>
-                </div>
-            </div> {% endcomment %}
-
             <!-- Other Categories (Django loop) -->
-            {% for category in categories %}
+            {% for category in page_obj %}
             <div class="categories-card">
                 <div class="category-row">
                     <div class="category-image-wrapper">
@@ -139,7 +53,24 @@
                 </div>
             </div>
             {% endfor %}
+                                <!-- Pagination controls -->
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj.has_previous %}
+                                <a href="?page=1">&laquo; first</a>
+                                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                            {% endif %}
 
+                            <span class="current">
+                                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                            </span>
+
+                            {% if page_obj.has_next %}
+                                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
         </div>
 
     {% endblock %}

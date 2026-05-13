@@ -25,22 +25,24 @@ div {
 }
 
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.822)), url('../images/contact-image.jpg') center/cover no-repeat;
-    color: white;
+    background: linear-gradient(rgba(255, 116, 36, 0.3), rgba(70, 1, 1, 0.7)), url('../images/contact-image.jpg') center/cover no-repeat;
+    color: var(--text-white);
     padding: 120px 0;
     text-align: center;
+    font-weight: 600;
+    
 }
 
 .hero-title {
-    font-size: var(--text-xl);
-    font-weight: 700;
+    font-size: var(--text-xxl);
+    font-weight: 800;
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
     font-size: var(--text-md);
     margin-bottom: 30px;
-    max-width: var(--container-width)/2;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -62,6 +64,7 @@ div {
 
 .contact-section {
     padding: 80px 0;
+    background-color: var(--bg-light);
 }
 
 .section-title {
@@ -88,7 +91,7 @@ div {
 }
 
 .contact-card {
-    background-color: white;
+    background-color: var(--bg-dark);
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -147,4 +150,135 @@ div {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     max-height: 1000px;
     height: 800px;
+}
+
+
+
+
+/* ======================
+   MEDIA QUERY FOR 4K - 8K SCREENS
+====================== */
+@media (min-width: 2560px) {
+    /* Base Typography */
+    h3 {
+        font-size: var(--text-xl);
+    }
+
+    input {
+        font-size: var(--text-base);
+    }
+
+    div {
+        font-size: var(--text-base);
+    }
+
+    /* Contact Button */
+    .btn-contact {
+        border-radius: 45px;
+        padding: 20px 50px;
+        font-size: var(--text-base);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 240px 0;
+    }
+
+    .hero-title {
+        font-size: var(--text-xxl);
+        margin-bottom: 50px;
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-xl);
+        margin-bottom: 70px;
+        max-width: 65%;
+    }
+
+    /* Primary Custom Button */
+    .btn-primary-custom {
+        border-radius: 45px;
+        padding: 24px 60px;
+        font-size: var(--text-base);
+    }
+
+    .btn-primary-custom:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding: 180px 0;
+    }
+
+    .section-title {
+        font-size: var(--text-xxl);
+        margin-bottom: 120px;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        margin-bottom: 90px;
+    }
+
+    .contact-item {
+        margin-bottom: 50px;
+    }
+
+    .contact-icon {
+        font-size: var(--text-lg);
+        margin-right: 35px;
+    }
+
+    /* Contact Card */
+    .contact-card {
+        border-radius: 20px;
+        padding: 70px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        margin-bottom: 70px;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .contact-card-icon {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 50px;
+        font-size: var(--text-xl);
+    }
+
+    .contact-card h3 {
+        font-size: var(--text-xxl);
+        margin-bottom: 35px;
+    }
+
+    .contact-card p {
+        font-size: var(--text-base);
+    }
+
+    /* Contact Form */
+    .contact-form input,
+    .contact-form textarea {
+        border-radius: 12px;
+        padding: 24px 30px;
+        margin-bottom: 45px;
+        border: 2px solid #ddd;
+        font-size: var(--text-base);
+    }
+
+    /* Map Section */
+    .map-section {
+        padding: 90px 0 180px;
+    }
+
+    .map-container {
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        max-height: 2000px;
+        height: 1600px;
+    }
 }
